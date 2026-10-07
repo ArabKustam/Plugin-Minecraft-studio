@@ -5,8 +5,8 @@ Thanks for helping. Studio quality, real-world usefulness and honest docs matter
 ## Setup
 
 ```bash
-git clone https://github.com/ArabKustam/minecraft-studio
-cd minecraft-studio/runtime
+git clone https://github.com/ArabKustam/Plugin-Minecraft-studio
+cd Plugin-Minecraft-studio/runtime
 npm ci
 npm run build          # bundles runtime/src → runtime/dist (committed, so installs need no npm)
 cd ..

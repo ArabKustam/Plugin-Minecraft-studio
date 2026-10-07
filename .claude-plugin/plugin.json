@@ -6,8 +6,8 @@
     "name": "ArabKustam",
     "url": "https://github.com/ArabKustam"
   },
-  "homepage": "https://github.com/ArabKustam/minecraft-studio#readme",
-  "repository": "https://github.com/ArabKustam/minecraft-studio",
+  "homepage": "https://github.com/ArabKustam/Plugin-Minecraft-studio#readme",
+  "repository": "https://github.com/ArabKustam/Plugin-Minecraft-studio",
   "license": "MIT",
   "keywords": ["minecraft", "paper", "fabric", "resource-pack", "pixel-art", "blockbench", "game-audio", "adaptive-music", "elevenlabs", "game-development"],
   "userConfig": {

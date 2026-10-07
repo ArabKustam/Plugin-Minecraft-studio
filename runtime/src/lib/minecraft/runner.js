@@ -59,7 +59,7 @@ export function requiredJava(mcVersion) {
 }
 
 async function downloadPaper(version, dir) {
-  const meta = await fetch(`https://fill.papermc.io/v3/projects/paper/versions/${encodeURIComponent(version)}/builds/latest`, { headers: { 'user-agent': 'minecraft-studio (https://github.com/ArabKustam/minecraft-studio)' } });
+  const meta = await fetch(`https://fill.papermc.io/v3/projects/paper/versions/${encodeURIComponent(version)}/builds/latest`, { headers: { 'user-agent': 'minecraft-studio (https://github.com/ArabKustam/Plugin-Minecraft-studio)' } });
   if (!meta.ok) throw new StudioError('E_PAPER', `Paper ${version} not found on fill.papermc.io (HTTP ${meta.status})`);
   const build = await meta.json();
   const dl = build.downloads?.['server:default'];

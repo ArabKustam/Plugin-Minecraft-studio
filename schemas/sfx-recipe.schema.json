@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/ArabKustam/minecraft-studio/main/schemas/sfx-recipe.schema.json",
+  "$id": "https://raw.githubusercontent.com/ArabKustam/Plugin-Minecraft-studio/main/schemas/sfx-recipe.schema.json",
   "title": "Minecraft Studio SFX recipe",
   "type": "object",
   "required": [

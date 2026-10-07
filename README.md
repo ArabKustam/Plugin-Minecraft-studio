@@ -12,7 +12,7 @@ Describe a feature. The plugin plans it, delegates the work to specialist agents
 [![Version](https://img.shields.io/badge/version-0.1.0-5ccf6a)](CHANGELOG.md)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11%20%7C%2026.x-62b47a)](docs/compatibility.md)
 [![MCP tools](https://img.shields.io/badge/MCP%20tools-82-3fb0c8)](docs/mcp.md)
-[![CI](https://github.com/ArabKustam/minecraft-studio/actions/workflows/ci.yml/badge.svg)](.github/workflows/ci.yml)
+[![CI](https://github.com/ArabKustam/Plugin-Minecraft-studio/actions/workflows/ci.yml/badge.svg)](.github/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 <img src="docs/images/dashboard-overview.png" width="900" alt="Studio Dashboard showing the Industrial Reactor demo">
@@ -30,7 +30,7 @@ Describe a feature. The plugin plans it, delegates the work to specialist agents
 ## Quick start
 
 ```
-/plugin marketplace add ArabKustam/minecraft-studio
+/plugin marketplace add ArabKustam/Plugin-Minecraft-studio
 /plugin install minecraft-studio@minecraft-studio
 ```
 

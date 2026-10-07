@@ -18,7 +18,7 @@
 From GitHub (marketplace):
 
 ```
-/plugin marketplace add ArabKustam/minecraft-studio
+/plugin marketplace add ArabKustam/Plugin-Minecraft-studio
 /plugin install minecraft-studio@minecraft-studio
 ```
 

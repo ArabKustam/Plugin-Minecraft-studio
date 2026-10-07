@@ -19,4 +19,4 @@ Minecraft Studio uses semantic versioning. The plugin version lives in `.claude-
    - `SHA256SUMS.txt`
    - release notes taken from the changelog
 
-Users install releases from the marketplace (`/plugin marketplace add ArabKustam/minecraft-studio`) or by uploading the `.plugin` file.
+Users install releases from the marketplace (`/plugin marketplace add ArabKustam/Plugin-Minecraft-studio`) or by uploading the `.plugin` file.

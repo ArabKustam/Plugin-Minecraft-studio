@@ -2,7 +2,7 @@ import { createRequire as __msCreateRequire } from 'node:module'; const require 
 import {
   detectPlatforms,
   javaVersion
-} from "./chunk-GCZYLA7M.mjs";
+} from "./chunk-J5ZW7ISX.mjs";
 import {
   readPng
 } from "./chunk-3P6ZCJ33.mjs";

@@ -14,7 +14,7 @@ import {
   requiredJava,
   runPaperTestServer,
   runProjectCommand
-} from "./chunks/chunk-GCZYLA7M.mjs";
+} from "./chunks/chunk-J5ZW7ISX.mjs";
 import {
   PACK_FORMATS,
   packageResourcePack,
