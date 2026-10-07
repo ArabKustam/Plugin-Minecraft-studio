@@ -15,7 +15,7 @@ body:
     attributes: { label: "/minecraft-studio:doctor output", render: text }
   - type: input
     id: version
-    attributes: { label: Minecraft Studio version, placeholder: "0.1.1" }
+    attributes: { label: Minecraft Studio version, placeholder: "0.2.0" }
     validations: { required: true }
   - type: dropdown
     id: host

@@ -34,7 +34,10 @@ The `local-synth` provider builds sounds from layered recipes ([schema](../schem
 `local-composer` renders a score ([schema](../schemas/music-score.schema.json)).
 
 - **Sections:** intro / loop / outro / stinger.
-- **Instruments:** pad, strings, bass, sub, pluck (Karplus-Strong), bell (FM), choir (formant vowels), lead, pulse, brass, drone and synthesized drums.
+- **Real instruments:** all 128 General MIDI instruments by name (`acoustic_grand_piano`, `celesta`, `cello`, `string_ensemble_2`, `choir_aahs`, `flute`, `french_horn`, `kalimba`, …), aliases (`piano`, `rhodes`, `guitar`, `рояль`) and 8 drum kits (`drum_kit`, `jazz_kit`, `brush_kit`, `orchestra_kit`, …). They are recorded samples from a SoundFont, rendered offline by [spessasynth_core](https://github.com/spessasus/spessasynth_core) (Apache-2.0, bundled). `audio_instruments` lists everything.
+  - The sound bank is not bundled. `audio_soundfont_install` downloads [GeneralUser GS v2.0](https://github.com/mrbumpy409/GeneralUser-GS) (S. Christian Collins; ~31 MB; free for private and commercial music) once per computer into `%LOCALAPPDATA%minecraft-studiosoundfonts` or `~/.cache/minecraft-studio/soundfonts`, pinned by sha256. Use your own .sf2/.sf3 with `"soundfont"` in the score or `MINECRAFT_STUDIO_SOUNDFONT`.
+  - Stem options: `velocity`, `legato` (> 1 overlaps notes like a sustain pedal), `pedal`, fractional `transpose` (detune), `pan`, `gain`, `effects`.
+- **Synth voices** (no download): pad, strings, bass, sub, pluck (Karplus-Strong, sounds like a plucked string, not a piano), bell (FM), choir (formant vowels), lead, pulse, brass, drone and synthesized drums. `synth:<name>` is the explicit form.
 
 It writes four kinds of output:
 

@@ -9,8 +9,9 @@ Read first: `${CLAUDE_PLUGIN_ROOT}/skills/minecraft-studio/references/adaptive-m
 
 1. **Music design** — states and what triggers them; per state: mood, tempo, key, instrumentation, intensity layers (stems). Related states share key/tempo relations so transitions feel natural (e.g. calm 92 BPM D minor → alarm 132 BPM D minor).
 2. **Score** — one cue per state with `intro`, one `loop` (8–16 bars), optional `outro`/`stinger`; separate stems for layers that game logic may toggle (drums, bass, choir, pads).
-3. **Render** — `audio_music_render {score, out_dir: "audio/music", ogg_dir: "<pack>/assets/<ns>/sounds/music", asset: {id, agent: "composer"}}`; check the loop audit (seam, loudness −20 LUFS).
-4. **Integrate** — sound events (`stream: true`), copy `metadata/<title>.json` into the plugin resources, describe the transition rule (every N bars) to the developer.
-5. **Iterate** on the score source; keep `music/source/` — it's the editable composition.
-6. **AI music** (`audio_music_generate_ai`) only for references/one-offs with the user's consent.
-7. Hand off to `audio-qa` with BPM, key, bar length, loop length, transition points.
+3. **Instruments** — use real instruments by General MIDI name (piano, strings, choir, winds, kits; see the reference and `audio_instruments`). If the sound bank is missing, tell the user it is a one-time ~31 MB download and run `audio_soundfont_install`. Synth voices are for retro/sci-fi/sound-design layers.
+4. **Render** — `audio_music_render {score, out_dir: "audio/music", ogg_dir: "<pack>/assets/<ns>/sounds/music", ogg_stems: false, asset: {id, agent: "composer"}}`; check the loop audit (seam, loudness −20 LUFS) and the per-stem balance.
+5. **Integrate** — sound events (`stream: true`), copy `metadata/<title>.json` into the plugin resources, describe the transition rule (every N bars) to the developer.
+6. **Iterate** on the score source; keep `music/source/` — it's the editable composition.
+7. **AI music** (`audio_music_generate_ai`) only for references/one-offs with the user's consent.
+8. Hand off to `audio-qa` with BPM, key, bar length, loop length, transition points.

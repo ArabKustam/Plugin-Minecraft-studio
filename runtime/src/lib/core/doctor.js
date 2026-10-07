@@ -4,6 +4,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { findFfmpeg } from '../audio/ffmpeg.js';
+import { resolveSoundfont, DEFAULT_SOUNDFONT } from '../audio/soundbank.js';
 import { javaVersion } from '../minecraft/runner.js';
 import { VOICE_PROVIDERS } from '../providers/index.js';
 import { getSecret } from './secrets.js';
@@ -65,6 +66,8 @@ export async function runDoctor({ projectRoot, pluginRoot = process.env.CLAUDE_P
   // media
   const ff = findFfmpeg();
   add('FFmpeg', ff ? (ff.vorbis ? 'ok' : 'warn') : 'warn', ff ? `${ff.version}${ff.vorbis ? ', libvorbis ✓' : ', NO libvorbis'}` : 'not found — synthesis works, but Ogg Vorbis export for Minecraft is unavailable', ff ? null : 'Install FFmpeg with libvorbis (winget install Gyan.FFmpeg / brew install ffmpeg / apt install ffmpeg)');
+  const sf = resolveSoundfont({ root: projectRoot });
+  add('Instrument sound bank', sf.exists ? 'ok' : 'warn', sf.exists ? `${sf.source === 'default' ? DEFAULT_SOUNDFONT.name : 'custom bank'} (${sf.path})` : 'not installed — music can use only synth voices; real instruments (piano, strings, choir, ...) need a General MIDI SoundFont', sf.exists ? null : `Run audio_soundfont_install (downloads ${DEFAULT_SOUNDFONT.name}, ${Math.round(DEFAULT_SOUNDFONT.bytes / 1048576)} MB, once per computer) or set MINECRAFT_STUDIO_SOUNDFONT to your own .sf2/.sf3`);
   const sys = VOICE_PROVIDERS.system.available();
   add('System TTS (draft voices)', sys.ok ? 'ok' : 'warn', sys.ok ? `engine ${sys.engine}` : sys.reason);
   const elKey = getSecret('ELEVENLABS_API_KEY');

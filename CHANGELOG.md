@@ -4,6 +4,19 @@ All notable changes to Minecraft Studio are documented here. The format follows 
 
 ## [Unreleased]
 
+## [0.2.0] — 2026-10-07
+
+### Added
+- **Real instruments in the music renderer.** Score stems can use all 128 General MIDI instruments by name (`acoustic_grand_piano`, `celesta`, `cello`, `string_ensemble_2`, `choir_aahs`, `flute`, `french_horn`, …), aliases (`piano`, `rhodes`, `guitar`, `рояль`, `скрипка`), `gm:<n>` and 8 drum kits. Instruments are recorded samples from a SoundFont, rendered offline with the bundled [spessasynth_core](https://github.com/spessasus/spessasynth_core) (Apache-2.0); the output is real stereo.
+- New stem options: `velocity`, `pedal`, fractional `transpose` (detune via pitch bend), and `legato` above 1 for pedal-like overlap.
+- `audio_instruments`: catalogue of instruments, kits, drum names and aliases, plus sound bank status.
+- `audio_soundfont_install`: one-time download of GeneralUser GS v2.0 (~31 MB, free for commercial music) into the user cache, pinned by sha256. Custom banks: `score.soundfont` or `MINECRAFT_STUDIO_SOUNDFONT`. The doctor reports the bank.
+- `audio_music_render` option `ogg_stems: false` keeps per-stem loops out of the resource pack.
+- Loop metadata includes `ticks_exact`.
+
+### Changed
+- Synth voices keep their names (`pad`, `strings`, `pluck`, …) and can be written `synth:<name>`; existing scores render as before. Docs and the composer skill now explain that `pluck` is a Karplus-Strong string, not a piano.
+
 ## [0.1.1] — 2026-10-07
 
 ### Added

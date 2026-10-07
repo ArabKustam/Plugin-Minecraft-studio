@@ -16,12 +16,27 @@
 //   ]
 // }
 // Note syntax: NOTE:beats | [CHORD NOTES]:beats | r:beats, optional @velocity (0..1), "|" bar lines ignored.
+//
+// Instruments are either real sampled instruments from a General MIDI SoundFont
+// (see sampler.js: "acoustic_grand_piano", "cello", "piano", "drum_kit", ...)
+// or the built-in synthesizer voices listed in INSTRUMENTS ("synth:<name>" also works).
 import { StudioError } from '../core/fsutil.js';
 import { noteToMidi, midiToFreq, Biquad, noiseGen, applyEffects, dbToGain, envelopeFn, oscillator, rng, limit } from './dsp.js';
 import { makeAudio } from './wav.js';
 import { integratedLoudness } from './analyze.js';
+import { resolveSampled, renderSampledStem, GM_DRUM_KEYS } from './sampler.js';
 
+/** Built-in synthesizer voices (no sound bank needed). */
 export const INSTRUMENTS = ['pad', 'strings', 'bass', 'pluck', 'bell', 'choir', 'lead', 'drone', 'brass', 'drums', 'pulse', 'sub'];
+
+const synthName = (name) => (typeof name === 'string' && name.startsWith('synth:') ? name.slice(6) : name);
+/** Stem engine: { engine: 'sampled', patch } or { engine: 'synth', instrument }; null if unknown. */
+export function stemEngine(stem) {
+  const patch = resolveSampled(stem.instrument);
+  if (patch && !INSTRUMENTS.includes(stem.instrument)) return { engine: 'sampled', patch };
+  const s = synthName(stem.instrument);
+  return INSTRUMENTS.includes(s) ? { engine: 'synth', instrument: s } : null;
+}
 
 export function parseSequence(text) {
   if (typeof text !== 'string') throw new StudioError('E_SCORE', 'Melodic parts must be strings');
@@ -181,7 +196,14 @@ export function validateScore(score) {
   const names = new Set((score.sections || []).map((s) => s.name));
   if ((score.sections || []).filter((s) => s.loop).length > 1) problems.push('only one loop section per cue (create separate cues per music state)');
   for (const st of score.stems || []) {
-    if (!INSTRUMENTS.includes(st.instrument)) problems.push(`stem ${st.name}: unknown instrument ${st.instrument}`);
+    const eng = stemEngine(st);
+    if (!eng) problems.push(`stem ${st.name}: unknown instrument ${st.instrument} (use a General MIDI name like acoustic_grand_piano, cello, flute, drum_kit — see audio_instruments — or a synth voice: ${INSTRUMENTS.join(', ')})`);
+    if (eng?.engine === 'sampled' && eng.patch.kind === 'kit') {
+      for (const part of Object.values(st.parts || {})) {
+        if (typeof part !== 'object') { problems.push(`stem ${st.name}: drum kit parts are objects of step patterns`); continue; }
+        for (const d of Object.keys(part)) if (!(d in GM_DRUM_KEYS) && !/^\d+$/.test(d)) problems.push(`stem ${st.name}: unknown drum ${d} (use ${Object.keys(GM_DRUM_KEYS).join(', ')} or a GM key number)`);
+      }
+    }
     for (const sec of Object.keys(st.parts || {})) if (!names.has(sec)) problems.push(`stem ${st.name}: part for unknown section ${sec}`);
   }
   return problems;
@@ -205,7 +227,38 @@ export function timing(score) {
  * Render one section (all or selected stems). Notes ringing past the end of a
  * loop section are wrapped onto its start so the loop is seamless.
  */
-export function renderSection(score, sectionName, { stems = null, sampleRate = 48000 } = {}) {
+/** Expand a melodic part into timed notes (repeating short parts across the section). */
+function partNotes(stem, part, sectionBeats, beatSec) {
+  const { events, beats } = parseSequence(typeof part === 'string' ? part : part.notes);
+  const repeat = stem.repeat !== false && beats > 0 && beats < sectionBeats;
+  const notes = [];
+  for (let rep = 0; rep * beats < sectionBeats && (rep === 0 || repeat); rep++) {
+    for (const ev of events) {
+      const b = ev.beat + rep * beats;
+      if (b >= sectionBeats) continue;
+      notes.push({ beat: b, start_s: b * beatSec, dur_s: Math.min(ev.beats, sectionBeats - b) * beatSec * (stem.legato ?? 0.98), midi: ev.midi, vel: Math.min(1, ev.vel * (stem.velocity ?? 1)), rep });
+    }
+  }
+  return notes;
+}
+
+/** Expand drum step patterns (16th-note steps) into hits. */
+function patternHits(part, sectionBeats, beatSec) {
+  const steps = 4;
+  const hits = [];
+  for (const [drum, pattern] of Object.entries(part)) {
+    const p = pattern.replace(/\s|\|/g, '');
+    const total = Math.round(sectionBeats * steps);
+    for (let k = 0; k < total; k++) {
+      const ch = p[k % p.length];
+      if (ch === '.' || ch === '-') continue;
+      hits.push({ drum, k, start_s: (k / steps) * beatSec, vel: ch === 'X' ? 1 : ch === 'o' ? 0.45 : 0.75 });
+    }
+  }
+  return hits;
+}
+
+export function renderSection(score, sectionName, { stems = null, sampleRate = 48000, soundfont = null } = {}) {
   const tm = timing(score);
   const sec = tm.sections.find((s) => s.name === sectionName);
   if (!sec) throw new StudioError('E_SCORE', `Unknown section ${sectionName}`);
@@ -216,9 +269,23 @@ export function renderSection(score, sectionName, { stems = null, sampleRate = 4
   chosen.forEach((stem, si) => {
     const part = stem.parts?.[sectionName];
     if (!part) return;
-    const mono = new Float32Array(buf.channels[0].length);
     const sectionBeats = sec.bars * tm.barBeats;
-    if (stem.instrument === 'drums') {
+    const g = dbToGain(stem.gain ?? -10);
+    const pan = stem.pan || 0;
+    const gl = Math.cos(((pan + 1) * Math.PI) / 4) * Math.SQRT2, gr = Math.sin(((pan + 1) * Math.PI) / 4) * Math.SQRT2;
+    const eng = stemEngine(stem);
+    if (eng?.engine === 'sampled') {
+      const notes = eng.patch.kind === 'kit'
+        ? patternHits(part, sectionBeats, tm.beatSec).map((h) => ({ start_s: h.start_s, key: GM_DRUM_KEYS[h.drum] ?? Number(h.drum), vel: Math.min(1, h.vel * (stem.velocity ?? 1)) }))
+        : partNotes(stem, part, sectionBeats, tm.beatSec);
+      const { left, right } = renderSampledStem(eng.patch, notes, { length: buf.channels[0].length, sampleRate, soundfont, transpose: stem.transpose || 0, pedal: !!stem.pedal });
+      const l = applyEffects(left, sampleRate, stem.effects || []);
+      const r = applyEffects(right, sampleRate, stem.effects || []);
+      for (let i = 0; i < l.length && i < buf.channels[0].length; i++) { buf.channels[0][i] += l[i] * g * gl; buf.channels[1][i] += r[i] * g * gr; }
+      return;
+    }
+    const mono = new Float32Array(buf.channels[0].length);
+    if (synthName(stem.instrument) === 'drums') {
       const steps = 4; // 16th notes per beat
       for (const [drum, pattern] of Object.entries(part)) {
         const p = pattern.replace(/\s|\|/g, '');
@@ -238,15 +305,12 @@ export function renderSection(score, sectionName, { stems = null, sampleRate = 4
           const b = ev.beat + rep * beats;
           if (b >= sectionBeats) continue;
           const dur = Math.min(ev.beats, sectionBeats - b) * tm.beatSec * (stem.legato ?? 0.98);
-          const note = renderNote(stem.instrument, midiToFreq(ev.midi + (stem.transpose || 0)), dur, ev.vel, sampleRate, { vowel: stem.vowel }, ev.midi * 31 + rep);
+          const note = renderNote(synthName(stem.instrument), midiToFreq(ev.midi + (stem.transpose || 0)), dur, ev.vel, sampleRate, { vowel: stem.vowel }, ev.midi * 31 + rep);
           addAt(mono, note, Math.round(b * tm.beatSec * sampleRate), 1);
         }
       }
     }
-    let processed = applyEffects(mono, sampleRate, stem.effects || []);
-    const g = dbToGain(stem.gain ?? -10);
-    const pan = stem.pan || 0;
-    const gl = Math.cos(((pan + 1) * Math.PI) / 4) * Math.SQRT2, gr = Math.sin(((pan + 1) * Math.PI) / 4) * Math.SQRT2;
+    const processed = applyEffects(mono, sampleRate, stem.effects || []);
     for (let i = 0; i < processed.length && i < buf.channels[0].length; i++) { buf.channels[0][i] += processed[i] * g * gl; buf.channels[1][i] += processed[i] * g * gr; }
   });
   // wrap tail for loops, otherwise keep a short natural tail for one-shots
@@ -267,20 +331,20 @@ export function renderSection(score, sectionName, { stems = null, sampleRate = 4
 }
 
 /** Render every section mix and every stem loop; returns audio + metadata (files written by caller). */
-export function renderScore(score, { sampleRate = 48000, lufs = -20 } = {}) {
+export function renderScore(score, { sampleRate = 48000, lufs = -20, soundfont = null } = {}) {
   const problems = validateScore(score);
   if (problems.length) throw new StudioError('E_SCORE', `Invalid score: ${problems.join('; ')}`);
   const tm = timing(score);
   const outputs = [];
   for (const sec of tm.sections) {
-    const { audio } = renderSection(score, sec.name, { sampleRate });
+    const { audio } = renderSection(score, sec.name, { sampleRate, soundfont });
     outputs.push({ kind: 'section', section: sec.name, audio });
   }
   const loopSec = tm.sections.find((s) => s.loop);
   if (loopSec && score.stems.length > 1) {
     for (const stem of score.stems) {
       if (!stem.parts?.[loopSec.name]) continue;
-      const { audio } = renderSection(score, loopSec.name, { stems: [stem.name], sampleRate });
+      const { audio } = renderSection(score, loopSec.name, { stems: [stem.name], sampleRate, soundfont });
       outputs.push({ kind: 'stem', section: loopSec.name, stem: stem.name, audio });
     }
   }
@@ -296,10 +360,13 @@ export function renderScore(score, { sampleRate = 48000, lufs = -20 } = {}) {
     title: score.title, state: score.state || null, bpm: score.bpm, meter: tm.meter, key: score.key || null,
     sample_rate: sampleRate, beat_seconds: Number(tm.beatSec.toFixed(6)), bar_seconds: Number(tm.barSec.toFixed(6)),
     sections: tm.sections,
-    loop: loopSec ? { section: loopSec.name, bars: loopSec.bars, duration_s: loopSec.duration_s, samples: Math.round(loopSec.duration_s * sampleRate), ticks: Math.round(loopSec.duration_s * 20) } : null,
+    loop: loopSec ? { section: loopSec.name, bars: loopSec.bars, duration_s: loopSec.duration_s, samples: Math.round(loopSec.duration_s * sampleRate), ticks: Math.round(loopSec.duration_s * 20), ticks_exact: Number((loopSec.duration_s * 20).toFixed(4)) } : null,
     transition_points_s: loopSec ? Array.from({ length: Math.floor(loopSec.bars / every) + 1 }, (_, k) => Number((k * every * tm.barSec).toFixed(4))) : [],
     transition_every_bars: every,
-    stems: score.stems.map((s) => ({ name: s.name, instrument: s.instrument, gain: s.gain ?? -10 })),
+    stems: score.stems.map((s) => {
+      const eng = stemEngine(s);
+      return { name: s.name, instrument: s.instrument, engine: eng?.engine, ...(eng?.engine === 'sampled' ? { gm: eng.patch.name, gm_program: eng.patch.program, kit: eng.patch.kind === 'kit' } : {}), gain: s.gain ?? -10 };
+    }),
   };
   return { outputs, metadata };
 }

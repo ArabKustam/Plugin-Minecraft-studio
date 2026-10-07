@@ -1,5 +1,9 @@
 import { createRequire as __msCreateRequire } from 'node:module'; const require = __msCreateRequire(import.meta.url);
 import {
+  DEFAULT_SOUNDFONT,
+  resolveSoundfont
+} from "./chunk-HC4HRIBW.mjs";
+import {
   detectPlatforms,
   javaVersion
 } from "./chunk-P5W76KFS.mjs";
@@ -289,6 +293,8 @@ async function runDoctor({ projectRoot, pluginRoot = process.env.CLAUDE_PLUGIN_R
   add("Build tools", "ok", [gradle ? "gradle" : null, mvn ? "maven" : null].filter(Boolean).join(", ") || "none globally (Gradle wrapper in projects is enough)");
   const ff = findFfmpeg();
   add("FFmpeg", ff ? ff.vorbis ? "ok" : "warn" : "warn", ff ? `${ff.version}${ff.vorbis ? ", libvorbis \u2713" : ", NO libvorbis"}` : "not found \u2014 synthesis works, but Ogg Vorbis export for Minecraft is unavailable", ff ? null : "Install FFmpeg with libvorbis (winget install Gyan.FFmpeg / brew install ffmpeg / apt install ffmpeg)");
+  const sf = resolveSoundfont({ root: projectRoot });
+  add("Instrument sound bank", sf.exists ? "ok" : "warn", sf.exists ? `${sf.source === "default" ? DEFAULT_SOUNDFONT.name : "custom bank"} (${sf.path})` : "not installed \u2014 music can use only synth voices; real instruments (piano, strings, choir, ...) need a General MIDI SoundFont", sf.exists ? null : `Run audio_soundfont_install (downloads ${DEFAULT_SOUNDFONT.name}, ${Math.round(DEFAULT_SOUNDFONT.bytes / 1048576)} MB, once per computer) or set MINECRAFT_STUDIO_SOUNDFONT to your own .sf2/.sf3`);
   const sys = VOICE_PROVIDERS.system.available();
   add("System TTS (draft voices)", sys.ok ? "ok" : "warn", sys.ok ? `engine ${sys.engine}` : sys.reason);
   const elKey = getSecret("ELEVENLABS_API_KEY");

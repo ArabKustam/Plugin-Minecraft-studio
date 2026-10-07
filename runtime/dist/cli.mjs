@@ -5,7 +5,8 @@ import {
   initProject,
   runDoctor,
   summarizeAnalysis
-} from "./chunks/chunk-PBQNDJ76.mjs";
+} from "./chunks/chunk-ZTNQR47A.mjs";
+import "./chunks/chunk-HC4HRIBW.mjs";
 import "./chunks/chunk-P5W76KFS.mjs";
 import {
   packageResourcePack,

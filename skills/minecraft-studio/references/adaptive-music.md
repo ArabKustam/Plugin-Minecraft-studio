@@ -18,7 +18,13 @@ Game music is a **system**, not an MP3: states, sections, stems and musically-ti
 ```
 
 - Notes: `NOTE:beats` (`C#4:1/2`), chords `[D4 F4 A4]:4`, rests `r:1`, velocity `@0.6`, `|` bar lines are cosmetic. Parts shorter than the section repeat.
-- Instruments: `pad, strings, bass, sub, pluck, bell, choir (vowel a/o/u/e/i), lead, pulse, brass, drone, drums (kick, snare, hat, openhat, tom, clap, impact)`.
+- **Real instruments (default choice):** sampled from a General MIDI SoundFont, named by their GM names in snake_case. Examples: `acoustic_grand_piano`, `electric_piano_1`, `celesta`, `music_box`, `vibraphone`, `marimba`, `nylon_guitar`, `violin`, `cello`, `string_ensemble_1`/`string_ensemble_2` (slow), `pizzicato_strings`, `orchestral_harp`, `choir_aahs`, `voice_oohs`, `flute`, `clarinet`, `oboe`, `french_horn`, `trumpet`, `kalimba`, `ocarina`, `warm_pad`, `halo_pad`, `timpani`. Aliases work too (`piano`, `rhodes`, `guitar`, `harp`, `рояль`, `скрипка`). `audio_instruments` lists all 128 plus kits.
+  - Drum kits: `drum_kit`, `room_kit`, `power_kit`, `electronic_kit`, `tr808_kit`, `jazz_kit`, `brush_kit`, `orchestra_kit`. Their parts are step patterns, and the drum names are `kick, snare, rim, clap, hat, openhat, pedal_hat, tom_low, tom, tom_high, crash, ride, tambourine, shaker, cowbell, triangle, woodblock, conga_high, conga_low, bongo_high, bongo_low, timpani-free percussion…`.
+  - Stem options: `velocity` (0..1 multiplier: softer piano is darker, not just quieter), `legato` (>1 lets notes ring over the next ones, like a sustain pedal on arpeggios), `pedal: true` (sustain pedal for the whole part), `transpose` (fractional = detune, good for dreamy/trippy chorus), `pan`, `gain`, `effects`.
+  - Needs the sound bank once per computer: if `audio_instruments` reports `installed: false`, tell the user and run `audio_soundfont_install` (GeneralUser GS, ~31 MB, free for commercial music). Custom banks go in `score.soundfont` or `MINECRAFT_STUDIO_SOUNDFONT`.
+  - Levels: sampled and synth stems share one gain scale; start piano/lead at about −8 dB, pads −16…−20, accents (celesta, bells) −12, sub −30 and check the per-stem loudness.
+- **Synth voices** (no sound bank; good for retro, sci-fi and sound-design layers, not for acoustic instruments): `pad, strings, bass, sub, pluck, bell, choir (vowel a/o/u/e/i), lead, pulse, brass, drone, drums (kick, snare, hat, openhat, tom, clap, impact)`; `synth:<name>` is the explicit form. `pluck` is a Karplus-Strong string, so it sounds like a banjo or dombra, not a piano.
+- Set `ogg_stems: false` in `audio_music_render` unless game logic layers the stems; otherwise they bloat the resource pack.
 - One loop section per cue; make one cue per music state (`calm`, `exploration`, `danger`, `alarm`, `combat`, `boss`, `critical`, `victory`, `failure`).
 
 Output layout under `out_dir` (keep it — sources stay editable):

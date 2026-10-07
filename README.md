@@ -4,11 +4,11 @@
 
 **[Install](#installation)** · **[Quick start](#quick-start)** · **[Docs](docs/)** · **[Demo project](examples/industrial-reactor)** · **[Report a bug](https://github.com/ArabKustam/Plugin-Minecraft-studio/issues/new/choose)** · **[🇷🇺 Русский](README.ru.md)**
 
-[![Version](https://img.shields.io/badge/version-0.1.1-5ccf6a?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.2.0-5ccf6a?style=flat-square)](CHANGELOG.md)
 [![CI](https://img.shields.io/github/actions/workflow/status/ArabKustam/Plugin-Minecraft-studio/ci.yml?branch=main&style=flat-square&label=CI&color=5ccf6a)](https://github.com/ArabKustam/Plugin-Minecraft-studio/actions/workflows/ci.yml)
 [![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-d9b42a?style=flat-square)](.claude-plugin/plugin.json)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11%20·%2026.x-794f2f?style=flat-square)](docs/compatibility.md)
-[![MCP tools](https://img.shields.io/badge/MCP%20tools-86-3fb0c8?style=flat-square)](docs/mcp.md)
+[![MCP tools](https://img.shields.io/badge/MCP%20tools-88-3fb0c8?style=flat-square)](docs/mcp.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-6c7683?style=flat-square)](LICENSE)
 
 </div>
@@ -226,7 +226,7 @@ A timeline keeps every medium in sync. The game code runs the compiled list of t
     "state":     [{ "t": 5.0, "state": "RUNNING" }] } }
 ```
 
-All 86 tools are listed in [docs/mcp.md](docs/mcp.md). The file formats are published as [JSON Schemas](schemas/).
+All 88 tools are listed in [docs/mcp.md](docs/mcp.md). The file formats are published as [JSON Schemas](schemas/).
 
 ## FAQ
 

@@ -5,7 +5,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { createServer, tool, start, z, assetInput, registerOutput, requireOneOf } from './common.js';
 import { renderRecipe, RECIPE_PRESETS, validateRecipe, normalizeAudio } from '../lib/audio/synth.js';
-import { renderScore, validateScore, INSTRUMENTS } from '../lib/audio/music.js';
+import { renderScore, validateScore, INSTRUMENTS, stemEngine } from '../lib/audio/music.js';
+import { instrumentCatalogue, resolveSoundfont, installDefaultSoundfont, DEFAULT_SOUNDFONT } from '../lib/audio/sampler.js';
 import { writeWav, toMono } from '../lib/audio/wav.js';
 import { analyzeAudio, auditAudioFile } from '../lib/audio/analyze.js';
 import { decodeAny, encodeOgg, processFile, findFfmpeg, convertFile } from '../lib/audio/ffmpeg.js';
@@ -138,12 +139,13 @@ tool(server, 'audio_process', {
 // ------------------------------------------------------------------ music
 tool(server, 'audio_music_render', {
   title: 'Render adaptive music cue', capability: 'write',
-  description: `Render a score (bpm, meter, key, sections intro/loop/outro/stinger, stems with instruments ${INSTRUMENTS.join(', ')}) into section mixes, per-stem loops and metadata (BPM, bars, loop boundaries, transition points). Writes music/source, music/stems, music/rendered, music/metadata under out_dir; optional Ogg export into the pack.`,
+  description: `Render a score (bpm, meter, key, sections intro/loop/outro/stinger, stems) into section mixes, per-stem loops and metadata (BPM, bars, loop boundaries, transition points). Writes music/source, music/stems, music/rendered, music/metadata under out_dir; optional Ogg export into the pack. Stem instruments: real sampled instruments by General MIDI name (acoustic_grand_piano, electric_piano_1, celesta, music_box, vibraphone, marimba, nylon_guitar, violin, cello, string_ensemble_1, pizzicato_strings, orchestral_harp, choir_aahs, flute, clarinet, french_horn, kalimba, ... full list: audio_instruments; aliases like piano/rhodes/guitar; drum kits drum_kit/jazz_kit/brush_kit/orchestra_kit with step patterns) or synth voices ${INSTRUMENTS.join(', ')} (synth:<name>). Sampled stems support pan, transpose (fractional = detune), legato, pedal (sustain) and effects. Real instruments need the sound bank (audio_soundfont_install, once per computer).`,
   input: {
     score: z.record(z.string(), z.any()).optional(), score_path: z.string().optional(),
     out_dir: z.string().describe('Project-relative directory, e.g. audio/music'),
     ogg_dir: z.string().optional().describe('Resource-pack sounds directory for Ogg exports, e.g. resourcepack/assets/ns/sounds/music'),
     lufs: z.number().optional(), asset: assetInput,
+    ogg_stems: z.boolean().optional().describe('Also export per-stem loops as Ogg into ogg_dir (default true). Set false when the game will not layer stems, to keep the pack small.'),
   },
 }, async (a, { studio }) => {
   requireOneOf(a, ['score', 'score_path']);
@@ -151,7 +153,10 @@ tool(server, 'audio_music_render', {
   const problems = validateScore(score);
   if (problems.length) throw new StudioError('E_SCORE', problems.join('; '));
   const title = slugify(score.title || 'cue');
-  const { outputs, metadata } = renderScore(score, { lufs: a.lufs ?? -20 });
+  const sampled = score.stems.some((s) => stemEngine(s)?.engine === 'sampled');
+  const sf = sampled ? resolveSoundfont({ scorePath: score.soundfont, configPath: studio.isInitialized() ? studio.config().audio?.soundfont : null, root: studio.root }) : null;
+  const { outputs, metadata } = renderScore(score, { lufs: a.lufs ?? -20, soundfont: sf?.path });
+  if (sf) metadata.soundfont = { file: path.basename(sf.path), source: sf.source, ...(sf.source === 'default' ? { name: DEFAULT_SOUNDFONT.name, sha256: DEFAULT_SOUNDFONT.sha256 } : {}) };
   const base = a.out_dir.replace(/\/$/, '');
   const sourceFile = `${base}/source/${title}.score.json`;
   writeJson(studio.abs(sourceFile), score);
@@ -163,7 +168,7 @@ tool(server, 'audio_music_render', {
     writeMaster(studio.abs(wav), o.audio);
     files.push({ path: wav, role: o.kind });
     if (o.kind === 'section') metadata.files.sections[o.section] = wav; else metadata.files.stems[o.stem] = wav;
-    if (a.ogg_dir) {
+    if (a.ogg_dir && (o.kind === 'section' || a.ogg_stems !== false)) {
       const ogg = `${a.ogg_dir.replace(/\/$/, '')}/${name}.ogg`;
       encodeOgg(o.audio, studio.abs(ogg));
       files.push({ path: ogg, role: 'minecraft' });
@@ -175,9 +180,28 @@ tool(server, 'audio_music_render', {
   files.push({ path: metaFile, role: 'metadata' });
   const loopWav = metadata.files.sections[metadata.loop?.section || score.sections[0].name];
   const loopAudit = auditAudioFile(studio.abs(loopWav), { role: 'music', loop: !!metadata.loop, positional: false, targetLufs: a.lufs ?? -20 });
-  const reg = registerOutput(studio, a.asset, { type: 'music', files, source: { provider: 'local-composer', format: 'minecraft-studio-score/1', source_files: [sourceFile] }, metadata: { bpm: metadata.bpm, key: metadata.key, meter: metadata.meter, state: metadata.state, loop: metadata.loop, transition_points_s: metadata.transition_points_s, stems: metadata.stems, sections: metadata.sections, waveform: loopAudit.waveform, metadata_file: metaFile } });
+  const reg = registerOutput(studio, a.asset, { type: 'music', files, source: { provider: sampled ? 'local-composer+soundfont' : 'local-composer', format: 'minecraft-studio-score/1', source_files: [sourceFile], ...(metadata.soundfont ? { soundfont: metadata.soundfont } : {}) }, metadata: { bpm: metadata.bpm, key: metadata.key, meter: metadata.meter, state: metadata.state, loop: metadata.loop, transition_points_s: metadata.transition_points_s, stems: metadata.stems, sections: metadata.sections, waveform: loopAudit.waveform, metadata_file: metaFile } });
   return { metadata_file: metaFile, files: files.map((f) => f.path), loop: metadata.loop, transition_points_s: metadata.transition_points_s, loop_audit: { verdict: loopAudit.verdict, checks: loopAudit.checks }, asset: reg };
 });
+
+tool(server, 'audio_instruments', {
+  title: 'List music instruments', capability: 'read',
+  description: 'Real sampled instruments (128 General MIDI programs by family, drum kits, drum names, aliases incl. Russian) and synth voices usable in audio_music_render scores, plus whether the sound bank is installed.',
+}, async (_a, { studio }) => {
+  const sf = resolveSoundfont({ configPath: studio.isInitialized() ? studio.config().audio?.soundfont : null, root: studio.root });
+  return {
+    soundfont: { path: sf.path, source: sf.source, installed: sf.exists, ...(sf.source === 'default' ? { name: DEFAULT_SOUNDFONT.name, size_mb: Math.round(DEFAULT_SOUNDFONT.bytes / 1048576), install_with: 'audio_soundfont_install' } : {}) },
+    sampled: instrumentCatalogue(),
+    synth_voices: INSTRUMENTS.map((n) => `synth:${n}`),
+    usage: 'stem.instrument = General MIDI name or alias; drum kits take step-pattern objects {kick: "x...", snare: "....x...", hat: "x.x.x.x."}',
+  };
+});
+
+tool(server, 'audio_soundfont_install', {
+  title: 'Install the instrument sound bank', capability: 'publish',
+  description: `Download the default General MIDI sound bank (${DEFAULT_SOUNDFONT.name}, ${Math.round(DEFAULT_SOUNDFONT.bytes / 1048576)} MB, free for commercial music) once per computer into the user cache, verifying its sha256. Needed for real instruments in audio_music_render. Tell the user about the download before calling.`,
+  input: { force: z.boolean().optional() },
+}, async (a) => installDefaultSoundfont({ force: !!a.force }));
 
 tool(server, 'audio_music_generate_ai', {
   title: 'Generate music with ElevenLabs', capability: 'publish',
