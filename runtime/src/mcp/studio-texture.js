@@ -8,6 +8,9 @@ import { readPng, writePng } from '../lib/texture/image.js';
 import { analyzeImage, buildStyleProfile, compareToProfile, textureCategory } from '../lib/texture/style.js';
 import { validateTexture, checkTiling, quantizeToPalette, conceptToPixelArt, applyOps, previewSheet, variantStrip } from '../lib/texture/ops.js';
 import { readJson, writeJson, walk, StudioError, slugify, exists } from '../lib/core/fsutil.js';
+import { packBoxUv, paintAtlas, uvReport } from '../lib/texture/uvpaint.js';
+import { renderTurnaround } from '../lib/model/render.js';
+import { scaleNearest } from '../lib/texture/image.js';
 
 const server = createServer('studio-texture', 'Minecraft Studio texture pipeline. Author textures as pixel specs (palette + character grid) — not by downscaling. Build a style profile from the existing pack first, compare every new texture against it, review previews at 1600%/800%/100%/tiled, derive state variants from one base so they read as the same object.');
 
@@ -200,6 +203,41 @@ tool(server, 'texture_preview', {
   const pp = previewPath(studio, `preview_${a.path}`);
   writePng(pp, sheet.image);
   return { preview: studio.rel(pp), layout: sheet.layout, _images: [pp] };
+});
+
+tool(server, 'texture_paint_uv', {
+  title: 'Paint creature/entity UV atlas', capability: 'write',
+  description: 'Lay out box-UV islands for a model (auto packing) and paint a pixel-art atlas from materials (dark→light ramps, patterns fur/shaggy/plates/feathers/stripes/scales) with per-face shading and hand-authored face details (eyes, mouths, markings). Writes the PNG, the packed model source and the paint spec; returns the atlas at 4× and a textured turnaround for review.',
+  input: {
+    model: z.record(z.string(), z.any()).optional(), model_path: z.string().optional().describe('Project-relative model source; the packed version is written back unless model_output is given'),
+    paint: z.record(z.string(), z.any()).optional(), paint_path: z.string().optional(),
+    output: z.string().describe('Project-relative atlas PNG path'), model_output: z.string().optional(), texture_key: z.string().optional().describe('Model texture key to point at the atlas (default: first)'),
+    repack: z.boolean().optional().describe('Re-run UV packing even if cubes already have box_uv (default true)'), asset: assetInput,
+  },
+}, async (a, { studio }) => {
+  requireOneOf(a, ['model', 'model_path']);
+  requireOneOf(a, ['paint', 'paint_path']);
+  let model = a.model || readJson(studio.abs(a.model_path));
+  const paint = a.paint || readJson(studio.abs(a.paint_path));
+  if (a.repack !== false || model.bones.some((b) => (b.cubes || []).some((c) => !c.box_uv))) model = packBoxUv(model, { textureSize: paint.texture_size });
+  const key = a.texture_key || Object.keys(model.textures)[0];
+  model.textures[key] = a.output;
+  const { image, materials_used } = paintAtlas(model, { ...paint, texture_size: model.texture_size });
+  writePng(studio.abs(a.output), image);
+  const modelOut = a.model_output || a.model_path;
+  if (modelOut) writeJson(studio.abs(modelOut), model);
+  const files = [a.output];
+  if (a.asset) {
+    if (a.paint && !a.paint_path) { const pf = studio.p('sources', a.asset.id, 'paint.json'); writeJson(pf, paint); files.push({ path: studio.rel(pf), role: 'source' }); }
+    else if (a.paint_path) files.push({ path: a.paint_path, role: 'source' });
+  }
+  const atlasPreview = studio.p('previews', `atlas_${slugify(a.asset?.id || a.output)}.png`);
+  writePng(atlasPreview, scaleNearest(image, Math.max(1, Math.floor(512 / Math.max(image.width, image.height)))));
+  const turn = renderTurnaround(model, { resolveTexture: (p) => studio.abs(p) });
+  const turnPreview = studio.p('previews', `model_${slugify(model.name || 'model')}.png`);
+  writePng(turnPreview, turn.image);
+  const reg = registerOutput(studio, a.asset, { type: 'texture', files, source: { provider: 'uv-painter', method: 'texture_paint_uv', source_files: [a.paint_path, modelOut].filter(Boolean), parameters: { materials: materials_used } }, preview: studio.rel(atlasPreview), metadata: { width: image.width, height: image.height, ...uvReport(model) } });
+  return { output: a.output, model_output: modelOut || null, texture_size: model.texture_size, uv: uvReport(model), materials_used, previews: [studio.rel(atlasPreview), studio.rel(turnPreview)], asset: reg, _images: [atlasPreview, turnPreview] };
 });
 
 await start(server);

@@ -10,7 +10,7 @@ import "./chunks/chunk-J5ZW7ISX.mjs";
 import {
   packageResourcePack,
   validateResourcePack
-} from "./chunks/chunk-HYFTE7OH.mjs";
+} from "./chunks/chunk-E52IL6RB.mjs";
 import "./chunks/chunk-3P6ZCJ33.mjs";
 import {
   createDashboard

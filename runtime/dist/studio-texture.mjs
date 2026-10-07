@@ -1,5 +1,10 @@
 import { createRequire as __msCreateRequire } from 'node:module'; const require = __msCreateRequire(import.meta.url);
 import {
+  boxUvFaces,
+  normalizeModel,
+  renderTurnaround
+} from "./chunks/chunk-G3FZ7JVB.mjs";
+import {
   assetInput,
   createServer,
   external_exports,
@@ -708,6 +713,176 @@ function variantStrip(images) {
   return sheet;
 }
 
+// src/lib/texture/uvpaint.js
+var ceilDims = (c) => c.size.map((s) => Math.max(1, Math.ceil(Math.abs(s) - 1e-6)));
+var isPow2 = (n) => (n & n - 1) === 0;
+function packBoxUv(src, { textureSize = null, padding = 0 } = {}) {
+  const model = structuredClone(src);
+  const items = [];
+  for (const b of model.bones) for (const c of b.cubes || []) {
+    const [dx, dy, dz] = ceilDims({ size: c.to.map((t, i) => t - c.from[i]) });
+    items.push({ c, w: 2 * (dx + dz) + padding, h: dz + dy + padding });
+  }
+  items.sort((a, b) => b.h - a.h || b.w - a.w);
+  let [tw, th] = textureSize || [64, 64];
+  for (let attempt = 0; attempt < 6; attempt++) {
+    let x = 0, y = 0, rowH = 0, ok = true;
+    const placed = [];
+    for (const it of items) {
+      if (it.w > tw) {
+        ok = false;
+        break;
+      }
+      if (x + it.w > tw) {
+        x = 0;
+        y += rowH;
+        rowH = 0;
+      }
+      if (y + it.h > th) {
+        ok = false;
+        break;
+      }
+      placed.push([it, x, y]);
+      x += it.w;
+      rowH = Math.max(rowH, it.h);
+    }
+    if (ok) {
+      for (const [it, px, py] of placed) {
+        it.c.box_uv = [px, py];
+        delete it.c.faces;
+      }
+      model.texture_size = [tw, th];
+      return model;
+    }
+    if (th <= tw) th *= 2;
+    else tw *= 2;
+  }
+  throw new StudioError("E_UV", "Could not pack box UVs into a texture up to 4096 px");
+}
+function rng(seed) {
+  let s = seed >>> 0 || 1;
+  return () => {
+    s ^= s << 13;
+    s ^= s >>> 17;
+    s ^= s << 5;
+    return (s >>> 0) / 4294967296;
+  };
+}
+function shadeIndex(face, fx, fy, fw, fh, n) {
+  const top = n - 1;
+  let i;
+  switch (face) {
+    case "up":
+      i = top;
+      break;
+    case "down":
+      i = 0;
+      break;
+    case "north":
+    case "south":
+      i = top - 1 - (fh > 3 && fy >= Math.ceil(fh * 0.66) ? 1 : 0);
+      break;
+    case "west":
+      i = top - 1 - (fh > 3 && fy >= Math.ceil(fh * 0.6) ? 1 : 0);
+      break;
+    case "east":
+      i = top - 2 + (fh > 3 && fy < Math.floor(fh * 0.25) ? 1 : 0);
+      break;
+    default:
+      i = 1;
+  }
+  if (["north", "south", "east", "west"].includes(face) && fy === fh - 1 && fh > 2) i -= 1;
+  return Math.max(0, Math.min(top, i));
+}
+function patternShift(p, face, fx, fy, fw, fh, r) {
+  if (!p || p.type === "none") return 0;
+  const d = p.density ?? 0.2;
+  switch (p.type) {
+    case "fur":
+      return r() < d ? r() < 0.6 ? -1 : 1 : 0;
+    case "shaggy": {
+      const strand = (fx * 2654435761 >>> 0) % 5;
+      return face === "up" ? r() < d ? -1 : 0 : strand === 0 ? -1 : strand === 1 && fy % 3 === 0 ? 1 : 0;
+    }
+    case "plates": {
+      const s = p.size ?? 4;
+      return fx % s === s - 1 || fy % s === s - 1 ? -1 : fx % s === 0 && fy % s === 0 ? 1 : 0;
+    }
+    case "feathers": {
+      const s = p.size ?? 3;
+      return fy % s === s - 1 && (fx + Math.floor(fy / s)) % 2 === 0 ? -1 : fy % s === 0 && r() < d ? 1 : 0;
+    }
+    case "stripes": {
+      const s = p.size ?? 3;
+      const v = p.vertical ? fx : fy;
+      return Math.floor(v / s) % 2 === 1 ? -1 : 0;
+    }
+    case "scales": {
+      const s = p.size ?? 2;
+      return (fx + Math.floor(fy / s) % 2 * s) % (s * 2) === 0 ? -1 : 0;
+    }
+    default:
+      throw new StudioError("E_PAINT", `Unknown pattern ${p.type}`);
+  }
+}
+function faceRects(c) {
+  const dims = ceilDims(c);
+  const faces = boxUvFaces(c.box_uv[0], c.box_uv[1], dims, "t");
+  return Object.fromEntries(Object.entries(faces).map(([f, d]) => {
+    const [u1, v1, u2, v2] = d.uv;
+    return [f, { x: Math.min(u1, u2), y: Math.min(v1, v2), w: Math.abs(u2 - u1), h: Math.abs(v2 - v1) }];
+  }));
+}
+function paintAtlas(src, paint) {
+  const model = normalizeModel(src);
+  const [tw, th] = paint.texture_size || model.texture_size;
+  if (!isPow2(tw) || !isPow2(th)) throw new StudioError("E_PAINT", "texture_size must be powers of two");
+  const img = createImage(tw, th, [0, 0, 0, 0]);
+  const mats = paint.materials || {};
+  const used = /* @__PURE__ */ new Set();
+  for (const b of model.bones) {
+    for (const c of b.cubes) {
+      if (!c.box_uv) throw new StudioError("E_PAINT", `cube ${c.name} has no box_uv; run packBoxUv first`);
+      const cfg = paint.cubes?.[`${b.name}/${c.name}`] || paint.cubes?.[c.name] || paint.bones?.[b.name] || {};
+      const matName = cfg.material || paint.bones?.[b.name]?.material || paint.default_material;
+      const mat = mats[matName];
+      if (!mat) throw new StudioError("E_PAINT", `cube ${c.name}: unknown material "${matName}"`);
+      used.add(matName);
+      const ramp = mat.ramp.map((h) => hexToRgba(h));
+      const r = rng((mat.pattern?.seed ?? 1) * 7919 + c.box_uv[0] * 31 + c.box_uv[1]);
+      for (const [face, rect] of Object.entries(faceRects(c))) {
+        const faceMat = cfg.face_materials?.[face] ? mats[cfg.face_materials[face]] : null;
+        const fr = faceMat ? faceMat.ramp.map((h) => hexToRgba(h)) : ramp;
+        const pat = faceMat ? faceMat.pattern : mat.pattern;
+        for (let fy = 0; fy < rect.h; fy++) for (let fx = 0; fx < rect.w; fx++) {
+          let i = shadeIndex(face, fx, fy, rect.w, rect.h, fr.length) + patternShift(pat, face, fx, fy, rect.w, rect.h, r);
+          i = Math.max(0, Math.min(fr.length - 1, i));
+          setPx(img, rect.x + fx, rect.y + fy, fr[i]);
+        }
+        const ov = cfg.faces?.[face];
+        if (ov) {
+          const pal = Object.fromEntries(Object.entries(ov.palette || {}).map(([k, v]) => [k, v === "transparent" ? [0, 0, 0, 0] : hexToRgba(v)]));
+          (ov.rows || []).forEach((row, oy) => [...row].forEach((ch, ox) => {
+            if (ch === "." || ch === " ") return;
+            const col = pal[ch];
+            if (!col) throw new StudioError("E_PAINT", `cube ${c.name}.${face}: character "${ch}" not in palette`);
+            const x = rect.x + (ov.x || 0) + ox, y = rect.y + (ov.y || 0) + oy;
+            if (x < rect.x + rect.w && y < rect.y + rect.h) setPx(img, x, y, col);
+          }));
+        }
+      }
+    }
+  }
+  return { image: img, materials_used: [...used] };
+}
+function uvReport(src) {
+  const model = normalizeModel(src);
+  const [tw, th] = model.texture_size;
+  let area = 0;
+  for (const b of model.bones) for (const c of b.cubes) for (const r of Object.values(faceRects(c))) area += r.w * r.h;
+  return { texture_size: [tw, th], cubes: model.bones.reduce((n, b) => n + b.cubes.length, 0), coverage: Number((area / (tw * th)).toFixed(3)) };
+}
+
 // src/mcp/studio-texture.js
 var server = createServer("studio-texture", "Minecraft Studio texture pipeline. Author textures as pixel specs (palette + character grid) \u2014 not by downscaling. Build a style profile from the existing pack first, compare every new texture against it, review previews at 1600%/800%/100%/tiled, derive state variants from one base so they read as the same object.");
 var previewPath = (studio, name) => studio.p("previews", `${slugify(name)}.png`);
@@ -909,5 +1084,48 @@ tool(server, "texture_preview", {
   const pp = previewPath(studio, `preview_${a.path}`);
   writePng(pp, sheet.image);
   return { preview: studio.rel(pp), layout: sheet.layout, _images: [pp] };
+});
+tool(server, "texture_paint_uv", {
+  title: "Paint creature/entity UV atlas",
+  capability: "write",
+  description: "Lay out box-UV islands for a model (auto packing) and paint a pixel-art atlas from materials (dark\u2192light ramps, patterns fur/shaggy/plates/feathers/stripes/scales) with per-face shading and hand-authored face details (eyes, mouths, markings). Writes the PNG, the packed model source and the paint spec; returns the atlas at 4\xD7 and a textured turnaround for review.",
+  input: {
+    model: external_exports.record(external_exports.string(), external_exports.any()).optional(),
+    model_path: external_exports.string().optional().describe("Project-relative model source; the packed version is written back unless model_output is given"),
+    paint: external_exports.record(external_exports.string(), external_exports.any()).optional(),
+    paint_path: external_exports.string().optional(),
+    output: external_exports.string().describe("Project-relative atlas PNG path"),
+    model_output: external_exports.string().optional(),
+    texture_key: external_exports.string().optional().describe("Model texture key to point at the atlas (default: first)"),
+    repack: external_exports.boolean().optional().describe("Re-run UV packing even if cubes already have box_uv (default true)"),
+    asset: assetInput
+  }
+}, async (a, { studio }) => {
+  requireOneOf(a, ["model", "model_path"]);
+  requireOneOf(a, ["paint", "paint_path"]);
+  let model = a.model || readJson(studio.abs(a.model_path));
+  const paint = a.paint || readJson(studio.abs(a.paint_path));
+  if (a.repack !== false || model.bones.some((b) => (b.cubes || []).some((c) => !c.box_uv))) model = packBoxUv(model, { textureSize: paint.texture_size });
+  const key = a.texture_key || Object.keys(model.textures)[0];
+  model.textures[key] = a.output;
+  const { image, materials_used } = paintAtlas(model, { ...paint, texture_size: model.texture_size });
+  writePng(studio.abs(a.output), image);
+  const modelOut = a.model_output || a.model_path;
+  if (modelOut) writeJson(studio.abs(modelOut), model);
+  const files = [a.output];
+  if (a.asset) {
+    if (a.paint && !a.paint_path) {
+      const pf = studio.p("sources", a.asset.id, "paint.json");
+      writeJson(pf, paint);
+      files.push({ path: studio.rel(pf), role: "source" });
+    } else if (a.paint_path) files.push({ path: a.paint_path, role: "source" });
+  }
+  const atlasPreview = studio.p("previews", `atlas_${slugify(a.asset?.id || a.output)}.png`);
+  writePng(atlasPreview, scaleNearest(image, Math.max(1, Math.floor(512 / Math.max(image.width, image.height)))));
+  const turn = renderTurnaround(model, { resolveTexture: (p) => studio.abs(p) });
+  const turnPreview = studio.p("previews", `model_${slugify(model.name || "model")}.png`);
+  writePng(turnPreview, turn.image);
+  const reg = registerOutput(studio, a.asset, { type: "texture", files, source: { provider: "uv-painter", method: "texture_paint_uv", source_files: [a.paint_path, modelOut].filter(Boolean), parameters: { materials: materials_used } }, preview: studio.rel(atlasPreview), metadata: { width: image.width, height: image.height, ...uvReport(model) } });
+  return { output: a.output, model_output: modelOut || null, texture_size: model.texture_size, uv: uvReport(model), materials_used, previews: [studio.rel(atlasPreview), studio.rel(turnPreview)], asset: reg, _images: [atlasPreview, turnPreview] };
 });
 await start(server);

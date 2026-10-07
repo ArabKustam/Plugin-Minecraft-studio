@@ -7,6 +7,7 @@ import { ADAPTERS, detectPlatforms, getAdapter, parseServerLog } from '../lib/ad
 import { runProjectCommand, runPaperTestServer, javaVersion, requiredJava } from '../lib/minecraft/runner.js';
 import { validateResourcePack, packageResourcePack, upsertSoundEvent, writeItemDefinition, PACK_FORMATS } from '../lib/minecraft/resourcepack.js';
 import { walk, StudioError } from '../lib/core/fsutil.js';
+import { validateBedrockAddon, packageBedrockAddon } from '../lib/minecraft/bedrock.js';
 
 const server = createServer('studio-minecraft', 'Minecraft Studio platform layer. Detect the platform before changing code; build and test through the adapter; validate the resource pack for broken references after every asset change; run the local Paper test server only after the user accepted the Minecraft EULA.');
 
@@ -93,5 +94,23 @@ tool(server, 'mc_item_definition', {
 
 tool(server, 'mc_pack_formats', { title: 'Resource pack formats', capability: 'read', description: 'Known Minecraft version → resource pack format numbers.' },
   async () => PACK_FORMATS);
+
+tool(server, 'mc_bedrock_validate', {
+  title: 'Validate Bedrock add-on', capability: 'read',
+  description: 'Validate a Bedrock resource pack (+ behavior pack): manifests and UUIDs, client entities → geometry/textures/animations/render controllers, animate scripts, sound_definitions → .ogg files, sounds.json events, behavior entities ↔ client entities, language names.',
+  input: { rp_dir: z.string(), bp_dir: z.string().optional() },
+}, async (a, { studio }) => {
+  const r = validateBedrockAddon(studio.abs(a.rp_dir), a.bp_dir ? studio.abs(a.bp_dir) : null);
+  if (studio.isInitialized()) studio.saveTestRun({ suite: 'bedrock-addon', passed: r.verdict !== 'fail', summary: `${r.errors} errors, ${r.warnings} warnings; ${r.counts.client_entities} entities, ${r.counts.geometries} geometries, ${r.counts.animations} animations`, details: { issues: r.issues.filter((i) => i.severity !== 'info').slice(0, 50), counts: r.counts }, agent: 'integration-qa' });
+  return r;
+});
+
+tool(server, 'mc_bedrock_package', {
+  title: 'Package Bedrock add-on', capability: 'write', description: 'Zip the resource/behavior packs into .mcpack files and one .mcaddon (double-click to import in Minecraft Bedrock).',
+  input: { rp_dir: z.string(), bp_dir: z.string().optional(), output_base: z.string().describe('Project-relative path without extension, e.g. build-out/creatures') },
+}, async (a, { studio }) => {
+  const r = packageBedrockAddon(studio.abs(a.rp_dir), a.bp_dir ? studio.abs(a.bp_dir) : null, studio.abs(a.output_base));
+  return Object.fromEntries(Object.entries(r).map(([k, v]) => [k, { file: studio.rel(v.file), bytes: v.bytes, sha1: v.sha1 }]));
+});
 
 await start(server);

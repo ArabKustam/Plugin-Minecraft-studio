@@ -271,5 +271,6 @@ export {
   validateResourcePack,
   upsertSoundEvent,
   writeItemDefinition,
+  writeZip,
   packageResourcePack
 };
