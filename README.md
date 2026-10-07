@@ -8,7 +8,7 @@
 [![CI](https://img.shields.io/github/actions/workflow/status/ArabKustam/Plugin-Minecraft-studio/ci.yml?branch=main&style=flat-square&label=CI&color=5ccf6a)](https://github.com/ArabKustam/Plugin-Minecraft-studio/actions/workflows/ci.yml)
 [![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-d9b42a?style=flat-square)](.claude-plugin/plugin.json)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11%20·%2026.x-794f2f?style=flat-square)](docs/compatibility.md)
-[![MCP tools](https://img.shields.io/badge/MCP%20tools-85-3fb0c8?style=flat-square)](docs/mcp.md)
+[![MCP tools](https://img.shields.io/badge/MCP%20tools-86-3fb0c8?style=flat-square)](docs/mcp.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-6c7683?style=flat-square)](LICENSE)
 
 </div>
@@ -62,7 +62,7 @@ An asset is **approved** only after a passing QA record for its current version.
 
 ## Examples
 
-Both examples are full productions made with the plugin's own tools. Each can be replayed with `node studio/produce.mjs --fresh`.
+All three examples are full productions made with the plugin's own tools. Each can be replayed with `node studio/produce.mjs --fresh`.
 
 ### 🧪 [Industrial Reactor](examples/industrial-reactor): Paper 1.21.11 plugin
 
@@ -74,11 +74,13 @@ The plugin has 52 classes and 81 unit tests. It implements a reactor state machi
 - 2 adaptive music cues
 - 5 Russian PA announcements
 
-### 🐾 [Creature Pack](examples/creatures): 3 animals, 2 monsters, 1 anthropomorphic NPC
+### 🐾 [Creature Pack](examples/creatures): 3 animals, 2 monsters, 2 anthropomorphic characters
 
-<img src="docs/images/readme/creatures-lineup-en.png" alt="Ember Fox, Highland Ox, Marsh Heron, Rust Crawler, Hollow Wraith and Badger Smith at the same scale" width="100%">
+<img src="docs/images/readme/creatures-lineup-en.png" alt="Ember Fox, Highland Ox, Marsh Heron, Rust Crawler, Hollow Wraith, Badger Smith and Abyssal Seer at the same scale" width="100%">
 
-<div align="center"><img src="docs/images/readme/creatures-walk-en.gif" alt="Walk cycles of all six creatures" width="720"></div>
+<div align="center"><img src="docs/images/readme/creatures-walk-en.gif" alt="Walk cycles of all seven creatures and the Seer casting" width="860"></div>
+
+<div align="center"><img src="docs/images/readme/seer-en.gif" alt="Abyssal Seer turntable: digitigrade legs, four segmented back tentacles waving, long clawed arms, coral staff and robe" width="720"><br><sub>The Abyssal Seer is anthropomorphic without being player-shaped: digitigrade legs, four segmented back tentacles moving in a wave, long clawed arms, a coral staff and a robe.</sub></div>
 
 | Creature | Type | Rig and animations | Sounds |
 |---|---|---|---|
@@ -88,16 +90,34 @@ The plugin has 52 classes and 81 unit tests. It implements a reactor state machi
 | **Rust Crawler** | monster | six-legged scrap scorpion · tripod gait, tail sting | chitter, hiss, sting |
 | **Hollow Wraith** | monster | hovering hooded spirit · hover, drift, shriek | whisper, wail, shriek |
 | **Badger Smith** | anthropomorphic | humanoid badger with a hammer · walk, hammer strike, forge loop | anvil clang, grunt, impact |
+| **Abyssal Seer** | anthropomorphic | digitigrade legs, 4×4-segment back tentacles, long clawed arms, staff, robe · tentacle wave, digitigrade walk, staff cast | chant & bubbles, hurt, cast |
 
 Each creature includes:
 
-- a UV-painted 64×64 atlas (`texture_paint_uv`)
+- a UV-painted atlas (`texture_paint_uv`)
 - Bedrock geometry and animations
 - client and behavior entities with spawn eggs
 - 3 sounds
 - a Blockbench `.bbmodel`
 
 All of it is packaged as `studio-creatures.mcaddon`, which passes the studio's Bedrock validator. The pack has not been run in a Bedrock client yet. Field guide: [examples/creatures/docs/creatures.md](examples/creatures/docs/creatures.md).
+
+### ⚔️ [Armory & Orchard](examples/armory): weapons, tools, bows, staffs, fruit, armour and clothing
+
+<img src="docs/images/readme/armory-sheet-en.png" alt="Inventory-style sheet: 4 swords, 4 tools, 2 bows with 3 draw stages each, 2 staffs, 6 fruits, 8 armour and clothing pieces" width="100%">
+
+<div align="center"><img src="docs/images/readme/armory-animated-en.gif" alt="Bows drawing through three stages and staffs with animated crystals" width="860"></div>
+
+<div align="center"><img src="docs/images/readme/armory-wearables-en.gif" alt="Rotating mannequins wearing the ranger clothing and the knight plate armour" width="860"></div>
+
+This is a Java 1.21.11 resource pack. Vanilla items are reskinned through the `item_model` and `equippable` components, so it needs no mods.
+
+- **Weapons, tools and fruit.** 32 icons drawn as part-labelled silhouettes, then shaded by `texture_shade_item`. It adds light, rim shading, metal shine, wood grain, glowing gems and coloured outlines.
+- **Bows.** Each bow has 3 draw stages and an item definition that picks the stage the same way vanilla bows do.
+- **Staffs.** The crystals pulse through `.mcmeta` animations.
+- **Wearables.** Both sets, the *ranger clothing* and the *knight plate*, are painted onto the vanilla `humanoid` and `humanoid_leggings` layouts and shown on a mannequin. Areas the armour doesn't cover are transparent, so the body shows through.
+
+The pack passes the studio's resource-pack validator. It has not been loaded in a Minecraft client yet. The [guide](examples/armory/docs/armory.md) lists a `/give` command for every item.
 
 ## How it works
 
@@ -206,7 +226,7 @@ A timeline keeps every medium in sync. The game code runs the compiled list of t
     "state":     [{ "t": 5.0, "state": "RUNNING" }] } }
 ```
 
-All 85 tools are listed in [docs/mcp.md](docs/mcp.md). The file formats are published as [JSON Schemas](schemas/).
+All 86 tools are listed in [docs/mcp.md](docs/mcp.md). The file formats are published as [JSON Schemas](schemas/).
 
 ## FAQ
 

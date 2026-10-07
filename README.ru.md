@@ -8,7 +8,7 @@
 [![CI](https://img.shields.io/github/actions/workflow/status/ArabKustam/Plugin-Minecraft-studio/ci.yml?branch=main&style=flat-square&label=CI&color=5ccf6a)](https://github.com/ArabKustam/Plugin-Minecraft-studio/actions/workflows/ci.yml)
 [![Плагин Claude Code](https://img.shields.io/badge/Claude%20Code-плагин-d9b42a?style=flat-square)](.claude-plugin/plugin.json)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11%20·%2026.x-794f2f?style=flat-square)](docs/compatibility.md)
-[![MCP-инструменты](https://img.shields.io/badge/MCP--инструментов-85-3fb0c8?style=flat-square)](docs/mcp.md)
+[![MCP-инструменты](https://img.shields.io/badge/MCP--инструментов-86-3fb0c8?style=flat-square)](docs/mcp.md)
 [![Лицензия: MIT](https://img.shields.io/badge/лицензия-MIT-6c7683?style=flat-square)](LICENSE)
 
 </div>
@@ -167,15 +167,17 @@ claude
     "state":     [{ "t": 5.0, "state": "RUNNING" }] } }
 ```
 
-Все 85 инструментов описаны в [docs/mcp.md](docs/mcp.md), форматы файлов — в виде [JSON Schema](schemas/).
+Все 86 инструментов описаны в [docs/mcp.md](docs/mcp.md), форматы файлов — в виде [JSON Schema](schemas/).
 
 ## Примеры
 
-### 🐾 [Набор существ](examples/creatures): 3 животных, 2 монстра, 1 антропоморфный персонаж
+### 🐾 [Набор существ](examples/creatures): 3 животных, 2 монстра, 2 антропоморфных персонажа
 
 <img src="docs/images/readme/creatures-lineup-ru.png" alt="Огненный лис, горный бык, болотная цапля, ржавый ползун, полый призрак и барсук-кузнец в одном масштабе" width="100%">
 
-<div align="center"><img src="docs/images/readme/creatures-walk-ru.gif" alt="Циклы ходьбы всех шести существ" width="720"></div>
+<div align="center"><img src="docs/images/readme/creatures-walk-ru.gif" alt="Циклы ходьбы всех семи существ и заклинание провидца" width="860"></div>
+
+<div align="center"><img src="docs/images/readme/seer-ru.gif" alt="Бездонный провидец на поворотном столе" width="720"><br><sub>Бездонный провидец — антропоморфный, но не похожий на игрока: пальцеходящие ноги, четыре сегментированных щупальца из спины, которые движутся волной, длинные руки с когтями, коралловый посох и мантия.</sub></div>
 
 | Существо | Тип | Риг и анимации | Звуки |
 |---|---|---|---|
@@ -185,16 +187,34 @@ claude
 | **Ржавый ползун** | монстр | шестиногий скорпион из металлолома · походка «треногой», удар жалом | стрекот, шипение, жало |
 | **Полый призрак** | монстр | парящий дух в капюшоне · парение, дрейф, вопль | шёпот, стон, вопль |
 | **Барсук-кузнец** | антропоморфный | барсук-гуманоид с молотом · шаг, удар молотом, работа у наковальни | звон наковальни, кряхтение, удар |
+| **Бездонный провидец** | антропоморфный | пальцеходящие ноги, 4 щупальца по 4 сегмента, длинные руки с когтями, посох, мантия · волна щупалец, пальцеходящая походка, заклинание посохом | напев и пузыри, боль, заклинание |
 
 Что есть у каждого существа:
 
-- атлас текстур 64×64, нарисованный инструментом `texture_paint_uv`;
+- атлас текстур, нарисованный инструментом `texture_paint_uv`;
 - геометрия и анимации Bedrock;
 - клиентская и поведенческая сущности с яйцом призыва;
 - 3 звука;
 - проект `.bbmodel` для Blockbench.
 
 Всё упаковано в `studio-creatures.mcaddon`. Аддон проходит Bedrock-валидатор студии, но в клиенте Bedrock пока не запускался. Описание существ — в [руководстве](examples/creatures/docs/creatures.md) (на английском).
+
+### ⚔️ [Арсенал и сад](examples/armory): оружие, инструменты, луки, посохи, фрукты, броня и одежда
+
+<img src="docs/images/readme/armory-sheet-ru.png" alt="Лист в стиле инвентаря: 4 меча, 4 инструмента, 2 лука по 3 стадии натяжения, 2 посоха, 6 фруктов, 8 предметов брони и одежды" width="100%">
+
+<div align="center"><img src="docs/images/readme/armory-animated-ru.gif" alt="Натяжение луков и анимированные кристаллы посохов" width="860"></div>
+
+<div align="center"><img src="docs/images/readme/armory-wearables-ru.gif" alt="Вращающиеся манекены в одежде следопыта и рыцарских латах" width="860"></div>
+
+Это ресурспак для Java 1.21.11. Модов не нужно: обычные ванильные предметы получают новый вид через компоненты `item_model` и `equippable`.
+
+- **Оружие, инструменты и фрукты** — 32 иконки. Каждая нарисована как силуэт, размеченный по частям, а затем `texture_shade_item` добавляет свет, тени на кромках, блеск металла, текстуру дерева, свечение камней и цветной контур.
+- **Луки** — у каждого 3 стадии натяжения и item definition, который выбирает стадию так же, как у ванильного лука.
+- **Посохи** — кристаллы пульсируют через `.mcmeta`.
+- **Одежда и броня** — два комплекта, *одежда следопыта* и *рыцарские латы*. Они нарисованы на ванильных раскладках `humanoid` и `humanoid_leggings` и показаны на манекене. Там, где броня не закрывает тело, текстура прозрачная, и тело видно.
+
+Пак проходит валидатор ресурспаков студии, но в клиенте Minecraft ещё не запускался. В [руководстве](examples/armory/docs/armory.md) (на английском) для каждого предмета есть команда `/give`.
 
 ### 🧪 Industrial Reactor
 

@@ -49,7 +49,7 @@ function viewPts(model) {
     return [x1, Math.cos(p) * y - Math.sin(p) * z1, Math.sin(p) * y + Math.cos(p) * z1];
   }));
 }
-const EXTENT = 38; // model units covered by one tile (fits the tallest creature)
+const EXTENT = 48; // model units covered by one tile (fits the tallest creature)
 function boundsFor(model) {
   const pts = viewPts(model);
   const xs = pts.map((p) => p[0]), ys = pts.map((p) => p[1]);
@@ -63,7 +63,7 @@ function render(c, pose, size) {
 const anim = (c, n) => c.anims.find((a) => a.name.endsWith(`.${n}`));
 
 function lineup(lang) {
-  const tile = 260, W = tile * data.length, H = 350;
+  const tile = 230, W = tile * data.length, H = 350;
   const img = createImage(W, H, hexToRgba(C.night));
   for (let y = 16; y < H; y += 32) for (let x = 16; x < W; x += 32) rect(img, x, y, 2, 2, '#161b23');
   ground(img, H - 72);
@@ -81,18 +81,18 @@ function lineup(lang) {
 }
 
 function walkGif(lang, out) {
-  const tile = 280, cols = 3, rows = 2, fps = 10, seconds = 6;
+  const tile = 280, cols = 4, rows = 2, fps = 10, seconds = 6;
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'ms-walk-'));
   for (let f = 0; f < fps * seconds; f++) {
     const t = f / fps;
     const img = createImage(tile * cols, (tile + 30) * rows, hexToRgba(C.night));
-    data.forEach((c, i) => {
+    const cells = [...data.map((c) => ({ c, a: anim(c, 'walk'), label: c.name[lang].toUpperCase() })), ...data.filter((c) => c.id === 'abyssal_seer').map((c) => ({ c, a: anim(c, 'attack'), label: (lang === 'ru' ? 'ПРОВИДЕЦ · ЗАКЛИНАНИЕ' : 'SEER · CAST') }))];
+    cells.forEach(({ c, a, label }, i) => {
       const x = (i % cols) * tile, y = Math.floor(i / cols) * (tile + 30);
-      const a = anim(c, 'walk');
       rect(img, x, y + tile - 34, tile, 34, '#11151b');
       for (let gx = x; gx < x + tile; gx += 4) rect(img, gx, y + tile - 34, 4, 4, ((gx * 13) % 7) < 3 ? C.grassLight : C.grass);
       blit(img, render(c, poseAt(a, t % a.length), tile), x, y + tile - 34 - Math.round(tile * 0.93) + 6);
-      text(img, c.name[lang].toUpperCase(), x + tile / 2, y + tile + 6, 2, TAG[c.category]);
+      text(img, label, x + tile / 2, y + tile + 6, 2, TAG[c.category]);
     });
     writePng(path.join(dir, `f${String(f).padStart(4, '0')}.png`), img);
   }
@@ -101,7 +101,31 @@ function walkGif(lang, out) {
   if (r.status !== 0) throw new Error(r.stderr);
 }
 
+function seerGif(lang, out) {
+  const c = data.find((d) => d.id === 'abyssal_seer');
+  const W = 900, H = 520, fps = 15, N = 45; // idle loop is 3.0 s → 45 frames = one full turn + one tentacle cycle
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'ms-seer-'));
+  const idle = anim(c, 'idle');
+  const title = lang === 'ru' ? 'БЕЗДОННЫЙ ПРОВИДЕЦ' : 'ABYSSAL SEER';
+  const notes = lang === 'ru' ? ['ПАЛЬЦЕХОДЯЩИЕ НОГИ', '4 ЩУПАЛЬЦА × 4 СЕГМЕНТА', 'ДЛИННЫЕ РУКИ С КОГТЯМИ', 'КОРАЛЛОВЫЙ ПОСОХ', 'МАНТИЯ С ПОЯСОМ'] : ['DIGITIGRADE LEGS', '4 TENTACLES × 4 SEGMENTS', 'LONG CLAWED ARMS', 'CORAL STAFF', 'ROBE WITH BELT'];
+  for (let f = 0; f < N; f++) {
+    const img = createImage(W, H, hexToRgba(C.night));
+    for (let y = 16; y < H; y += 32) for (let x = 16; x < W; x += 32) rect(img, x, y, 2, 2, '#161b23');
+    ground(img, H - 56);
+    const { quads } = buildQuads(c.model, poseAt(idle, (f / fps) % idle.length));
+    const sprite = renderView(quads, { skin: c.skin }, c.model.texture_size, { yaw: (360 * f) / N, pitch: 12, size: 470, background: [0, 0, 0, 0], bounds: [[-24, -11, 0], [24, 37, 0]] });
+    blit(img, sprite, 20, H - 56 - 470 + 22);
+    text(img, title, 640, 60, 3, TAG.anthropomorphic);
+    notes.forEach((n, i) => { rect(img, 560, 132 + i * 44, 8, 8, '#7ff5ff'); text(img, n, 580, 128 + i * 44, 2, C.text, false); });
+    writePng(path.join(dir, `f${String(f).padStart(4, '0')}.png`), img);
+  }
+  const r = spawnSync('ffmpeg', ['-y', '-loglevel', 'error', '-framerate', String(fps), '-i', path.join(dir, 'f%04d.png'), '-vf', 'split[a][b];[a]palettegen=max_colors=128:stats_mode=diff[p];[b][p]paletteuse=dither=none:diff_mode=rectangle', '-loop', '0', out], { encoding: 'utf8' });
+  fs.rmSync(dir, { recursive: true, force: true });
+  if (r.status !== 0) throw new Error(r.stderr);
+}
+
 for (const lang of ['en', 'ru']) {
+  seerGif(lang, path.join(OUT, `seer-${lang}.gif`));
   writePng(path.join(OUT, `creatures-lineup-${lang}.png`), lineup(lang));
   walkGif(lang, path.join(OUT, `creatures-walk-${lang}.gif`));
   console.log(`creatures-lineup-${lang}.png, creatures-walk-${lang}.gif (${(fs.statSync(path.join(OUT, `creatures-walk-${lang}.gif`)).size / 1024).toFixed(0)} KiB)`);

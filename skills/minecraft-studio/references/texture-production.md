@@ -57,6 +57,32 @@ Check the returned strip image: silhouettes and material must stay identical; on
 
 `texture_validate` (power-of-two, square/strip + mcmeta, palette size, isolated pixels), `texture_check_tiling` for blocks that repeat, `texture_style_compare` (score ≥ 75 to send to QA). Then hand to `visual-qa`.
 
+## Items: weapons, tools, bows, staffs, food, armour icons
+
+Use `texture_shade_item`. You draw a **part-labelled silhouette**, one character per pixel, where each character names a part: `e` edge, `b` blade, `g` guard, `h` grip, `o` gem, peel, leaf… Each part maps to a material with a dark → light `ramp` and a `style`:
+
+| Style | Effect |
+|---|---|
+| `metal` | shine streak |
+| `wood` | grain |
+| `leather` | grain |
+| `cloth` | soft shading |
+| `organic` | rounded fruit shading |
+| `glow` | radial highlight |
+| `gem` | radial highlight with a specular corner |
+| `bone` | — |
+| `flat` | no shading |
+
+The shader applies consistent top-left light, rim light and shadow, and coloured outlines (a material can opt out with `"outline": false`, e.g. bow strings). Put the eye-catching pixels in `details` (sparkles, seeds, emblems). For animation (staff crystals, glowing fruit), use `frames` together with `frametime`; the shader writes the `.mcmeta` for you.
+
+Proven recipes:
+- **Swords and tools:** diagonal from bottom-left to top-right; 2–3 px blades, guard perpendicular to the blade.
+- **Bows:** one standby texture plus 3 `_pulling_N` textures. The item definition switches between them with `condition` (`using_item`) and `range_dispatch` (`use_duration`).
+- **Armour icons:** follow the vanilla silhouettes.
+- **Worn armour and clothing:** paint onto the vanilla 64×32 `humanoid` and `humanoid_leggings` layouts with `texture_paint_uv` and `repack: false`, using `transparent` overlays for uncovered areas. Add `assets/<ns>/equipment/<set>.json`, then review the result on a mannequin. Outer layer inflate is 1.0, leggings 0.5.
+
+`examples/armory` covers 32 items and 2 wearable sets.
+
 ## Entity & creature atlases
 
 Mobs, NPCs and other box-UV models use `texture_paint_uv`. Drawing a 64×64 atlas character by character is impractical, so this tool does the layout and painting:

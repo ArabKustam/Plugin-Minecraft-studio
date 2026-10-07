@@ -37,6 +37,19 @@ The profile also records a shared palette and readable `traits`.
 - With fewer than 12 samples, the tolerance widens by √(12/n).
 - For cut-out textures such as items, outline darkness is informational only.
 
+## Item shader
+
+`texture_shade_item` ([schema](../schemas/item-spec.schema.json)) turns a part-labelled silhouette into a finished item. It adds:
+
+- top-left light and rim shading;
+- specular corners;
+- material styles: metal, wood, leather, cloth, organic, glow, gem, bone, flat;
+- coloured outlines;
+- detail pixels;
+- animation frames, with the matching `.mcmeta`.
+
+See `examples/armory`, which has swords, tools, bows with draw stages, animated staffs, fruits and armour icons.
+
 ## Validation & variants
 
 - `texture_validate`: power of two, square or strip with `.mcmeta`, expected resolution, semi-transparency, palette size, isolated-pixel noise.

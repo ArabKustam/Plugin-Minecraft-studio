@@ -210,7 +210,7 @@ ground(social, 640 - 96, 96);
 blit(social, scaleNearest(logo, 14), 96, 96);
 text(social, 'MINECRAFT STUDIO', 360, 120, 9, C.text);
 text(social, L.en.tagline, 362, 222, 4, C.grass);
-text(social, 'CLAUDE PLUGIN · 15 AGENTS · 85 TOOLS', 362, 290, 3, C.muted);
+text(social, 'CLAUDE PLUGIN · 15 AGENTS · 86 TOOLS', 362, 290, 3, C.muted);
 blit(social, renderReactor('active', poseAt(anim('idle_spin'), 0.2), 300, BOUNDS), 930, 640 - 96 - 272);
 writePng(path.join(OUT, 'social-preview.png'), social); written.push('social-preview.png');
 try { for (const lang of ['en', 'ru']) { const n = reactorGif(path.join(OUT, `reactor-states-${lang}.gif`), lang); written.push(`reactor-states-${lang}.gif (${n} frames)`); } } catch (e) { console.warn(`GIF skipped: ${e.message}`); }

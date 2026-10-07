@@ -28,7 +28,7 @@ What has actually been tested is marked ✅ tested. Things that should work by d
 | Fabric | 🟡 | 🟡 Gradle (Loom) | — | ✅ resource pack side |
 | NeoForge / Forge | 🟡 | 🟡 Gradle | — | ✅ resource pack side |
 | Datapack | ✅ detect | — | — | 🟡 |
-| Java resource pack | ✅ | ✅ validate & package | — | ✅ |
+| Java resource pack | ✅ | ✅ validate & package | — | ✅ blocks, items, bows with pull states, animated items, equipment (worn armour); 🟡 not yet loaded in a 1.21.11 client |
 | Bedrock add-on | ✅ detect | — | — | ✅ add-on generation + static validation (Creature Pack); 🟡 not yet loaded in a Bedrock client |
 
 ## Minecraft versions

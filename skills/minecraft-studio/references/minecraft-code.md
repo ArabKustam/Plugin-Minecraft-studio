@@ -32,6 +32,15 @@
 
 `mc_build` → fix errors → `mc_test` (unit tests for pure logic) → `mc_test_server` smoke test (requires the user's EULA consent) with commands like `<plugin> selftest`. Iterate: detect → diagnose → fix → rebuild → retest. Record results (the tools store test runs for the dashboard).
 
+## Custom items & wearables (Java 1.21.4+)
+
+No mod is needed:
+- Reskin a vanilla item with `item_model="ns:id"`. Its definition lives in `assets/ns/items/id.json`.
+- Make an item wearable with `equippable={slot:"chest",asset_id:"ns:set"}` and an asset in `assets/ns/equipment/set.json`.
+- Make an item edible with the `food` / `consumable` components.
+
+Validate the pack with `mc_resourcepack_validate`, which also checks equipment layer textures.
+
 ## Bedrock add-ons
 
 - **Packs.**

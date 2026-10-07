@@ -5,10 +5,29 @@ All notable changes to Minecraft Studio are documented here. The format follows 
 ## [Unreleased]
 
 ### Added
+- **Abyssal Seer.** A non-humanoid anthropomorphic creature with:
+  - digitigrade legs (thigh → shin → raised hock → toes, placed with forward kinematics)
+  - four 4-segment back tentacles with wave animation
+  - long clawed arms, a coral staff and a robe with belt
+  - idle, digitigrade walk and cast animations
+  - 3 sounds
+- **Armory & Orchard example** (`examples/armory`), a Java 1.21.11 resource pack:
+  - 4 swords and a 4-piece tool set
+  - 2 bows, each with 3 draw stages and a `condition`/`range_dispatch` item definition
+  - 2 animated staffs and 6 fruits
+  - 2 wearable sets, ranger clothing and knight plate: icons, worn `humanoid`/`humanoid_leggings` textures and equipment assets, previewed on a mannequin
+  - `/give` commands for every item
+- `texture_shade_item`: an item shader that turns part-labelled silhouettes into lit, outlined pixel art, with material styles and animation frames.
+- Resource-pack validation now checks equipment layer textures.
+- `item-spec` JSON Schema. README artwork for the new examples: inventory-style item sheet, bow and staff animation, rotating mannequins and a Seer showcase.
+
 - **Creature Pack example** (`examples/creatures`). Six rigged, textured, animated and voiced creatures: 3 animals (Ember Fox, Highland Ox, Marsh Heron), 2 monsters (Rust Crawler, Hollow Wraith) and 1 anthropomorphic NPC (Badger Smith). Each ships with idle, walk and attack animations plus specials, and with ambient, hurt and attack sounds. Output: a Bedrock add-on (`.mcaddon`) and Blockbench projects.
 - `texture_paint_uv`: automatic box-UV packing and pixel-art atlas painting from materials (ramps, patterns) with per-face shading and hand-authored face overlays.
 - `mc_bedrock_validate` / `mc_bedrock_package`: checks Bedrock add-on manifests, entity, geometry, texture, animation and sound references, and packages `.mcpack`/`.mcaddon` files.
 - `paint-spec` JSON Schema. Creature lineup and walk-cycle artwork in both READMEs.
+
+### Fixed
+- Texture validation no longer treats non-square entity atlases (e.g. 64×128) as animation strips.
 
 ## [0.1.0] — 2026-10-07
 
