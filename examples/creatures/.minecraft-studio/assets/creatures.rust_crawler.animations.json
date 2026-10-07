@@ -17,8 +17,8 @@
     "provider": "studio-model",
     "format": "bedrock-animation/1.8.0"
   },
-  "created_at": "2026-10-07T05:37:30.501Z",
-  "modified_at": "2026-10-07T05:37:30.658Z",
+  "created_at": "2026-10-07T05:41:46.243Z",
+  "modified_at": "2026-10-07T05:41:46.411Z",
   "created_by": "animator",
   "dependencies": [
     "creatures.rust_crawler.model"
@@ -32,7 +32,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:30.654Z",
+      "at": "2026-10-07T05:41:46.408Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -59,7 +59,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:30.502Z",
+      "at": "2026-10-07T05:41:46.244Z",
       "by": "animator",
       "note": "initial version",
       "files": [

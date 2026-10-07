@@ -15,7 +15,7 @@
     {
       "path": "bedrock/RP/sounds/creatures/badger_smith/hurt.ogg",
       "role": "primary",
-      "sha256": "87f8868b7357fb3a6f11ce9a6165b1780d8475a06584c97c4ead1662056b8785",
+      "sha256": "603dea8465b2ce98b1d9bda5b8d6616177fc4486ddd2185ae71ecd33438924ff",
       "bytes": 7819
     }
   ],
@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/creatures.badger_smith.hurt.sfx/recipe.json"
     ]
   },
-  "created_at": "2026-10-07T05:37:33.276Z",
-  "modified_at": "2026-10-07T05:37:33.282Z",
+  "created_at": "2026-10-07T05:41:49.027Z",
+  "modified_at": "2026-10-07T05:41:49.033Z",
   "created_by": "sfx-designer",
   "dependencies": [],
   "minecraft_ids": [
@@ -41,7 +41,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:33.279Z",
+      "at": "2026-10-07T05:41:49.030Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -93,7 +93,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:33.278Z",
+      "at": "2026-10-07T05:41:49.029Z",
       "by": "sfx-designer",
       "note": "initial version",
       "files": [
@@ -103,7 +103,7 @@
         },
         {
           "path": "bedrock/RP/sounds/creatures/badger_smith/hurt.ogg",
-          "sha256": "87f8868b7357fb3a6f11ce9a6165b1780d8475a06584c97c4ead1662056b8785"
+          "sha256": "603dea8465b2ce98b1d9bda5b8d6616177fc4486ddd2185ae71ecd33438924ff"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.badger_smith.hurt.sfx/v1",

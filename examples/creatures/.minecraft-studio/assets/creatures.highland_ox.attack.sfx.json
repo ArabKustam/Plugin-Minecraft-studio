@@ -15,7 +15,7 @@
     {
       "path": "bedrock/RP/sounds/creatures/highland_ox/attack.ogg",
       "role": "primary",
-      "sha256": "45154d4375cee579e46deceb9e7ee92191af49443351d4813518cf8ca35a456a",
+      "sha256": "988de794e2911000b21c9381c5be00d6700d5e9067e93fde97782a45c6966e24",
       "bytes": 8016
     }
   ],
@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/creatures.highland_ox.attack.sfx/recipe.json"
     ]
   },
-  "created_at": "2026-10-07T05:37:29.282Z",
-  "modified_at": "2026-10-07T05:37:29.289Z",
+  "created_at": "2026-10-07T05:41:45.026Z",
+  "modified_at": "2026-10-07T05:41:45.032Z",
   "created_by": "sfx-designer",
   "dependencies": [],
   "minecraft_ids": [
@@ -41,7 +41,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:29.286Z",
+      "at": "2026-10-07T05:41:45.029Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -93,7 +93,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:29.284Z",
+      "at": "2026-10-07T05:41:45.028Z",
       "by": "sfx-designer",
       "note": "initial version",
       "files": [
@@ -103,7 +103,7 @@
         },
         {
           "path": "bedrock/RP/sounds/creatures/highland_ox/attack.ogg",
-          "sha256": "45154d4375cee579e46deceb9e7ee92191af49443351d4813518cf8ca35a456a"
+          "sha256": "988de794e2911000b21c9381c5be00d6700d5e9067e93fde97782a45c6966e24"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.highland_ox.attack.sfx/v1",

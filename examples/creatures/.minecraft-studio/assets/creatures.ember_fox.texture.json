@@ -15,8 +15,8 @@
     {
       "path": "art/paint/ember_fox.paint.json",
       "role": "source",
-      "sha256": "6044aaa53e89535fa8dea91c7397107043b153dd0f02b5d80060ed11937a70cc",
-      "bytes": 1965
+      "sha256": "7a68ecf37db1318fd0f03ad3576644d056bab7225e532c99143dc1a408169e0b",
+      "bytes": 1850
     }
   ],
   "source": {
@@ -35,8 +35,8 @@
       ]
     }
   },
-  "created_at": "2026-10-07T05:37:27.030Z",
-  "modified_at": "2026-10-07T05:37:27.052Z",
+  "created_at": "2026-10-07T05:41:42.796Z",
+  "modified_at": "2026-10-07T05:41:42.817Z",
   "created_by": "texture-artist",
   "dependencies": [],
   "minecraft_ids": [
@@ -50,7 +50,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:27.049Z",
+      "at": "2026-10-07T05:41:42.814Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -77,7 +77,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:27.034Z",
+      "at": "2026-10-07T05:41:42.800Z",
       "by": "texture-artist",
       "note": "initial version",
       "files": [
@@ -87,7 +87,7 @@
         },
         {
           "path": "art/paint/ember_fox.paint.json",
-          "sha256": "6044aaa53e89535fa8dea91c7397107043b153dd0f02b5d80060ed11937a70cc"
+          "sha256": "7a68ecf37db1318fd0f03ad3576644d056bab7225e532c99143dc1a408169e0b"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.ember_fox.texture/v1",

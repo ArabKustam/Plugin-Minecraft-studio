@@ -17,8 +17,8 @@
     "provider": "studio-model",
     "format": "bedrock-animation/1.8.0"
   },
-  "created_at": "2026-10-07T05:37:32.591Z",
-  "modified_at": "2026-10-07T05:37:32.826Z",
+  "created_at": "2026-10-07T05:41:48.338Z",
+  "modified_at": "2026-10-07T05:41:48.576Z",
   "created_by": "animator",
   "dependencies": [
     "creatures.badger_smith.model"
@@ -32,7 +32,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:32.822Z",
+      "at": "2026-10-07T05:41:48.574Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -64,7 +64,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:32.592Z",
+      "at": "2026-10-07T05:41:48.339Z",
       "by": "animator",
       "note": "initial version",
       "files": [

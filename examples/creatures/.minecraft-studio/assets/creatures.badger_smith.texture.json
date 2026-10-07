@@ -15,8 +15,8 @@
     {
       "path": "art/paint/badger_smith.paint.json",
       "role": "source",
-      "sha256": "a6140270fecb8e454789dde6fdcee5f35a4719eeebbba4873c0ff8e841d9d048",
-      "bytes": 4442
+      "sha256": "dbb8210cf39fbe6caacddb09e20a6e80b2fd7462be5f3d4bb7d3cdcf54c94c3f",
+      "bytes": 4196
     }
   ],
   "source": {
@@ -38,8 +38,8 @@
       ]
     }
   },
-  "created_at": "2026-10-07T05:37:32.493Z",
-  "modified_at": "2026-10-07T05:37:32.509Z",
+  "created_at": "2026-10-07T05:41:48.245Z",
+  "modified_at": "2026-10-07T05:41:48.260Z",
   "created_by": "texture-artist",
   "dependencies": [],
   "minecraft_ids": [
@@ -53,7 +53,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:32.506Z",
+      "at": "2026-10-07T05:41:48.257Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -80,7 +80,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:32.495Z",
+      "at": "2026-10-07T05:41:48.247Z",
       "by": "texture-artist",
       "note": "initial version",
       "files": [
@@ -90,7 +90,7 @@
         },
         {
           "path": "art/paint/badger_smith.paint.json",
-          "sha256": "a6140270fecb8e454789dde6fdcee5f35a4719eeebbba4873c0ff8e841d9d048"
+          "sha256": "dbb8210cf39fbe6caacddb09e20a6e80b2fd7462be5f3d4bb7d3cdcf54c94c3f"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.badger_smith.texture/v1",

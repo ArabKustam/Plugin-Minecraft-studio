@@ -14,8 +14,8 @@
     }
   ],
   "source": {},
-  "created_at": "2026-10-07T05:37:33.672Z",
-  "modified_at": "2026-10-07T05:37:33.678Z",
+  "created_at": "2026-10-07T05:41:49.421Z",
+  "modified_at": "2026-10-07T05:41:49.426Z",
   "created_by": "documentation-writer",
   "dependencies": [
     "creatures.bedrock"
@@ -26,7 +26,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:33.675Z",
+      "at": "2026-10-07T05:41:49.424Z",
       "by": "code-reviewer",
       "version": 1,
       "verdict": "pass",
@@ -48,7 +48,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:33.673Z",
+      "at": "2026-10-07T05:41:49.422Z",
       "by": "documentation-writer",
       "note": "initial version",
       "files": [

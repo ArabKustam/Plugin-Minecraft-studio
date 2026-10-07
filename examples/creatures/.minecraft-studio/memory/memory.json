@@ -7,7 +7,7 @@
       "content": "Detected bedrock (90%: bedrock/BP/manifest.json, bedrock/RP/manifest.json). Minecraft version: 1.21.",
       "tags": [],
       "by": "project-director",
-      "at": "2026-10-07T05:37:26.775Z",
+      "at": "2026-10-07T05:41:42.546Z",
       "superseded_by": null
     },
     {
@@ -17,7 +17,7 @@
       "content": "New resource locations, sound events and item models use this namespace unless the user says otherwise.",
       "tags": [],
       "by": "project-director",
-      "at": "2026-10-07T05:37:26.776Z",
+      "at": "2026-10-07T05:41:42.547Z",
       "superseded_by": null
     },
     {
@@ -27,7 +27,7 @@
       "content": "Custom entities need a client mod/model engine on Java; Bedrock supports them natively. Each creature ships as Bedrock geometry/animations/client+behavior entity, plus a .bbmodel for Blockbench/ModelEngine users.",
       "tags": [],
       "by": "project-director",
-      "at": "2026-10-07T05:37:26.783Z",
+      "at": "2026-10-07T05:41:42.554Z",
       "superseded_by": null
     }
   ]

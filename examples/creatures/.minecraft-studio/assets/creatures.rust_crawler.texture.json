@@ -15,8 +15,8 @@
     {
       "path": "art/paint/rust_crawler.paint.json",
       "role": "source",
-      "sha256": "29301586375384bdfe9033ab3c72c0f23ff205115cb5d2a0a47f14884e00b09a",
-      "bytes": 1345
+      "sha256": "506032dec8629ce1fbb81c4b8f17d90b41f5dd19348a55a48222ed0f9978b371",
+      "bytes": 1263
     }
   ],
   "source": {
@@ -34,8 +34,8 @@
       ]
     }
   },
-  "created_at": "2026-10-07T05:37:30.415Z",
-  "modified_at": "2026-10-07T05:37:30.427Z",
+  "created_at": "2026-10-07T05:41:46.160Z",
+  "modified_at": "2026-10-07T05:41:46.171Z",
   "created_by": "texture-artist",
   "dependencies": [],
   "minecraft_ids": [
@@ -49,7 +49,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:30.424Z",
+      "at": "2026-10-07T05:41:46.168Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -76,7 +76,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:30.417Z",
+      "at": "2026-10-07T05:41:46.162Z",
       "by": "texture-artist",
       "note": "initial version",
       "files": [
@@ -86,7 +86,7 @@
         },
         {
           "path": "art/paint/rust_crawler.paint.json",
-          "sha256": "29301586375384bdfe9033ab3c72c0f23ff205115cb5d2a0a47f14884e00b09a"
+          "sha256": "506032dec8629ce1fbb81c4b8f17d90b41f5dd19348a55a48222ed0f9978b371"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.rust_crawler.texture/v1",

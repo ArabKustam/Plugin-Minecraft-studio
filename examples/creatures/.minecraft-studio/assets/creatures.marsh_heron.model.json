@@ -15,7 +15,7 @@
     {
       "path": "models/marsh_heron.bbmodel",
       "role": "primary",
-      "sha256": "2eb5b8c4966dc2c39bfb1dccb2b751a2350294a0bb8ce5dc1aeb7d0db2c05334",
+      "sha256": "9e886d3454e9e44b5611b71c7715ad664b6b62603db6be21eb9475094b462bc6",
       "bytes": 40838
     },
     {
@@ -32,8 +32,8 @@
       "art/models/marsh_heron.model.json"
     ]
   },
-  "created_at": "2026-10-07T05:37:29.442Z",
-  "modified_at": "2026-10-07T05:37:29.449Z",
+  "created_at": "2026-10-07T05:41:45.185Z",
+  "modified_at": "2026-10-07T05:41:45.193Z",
   "created_by": "modeler",
   "dependencies": [
     "creatures.marsh_heron.texture"
@@ -49,7 +49,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:29.447Z",
+      "at": "2026-10-07T05:41:45.190Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -71,7 +71,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:29.445Z",
+      "at": "2026-10-07T05:41:45.188Z",
       "by": "modeler",
       "note": "initial version",
       "files": [
@@ -81,7 +81,7 @@
         },
         {
           "path": "models/marsh_heron.bbmodel",
-          "sha256": "2eb5b8c4966dc2c39bfb1dccb2b751a2350294a0bb8ce5dc1aeb7d0db2c05334"
+          "sha256": "9e886d3454e9e44b5611b71c7715ad664b6b62603db6be21eb9475094b462bc6"
         },
         {
           "path": "art/models/marsh_heron.model.json",

@@ -15,8 +15,8 @@
     {
       "path": "art/paint/marsh_heron.paint.json",
       "role": "source",
-      "sha256": "796705f3951c3c8712c8d8db164a35b87c3e2df7712b959e0a9f4570a249ef3d",
-      "bytes": 1943
+      "sha256": "4ad7e6375e1b230710c726d2b3319d6cf716d33791d49056be49ad1aa9074305",
+      "bytes": 1831
     }
   ],
   "source": {
@@ -35,8 +35,8 @@
       ]
     }
   },
-  "created_at": "2026-10-07T05:37:29.370Z",
-  "modified_at": "2026-10-07T05:37:29.384Z",
+  "created_at": "2026-10-07T05:41:45.113Z",
+  "modified_at": "2026-10-07T05:41:45.126Z",
   "created_by": "texture-artist",
   "dependencies": [],
   "minecraft_ids": [
@@ -50,7 +50,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:29.381Z",
+      "at": "2026-10-07T05:41:45.123Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -77,7 +77,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:29.373Z",
+      "at": "2026-10-07T05:41:45.115Z",
       "by": "texture-artist",
       "note": "initial version",
       "files": [
@@ -87,7 +87,7 @@
         },
         {
           "path": "art/paint/marsh_heron.paint.json",
-          "sha256": "796705f3951c3c8712c8d8db164a35b87c3e2df7712b959e0a9f4570a249ef3d"
+          "sha256": "4ad7e6375e1b230710c726d2b3319d6cf716d33791d49056be49ad1aa9074305"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.marsh_heron.texture/v1",

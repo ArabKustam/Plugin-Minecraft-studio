@@ -25,8 +25,8 @@
     "entity_ids": "studio:<snake_case>",
     "textures": "64×64 box-UV atlases painted with texture_paint_uv; ramps dark→light, top-left light"
   },
-  "created_at": "2026-10-07T05:37:26.774Z",
-  "updated_at": "2026-10-07T05:37:26.781Z",
+  "created_at": "2026-10-07T05:41:42.544Z",
+  "updated_at": "2026-10-07T05:41:42.551Z",
   "plugin_version": "0.1.0",
   "resource_pack_version": "0.1.0"
 }

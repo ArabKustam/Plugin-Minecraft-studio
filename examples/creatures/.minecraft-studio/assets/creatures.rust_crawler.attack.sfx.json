@@ -15,7 +15,7 @@
     {
       "path": "bedrock/RP/sounds/creatures/rust_crawler/attack.ogg",
       "role": "primary",
-      "sha256": "2d3f6536eb697aab373e34d0243743f10cbb640dc6b653bbb3ce8e152f6691e9",
+      "sha256": "cc6e635e89a23c24494d91dca2720a1a0133b4c3d7e7fa4802afa9c1c546c632",
       "bytes": 7335
     }
   ],
@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/creatures.rust_crawler.attack.sfx/recipe.json"
     ]
   },
-  "created_at": "2026-10-07T05:37:31.307Z",
-  "modified_at": "2026-10-07T05:37:31.313Z",
+  "created_at": "2026-10-07T05:41:47.048Z",
+  "modified_at": "2026-10-07T05:41:47.054Z",
   "created_by": "sfx-designer",
   "dependencies": [],
   "minecraft_ids": [
@@ -41,7 +41,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:31.310Z",
+      "at": "2026-10-07T05:41:47.051Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -93,7 +93,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:31.309Z",
+      "at": "2026-10-07T05:41:47.050Z",
       "by": "sfx-designer",
       "note": "initial version",
       "files": [
@@ -103,7 +103,7 @@
         },
         {
           "path": "bedrock/RP/sounds/creatures/rust_crawler/attack.ogg",
-          "sha256": "2d3f6536eb697aab373e34d0243743f10cbb640dc6b653bbb3ce8e152f6691e9"
+          "sha256": "cc6e635e89a23c24494d91dca2720a1a0133b4c3d7e7fa4802afa9c1c546c632"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.rust_crawler.attack.sfx/v1",

@@ -15,7 +15,7 @@
     {
       "path": "bedrock/RP/sounds/creatures/marsh_heron/hurt.ogg",
       "role": "primary",
-      "sha256": "d738fed851762136712320375a0c5ef087bf2565c417d9127c1fc657d6021765",
+      "sha256": "89d236e2680cd1bcf23437e9d63135b9e88b9606201c0999c5fd5a50753bc61d",
       "bytes": 7939
     }
   ],
@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/creatures.marsh_heron.hurt.sfx/recipe.json"
     ]
   },
-  "created_at": "2026-10-07T05:37:30.112Z",
-  "modified_at": "2026-10-07T05:37:30.118Z",
+  "created_at": "2026-10-07T05:41:45.850Z",
+  "modified_at": "2026-10-07T05:41:45.856Z",
   "created_by": "sfx-designer",
   "dependencies": [],
   "minecraft_ids": [
@@ -41,7 +41,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:30.115Z",
+      "at": "2026-10-07T05:41:45.853Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -93,7 +93,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:30.113Z",
+      "at": "2026-10-07T05:41:45.852Z",
       "by": "sfx-designer",
       "note": "initial version",
       "files": [
@@ -103,7 +103,7 @@
         },
         {
           "path": "bedrock/RP/sounds/creatures/marsh_heron/hurt.ogg",
-          "sha256": "d738fed851762136712320375a0c5ef087bf2565c417d9127c1fc657d6021765"
+          "sha256": "89d236e2680cd1bcf23437e9d63135b9e88b9606201c0999c5fd5a50753bc61d"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.marsh_heron.hurt.sfx/v1",

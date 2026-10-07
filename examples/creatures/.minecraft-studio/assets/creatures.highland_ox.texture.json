@@ -15,8 +15,8 @@
     {
       "path": "art/paint/highland_ox.paint.json",
       "role": "source",
-      "sha256": "a41efd1a92ae6a81d41a197c28fa9aed2bc2c018b741cd6fd1411b4a1b7c1443",
-      "bytes": 4946
+      "sha256": "b418f7f8c984388f9a60df0842ee90a4a74045c3fdf7c789af45154c574fbd88",
+      "bytes": 4670
     }
   ],
   "source": {
@@ -35,8 +35,8 @@
       ]
     }
   },
-  "created_at": "2026-10-07T05:37:28.211Z",
-  "modified_at": "2026-10-07T05:37:28.233Z",
+  "created_at": "2026-10-07T05:41:43.957Z",
+  "modified_at": "2026-10-07T05:41:43.978Z",
   "created_by": "texture-artist",
   "dependencies": [],
   "minecraft_ids": [
@@ -50,7 +50,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:28.230Z",
+      "at": "2026-10-07T05:41:43.975Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -77,7 +77,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:28.213Z",
+      "at": "2026-10-07T05:41:43.959Z",
       "by": "texture-artist",
       "note": "initial version",
       "files": [
@@ -87,7 +87,7 @@
         },
         {
           "path": "art/paint/highland_ox.paint.json",
-          "sha256": "a41efd1a92ae6a81d41a197c28fa9aed2bc2c018b741cd6fd1411b4a1b7c1443"
+          "sha256": "b418f7f8c984388f9a60df0842ee90a4a74045c3fdf7c789af45154c574fbd88"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.highland_ox.texture/v1",

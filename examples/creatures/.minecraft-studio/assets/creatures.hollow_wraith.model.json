@@ -15,7 +15,7 @@
     {
       "path": "models/hollow_wraith.bbmodel",
       "role": "primary",
-      "sha256": "2819d99515722d47ba49b69a93777532182774a166ffe625e0278a28c0ba2277",
+      "sha256": "9f0b2de5806f5ca6cb05dc9fa36c684fd0cea3fd7c13c75aaaed3b5c122e8560",
       "bytes": 28824
     },
     {
@@ -32,8 +32,8 @@
       "art/models/hollow_wraith.model.json"
     ]
   },
-  "created_at": "2026-10-07T05:37:31.474Z",
-  "modified_at": "2026-10-07T05:37:31.482Z",
+  "created_at": "2026-10-07T05:41:47.211Z",
+  "modified_at": "2026-10-07T05:41:47.220Z",
   "created_by": "modeler",
   "dependencies": [
     "creatures.hollow_wraith.texture"
@@ -49,7 +49,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:31.479Z",
+      "at": "2026-10-07T05:41:47.217Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -71,7 +71,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:31.477Z",
+      "at": "2026-10-07T05:41:47.214Z",
       "by": "modeler",
       "note": "initial version",
       "files": [
@@ -81,7 +81,7 @@
         },
         {
           "path": "models/hollow_wraith.bbmodel",
-          "sha256": "2819d99515722d47ba49b69a93777532182774a166ffe625e0278a28c0ba2277"
+          "sha256": "9f0b2de5806f5ca6cb05dc9fa36c684fd0cea3fd7c13c75aaaed3b5c122e8560"
         },
         {
           "path": "art/models/hollow_wraith.model.json",

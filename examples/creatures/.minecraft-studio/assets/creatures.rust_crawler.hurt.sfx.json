@@ -15,7 +15,7 @@
     {
       "path": "bedrock/RP/sounds/creatures/rust_crawler/hurt.ogg",
       "role": "primary",
-      "sha256": "f94847277238fcd2e190d3e63655dd733eb0a829308b2853fbdc421e323d4034",
+      "sha256": "9e99107c2486a0bfc1ac0e88197e234838c978b3e234be73114b63ba36367436",
       "bytes": 8457
     }
   ],
@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/creatures.rust_crawler.hurt.sfx/recipe.json"
     ]
   },
-  "created_at": "2026-10-07T05:37:31.092Z",
-  "modified_at": "2026-10-07T05:37:31.099Z",
+  "created_at": "2026-10-07T05:41:46.838Z",
+  "modified_at": "2026-10-07T05:41:46.844Z",
   "created_by": "sfx-designer",
   "dependencies": [],
   "minecraft_ids": [
@@ -41,7 +41,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:31.095Z",
+      "at": "2026-10-07T05:41:46.841Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -93,7 +93,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:31.094Z",
+      "at": "2026-10-07T05:41:46.840Z",
       "by": "sfx-designer",
       "note": "initial version",
       "files": [
@@ -103,7 +103,7 @@
         },
         {
           "path": "bedrock/RP/sounds/creatures/rust_crawler/hurt.ogg",
-          "sha256": "f94847277238fcd2e190d3e63655dd733eb0a829308b2853fbdc421e323d4034"
+          "sha256": "9e99107c2486a0bfc1ac0e88197e234838c978b3e234be73114b63ba36367436"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.rust_crawler.hurt.sfx/v1",

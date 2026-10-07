@@ -15,7 +15,7 @@
     {
       "path": "bedrock/RP/sounds/creatures/hollow_wraith/attack.ogg",
       "role": "primary",
-      "sha256": "f4fefd168d84be867217c558e044f4dc6bff12be907f174110432473beb1ce42",
+      "sha256": "3fd65affeb6f7c4a632bef76bf752c9a19874202068148abdbdac832ea915d55",
       "bytes": 14809
     }
   ],
@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/creatures.hollow_wraith.attack.sfx/recipe.json"
     ]
   },
-  "created_at": "2026-10-07T05:37:32.398Z",
-  "modified_at": "2026-10-07T05:37:32.405Z",
+  "created_at": "2026-10-07T05:41:48.146Z",
+  "modified_at": "2026-10-07T05:41:48.152Z",
   "created_by": "sfx-designer",
   "dependencies": [],
   "minecraft_ids": [
@@ -41,7 +41,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:32.401Z",
+      "at": "2026-10-07T05:41:48.149Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -93,7 +93,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:32.400Z",
+      "at": "2026-10-07T05:41:48.147Z",
       "by": "sfx-designer",
       "note": "initial version",
       "files": [
@@ -103,7 +103,7 @@
         },
         {
           "path": "bedrock/RP/sounds/creatures/hollow_wraith/attack.ogg",
-          "sha256": "f4fefd168d84be867217c558e044f4dc6bff12be907f174110432473beb1ce42"
+          "sha256": "3fd65affeb6f7c4a632bef76bf752c9a19874202068148abdbdac832ea915d55"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.hollow_wraith.attack.sfx/v1",

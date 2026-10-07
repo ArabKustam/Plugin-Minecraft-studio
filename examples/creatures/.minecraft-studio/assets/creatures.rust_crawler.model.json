@@ -15,7 +15,7 @@
     {
       "path": "models/rust_crawler.bbmodel",
       "role": "primary",
-      "sha256": "519005b39c90ff629734dd188a177d74bace25b63d04ec1889df35032e74d432",
+      "sha256": "9df23dcd6b47f8f607144854d5156c880a0c619b4eb82f0498e0eb4844811fdb",
       "bytes": 52793
     },
     {
@@ -32,8 +32,8 @@
       "art/models/rust_crawler.model.json"
     ]
   },
-  "created_at": "2026-10-07T05:37:30.487Z",
-  "modified_at": "2026-10-07T05:37:30.494Z",
+  "created_at": "2026-10-07T05:41:46.229Z",
+  "modified_at": "2026-10-07T05:41:46.237Z",
   "created_by": "modeler",
   "dependencies": [
     "creatures.rust_crawler.texture"
@@ -49,7 +49,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:30.491Z",
+      "at": "2026-10-07T05:41:46.234Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -71,7 +71,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:30.490Z",
+      "at": "2026-10-07T05:41:46.232Z",
       "by": "modeler",
       "note": "initial version",
       "files": [
@@ -81,7 +81,7 @@
         },
         {
           "path": "models/rust_crawler.bbmodel",
-          "sha256": "519005b39c90ff629734dd188a177d74bace25b63d04ec1889df35032e74d432"
+          "sha256": "9df23dcd6b47f8f607144854d5156c880a0c619b4eb82f0498e0eb4844811fdb"
         },
         {
           "path": "art/models/rust_crawler.model.json",

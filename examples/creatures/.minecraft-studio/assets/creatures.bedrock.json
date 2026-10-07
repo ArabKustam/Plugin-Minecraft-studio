@@ -122,8 +122,8 @@
     }
   ],
   "source": {},
-  "created_at": "2026-10-07T05:37:33.526Z",
-  "modified_at": "2026-10-07T05:37:33.620Z",
+  "created_at": "2026-10-07T05:41:49.279Z",
+  "modified_at": "2026-10-07T05:41:49.370Z",
   "created_by": "minecraft-developer",
   "dependencies": [
     "creatures.ember_fox.model",
@@ -155,7 +155,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:37:33.617Z",
+      "at": "2026-10-07T05:41:49.367Z",
       "by": "integration-qa",
       "version": 1,
       "verdict": "pass",
@@ -182,7 +182,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:37:33.542Z",
+      "at": "2026-10-07T05:41:49.295Z",
       "by": "minecraft-developer",
       "note": "initial version",
       "files": [
