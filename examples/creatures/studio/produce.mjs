@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Creature Pack — reproducible production run through the Minecraft Studio MCP servers.
 // 3 animals (Ember Fox, Highland Ox, Marsh Heron), 2 monsters (Rust Crawler, Hollow Wraith)
-// and 1 anthropomorphic character (Badger Smith): UV-painted textures, rigged models,
+// and 2 anthropomorphic characters (Badger Smith; Abyssal Seer with digitigrade legs and back tentacles): UV-painted textures, rigged models,
 // animations, SFX, a Bedrock add-on (RP + BP) and Blockbench projects.
 //
 //   node studio/produce.mjs [--fresh]
@@ -27,6 +27,7 @@ const STATS = {
   rust_crawler: { health: 20, speed: 0.3, box: [1.2, 0.6], temper: 'hostile', damage: 4, egg: ['#5a2f1c', '#6fbf2c'] },
   hollow_wraith: { health: 24, speed: 0.22, box: [0.7, 2.0], temper: 'hostile', damage: 5, egg: ['#1d1a26', '#7ff5ff'] },
   badger_smith: { health: 26, speed: 0.25, box: [0.6, 2.0], temper: 'neutral', damage: 5, egg: ['#4a4a4e', '#e8e6e0'] },
+  abyssal_seer: { health: 34, speed: 0.24, box: [0.8, 2.4], temper: 'hostile', damage: 6, egg: ['#3a2f72', '#7ff5ff'] },
 };
 const creatures = art('creatures.json');
 
@@ -85,7 +86,7 @@ for (const c of creatures) {
   });
   // ---- model
   await step(`${id}-model`, 'modeler', `${c.name.en} rig exported`, async () => {
-    const v = await call('studio-model', 'model_validate', { model_path: `art/models/${id}.model.json`, target: 'bedrock', cube_budget: 40 });
+    const v = await call('studio-model', 'model_validate', { model_path: `art/models/${id}.model.json`, target: 'bedrock', cube_budget: 60 });
     await call('studio-model', 'model_export', { model_path: `art/models/${id}.model.json`, bedrock: `${RP}/models/entity/${id}.geo.json`, bbmodel: `models/${id}.bbmodel`, animations_path: `art/animations/${id}.animation.json`, asset: { id: `creatures.${id}.model`, name: `${c.name.en} model`, minecraft_ids: [`geometry.${id}`], tags: ['creature', c.category], dependencies: [`creatures.${id}.texture`], agent: 'modeler' } });
     await qa(`creatures.${id}.model`, 'visual-qa', [ok('rig validation', v.verdict !== 'fail', `${v.cubes} cubes, bones ${v.bones.map((b) => b.name).join('/')}`), ok('size', true, `${v.bounds.size_blocks.join(' × ')} blocks`)], `${v.cubes} cubes`);
   });

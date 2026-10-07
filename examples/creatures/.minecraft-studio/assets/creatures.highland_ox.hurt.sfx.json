@@ -15,7 +15,7 @@
     {
       "path": "bedrock/RP/sounds/creatures/highland_ox/hurt.ogg",
       "role": "primary",
-      "sha256": "faf245cd4b7e26d5093059bd855a253f31ac8bf20c8c0a73facdf94a97594249",
+      "sha256": "89a9b5f6f8b757d26d6854d283abb0168eef8e88c89939362e1eee3b8d29f9b6",
       "bytes": 10328
     }
   ],
@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/creatures.highland_ox.hurt.sfx/recipe.json"
     ]
   },
-  "created_at": "2026-10-07T05:41:44.779Z",
-  "modified_at": "2026-10-07T05:41:44.786Z",
+  "created_at": "2026-10-07T06:03:21.794Z",
+  "modified_at": "2026-10-07T06:03:21.802Z",
   "created_by": "sfx-designer",
   "dependencies": [],
   "minecraft_ids": [
@@ -41,7 +41,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:41:44.783Z",
+      "at": "2026-10-07T06:03:21.799Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -93,7 +93,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:41:44.781Z",
+      "at": "2026-10-07T06:03:21.796Z",
       "by": "sfx-designer",
       "note": "initial version",
       "files": [
@@ -103,7 +103,7 @@
         },
         {
           "path": "bedrock/RP/sounds/creatures/highland_ox/hurt.ogg",
-          "sha256": "faf245cd4b7e26d5093059bd855a253f31ac8bf20c8c0a73facdf94a97594249"
+          "sha256": "89a9b5f6f8b757d26d6854d283abb0168eef8e88c89939362e1eee3b8d29f9b6"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.highland_ox.hurt.sfx/v1",

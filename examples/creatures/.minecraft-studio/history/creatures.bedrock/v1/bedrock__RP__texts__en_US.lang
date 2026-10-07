@@ -10,3 +10,5 @@ entity.studio:hollow_wraith.name=Hollow Wraith
 item.spawn_egg.entity.studio:hollow_wraith.name=Spawn Hollow Wraith
 entity.studio:badger_smith.name=Badger Smith
 item.spawn_egg.entity.studio:badger_smith.name=Spawn Badger Smith
+entity.studio:abyssal_seer.name=Abyssal Seer
+item.spawn_egg.entity.studio:abyssal_seer.name=Spawn Abyssal Seer

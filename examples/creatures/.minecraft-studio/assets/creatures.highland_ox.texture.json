@@ -35,8 +35,8 @@
       ]
     }
   },
-  "created_at": "2026-10-07T05:41:43.957Z",
-  "modified_at": "2026-10-07T05:41:43.978Z",
+  "created_at": "2026-10-07T06:03:20.968Z",
+  "modified_at": "2026-10-07T06:03:20.991Z",
   "created_by": "texture-artist",
   "dependencies": [],
   "minecraft_ids": [
@@ -50,7 +50,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:41:43.975Z",
+      "at": "2026-10-07T06:03:20.988Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -77,7 +77,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:41:43.959Z",
+      "at": "2026-10-07T06:03:20.970Z",
       "by": "texture-artist",
       "note": "initial version",
       "files": [

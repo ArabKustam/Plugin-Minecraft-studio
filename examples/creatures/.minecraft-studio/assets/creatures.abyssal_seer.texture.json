@@ -1,0 +1,130 @@
+{
+  "id": "creatures.abyssal_seer.texture",
+  "type": "texture",
+  "name": "Abyssal Seer skin",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/textures/entity/abyssal_seer.png",
+      "role": "primary",
+      "sha256": "9cd9a2d6477ba005d899c3775a0a4fe7af9952d8a11e01eb0fe413cf3caed81e",
+      "bytes": 3822
+    },
+    {
+      "path": "art/paint/abyssal_seer.paint.json",
+      "role": "source",
+      "sha256": "648a47aa3a4671cb6b4b8d9548856dd19e21d319fd25a0e2ab7294637ca9e9ce",
+      "bytes": 6181
+    }
+  ],
+  "source": {
+    "provider": "uv-painter",
+    "method": "texture_paint_uv",
+    "source_files": [
+      "art/paint/abyssal_seer.paint.json",
+      "art/models/abyssal_seer.model.json"
+    ],
+    "parameters": {
+      "materials": [
+        "robe",
+        "skin",
+        "claw",
+        "gold",
+        "fin",
+        "belly",
+        "coral",
+        "orb"
+      ]
+    }
+  },
+  "created_at": "2026-10-07T06:03:26.333Z",
+  "modified_at": "2026-10-07T06:03:26.352Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:abyssal_seer"
+  ],
+  "preview": ".minecraft-studio/previews/atlas_creatures_abyssal_seer_texture.png",
+  "tags": [
+    "creature",
+    "anthropomorphic"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:03:26.349Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "64×128 atlas",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "uv coverage",
+          "status": "pass",
+          "detail": "41% of 64×128"
+        },
+        {
+          "name": "turnaround review",
+          "status": "pass",
+          "detail": "Face details (eyes, markings) land on the right faces; materials read at game scale."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:03:26.335Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/textures/entity/abyssal_seer.png",
+          "sha256": "9cd9a2d6477ba005d899c3775a0a4fe7af9952d8a11e01eb0fe413cf3caed81e"
+        },
+        {
+          "path": "art/paint/abyssal_seer.paint.json",
+          "sha256": "648a47aa3a4671cb6b4b8d9548856dd19e21d319fd25a0e2ab7294637ca9e9ce"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.abyssal_seer.texture/v1",
+      "source": {
+        "provider": "uv-painter",
+        "method": "texture_paint_uv",
+        "source_files": [
+          "art/paint/abyssal_seer.paint.json",
+          "art/models/abyssal_seer.model.json"
+        ],
+        "parameters": {
+          "materials": [
+            "robe",
+            "skin",
+            "claw",
+            "gold",
+            "fin",
+            "belly",
+            "coral",
+            "orb"
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "width": 64,
+    "height": 128,
+    "texture_size": [
+      64,
+      128
+    ],
+    "cubes": 45,
+    "coverage": 0.407
+  }
+}

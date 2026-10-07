@@ -1,0 +1,58 @@
+{
+  "duration": 0.7,
+  "layers": [
+    {
+      "type": "osc",
+      "wave": "saw",
+      "freq": {
+        "from": 260,
+        "to": 170
+      },
+      "harmonics": [
+        1,
+        0.5,
+        0.3
+      ],
+      "gain": -6,
+      "envelope": {
+        "attack": 0.02,
+        "release": 0.4
+      },
+      "filter": {
+        "type": "bandpass",
+        "freq": 900,
+        "q": 2
+      },
+      "effects": [
+        {
+          "type": "tremolo",
+          "rate": 28,
+          "depth": 0.6
+        }
+      ]
+    },
+    {
+      "type": "noise",
+      "color": "pink",
+      "gain": -18,
+      "envelope": {
+        "attack": 0.01,
+        "release": 0.3
+      },
+      "filter": {
+        "type": "highpass",
+        "freq": 2500
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.6,
+      "mix": 0.25
+    }
+  ],
+  "normalize": {
+    "lufs": -17
+  }
+}

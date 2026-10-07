@@ -9,13 +9,13 @@
     {
       "path": "docs/creatures.md",
       "role": "primary",
-      "sha256": "f8d0513f2525439b732c7a72d392cbee2567bad15a344179c824e598d1af2579",
-      "bytes": 3599
+      "sha256": "3c6826aba38b23705210ae35e1a2ac3b62364aca8863dbea25d10cae3ad91d6b",
+      "bytes": 3871
     }
   ],
   "source": {},
-  "created_at": "2026-10-07T05:41:49.421Z",
-  "modified_at": "2026-10-07T05:41:49.426Z",
+  "created_at": "2026-10-07T06:03:27.632Z",
+  "modified_at": "2026-10-07T06:03:27.637Z",
   "created_by": "documentation-writer",
   "dependencies": [
     "creatures.bedrock"
@@ -26,7 +26,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:41:49.424Z",
+      "at": "2026-10-07T06:03:27.635Z",
       "by": "code-reviewer",
       "version": 1,
       "verdict": "pass",
@@ -35,7 +35,7 @@
         {
           "name": "every creature documented",
           "status": "pass",
-          "detail": "6 entities"
+          "detail": "7 entities"
         },
         {
           "name": "stats match behavior pack",
@@ -48,13 +48,13 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:41:49.422Z",
+      "at": "2026-10-07T06:03:27.633Z",
       "by": "documentation-writer",
       "note": "initial version",
       "files": [
         {
           "path": "docs/creatures.md",
-          "sha256": "f8d0513f2525439b732c7a72d392cbee2567bad15a344179c824e598d1af2579"
+          "sha256": "3c6826aba38b23705210ae35e1a2ac3b62364aca8863dbea25d10cae3ad91d6b"
         }
       ],
       "archived_dir": ".minecraft-studio/history/guide.creatures/v1",

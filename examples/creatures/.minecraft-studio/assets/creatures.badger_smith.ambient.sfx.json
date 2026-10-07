@@ -15,7 +15,7 @@
     {
       "path": "bedrock/RP/sounds/creatures/badger_smith/ambient.ogg",
       "role": "primary",
-      "sha256": "38b0ab16cfc4c9350dc4ae8d29e42b698441612aa23831b90f3ff7d0d4418c24",
+      "sha256": "d81f6f034b2eae897303dce227d04c070928578d5af302eabb2e71a193d6b4ad",
       "bytes": 13189
     }
   ],
@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/creatures.badger_smith.ambient.sfx/recipe.json"
     ]
   },
-  "created_at": "2026-10-07T05:41:48.819Z",
-  "modified_at": "2026-10-07T05:41:48.825Z",
+  "created_at": "2026-10-07T06:03:25.827Z",
+  "modified_at": "2026-10-07T06:03:25.834Z",
   "created_by": "sfx-designer",
   "dependencies": [],
   "minecraft_ids": [
@@ -41,7 +41,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:41:48.822Z",
+      "at": "2026-10-07T06:03:25.831Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -93,7 +93,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:41:48.820Z",
+      "at": "2026-10-07T06:03:25.829Z",
       "by": "sfx-designer",
       "note": "initial version",
       "files": [
@@ -103,7 +103,7 @@
         },
         {
           "path": "bedrock/RP/sounds/creatures/badger_smith/ambient.ogg",
-          "sha256": "38b0ab16cfc4c9350dc4ae8d29e42b698441612aa23831b90f3ff7d0d4418c24"
+          "sha256": "d81f6f034b2eae897303dce227d04c070928578d5af302eabb2e71a193d6b4ad"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.badger_smith.ambient.sfx/v1",

@@ -1,0 +1,23 @@
+{
+  "id": "abyssal_seer-texture",
+  "goal": "Abyssal Seer: paint the UV atlas",
+  "agent": "texture-artist",
+  "inputs": [],
+  "outputs": [],
+  "allowed_tools": [],
+  "dependencies": [
+    "creature-design"
+  ],
+  "constraints": [],
+  "quality": [],
+  "validation": [],
+  "destination": null,
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T06:03:19.645Z",
+  "started_at": "2026-10-07T06:03:26.261Z",
+  "finished_at": "2026-10-07T06:03:26.354Z",
+  "updated_at": "2026-10-07T06:03:26.354Z",
+  "plan": null
+}

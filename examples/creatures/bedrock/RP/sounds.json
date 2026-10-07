@@ -72,6 +72,18 @@
           "hurt": "mob.badger_smith.hurt",
           "death": "mob.badger_smith.hurt"
         }
+      },
+      "studio:abyssal_seer": {
+        "volume": 1,
+        "pitch": [
+          0.9,
+          1.1
+        ],
+        "events": {
+          "ambient": "mob.abyssal_seer.ambient",
+          "hurt": "mob.abyssal_seer.hurt",
+          "death": "mob.abyssal_seer.hurt"
+        }
       }
     }
   }

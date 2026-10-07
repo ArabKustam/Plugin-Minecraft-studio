@@ -79,16 +79,28 @@
       "bytes": 1575
     },
     {
+      "path": "bedrock/RP/entity/abyssal_seer.entity.json",
+      "role": "primary",
+      "sha256": "cd6dadbebae0cb4f0db149820bb787d6bad1560c282af3248279be11996f3749",
+      "bytes": 1000
+    },
+    {
+      "path": "bedrock/BP/entities/abyssal_seer.json",
+      "role": "primary",
+      "sha256": "9016aa20356f6695bb40a0f2dd1604b7372deb124ee7f2d73de704f2997642aa",
+      "bytes": 1953
+    },
+    {
       "path": "bedrock/RP/sounds/sound_definitions.json",
       "role": "primary",
-      "sha256": "3b73cbf48ac14f005056f2ed6698b6d0e94b99facc6cacf9b76d78487384b27c",
-      "bytes": 3536
+      "sha256": "e988600b3397f86dbb618f8c278ba6a60b49fa1d7b7ec6dac41d63e92cf0ff59",
+      "bytes": 4119
     },
     {
       "path": "bedrock/RP/sounds.json",
       "role": "primary",
-      "sha256": "02277f21a23b7aa53539d8d3e6db9bd88b8a09e70323f0af416285dcdce28c57",
-      "bytes": 1746
+      "sha256": "e907243cb9e84e4a79639c8ee4482932e71e90d43fc0dc4b079d0aef245d9b26",
+      "bytes": 2031
     },
     {
       "path": "bedrock/RP/texts/languages.json",
@@ -99,14 +111,14 @@
     {
       "path": "bedrock/RP/texts/en_US.lang",
       "role": "primary",
-      "sha256": "fa72dcc2823366bb830ff279b929cf899876dfda035a82c0b104ee32d0c77468",
-      "bytes": 650
+      "sha256": "992e595e0b7073677d8434e1830a1f62059b651702a6c7fde6465d2c15edc5d4",
+      "bytes": 761
     },
     {
       "path": "bedrock/RP/texts/ru_RU.lang",
       "role": "primary",
-      "sha256": "9f2d13fb292ffb2a4ef0fdb2eaf1718de816b197fa7c69399e733918cee253b3",
-      "bytes": 874
+      "sha256": "93998074b10bd8e5a1776a790befb1e7a391ad9ba095636b8691094ec8d9b9fc",
+      "bytes": 1043
     },
     {
       "path": "bedrock/RP/manifest.json",
@@ -122,8 +134,8 @@
     }
   ],
   "source": {},
-  "created_at": "2026-10-07T05:41:49.279Z",
-  "modified_at": "2026-10-07T05:41:49.370Z",
+  "created_at": "2026-10-07T06:03:27.461Z",
+  "modified_at": "2026-10-07T06:03:27.569Z",
   "created_by": "minecraft-developer",
   "dependencies": [
     "creatures.ember_fox.model",
@@ -137,7 +149,9 @@
     "creatures.hollow_wraith.model",
     "creatures.hollow_wraith.animations",
     "creatures.badger_smith.model",
-    "creatures.badger_smith.animations"
+    "creatures.badger_smith.animations",
+    "creatures.abyssal_seer.model",
+    "creatures.abyssal_seer.animations"
   ],
   "minecraft_ids": [
     "studio:ember_fox",
@@ -145,7 +159,8 @@
     "studio:marsh_heron",
     "studio:rust_crawler",
     "studio:hollow_wraith",
-    "studio:badger_smith"
+    "studio:badger_smith",
+    "studio:abyssal_seer"
   ],
   "preview": null,
   "tags": [
@@ -155,7 +170,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:41:49.367Z",
+      "at": "2026-10-07T06:03:27.566Z",
       "by": "integration-qa",
       "version": 1,
       "verdict": "pass",
@@ -169,7 +184,7 @@
         {
           "name": "entities",
           "status": "pass",
-          "detail": "6 client / 6 behavior"
+          "detail": "7 client / 7 behavior"
         },
         {
           "name": "in-game test",
@@ -182,7 +197,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:41:49.295Z",
+      "at": "2026-10-07T06:03:27.478Z",
       "by": "minecraft-developer",
       "note": "initial version",
       "files": [
@@ -235,12 +250,20 @@
           "sha256": "c47796fba9a328298a093d63339f356ae3be133318114b348514827d6cb95ab4"
         },
         {
+          "path": "bedrock/RP/entity/abyssal_seer.entity.json",
+          "sha256": "cd6dadbebae0cb4f0db149820bb787d6bad1560c282af3248279be11996f3749"
+        },
+        {
+          "path": "bedrock/BP/entities/abyssal_seer.json",
+          "sha256": "9016aa20356f6695bb40a0f2dd1604b7372deb124ee7f2d73de704f2997642aa"
+        },
+        {
           "path": "bedrock/RP/sounds/sound_definitions.json",
-          "sha256": "3b73cbf48ac14f005056f2ed6698b6d0e94b99facc6cacf9b76d78487384b27c"
+          "sha256": "e988600b3397f86dbb618f8c278ba6a60b49fa1d7b7ec6dac41d63e92cf0ff59"
         },
         {
           "path": "bedrock/RP/sounds.json",
-          "sha256": "02277f21a23b7aa53539d8d3e6db9bd88b8a09e70323f0af416285dcdce28c57"
+          "sha256": "e907243cb9e84e4a79639c8ee4482932e71e90d43fc0dc4b079d0aef245d9b26"
         },
         {
           "path": "bedrock/RP/texts/languages.json",
@@ -248,11 +271,11 @@
         },
         {
           "path": "bedrock/RP/texts/en_US.lang",
-          "sha256": "fa72dcc2823366bb830ff279b929cf899876dfda035a82c0b104ee32d0c77468"
+          "sha256": "992e595e0b7073677d8434e1830a1f62059b651702a6c7fde6465d2c15edc5d4"
         },
         {
           "path": "bedrock/RP/texts/ru_RU.lang",
-          "sha256": "9f2d13fb292ffb2a4ef0fdb2eaf1718de816b197fa7c69399e733918cee253b3"
+          "sha256": "93998074b10bd8e5a1776a790befb1e7a391ad9ba095636b8691094ec8d9b9fc"
         },
         {
           "path": "bedrock/RP/manifest.json",

@@ -15,7 +15,7 @@
     {
       "path": "bedrock/RP/sounds/creatures/ember_fox/hurt.ogg",
       "role": "primary",
-      "sha256": "262367a49e6e5e3f028c5246c5e0d3e3839f9807c6b4975c457546d8d29388b5",
+      "sha256": "9b0fd4e59103a0a01688637e6b7309bbcac1b8425730163df4c079a5cc94dfd3",
       "bytes": 6836
     }
   ],
@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/creatures.ember_fox.hurt.sfx/recipe.json"
     ]
   },
-  "created_at": "2026-10-07T05:41:43.635Z",
-  "modified_at": "2026-10-07T05:41:43.642Z",
+  "created_at": "2026-10-07T06:03:20.641Z",
+  "modified_at": "2026-10-07T06:03:20.649Z",
   "created_by": "sfx-designer",
   "dependencies": [],
   "minecraft_ids": [
@@ -41,7 +41,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:41:43.639Z",
+      "at": "2026-10-07T06:03:20.646Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -93,7 +93,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:41:43.637Z",
+      "at": "2026-10-07T06:03:20.643Z",
       "by": "sfx-designer",
       "note": "initial version",
       "files": [
@@ -103,7 +103,7 @@
         },
         {
           "path": "bedrock/RP/sounds/creatures/ember_fox/hurt.ogg",
-          "sha256": "262367a49e6e5e3f028c5246c5e0d3e3839f9807c6b4975c457546d8d29388b5"
+          "sha256": "9b0fd4e59103a0a01688637e6b7309bbcac1b8425730163df4c079a5cc94dfd3"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.ember_fox.hurt.sfx/v1",

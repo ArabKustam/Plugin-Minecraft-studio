@@ -17,8 +17,8 @@
     "provider": "studio-model",
     "format": "bedrock-animation/1.8.0"
   },
-  "created_at": "2026-10-07T05:41:44.072Z",
-  "modified_at": "2026-10-07T05:41:44.290Z",
+  "created_at": "2026-10-07T06:03:21.085Z",
+  "modified_at": "2026-10-07T06:03:21.306Z",
   "created_by": "animator",
   "dependencies": [
     "creatures.highland_ox.model"
@@ -32,7 +32,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:41:44.287Z",
+      "at": "2026-10-07T06:03:21.303Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -59,7 +59,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:41:44.073Z",
+      "at": "2026-10-07T06:03:21.086Z",
       "by": "animator",
       "note": "initial version",
       "files": [

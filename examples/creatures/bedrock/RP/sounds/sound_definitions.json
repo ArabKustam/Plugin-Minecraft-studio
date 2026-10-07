@@ -162,6 +162,33 @@
           "volume": 1
         }
       ]
+    },
+    "mob.abyssal_seer.ambient": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/creatures/abyssal_seer/ambient",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.abyssal_seer.hurt": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/creatures/abyssal_seer/hurt",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.abyssal_seer.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/creatures/abyssal_seer/attack",
+          "volume": 1
+        }
+      ]
     }
   }
 }

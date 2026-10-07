@@ -1,0 +1,171 @@
+{
+  "id": "creatures.abyssal_seer.animations",
+  "type": "animation",
+  "name": "Abyssal Seer animations",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/animations/abyssal_seer.animation.json",
+      "role": "primary",
+      "sha256": "59ff7b52a71933c1f40edfcdbf73732e5e48b37b4ea83b2371a87dc145be14d4",
+      "bytes": 78047
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "bedrock-animation/1.8.0"
+  },
+  "created_at": "2026-10-07T06:03:26.437Z",
+  "modified_at": "2026-10-07T06:03:26.653Z",
+  "created_by": "animator",
+  "dependencies": [
+    "creatures.abyssal_seer.model"
+  ],
+  "minecraft_ids": [],
+  "preview": null,
+  "tags": [
+    "creature",
+    "anthropomorphic"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:03:26.650Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "contact sheets reviewed",
+      "checks": [
+        {
+          "name": "animation.abyssal_seer.idle",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.abyssal_seer.walk",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.abyssal_seer.attack",
+          "status": "pass",
+          "detail": "eased, seamless"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:03:26.439Z",
+      "by": "animator",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/animations/abyssal_seer.animation.json",
+          "sha256": "59ff7b52a71933c1f40edfcdbf73732e5e48b37b4ea83b2371a87dc145be14d4"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.abyssal_seer.animations/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "bedrock-animation/1.8.0"
+      }
+    }
+  ],
+  "metadata": {
+    "animations": [
+      {
+        "name": "animation.abyssal_seer.idle",
+        "length": 3,
+        "loop": true,
+        "bones": [
+          "tu_r0",
+          "tu_r1",
+          "tu_r2",
+          "tu_r3",
+          "tu_l0",
+          "tu_l1",
+          "tu_l2",
+          "tu_l3",
+          "td_r0",
+          "td_r1",
+          "td_r2",
+          "td_r3",
+          "td_l0",
+          "td_l1",
+          "td_l2",
+          "td_l3",
+          "torso",
+          "head",
+          "beard",
+          "forearm_l"
+        ]
+      },
+      {
+        "name": "animation.abyssal_seer.walk",
+        "length": 1.2,
+        "loop": true,
+        "bones": [
+          "tu_r0",
+          "tu_r1",
+          "tu_r2",
+          "tu_r3",
+          "tu_l0",
+          "tu_l1",
+          "tu_l2",
+          "tu_l3",
+          "td_r0",
+          "td_r1",
+          "td_r2",
+          "td_r3",
+          "td_l0",
+          "td_l1",
+          "td_l2",
+          "td_l3",
+          "thigh_r",
+          "shin_r",
+          "hock_r",
+          "toes_r",
+          "thigh_l",
+          "shin_l",
+          "hock_l",
+          "toes_l",
+          "pelvis",
+          "arm_l",
+          "torso"
+        ]
+      },
+      {
+        "name": "animation.abyssal_seer.attack",
+        "length": 1.6,
+        "loop": false,
+        "bones": [
+          "arm_r",
+          "forearm_r",
+          "staff",
+          "head",
+          "torso",
+          "tu_r0",
+          "tu_r1",
+          "tu_r2",
+          "tu_r3",
+          "tu_l0",
+          "tu_l1",
+          "tu_l2",
+          "tu_l3",
+          "td_r0",
+          "td_r1",
+          "td_r2",
+          "td_r3",
+          "td_l0",
+          "td_l1",
+          "td_l2",
+          "td_l3"
+        ]
+      }
+    ]
+  }
+}

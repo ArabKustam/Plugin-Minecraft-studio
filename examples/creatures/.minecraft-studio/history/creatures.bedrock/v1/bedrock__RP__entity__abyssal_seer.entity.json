@@ -1,0 +1,42 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "studio:abyssal_seer",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/abyssal_seer"
+      },
+      "geometry": {
+        "default": "geometry.abyssal_seer"
+      },
+      "animations": {
+        "idle": "animation.abyssal_seer.idle",
+        "walk": "animation.abyssal_seer.walk",
+        "attack": "animation.abyssal_seer.attack"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "idle": "query.modified_move_speed < 0.05"
+          },
+          {
+            "walk": "query.modified_move_speed >= 0.05"
+          },
+          {
+            "attack": "variable.attack_time > 0.0"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "spawn_egg": {
+        "base_color": "#3a2f72",
+        "overlay_color": "#7ff5ff"
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Studio Creatures — field guide
 
-This guide covers six creatures made with Minecraft Studio: three animals, two monsters and one anthropomorphic NPC. They ship as a Bedrock add-on (`bedrock/RP` + `bedrock/BP`, packaged as `build-out/studio-creatures.mcaddon`). Each one also comes as a Blockbench project in `models/*.bbmodel`, which you can use with Blockbench or a Java model engine.
+This guide covers seven creatures made with Minecraft Studio: three animals, two monsters and two anthropomorphic characters. They ship as a Bedrock add-on (`bedrock/RP` + `bedrock/BP`, packaged as `build-out/studio-creatures.mcaddon`). Each one also comes as a Blockbench project in `models/*.bbmodel`, which you can use with Blockbench or a Java model engine.
 
 > **Not yet tested in a Bedrock client.** The add-on passes the studio's Bedrock validator: manifests, geometry, textures, animations, sounds and entity links all check out.
 
@@ -13,6 +13,7 @@ This guide covers six creatures made with Minecraft Studio: three animals, two m
 | Marsh Heron / Болотная цапля | `studio:marsh_heron` | animal | passive: panics when hit | 8 | 0.6 × 1.9 | idle, walk, attack (peck), flap | ambient croak, hurt squawk, attack clicks |
 | Rust Crawler / Ржавый ползун | `studio:rust_crawler` | monster | hostile: hunts players within 16 blocks | 20 | 1.2 × 0.6 | idle, walk (tripod gait), attack (tail sting) | ambient chitter, hurt hiss, attack sting |
 | Hollow Wraith / Полый призрак | `studio:hollow_wraith` | monster | hostile | 24 | 0.7 × 2.0 | idle (hover), walk (drift), attack (shriek) | ambient whisper, hurt wail, attack shriek |
+| Abyssal Seer / Бездонный провидец | `studio:abyssal_seer` | anthropomorphic | hostile caster | 34 | 0.8 × 2.4 | idle (tentacle wave), walk (digitigrade gait), attack (staff cast, tentacles flare) | ambient chant & bubbles, hurt, attack cast |
 | Badger Smith / Барсук-кузнец | `studio:badger_smith` | anthropomorphic | neutral NPC: defends itself with a hammer | 26 | 0.6 × 2.0 | idle, walk, attack (hammer strike), forge | ambient anvil clang, hurt grunt, attack impact |
 
 ## Spawning

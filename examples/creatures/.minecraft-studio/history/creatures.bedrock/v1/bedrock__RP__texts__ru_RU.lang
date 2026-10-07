@@ -10,3 +10,5 @@ entity.studio:hollow_wraith.name=Полый призрак
 item.spawn_egg.entity.studio:hollow_wraith.name=Призвать: Полый призрак
 entity.studio:badger_smith.name=Барсук-кузнец
 item.spawn_egg.entity.studio:badger_smith.name=Призвать: Барсук-кузнец
+entity.studio:abyssal_seer.name=Бездонный провидец
+item.spawn_egg.entity.studio:abyssal_seer.name=Призвать: Бездонный провидец

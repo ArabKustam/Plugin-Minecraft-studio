@@ -15,7 +15,7 @@
     {
       "path": "models/ember_fox.bbmodel",
       "role": "primary",
-      "sha256": "81a2faa8b38921af91999f4e70935902f277278a777832bac934b1b34c7c5a56",
+      "sha256": "3ee1a53bdae0b99bce78be7244e6d2b889ed0307567788a13353e4a7dd894d1e",
       "bytes": 48296
     },
     {
@@ -32,8 +32,8 @@
       "art/models/ember_fox.model.json"
     ]
   },
-  "created_at": "2026-10-07T05:41:42.893Z",
-  "modified_at": "2026-10-07T05:41:42.904Z",
+  "created_at": "2026-10-07T06:03:19.899Z",
+  "modified_at": "2026-10-07T06:03:19.910Z",
   "created_by": "modeler",
   "dependencies": [
     "creatures.ember_fox.texture"
@@ -49,7 +49,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:41:42.901Z",
+      "at": "2026-10-07T06:03:19.907Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -71,7 +71,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:41:42.898Z",
+      "at": "2026-10-07T06:03:19.904Z",
       "by": "modeler",
       "note": "initial version",
       "files": [
@@ -81,7 +81,7 @@
         },
         {
           "path": "models/ember_fox.bbmodel",
-          "sha256": "81a2faa8b38921af91999f4e70935902f277278a777832bac934b1b34c7c5a56"
+          "sha256": "3ee1a53bdae0b99bce78be7244e6d2b889ed0307567788a13353e4a7dd894d1e"
         },
         {
           "path": "art/models/ember_fox.model.json",

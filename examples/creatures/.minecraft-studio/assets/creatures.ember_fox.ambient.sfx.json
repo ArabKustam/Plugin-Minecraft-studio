@@ -15,7 +15,7 @@
     {
       "path": "bedrock/RP/sounds/creatures/ember_fox/ambient.ogg",
       "role": "primary",
-      "sha256": "73e937ba317a9f7ec7f67a734a33111238a822c60a0fab99f67f32ad9b2ecc68",
+      "sha256": "7e5ff0bd73c571bdbee5aad68775879622e0ad0475a3447a0e8583aa3e631ea1",
       "bytes": 7236
     }
   ],
@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/creatures.ember_fox.ambient.sfx/recipe.json"
     ]
   },
-  "created_at": "2026-10-07T05:41:43.419Z",
-  "modified_at": "2026-10-07T05:41:43.428Z",
+  "created_at": "2026-10-07T06:03:20.420Z",
+  "modified_at": "2026-10-07T06:03:20.430Z",
   "created_by": "sfx-designer",
   "dependencies": [],
   "minecraft_ids": [
@@ -41,7 +41,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:41:43.425Z",
+      "at": "2026-10-07T06:03:20.427Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -93,7 +93,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:41:43.422Z",
+      "at": "2026-10-07T06:03:20.424Z",
       "by": "sfx-designer",
       "note": "initial version",
       "files": [
@@ -103,7 +103,7 @@
         },
         {
           "path": "bedrock/RP/sounds/creatures/ember_fox/ambient.ogg",
-          "sha256": "73e937ba317a9f7ec7f67a734a33111238a822c60a0fab99f67f32ad9b2ecc68"
+          "sha256": "7e5ff0bd73c571bdbee5aad68775879622e0ad0475a3447a0e8583aa3e631ea1"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.ember_fox.ambient.sfx/v1",

@@ -17,8 +17,8 @@
     "provider": "studio-model",
     "format": "bedrock-animation/1.8.0"
   },
-  "created_at": "2026-10-07T05:41:47.226Z",
-  "modified_at": "2026-10-07T05:41:47.381Z",
+  "created_at": "2026-10-07T06:03:24.228Z",
+  "modified_at": "2026-10-07T06:03:24.385Z",
   "created_by": "animator",
   "dependencies": [
     "creatures.hollow_wraith.model"
@@ -32,7 +32,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:41:47.378Z",
+      "at": "2026-10-07T06:03:24.381Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -59,7 +59,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:41:47.227Z",
+      "at": "2026-10-07T06:03:24.229Z",
       "by": "animator",
       "note": "initial version",
       "files": [

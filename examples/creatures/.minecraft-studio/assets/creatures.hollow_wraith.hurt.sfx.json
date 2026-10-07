@@ -15,7 +15,7 @@
     {
       "path": "bedrock/RP/sounds/creatures/hollow_wraith/hurt.ogg",
       "role": "primary",
-      "sha256": "d920e96490e6a4966ec089122a317b4006be1e8b2bed436f5b05d121237e40cb",
+      "sha256": "38d7c1832eb75b8f38936390c0858c4781d9850ceb14e23c3807c1a86e6c7f9c",
       "bytes": 11897
     }
   ],
@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/creatures.hollow_wraith.hurt.sfx/recipe.json"
     ]
   },
-  "created_at": "2026-10-07T05:41:47.898Z",
-  "modified_at": "2026-10-07T05:41:47.904Z",
+  "created_at": "2026-10-07T06:03:24.903Z",
+  "modified_at": "2026-10-07T06:03:24.910Z",
   "created_by": "sfx-designer",
   "dependencies": [],
   "minecraft_ids": [
@@ -41,7 +41,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:41:47.901Z",
+      "at": "2026-10-07T06:03:24.907Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -93,7 +93,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:41:47.900Z",
+      "at": "2026-10-07T06:03:24.905Z",
       "by": "sfx-designer",
       "note": "initial version",
       "files": [
@@ -103,7 +103,7 @@
         },
         {
           "path": "bedrock/RP/sounds/creatures/hollow_wraith/hurt.ogg",
-          "sha256": "d920e96490e6a4966ec089122a317b4006be1e8b2bed436f5b05d121237e40cb"
+          "sha256": "38d7c1832eb75b8f38936390c0858c4781d9850ceb14e23c3807c1a86e6c7f9c"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.hollow_wraith.hurt.sfx/v1",

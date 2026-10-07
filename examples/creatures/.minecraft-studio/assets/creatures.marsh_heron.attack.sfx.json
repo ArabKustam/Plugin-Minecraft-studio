@@ -15,7 +15,7 @@
     {
       "path": "bedrock/RP/sounds/creatures/marsh_heron/attack.ogg",
       "role": "primary",
-      "sha256": "73dbca1c59eb2a7ec803d446df5af3d5427deabaa6243346ec18b37b333d8509",
+      "sha256": "20a31b598b8c54807744344e995ce9de2492e277866d4703615e455acf5a5d2a",
       "bytes": 5584
     }
   ],
@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/creatures.marsh_heron.attack.sfx/recipe.json"
     ]
   },
-  "created_at": "2026-10-07T05:41:46.058Z",
-  "modified_at": "2026-10-07T05:41:46.064Z",
+  "created_at": "2026-10-07T06:03:23.065Z",
+  "modified_at": "2026-10-07T06:03:23.072Z",
   "created_by": "sfx-designer",
   "dependencies": [],
   "minecraft_ids": [
@@ -41,7 +41,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T05:41:46.061Z",
+      "at": "2026-10-07T06:03:23.069Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -93,7 +93,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T05:41:46.060Z",
+      "at": "2026-10-07T06:03:23.066Z",
       "by": "sfx-designer",
       "note": "initial version",
       "files": [
@@ -103,7 +103,7 @@
         },
         {
           "path": "bedrock/RP/sounds/creatures/marsh_heron/attack.ogg",
-          "sha256": "73dbca1c59eb2a7ec803d446df5af3d5427deabaa6243346ec18b37b333d8509"
+          "sha256": "20a31b598b8c54807744344e995ce9de2492e277866d4703615e455acf5a5d2a"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.marsh_heron.attack.sfx/v1",

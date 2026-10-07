@@ -1,0 +1,367 @@
+{
+  "texture_size": [
+    64,
+    64
+  ],
+  "default_material": "skin",
+  "materials": {
+    "skin": {
+      "ramp": [
+        "#120e24",
+        "#241c48",
+        "#3a2f72",
+        "#5a4aa6",
+        "#7f70d0"
+      ],
+      "pattern": {
+        "type": "scales",
+        "size": 2
+      }
+    },
+    "belly": {
+      "ramp": [
+        "#2a2a4a",
+        "#4a4a7a",
+        "#6e6aa8",
+        "#9a96d0"
+      ]
+    },
+    "sucker": {
+      "ramp": [
+        "#3a1a4a",
+        "#6a2a7a",
+        "#9a4aa8",
+        "#c88ad8",
+        "#f0d0ff"
+      ],
+      "pattern": {
+        "type": "spots",
+        "size": 2,
+        "seed": 7
+      }
+    },
+    "robe": {
+      "ramp": [
+        "#24060e",
+        "#46101e",
+        "#6c1a30",
+        "#962a44"
+      ],
+      "pattern": {
+        "type": "stripes",
+        "size": 4,
+        "vertical": true
+      }
+    },
+    "gold": {
+      "ramp": [
+        "#5a3a08",
+        "#a6720f",
+        "#e0b02a",
+        "#fff0a0"
+      ]
+    },
+    "claw": {
+      "ramp": [
+        "#5c5a52",
+        "#85827a",
+        "#aeaaa0",
+        "#e6e2d6"
+      ]
+    },
+    "coral": {
+      "ramp": [
+        "#3a1424",
+        "#7a2a44",
+        "#b84a66",
+        "#e07a92"
+      ]
+    },
+    "orb": {
+      "ramp": [
+        "#0a3a4a",
+        "#1a7a96",
+        "#40c4dc",
+        "#a0f4fa",
+        "#ffffff"
+      ]
+    },
+    "fin": {
+      "ramp": [
+        "#2a1a5a",
+        "#4a2a9a",
+        "#7a4ad0",
+        "#a88af0"
+      ],
+      "pattern": {
+        "type": "stripes",
+        "size": 1
+      }
+    }
+  },
+  "cubes": {
+    "robe_skirt": {
+      "material": "robe",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "g": "#e0b02a",
+            "x": "transparent"
+          },
+          "rows": [
+            "gggggggg",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "x.x..x.x"
+          ]
+        },
+        "south": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "g": "#e0b02a",
+            "x": "transparent"
+          },
+          "rows": [
+            "gggggggg",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "x.x..x.x"
+          ]
+        },
+        "east": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "g": "#e0b02a",
+            "x": "transparent"
+          },
+          "rows": [
+            "gggggggg",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "x.x..x"
+          ]
+        },
+        "west": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "g": "#e0b02a",
+            "x": "transparent"
+          },
+          "rows": [
+            "gggggggg",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "x.x..x"
+          ]
+        }
+      }
+    },
+    "pelvis": {
+      "material": "robe",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 1,
+          "palette": {
+            "b": "#1a0e06",
+            "k": "#e0b02a"
+          },
+          "rows": [
+            "bbkkbb"
+          ]
+        }
+      }
+    },
+    "torso": {
+      "material": "robe",
+      "faces": {
+        "north": {
+          "x": 2,
+          "y": 0,
+          "palette": {
+            "s": "#3a2f72",
+            "S": "#5a4aa6",
+            "g": "#e0b02a"
+          },
+          "rows": [
+            "gSSg",
+            ".SS.",
+            ".SS.",
+            "..g.",
+            ".g..",
+            "..g."
+          ]
+        }
+      }
+    },
+    "collar": {
+      "material": "gold"
+    },
+    "head": {
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "e": "#7ff5ff",
+            "E": "#e6ffff",
+            "k": "#06040c",
+            "g": "#e0b02a"
+          },
+          "rows": [
+            "...gg...",
+            "...EE...",
+            "........",
+            ".kEk.kEk",
+            ".keekeek",
+            "........",
+            "........"
+          ]
+        }
+      }
+    },
+    "dome": {
+      "material": "skin"
+    },
+    "fin_r": {
+      "material": "fin"
+    },
+    "fin_l": {
+      "material": "fin"
+    },
+    "tendril_a": {
+      "material": "belly"
+    },
+    "tendril_b": {
+      "material": "belly"
+    },
+    "tendril_c": {
+      "material": "belly"
+    },
+    "claws_r": {
+      "material": "claw"
+    },
+    "claws_l": {
+      "material": "claw"
+    },
+    "claw_r": {
+      "material": "claw"
+    },
+    "claw_l": {
+      "material": "claw"
+    },
+    "toes_r": {
+      "face_materials": {
+        "down": "belly"
+      }
+    },
+    "toes_l": {
+      "face_materials": {
+        "down": "belly"
+      }
+    },
+    "staff_shaft": {
+      "material": "coral"
+    },
+    "staff_orb": {
+      "material": "orb"
+    },
+    "tu_r0": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "tu_r1": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "tu_r2": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "tu_r3": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "tu_l0": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "tu_l1": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "tu_l2": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "tu_l3": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "td_r0": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "td_r1": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "td_r2": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "td_r3": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "td_l0": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "td_l1": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "td_l2": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    },
+    "td_l3": {
+      "face_materials": {
+        "down": "sucker"
+      }
+    }
+  }
+}

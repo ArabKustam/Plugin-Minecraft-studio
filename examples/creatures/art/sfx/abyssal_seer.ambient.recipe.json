@@ -1,0 +1,121 @@
+{
+  "duration": 2.4,
+  "layers": [
+    {
+      "type": "osc",
+      "wave": "triangle",
+      "freq": {
+        "center": 110,
+        "depth": 6,
+        "rate": 0.4
+      },
+      "harmonics": [
+        1,
+        0.5,
+        0.3,
+        0.2
+      ],
+      "voices": 3,
+      "detune": 14,
+      "gain": -8,
+      "envelope": {
+        "attack": 0.6,
+        "release": 0.9
+      },
+      "filter": {
+        "type": "bandpass",
+        "freq": {
+          "center": 700,
+          "depth": 250,
+          "rate": 0.5
+        },
+        "q": 3
+      }
+    },
+    {
+      "type": "chirp",
+      "start": 0.3,
+      "duration": 0.09,
+      "carrier": {
+        "from": 300,
+        "to": 900,
+        "curve": "exp"
+      },
+      "gain": -20,
+      "envelope": {
+        "attack": 0.005,
+        "release": 0.06
+      }
+    },
+    {
+      "type": "chirp",
+      "start": 0.6699999999999999,
+      "duration": 0.09,
+      "carrier": {
+        "from": 370,
+        "to": 990,
+        "curve": "exp"
+      },
+      "gain": -20,
+      "envelope": {
+        "attack": 0.005,
+        "release": 0.06
+      }
+    },
+    {
+      "type": "chirp",
+      "start": 1.04,
+      "duration": 0.09,
+      "carrier": {
+        "from": 440,
+        "to": 1080,
+        "curve": "exp"
+      },
+      "gain": -20,
+      "envelope": {
+        "attack": 0.005,
+        "release": 0.06
+      }
+    },
+    {
+      "type": "chirp",
+      "start": 1.41,
+      "duration": 0.09,
+      "carrier": {
+        "from": 510,
+        "to": 1170,
+        "curve": "exp"
+      },
+      "gain": -20,
+      "envelope": {
+        "attack": 0.005,
+        "release": 0.06
+      }
+    },
+    {
+      "type": "chirp",
+      "start": 1.78,
+      "duration": 0.09,
+      "carrier": {
+        "from": 580,
+        "to": 1260,
+        "curve": "exp"
+      },
+      "gain": -20,
+      "envelope": {
+        "attack": 0.005,
+        "release": 0.06
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.85,
+      "mix": 0.35
+    }
+  ],
+  "normalize": {
+    "lufs": -18
+  }
+}

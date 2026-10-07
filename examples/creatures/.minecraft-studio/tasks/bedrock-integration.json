@@ -17,7 +17,9 @@
     "hollow_wraith-animation",
     "hollow_wraith-sfx",
     "badger_smith-animation",
-    "badger_smith-sfx"
+    "badger_smith-sfx",
+    "abyssal_seer-animation",
+    "abyssal_seer-sfx"
   ],
   "constraints": [],
   "quality": [],
@@ -26,9 +28,9 @@
   "assets": [],
   "status": "done",
   "result": null,
-  "created_at": "2026-10-07T05:41:42.678Z",
-  "started_at": "2026-10-07T05:41:49.258Z",
-  "finished_at": "2026-10-07T05:41:49.405Z",
-  "updated_at": "2026-10-07T05:41:49.405Z",
+  "created_at": "2026-10-07T06:03:19.681Z",
+  "started_at": "2026-10-07T06:03:27.435Z",
+  "finished_at": "2026-10-07T06:03:27.611Z",
+  "updated_at": "2026-10-07T06:03:27.611Z",
   "plan": null
 }

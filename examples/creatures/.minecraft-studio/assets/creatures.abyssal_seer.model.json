@@ -1,0 +1,142 @@
+{
+  "id": "creatures.abyssal_seer.model",
+  "type": "model",
+  "name": "Abyssal Seer model",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/models/entity/abyssal_seer.geo.json",
+      "role": "primary",
+      "sha256": "400d0be714d44e0242040d4217e391c38b46af862ecaddf49dcc94ada077a6cc",
+      "bytes": 22768
+    },
+    {
+      "path": "models/abyssal_seer.bbmodel",
+      "role": "primary",
+      "sha256": "8f953a2341849c7c4b152704953d184b2ac1ab860bc95f58647e969d0206c44b",
+      "bytes": 283568
+    },
+    {
+      "path": "art/models/abyssal_seer.model.json",
+      "role": "source",
+      "sha256": "bd0e0b72621f64cdf7a476c94216465338049ab830de16a24f5fa2377ceba1ad",
+      "bytes": 19276
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "minecraft-studio-model/1",
+    "source_files": [
+      "art/models/abyssal_seer.model.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:03:26.422Z",
+  "modified_at": "2026-10-07T06:03:26.430Z",
+  "created_by": "modeler",
+  "dependencies": [
+    "creatures.abyssal_seer.texture"
+  ],
+  "minecraft_ids": [
+    "geometry.abyssal_seer"
+  ],
+  "preview": ".minecraft-studio/previews/model_abyssal_seer.png",
+  "tags": [
+    "creature",
+    "anthropomorphic"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:03:26.428Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "45 cubes",
+      "checks": [
+        {
+          "name": "rig validation",
+          "status": "pass",
+          "detail": "45 cubes, bones pelvis/thigh_r/shin_r/hock_r/toes_r/thigh_l/shin_l/hock_l/toes_l/torso/head/beard/arm_r/forearm_r/staff/arm_l/forearm_l/tu_r0/tu_r1/tu_r2/tu_r3/tu_l0/tu_l1/tu_l2/tu_l3/td_r0/td_r1/td_r2/td_r3/td_l0/td_l1/td_l2/td_l3"
+        },
+        {
+          "name": "size",
+          "status": "pass",
+          "detail": "0.88 × 2.63 × 1.5 blocks"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:03:26.425Z",
+      "by": "modeler",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/models/entity/abyssal_seer.geo.json",
+          "sha256": "400d0be714d44e0242040d4217e391c38b46af862ecaddf49dcc94ada077a6cc"
+        },
+        {
+          "path": "models/abyssal_seer.bbmodel",
+          "sha256": "8f953a2341849c7c4b152704953d184b2ac1ab860bc95f58647e969d0206c44b"
+        },
+        {
+          "path": "art/models/abyssal_seer.model.json",
+          "sha256": "bd0e0b72621f64cdf7a476c94216465338049ab830de16a24f5fa2377ceba1ad"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.abyssal_seer.model/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "minecraft-studio-model/1",
+        "source_files": [
+          "art/models/abyssal_seer.model.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "bones": [
+      "pelvis",
+      "thigh_r",
+      "shin_r",
+      "hock_r",
+      "toes_r",
+      "thigh_l",
+      "shin_l",
+      "hock_l",
+      "toes_l",
+      "torso",
+      "head",
+      "beard",
+      "arm_r",
+      "forearm_r",
+      "staff",
+      "arm_l",
+      "forearm_l",
+      "tu_r0",
+      "tu_r1",
+      "tu_r2",
+      "tu_r3",
+      "tu_l0",
+      "tu_l1",
+      "tu_l2",
+      "tu_l3",
+      "td_r0",
+      "td_r1",
+      "td_r2",
+      "td_r3",
+      "td_l0",
+      "td_l1",
+      "td_l2",
+      "td_l3"
+    ],
+    "texture_size": [
+      64,
+      128
+    ]
+  }
+}

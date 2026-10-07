@@ -108,5 +108,23 @@
       "hurt",
       "attack"
     ]
+  },
+  {
+    "id": "abyssal_seer",
+    "category": "anthropomorphic",
+    "name": {
+      "en": "Abyssal Seer",
+      "ru": "Бездонный провидец"
+    },
+    "animations": [
+      "idle",
+      "walk",
+      "attack"
+    ],
+    "sounds": [
+      "ambient",
+      "hurt",
+      "attack"
+    ]
   }
 ]
