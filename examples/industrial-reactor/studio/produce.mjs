@@ -335,6 +335,12 @@ await step('reactor-guide', 'documentation-writer', 'operator & admin guide regi
     const has = await core('studio_asset_list', { type: 'guide' });
     if (!has.total) await core('studio_asset_create', { id: 'guide.reactor', type: 'guide', name: 'Industrial Reactor — operator guide', description: 'How to build, start, monitor and shut down the reactor; states, sounds, commands, permissions, troubleshooting.', files: [guide], created_by: 'documentation-writer', dependencies: (await core('studio_asset_list', { type: 'code' })).total ? ['reactor.plugin'] : [] });
     else await core('studio_asset_update', { id: 'guide.reactor', patch: { files: [guide] }, by: 'documentation-writer' });
+    // review: every command the guide documents must exist in plugin.yml usage / command handler
+    const text = fs.readFileSync(path.join(DEMO, guide), 'utf8');
+    const documented = [...new Set([...text.matchAll(/`(give|list|status|start|stop|scram|power|coolant|heat|remove|selftest|reload)\b/g)].map((m) => m[1]))];
+    const code = fs.existsSync(path.join(DEMO, 'src/main/java')) ? fs.readdirSync(path.join(DEMO, 'src/main/java'), { recursive: true }).filter((f) => f.endsWith('.java')).map((f) => fs.readFileSync(path.join(DEMO, 'src/main/java', f), 'utf8')).join('\n') : '';
+    const missing = documented.filter((c) => !code.includes(`"${c}"`));
+    await qa('guide.reactor', 'code-reviewer', [ok('documented commands exist in code', missing.length === 0, missing.join(', ') || `${documented.length} commands verified`), ok('sections', ['Overview', 'How to start', 'Controls', 'Emergency shutdown', 'Permissions', 'Admin commands', 'Troubleshooting'].every((h) => text.includes(h)), 'required sections present')], 'guide verified against code');
   } else log('guide not written yet');
 });
 

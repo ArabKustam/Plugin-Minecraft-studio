@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/reactor.core_warning.model/core_warning.model.json"
     ]
   },
-  "created_at": "2026-10-07T04:41:15.487Z",
-  "modified_at": "2026-10-07T04:41:15.498Z",
+  "created_at": "2026-10-07T04:50:31.038Z",
+  "modified_at": "2026-10-07T04:50:31.048Z",
   "created_by": "modeler",
   "dependencies": [
     "reactor.core_side_warning.texture",
@@ -43,7 +43,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T04:41:15.495Z",
+      "at": "2026-10-07T04:50:31.045Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -65,7 +65,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T04:41:15.490Z",
+      "at": "2026-10-07T04:50:31.040Z",
       "by": "modeler",
       "note": "initial version",
       "files": [

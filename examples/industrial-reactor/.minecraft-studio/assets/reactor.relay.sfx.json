@@ -15,7 +15,7 @@
     {
       "path": "resourcepack/assets/reactor/sounds/reactor/relay.ogg",
       "role": "primary",
-      "sha256": "b577f1809ed3505a2c3166fe3c92cb79d5acdb0eacdada43805195b9eee873f1",
+      "sha256": "74be1539672170acde89cacae33035be2a3939b9a7ff72e72591beb7a82edeee",
       "bytes": 6319
     }
   ],
@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/reactor.relay.sfx/recipe.json"
     ]
   },
-  "created_at": "2026-10-07T04:41:16.896Z",
-  "modified_at": "2026-10-07T04:41:16.907Z",
+  "created_at": "2026-10-07T04:50:32.474Z",
+  "modified_at": "2026-10-07T04:50:32.482Z",
   "created_by": "sfx-designer",
   "dependencies": [],
   "minecraft_ids": [
@@ -40,7 +40,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T04:41:16.903Z",
+      "at": "2026-10-07T04:50:32.479Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -92,7 +92,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T04:41:16.898Z",
+      "at": "2026-10-07T04:50:32.475Z",
       "by": "sfx-designer",
       "note": "initial version",
       "files": [
@@ -102,7 +102,7 @@
         },
         {
           "path": "resourcepack/assets/reactor/sounds/reactor/relay.ogg",
-          "sha256": "b577f1809ed3505a2c3166fe3c92cb79d5acdb0eacdada43805195b9eee873f1"
+          "sha256": "74be1539672170acde89cacae33035be2a3939b9a7ff72e72591beb7a82edeee"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.relay.sfx/v1",

@@ -15,7 +15,7 @@
     {
       "path": "models/reactor_rig.bbmodel",
       "role": "primary",
-      "sha256": "277e96aac2c7d055d3d7d27c9ce4c59b9d789a1ff43e782c1c7e981593ffe74e",
+      "sha256": "5da1435e9ef20064f0aeebccf350c4d459ce80d21bd6e189a00bf01723f43801",
       "bytes": 51453
     },
     {
@@ -32,8 +32,8 @@
       "art/models/reactor_rig.model.json"
     ]
   },
-  "created_at": "2026-10-07T04:41:15.974Z",
-  "modified_at": "2026-10-07T04:41:15.985Z",
+  "created_at": "2026-10-07T04:50:31.535Z",
+  "modified_at": "2026-10-07T04:50:31.543Z",
   "created_by": "modeler",
   "dependencies": [
     "reactor.core_off.model",
@@ -48,7 +48,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T04:41:15.982Z",
+      "at": "2026-10-07T04:50:31.540Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -70,7 +70,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T04:41:15.977Z",
+      "at": "2026-10-07T04:50:31.537Z",
       "by": "modeler",
       "note": "initial version",
       "files": [
@@ -80,7 +80,7 @@
         },
         {
           "path": "models/reactor_rig.bbmodel",
-          "sha256": "277e96aac2c7d055d3d7d27c9ce4c59b9d789a1ff43e782c1c7e981593ffe74e"
+          "sha256": "5da1435e9ef20064f0aeebccf350c4d459ce80d21bd6e189a00bf01723f43801"
         },
         {
           "path": "art/models/reactor_rig.model.json",

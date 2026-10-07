@@ -15,7 +15,7 @@
     {
       "path": "resourcepack/assets/reactor/sounds/reactor/hydraulic.ogg",
       "role": "primary",
-      "sha256": "710adfcf6e70bd2e336b3200789a853f455ff8c23ee22b25dd7a1d59a1db1b43",
+      "sha256": "e1324c172d1e2d8745944dd8118fb6bed9d5262c6215d0fb8d6593bcef07c266",
       "bytes": 19268
     }
   ],
@@ -26,8 +26,8 @@
       ".minecraft-studio/sources/reactor.hydraulic.sfx/recipe.json"
     ]
   },
-  "created_at": "2026-10-07T04:41:17.196Z",
-  "modified_at": "2026-10-07T04:41:17.207Z",
+  "created_at": "2026-10-07T04:50:32.746Z",
+  "modified_at": "2026-10-07T04:50:32.754Z",
   "created_by": "sfx-designer",
   "dependencies": [],
   "minecraft_ids": [
@@ -40,7 +40,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T04:41:17.203Z",
+      "at": "2026-10-07T04:50:32.751Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -92,7 +92,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T04:41:17.198Z",
+      "at": "2026-10-07T04:50:32.748Z",
       "by": "sfx-designer",
       "note": "initial version",
       "files": [
@@ -102,7 +102,7 @@
         },
         {
           "path": "resourcepack/assets/reactor/sounds/reactor/hydraulic.ogg",
-          "sha256": "710adfcf6e70bd2e336b3200789a853f455ff8c23ee22b25dd7a1d59a1db1b43"
+          "sha256": "e1324c172d1e2d8745944dd8118fb6bed9d5262c6215d0fb8d6593bcef07c266"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.hydraulic.sfx/v1",

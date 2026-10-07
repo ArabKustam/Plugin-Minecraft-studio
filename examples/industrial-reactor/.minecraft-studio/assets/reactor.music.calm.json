@@ -21,7 +21,7 @@
     {
       "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_intro.ogg",
       "role": "minecraft",
-      "sha256": "9dcb9f2335122faea1afcf0f4309f5045fe3df71005a1290ecabfb300f16e8f7",
+      "sha256": "825f3d6c53e6bc70c372f093af7d8f2a10b30b9b1fe0aaa78ea928e1015c6beb",
       "bytes": 51911
     },
     {
@@ -33,7 +33,7 @@
     {
       "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop.ogg",
       "role": "minecraft",
-      "sha256": "66ae6eda1fe355dcb85697cb2c473bb494850e05cd8cbb1b48b63dba9b8d1ab0",
+      "sha256": "0c9bae8ac7c02ca8a73a55723ed8e7847ec5704ce48c634b656431e501f90ade",
       "bytes": 248938
     },
     {
@@ -45,7 +45,7 @@
     {
       "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_outro.ogg",
       "role": "minecraft",
-      "sha256": "f40560c62fa317925550b8e752c3fdd77c8b1719fffe2ed52f8e87d1669fe895",
+      "sha256": "84988b0cc33da17c2919169ed6dcbb513ffc1860c0c6a5e17343360ab131251f",
       "bytes": 73775
     },
     {
@@ -57,7 +57,7 @@
     {
       "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_pad.ogg",
       "role": "minecraft",
-      "sha256": "221b5ba77f41444153c0856508b9fe48033d13facad2f217ec472242ee652bdc",
+      "sha256": "273bdd2c0a857c5ddeb4f022cf1bddde3bbaf589f8baf9b54d6926509e96da61",
       "bytes": 183218
     },
     {
@@ -69,7 +69,7 @@
     {
       "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_bass.ogg",
       "role": "minecraft",
-      "sha256": "fbbb30e676c71a67b246116a8a8673524bcf2bcbcd0614f49234fef725950f13",
+      "sha256": "d97820e538ca91477bedf49cf3a92f5a115b766c5c7dc76567f925b5fdbf115c",
       "bytes": 117613
     },
     {
@@ -81,7 +81,7 @@
     {
       "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_arp.ogg",
       "role": "minecraft",
-      "sha256": "40138f725617b9d4c2b76493534172d9e3961f42d9d166616c0b426fd5b91ddd",
+      "sha256": "64af58e4ad85a9badd8ba9c9c81f353ce26d31d7054dc495a231aa491d427f0d",
       "bytes": 283809
     },
     {
@@ -93,7 +93,7 @@
     {
       "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_bell.ogg",
       "role": "minecraft",
-      "sha256": "fe23c770a34c6efeac51cca4a08d2e4fab8230c2fa1b5a78f452f2831fa119fb",
+      "sha256": "0dd9323d83d637f59973801907da6b4459e3ec608fadb6fd629f7817abf1f250",
       "bytes": 171615
     },
     {
@@ -105,7 +105,7 @@
     {
       "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_drums.ogg",
       "role": "minecraft",
-      "sha256": "1950d4164d3caa1502b8883eaaf6127b791e0afde3a2c21574585badda9f2a5f",
+      "sha256": "d35e3a045cb390b5865d29b6d389f5bb9e119f56b9a4ac33056a52e2cd7c6b7b",
       "bytes": 81113
     },
     {
@@ -122,8 +122,8 @@
       "audio/music/source/reactor_calm.score.json"
     ]
   },
-  "created_at": "2026-10-07T04:41:23.840Z",
-  "modified_at": "2026-10-07T04:41:23.884Z",
+  "created_at": "2026-10-07T04:50:39.075Z",
+  "modified_at": "2026-10-07T04:50:39.111Z",
   "created_by": "composer",
   "dependencies": [],
   "minecraft_ids": [
@@ -144,7 +144,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T04:41:23.881Z",
+      "at": "2026-10-07T04:50:39.108Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -206,7 +206,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T04:41:23.858Z",
+      "at": "2026-10-07T04:50:39.090Z",
       "by": "composer",
       "note": "initial version",
       "files": [
@@ -220,7 +220,7 @@
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_intro.ogg",
-          "sha256": "9dcb9f2335122faea1afcf0f4309f5045fe3df71005a1290ecabfb300f16e8f7"
+          "sha256": "825f3d6c53e6bc70c372f093af7d8f2a10b30b9b1fe0aaa78ea928e1015c6beb"
         },
         {
           "path": "audio/music/rendered/reactor_calm_loop.flac",
@@ -228,7 +228,7 @@
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop.ogg",
-          "sha256": "66ae6eda1fe355dcb85697cb2c473bb494850e05cd8cbb1b48b63dba9b8d1ab0"
+          "sha256": "0c9bae8ac7c02ca8a73a55723ed8e7847ec5704ce48c634b656431e501f90ade"
         },
         {
           "path": "audio/music/rendered/reactor_calm_outro.flac",
@@ -236,7 +236,7 @@
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_outro.ogg",
-          "sha256": "f40560c62fa317925550b8e752c3fdd77c8b1719fffe2ed52f8e87d1669fe895"
+          "sha256": "84988b0cc33da17c2919169ed6dcbb513ffc1860c0c6a5e17343360ab131251f"
         },
         {
           "path": "audio/music/stems/reactor_calm_loop_pad.flac",
@@ -244,7 +244,7 @@
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_pad.ogg",
-          "sha256": "221b5ba77f41444153c0856508b9fe48033d13facad2f217ec472242ee652bdc"
+          "sha256": "273bdd2c0a857c5ddeb4f022cf1bddde3bbaf589f8baf9b54d6926509e96da61"
         },
         {
           "path": "audio/music/stems/reactor_calm_loop_bass.flac",
@@ -252,7 +252,7 @@
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_bass.ogg",
-          "sha256": "fbbb30e676c71a67b246116a8a8673524bcf2bcbcd0614f49234fef725950f13"
+          "sha256": "d97820e538ca91477bedf49cf3a92f5a115b766c5c7dc76567f925b5fdbf115c"
         },
         {
           "path": "audio/music/stems/reactor_calm_loop_arp.flac",
@@ -260,7 +260,7 @@
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_arp.ogg",
-          "sha256": "40138f725617b9d4c2b76493534172d9e3961f42d9d166616c0b426fd5b91ddd"
+          "sha256": "64af58e4ad85a9badd8ba9c9c81f353ce26d31d7054dc495a231aa491d427f0d"
         },
         {
           "path": "audio/music/stems/reactor_calm_loop_bell.flac",
@@ -268,7 +268,7 @@
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_bell.ogg",
-          "sha256": "fe23c770a34c6efeac51cca4a08d2e4fab8230c2fa1b5a78f452f2831fa119fb"
+          "sha256": "0dd9323d83d637f59973801907da6b4459e3ec608fadb6fd629f7817abf1f250"
         },
         {
           "path": "audio/music/stems/reactor_calm_loop_drums.flac",
@@ -276,7 +276,7 @@
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_drums.ogg",
-          "sha256": "1950d4164d3caa1502b8883eaaf6127b791e0afde3a2c21574585badda9f2a5f"
+          "sha256": "d35e3a045cb390b5865d29b6d389f5bb9e119f56b9a4ac33056a52e2cd7c6b7b"
         },
         {
           "path": "audio/music/metadata/reactor_calm.json",

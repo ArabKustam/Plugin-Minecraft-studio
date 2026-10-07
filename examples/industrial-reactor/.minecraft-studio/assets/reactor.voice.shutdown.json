@@ -15,7 +15,7 @@
     {
       "path": "resourcepack/assets/reactor/sounds/voice/shutdown.ogg",
       "role": "primary",
-      "sha256": "8bc3372b1daf1acad2894d6757bcaf71e605a1db81a2fe9c14608e3024a7108b",
+      "sha256": "ddad29323d691b9e1b284da3367c9fb1e2091fcfd85fe3fabeb4653bc0fc26bf",
       "bytes": 41202
     }
   ],
@@ -37,8 +37,8 @@
     "engine": "sapi",
     "language": "ru"
   },
-  "created_at": "2026-10-07T04:41:32.665Z",
-  "modified_at": "2026-10-07T04:41:32.675Z",
+  "created_at": "2026-10-07T04:50:47.186Z",
+  "modified_at": "2026-10-07T04:50:47.194Z",
   "created_by": "voice-director",
   "dependencies": [],
   "minecraft_ids": [
@@ -52,7 +52,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T04:41:32.671Z",
+      "at": "2026-10-07T04:50:47.191Z",
       "by": "audio-qa",
       "version": 1,
       "verdict": "pass",
@@ -114,7 +114,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T04:41:32.666Z",
+      "at": "2026-10-07T04:50:47.188Z",
       "by": "voice-director",
       "note": "initial version",
       "files": [
@@ -124,7 +124,7 @@
         },
         {
           "path": "resourcepack/assets/reactor/sounds/voice/shutdown.ogg",
-          "sha256": "8bc3372b1daf1acad2894d6757bcaf71e605a1db81a2fe9c14608e3024a7108b"
+          "sha256": "ddad29323d691b9e1b284da3367c9fb1e2091fcfd85fe3fabeb4653bc0fc26bf"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.voice.shutdown/v1",

@@ -31,8 +31,8 @@
       ]
     }
   },
-  "created_at": "2026-10-07T04:41:15.118Z",
-  "modified_at": "2026-10-07T04:41:15.178Z",
+  "created_at": "2026-10-07T04:50:30.678Z",
+  "modified_at": "2026-10-07T04:50:30.728Z",
   "created_by": "texture-artist",
   "dependencies": [
     "reactor.core_side_off.texture"
@@ -48,7 +48,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T04:41:15.175Z",
+      "at": "2026-10-07T04:50:30.725Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -70,7 +70,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T04:41:15.120Z",
+      "at": "2026-10-07T04:50:30.679Z",
       "by": "texture-artist",
       "note": "initial version",
       "files": [

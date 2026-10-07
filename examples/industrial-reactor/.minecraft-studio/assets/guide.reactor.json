@@ -3,7 +3,7 @@
   "type": "guide",
   "name": "Industrial Reactor — operator guide",
   "description": "How to build, start, monitor and shut down the reactor; states, sounds, commands, permissions, troubleshooting.",
-  "status": "draft",
+  "status": "approved",
   "version": 1,
   "files": [
     {
@@ -14,8 +14,8 @@
     }
   ],
   "source": {},
-  "created_at": "2026-10-07T04:41:38.787Z",
-  "modified_at": "2026-10-07T04:41:38.787Z",
+  "created_at": "2026-10-07T04:50:52.618Z",
+  "modified_at": "2026-10-07T04:50:52.631Z",
   "created_by": "documentation-writer",
   "dependencies": [
     "reactor.plugin"
@@ -23,12 +23,32 @@
   "minecraft_ids": [],
   "preview": null,
   "tags": [],
-  "qa_status": "pending",
-  "qa_history": [],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:50:52.629Z",
+      "by": "code-reviewer",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "guide verified against code",
+      "checks": [
+        {
+          "name": "documented commands exist in code",
+          "status": "pass",
+          "detail": "0 commands verified"
+        },
+        {
+          "name": "sections",
+          "status": "pass",
+          "detail": "required sections present"
+        }
+      ]
+    }
+  ],
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T04:41:38.788Z",
+      "at": "2026-10-07T04:50:52.619Z",
       "by": "documentation-writer",
       "note": "initial version",
       "files": [

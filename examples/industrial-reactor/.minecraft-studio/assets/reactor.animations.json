@@ -17,8 +17,8 @@
     "provider": "studio-model",
     "format": "bedrock-animation/1.8.0"
   },
-  "created_at": "2026-10-07T04:41:15.992Z",
-  "modified_at": "2026-10-07T04:41:16.317Z",
+  "created_at": "2026-10-07T04:50:31.550Z",
+  "modified_at": "2026-10-07T04:50:31.931Z",
   "created_by": "animator",
   "dependencies": [
     "reactor.rig.model"
@@ -31,7 +31,7 @@
   "qa_status": "passed",
   "qa_history": [
     {
-      "at": "2026-10-07T04:41:16.314Z",
+      "at": "2026-10-07T04:50:31.927Z",
       "by": "visual-qa",
       "version": 1,
       "verdict": "pass",
@@ -68,7 +68,7 @@
   "versions": [
     {
       "version": 1,
-      "at": "2026-10-07T04:41:15.993Z",
+      "at": "2026-10-07T04:50:31.551Z",
       "by": "animator",
       "note": "initial version",
       "files": [
