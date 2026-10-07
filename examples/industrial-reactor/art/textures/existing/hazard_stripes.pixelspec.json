@@ -1,0 +1,29 @@
+{
+  "size": [
+    16,
+    16
+  ],
+  "palette": {
+    "d": "#2b3038",
+    "y": "#d9b42a",
+    "k": "#17191d"
+  },
+  "rows": [
+    "yyyykkkkyyyykkkk",
+    "yyykkkkyyyykkkky",
+    "yykkkkyyyykkkkyy",
+    "ykkkkyyydkkkkyyy",
+    "kkkkyyyykkkkyyyy",
+    "kkkyyyykkkkyyyyk",
+    "kkyyyykkkkyyyykk",
+    "kyyyykkkkyyydkkk",
+    "yyydkkkkyyyykkkk",
+    "yyykkkkyyyykkkky",
+    "yykkkkyyyykkkkyy",
+    "ykkkkyyyykkkkyyy",
+    "kkkkyyydkkkkyyyy",
+    "kkkyyyykkkkyyyyk",
+    "kkyyyykkkkyyyykk",
+    "kyyyykkkkyyyykkk"
+  ]
+}

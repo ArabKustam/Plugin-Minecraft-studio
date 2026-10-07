@@ -1,0 +1,20 @@
+name: IndustrialReactor
+version: '${project.version}'
+main: dev.minecraftstudio.reactor.ReactorPlugin
+api-version: '1.21'
+description: Minecraft Studio demo - an animated industrial reactor driven by studio timelines and adaptive music.
+authors: [Minecraft Studio]
+commands:
+  reactor:
+    description: Manage industrial reactors.
+    usage: /<command> <give|list|status|start|stop|scram|power|coolant|heat|remove|selftest|reload>
+    aliases: [rx]
+permissions:
+  reactor.use:
+    description: Place reactors, open control panels and start/stop/scram reactors.
+    default: true
+  reactor.admin:
+    description: Give items, set heat, remove reactors, run the self test and reload.
+    default: op
+    children:
+      reactor.use: true

@@ -1,0 +1,58 @@
+{
+  "duration": 1.7,
+  "layers": [
+    {
+      "name": "hiss",
+      "type": "noise",
+      "color": "white",
+      "gain": -6,
+      "envelope": {
+        "attack": 0.03,
+        "decay": 0.35,
+        "sustain": 0.55,
+        "release": 0.7
+      },
+      "filter": {
+        "type": "bandpass",
+        "freq": {
+          "from": 5200,
+          "to": 1700,
+          "curve": "exp"
+        },
+        "q": 0.8
+      }
+    },
+    {
+      "name": "flow",
+      "type": "noise",
+      "color": "brown",
+      "gain": -15,
+      "envelope": {
+        "attack": 0.1,
+        "release": 0.6
+      },
+      "filter": {
+        "type": "lowpass",
+        "freq": 320
+      }
+    },
+    {
+      "name": "valve_clunk",
+      "type": "impact",
+      "freq": 140,
+      "decay": 0.12,
+      "noise": 0.5,
+      "gain": -12
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.55,
+      "mix": 0.2
+    }
+  ],
+  "normalize": {
+    "lufs": -17
+  }
+}

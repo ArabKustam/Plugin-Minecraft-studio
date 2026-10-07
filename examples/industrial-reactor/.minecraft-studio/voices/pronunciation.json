@@ -1,0 +1,35 @@
+{
+  "entries": [
+    {
+      "term": "реактора",
+      "stress": "реАктора",
+      "language": "ru"
+    },
+    {
+      "term": "реактор",
+      "stress": "реАктор",
+      "language": "ru"
+    },
+    {
+      "term": "активной",
+      "stress": "актИвной",
+      "language": "ru"
+    },
+    {
+      "term": "мощность",
+      "stress": "мОщность",
+      "language": "ru"
+    },
+    {
+      "term": "заглушен",
+      "stress": "заглушЕн",
+      "language": "ru"
+    },
+    {
+      "term": "АЗ",
+      "say": "активная зона",
+      "language": "ru",
+      "note": "abbreviation used on panels"
+    }
+  ]
+}

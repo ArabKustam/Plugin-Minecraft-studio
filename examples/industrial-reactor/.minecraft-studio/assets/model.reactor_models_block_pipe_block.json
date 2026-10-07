@@ -1,0 +1,47 @@
+{
+  "id": "model.reactor_models_block_pipe_block",
+  "type": "model",
+  "name": "pipe_block.json",
+  "description": "Existing project asset (indexed by init)",
+  "status": "integrated",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/reactor/models/block/pipe_block.json",
+      "role": "primary",
+      "sha256": "38f68eb418c2ddd0751433df145c207bd0f293395facbecdf576f58b5642eee9",
+      "bytes": 102
+    }
+  ],
+  "source": {},
+  "created_at": "2026-10-07T04:41:14.582Z",
+  "modified_at": "2026-10-07T04:41:14.582Z",
+  "created_by": "import",
+  "dependencies": [],
+  "minecraft_ids": [
+    "reactor:block/pipe_block"
+  ],
+  "preview": null,
+  "tags": [
+    "existing"
+  ],
+  "qa_status": "n/a",
+  "qa_history": [],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:14.582Z",
+      "by": "import",
+      "note": "imported existing project file",
+      "files": [
+        {
+          "path": "resourcepack/assets/reactor/models/block/pipe_block.json",
+          "sha256": "38f68eb418c2ddd0751433df145c207bd0f293395facbecdf576f58b5642eee9"
+        }
+      ],
+      "archived_dir": null,
+      "source": {}
+    }
+  ],
+  "metadata": {}
+}

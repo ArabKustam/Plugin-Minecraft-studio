@@ -1,0 +1,431 @@
+{
+  "name": "default",
+  "source": [
+    "resourcepack"
+  ],
+  "generated_at": "2026-10-07T04:41:14.722Z",
+  "texture_count": 6,
+  "pixel_density": "16x16",
+  "resolutions": {
+    "16x16": 6
+  },
+  "palette": [
+    {
+      "hex": "#6c7683",
+      "weight": 310
+    },
+    {
+      "hex": "#535b67",
+      "weight": 282
+    },
+    {
+      "hex": "#1b1e24",
+      "weight": 264
+    },
+    {
+      "hex": "#2b3038",
+      "weight": 236
+    },
+    {
+      "hex": "#8e99a6",
+      "weight": 134
+    },
+    {
+      "hex": "#d9b42a",
+      "weight": 124
+    },
+    {
+      "hex": "#3d444e",
+      "weight": 112
+    },
+    {
+      "hex": "#23798f",
+      "weight": 24
+    },
+    {
+      "hex": "#3fb0c8",
+      "weight": 24
+    },
+    {
+      "hex": "#b9c3ce",
+      "weight": 14
+    },
+    {
+      "hex": "#9be3f0",
+      "weight": 12
+    }
+  ],
+  "lighting_direction": {
+    "x": 0.67,
+    "y": 0.71,
+    "description": "bottom-right"
+  },
+  "metrics": {
+    "colors_per_256px": {
+      "median": 5.5,
+      "p25": 5,
+      "p75": 6,
+      "min": 3,
+      "max": 9
+    },
+    "luminance_mean": {
+      "median": 38.955,
+      "p25": 36.315,
+      "p75": 41.88,
+      "min": 28.77,
+      "max": 45.81
+    },
+    "contrast": {
+      "median": 51.55,
+      "p25": 45.183,
+      "p75": 56.875,
+      "min": 43.06,
+      "max": 65.84
+    },
+    "saturation_mean": {
+      "median": 0.12,
+      "p25": 0.116,
+      "p75": 0.204,
+      "min": 0.112,
+      "max": 0.397
+    },
+    "noise": {
+      "median": 10.985,
+      "p25": 7.522,
+      "p75": 12.985,
+      "min": 6.27,
+      "max": 16.46
+    },
+    "dithering": {
+      "median": 0,
+      "p25": 0,
+      "p75": 0,
+      "min": 0,
+      "max": 0
+    },
+    "detail_density": {
+      "median": 0.816,
+      "p25": 0.768,
+      "p75": 0.959,
+      "min": 0.527,
+      "max": 0.996
+    },
+    "mean_cluster_px": {
+      "median": 10.875,
+      "p25": 6.248,
+      "p75": 18.323,
+      "min": 3.2,
+      "max": 21.33
+    },
+    "outline_darkness": {
+      "median": -3.88,
+      "p25": -6.282,
+      "p75": 4.14,
+      "min": -9.71,
+      "max": 10.5
+    },
+    "hue_shift": {
+      "median": -6.55,
+      "p25": -20.1,
+      "p75": -5.075,
+      "min": -172.7,
+      "max": -2.7
+    }
+  },
+  "categories": {
+    "block": {
+      "count": 6,
+      "metrics": {
+        "colors_per_256px": {
+          "median": 5.5,
+          "p25": 5,
+          "p75": 6,
+          "min": 3,
+          "max": 9
+        },
+        "luminance_mean": {
+          "median": 38.955,
+          "p25": 36.315,
+          "p75": 41.88,
+          "min": 28.77,
+          "max": 45.81
+        },
+        "contrast": {
+          "median": 51.55,
+          "p25": 45.183,
+          "p75": 56.875,
+          "min": 43.06,
+          "max": 65.84
+        },
+        "saturation_mean": {
+          "median": 0.12,
+          "p25": 0.116,
+          "p75": 0.204,
+          "min": 0.112,
+          "max": 0.397
+        },
+        "noise": {
+          "median": 10.985,
+          "p25": 7.522,
+          "p75": 12.985,
+          "min": 6.27,
+          "max": 16.46
+        },
+        "dithering": {
+          "median": 0,
+          "p25": 0,
+          "p75": 0,
+          "min": 0,
+          "max": 0
+        },
+        "detail_density": {
+          "median": 0.816,
+          "p25": 0.768,
+          "p75": 0.959,
+          "min": 0.527,
+          "max": 0.996
+        },
+        "mean_cluster_px": {
+          "median": 10.875,
+          "p25": 6.248,
+          "p75": 18.323,
+          "min": 3.2,
+          "max": 21.33
+        },
+        "outline_darkness": {
+          "median": -3.88,
+          "p25": -6.282,
+          "p75": 4.14,
+          "min": -9.71,
+          "max": 10.5
+        },
+        "hue_shift": {
+          "median": -6.55,
+          "p25": -20.1,
+          "p75": -5.075,
+          "min": -172.7,
+          "max": -2.7
+        }
+      }
+    }
+  },
+  "traits": [
+    "restrained palette (~5.5 colours per 16×16)",
+    "high contrast (L* range 51.55)",
+    "muted colours",
+    "noisy material surfaces (noise 10.985)",
+    "little or no dithering",
+    "highlights shift -6.55° in hue from shadows",
+    "no distinct outline",
+    "chunky pixel clusters (mean 10.875 px)"
+  ],
+  "samples": [
+    {
+      "path": "resourcepack/assets/reactor/textures/block/hazard_stripes.png",
+      "category": "block",
+      "metrics": {
+        "width": 16,
+        "height": 16,
+        "opaque_ratio": 1,
+        "colors": 3,
+        "colors_per_256px": 3,
+        "luminance_mean": 40.77,
+        "contrast": 65.84,
+        "saturation_mean": 0.397,
+        "saturation_p90": 0.697,
+        "shadow_hue": 220,
+        "highlight_hue": 47.3,
+        "hue_shift": -172.7,
+        "noise": 16.46,
+        "dithering": 0,
+        "detail_density": 0.527,
+        "mean_cluster_px": 21.33,
+        "outline_darkness": -2.55,
+        "lighting_dir": {
+          "x": 0,
+          "y": 0
+        },
+        "top_colors": [
+          "#17191d",
+          "#d9b42a",
+          "#2b3038"
+        ]
+      }
+    },
+    {
+      "path": "resourcepack/assets/reactor/textures/block/machine_casing.png",
+      "category": "block",
+      "metrics": {
+        "width": 16,
+        "height": 16,
+        "opaque_ratio": 1,
+        "colors": 6,
+        "colors_per_256px": 6,
+        "luminance_mean": 37.14,
+        "contrast": 43.06,
+        "saturation_mean": 0.117,
+        "saturation_p90": 0.131,
+        "shadow_hue": 215.9,
+        "highlight_hue": 213.2,
+        "hue_shift": -2.7,
+        "noise": 6.27,
+        "dithering": 0,
+        "detail_density": 0.773,
+        "mean_cluster_px": 19.69,
+        "outline_darkness": -5.21,
+        "lighting_dir": {
+          "x": 0.71,
+          "y": 0.71
+        },
+        "top_colors": [
+          "#3d444e",
+          "#6c7683",
+          "#2b3038",
+          "#8e99a6",
+          "#535b67",
+          "#b9c3ce"
+        ]
+      }
+    },
+    {
+      "path": "resourcepack/assets/reactor/textures/block/pipe_block.png",
+      "category": "block",
+      "metrics": {
+        "width": 16,
+        "height": 16,
+        "opaque_ratio": 1,
+        "colors": 9,
+        "colors_per_256px": 9,
+        "luminance_mean": 42.25,
+        "contrast": 58.65,
+        "saturation_mean": 0.231,
+        "saturation_p90": 0.607,
+        "shadow_hue": 216.4,
+        "highlight_hue": 191.9,
+        "hue_shift": -24.6,
+        "noise": 6.61,
+        "dithering": 0,
+        "detail_density": 0.766,
+        "mean_cluster_px": 7.53,
+        "outline_darkness": 10.5,
+        "lighting_dir": {
+          "x": 1,
+          "y": 0
+        },
+        "top_colors": [
+          "#535b67",
+          "#2b3038",
+          "#23798f",
+          "#3fb0c8",
+          "#3d444e",
+          "#9be3f0",
+          "#8e99a6",
+          "#6c7683"
+        ]
+      }
+    },
+    {
+      "path": "resourcepack/assets/reactor/textures/block/steel_grate.png",
+      "category": "block",
+      "metrics": {
+        "width": 16,
+        "height": 16,
+        "opaque_ratio": 1,
+        "colors": 5,
+        "colors_per_256px": 5,
+        "luminance_mean": 28.77,
+        "contrast": 51.55,
+        "saturation_mean": 0.123,
+        "saturation_p90": 0.143,
+        "shadow_hue": 220,
+        "highlight_hue": 213.5,
+        "hue_shift": -6.5,
+        "noise": 13.41,
+        "dithering": 0,
+        "detail_density": 0.996,
+        "mean_cluster_px": 3.2,
+        "outline_darkness": -9.71,
+        "lighting_dir": {
+          "x": 0.6,
+          "y": 0.8
+        },
+        "top_colors": [
+          "#1b1e24",
+          "#2b3038",
+          "#6c7683",
+          "#535b67",
+          "#8e99a6"
+        ]
+      }
+    },
+    {
+      "path": "resourcepack/assets/reactor/textures/block/steel_plate.png",
+      "category": "block",
+      "metrics": {
+        "width": 16,
+        "height": 16,
+        "opaque_ratio": 1,
+        "colors": 6,
+        "colors_per_256px": 6,
+        "luminance_mean": 45.81,
+        "contrast": 43.06,
+        "saturation_mean": 0.112,
+        "saturation_p90": 0.131,
+        "shadow_hue": 216.9,
+        "highlight_hue": 212.3,
+        "hue_shift": -4.6,
+        "noise": 10.26,
+        "dithering": 0,
+        "detail_density": 0.859,
+        "mean_cluster_px": 5.82,
+        "outline_darkness": 6.37,
+        "lighting_dir": {
+          "x": 0.71,
+          "y": 0.71
+        },
+        "top_colors": [
+          "#6c7683",
+          "#8e99a6",
+          "#2b3038",
+          "#535b67",
+          "#b9c3ce",
+          "#3d444e"
+        ]
+      }
+    },
+    {
+      "path": "resourcepack/assets/reactor/textures/block/vent.png",
+      "category": "block",
+      "metrics": {
+        "width": 16,
+        "height": 16,
+        "opaque_ratio": 1,
+        "colors": 5,
+        "colors_per_256px": 5,
+        "luminance_mean": 36.04,
+        "contrast": 51.55,
+        "saturation_mean": 0.116,
+        "saturation_p90": 0.143,
+        "shadow_hue": 220,
+        "highlight_hue": 213.4,
+        "hue_shift": -6.6,
+        "noise": 11.71,
+        "dithering": 0,
+        "detail_density": 0.992,
+        "mean_cluster_px": 14.22,
+        "outline_darkness": -6.64,
+        "lighting_dir": {
+          "x": 0.63,
+          "y": 0.78
+        },
+        "top_colors": [
+          "#535b67",
+          "#6c7683",
+          "#1b1e24",
+          "#8e99a6",
+          "#2b3038"
+        ]
+      }
+    }
+  ]
+}

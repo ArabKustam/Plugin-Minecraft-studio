@@ -1,0 +1,1178 @@
+{
+  "id": "reactor.music.calm",
+  "type": "music",
+  "name": "reactor calm",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "audio/music/source/reactor_calm.score.json",
+      "role": "source",
+      "sha256": "e31198dd5797ecfafd88fcfc276f476073e7e33a25334bb8a3738f9c3c6cfe2b",
+      "bytes": 2283
+    },
+    {
+      "path": "audio/music/rendered/reactor_calm_intro.flac",
+      "role": "section",
+      "sha256": "185b0c7f0f18fc27d1920de445af2db2f7b08c8f46909d1ca28d463dad3dca48",
+      "bytes": 145997
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_intro.ogg",
+      "role": "minecraft",
+      "sha256": "9dcb9f2335122faea1afcf0f4309f5045fe3df71005a1290ecabfb300f16e8f7",
+      "bytes": 51911
+    },
+    {
+      "path": "audio/music/rendered/reactor_calm_loop.flac",
+      "role": "section",
+      "sha256": "fb46494c3de9eed22fff7d85e40c20d761348b18fa52f460a54321984f7e0aa4",
+      "bytes": 915432
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop.ogg",
+      "role": "minecraft",
+      "sha256": "66ae6eda1fe355dcb85697cb2c473bb494850e05cd8cbb1b48b63dba9b8d1ab0",
+      "bytes": 248938
+    },
+    {
+      "path": "audio/music/rendered/reactor_calm_outro.flac",
+      "role": "section",
+      "sha256": "9d9e6af10407dabc42d14254108670814ba59327108c18d0c00c05ffeef45a6c",
+      "bytes": 194255
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_outro.ogg",
+      "role": "minecraft",
+      "sha256": "f40560c62fa317925550b8e752c3fdd77c8b1719fffe2ed52f8e87d1669fe895",
+      "bytes": 73775
+    },
+    {
+      "path": "audio/music/stems/reactor_calm_loop_pad.flac",
+      "role": "stem",
+      "sha256": "ec4781753254a864e303fe39a3497e86bd9f1ce4e1c20e0aede2f53a5b66160a",
+      "bytes": 509804
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_pad.ogg",
+      "role": "minecraft",
+      "sha256": "221b5ba77f41444153c0856508b9fe48033d13facad2f217ec472242ee652bdc",
+      "bytes": 183218
+    },
+    {
+      "path": "audio/music/stems/reactor_calm_loop_bass.flac",
+      "role": "stem",
+      "sha256": "316a20b10901763f76a50f5e35a053bbfa067d4e97a4637eb9006f7cb2f64ca9",
+      "bytes": 300160
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_bass.ogg",
+      "role": "minecraft",
+      "sha256": "fbbb30e676c71a67b246116a8a8673524bcf2bcbcd0614f49234fef725950f13",
+      "bytes": 117613
+    },
+    {
+      "path": "audio/music/stems/reactor_calm_loop_arp.flac",
+      "role": "stem",
+      "sha256": "f47b748cd522c725f40f354ea9be5e9ac534c344bd0f2a433d0fcd14a8d4c054",
+      "bytes": 842216
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_arp.ogg",
+      "role": "minecraft",
+      "sha256": "40138f725617b9d4c2b76493534172d9e3961f42d9d166616c0b426fd5b91ddd",
+      "bytes": 283809
+    },
+    {
+      "path": "audio/music/stems/reactor_calm_loop_bell.flac",
+      "role": "stem",
+      "sha256": "45ef3deedbc6d64f6ab74736c2fe0b7d7db1ab990b0381e61e471cf2e6fcc911",
+      "bytes": 316834
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_bell.ogg",
+      "role": "minecraft",
+      "sha256": "fe23c770a34c6efeac51cca4a08d2e4fab8230c2fa1b5a78f452f2831fa119fb",
+      "bytes": 171615
+    },
+    {
+      "path": "audio/music/stems/reactor_calm_loop_drums.flac",
+      "role": "stem",
+      "sha256": "c45cd15ab114ddeaa321448d39b6c3d3f69a0e72d925ae0f97b4aeedeb6703cf",
+      "bytes": 239013
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_drums.ogg",
+      "role": "minecraft",
+      "sha256": "1950d4164d3caa1502b8883eaaf6127b791e0afde3a2c21574585badda9f2a5f",
+      "bytes": 81113
+    },
+    {
+      "path": "audio/music/metadata/reactor_calm.json",
+      "role": "metadata",
+      "sha256": "9b156c0daccd7e7f3477cf1ac9cb5f584ec423375d6bc79c917cbf39cada51d3",
+      "bytes": 2841
+    }
+  ],
+  "source": {
+    "provider": "local-composer",
+    "format": "minecraft-studio-score/1",
+    "source_files": [
+      "audio/music/source/reactor_calm.score.json"
+    ]
+  },
+  "created_at": "2026-10-07T04:41:23.840Z",
+  "modified_at": "2026-10-07T04:41:23.884Z",
+  "created_by": "composer",
+  "dependencies": [],
+  "minecraft_ids": [
+    "reactor:reactor.music.calm_intro",
+    "reactor:reactor.music.calm_loop",
+    "reactor:reactor.music.calm_outro",
+    "reactor:reactor.music.calm_loop_pad",
+    "reactor:reactor.music.calm_loop_bass",
+    "reactor:reactor.music.calm_loop_arp",
+    "reactor:reactor.music.calm_loop_bell",
+    "reactor:reactor.music.calm_loop_drums"
+  ],
+  "preview": null,
+  "tags": [
+    "reactor",
+    "adaptive"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:41:23.881Z",
+      "by": "audio-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "loop 20.869565s / 417 ticks",
+      "checks": [
+        {
+          "name": "format",
+          "status": "warn",
+          "detail": "not Ogg Vorbis yet: export with studio_audio_export_minecraft before integration"
+        },
+        {
+          "name": "channels",
+          "status": "pass",
+          "detail": "stereo music (non-positional)"
+        },
+        {
+          "name": "clipping",
+          "status": "pass",
+          "detail": "0 clipped samples, peak -6.31 dBFS"
+        },
+        {
+          "name": "headroom",
+          "status": "pass",
+          "detail": "peak -6.31 dBFS (keep ≤ -1 dBFS)"
+        },
+        {
+          "name": "loudness",
+          "status": "pass",
+          "detail": "-20 LUFS (target -20 ±3 for music)"
+        },
+        {
+          "name": "leading silence",
+          "status": "pass",
+          "detail": "0s before first sound (delays sync with game events)"
+        },
+        {
+          "name": "duration",
+          "status": "pass",
+          "detail": "20.87s"
+        },
+        {
+          "name": "loop seam",
+          "status": "warn",
+          "detail": "jump ratio 11.53, level diff 3.42 dB"
+        },
+        {
+          "name": "file size",
+          "status": "pass",
+          "detail": "894.0 KiB (351 kbps)"
+        },
+        {
+          "name": "transition grid",
+          "status": "pass",
+          "detail": "every 2 bars: 0, 5.2174, 10.4348, 15.6522, 20.8696s"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:23.858Z",
+      "by": "composer",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "audio/music/source/reactor_calm.score.json",
+          "sha256": "e31198dd5797ecfafd88fcfc276f476073e7e33a25334bb8a3738f9c3c6cfe2b"
+        },
+        {
+          "path": "audio/music/rendered/reactor_calm_intro.flac",
+          "sha256": "185b0c7f0f18fc27d1920de445af2db2f7b08c8f46909d1ca28d463dad3dca48"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_intro.ogg",
+          "sha256": "9dcb9f2335122faea1afcf0f4309f5045fe3df71005a1290ecabfb300f16e8f7"
+        },
+        {
+          "path": "audio/music/rendered/reactor_calm_loop.flac",
+          "sha256": "fb46494c3de9eed22fff7d85e40c20d761348b18fa52f460a54321984f7e0aa4"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop.ogg",
+          "sha256": "66ae6eda1fe355dcb85697cb2c473bb494850e05cd8cbb1b48b63dba9b8d1ab0"
+        },
+        {
+          "path": "audio/music/rendered/reactor_calm_outro.flac",
+          "sha256": "9d9e6af10407dabc42d14254108670814ba59327108c18d0c00c05ffeef45a6c"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_outro.ogg",
+          "sha256": "f40560c62fa317925550b8e752c3fdd77c8b1719fffe2ed52f8e87d1669fe895"
+        },
+        {
+          "path": "audio/music/stems/reactor_calm_loop_pad.flac",
+          "sha256": "ec4781753254a864e303fe39a3497e86bd9f1ce4e1c20e0aede2f53a5b66160a"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_pad.ogg",
+          "sha256": "221b5ba77f41444153c0856508b9fe48033d13facad2f217ec472242ee652bdc"
+        },
+        {
+          "path": "audio/music/stems/reactor_calm_loop_bass.flac",
+          "sha256": "316a20b10901763f76a50f5e35a053bbfa067d4e97a4637eb9006f7cb2f64ca9"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_bass.ogg",
+          "sha256": "fbbb30e676c71a67b246116a8a8673524bcf2bcbcd0614f49234fef725950f13"
+        },
+        {
+          "path": "audio/music/stems/reactor_calm_loop_arp.flac",
+          "sha256": "f47b748cd522c725f40f354ea9be5e9ac534c344bd0f2a433d0fcd14a8d4c054"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_arp.ogg",
+          "sha256": "40138f725617b9d4c2b76493534172d9e3961f42d9d166616c0b426fd5b91ddd"
+        },
+        {
+          "path": "audio/music/stems/reactor_calm_loop_bell.flac",
+          "sha256": "45ef3deedbc6d64f6ab74736c2fe0b7d7db1ab990b0381e61e471cf2e6fcc911"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_bell.ogg",
+          "sha256": "fe23c770a34c6efeac51cca4a08d2e4fab8230c2fa1b5a78f452f2831fa119fb"
+        },
+        {
+          "path": "audio/music/stems/reactor_calm_loop_drums.flac",
+          "sha256": "c45cd15ab114ddeaa321448d39b6c3d3f69a0e72d925ae0f97b4aeedeb6703cf"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_drums.ogg",
+          "sha256": "1950d4164d3caa1502b8883eaaf6127b791e0afde3a2c21574585badda9f2a5f"
+        },
+        {
+          "path": "audio/music/metadata/reactor_calm.json",
+          "sha256": "9b156c0daccd7e7f3477cf1ac9cb5f584ec423375d6bc79c917cbf39cada51d3"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/reactor.music.calm/v1",
+      "source": {
+        "provider": "local-composer",
+        "format": "minecraft-studio-score/1",
+        "source_files": [
+          "audio/music/source/reactor_calm.score.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "bpm": 92,
+    "key": "D minor",
+    "meter": [
+      4,
+      4
+    ],
+    "state": "calm",
+    "loop": {
+      "section": "loop",
+      "bars": 8,
+      "duration_s": 20.869565,
+      "samples": 1001739,
+      "ticks": 417
+    },
+    "transition_points_s": [
+      0,
+      5.2174,
+      10.4348,
+      15.6522,
+      20.8696
+    ],
+    "stems": [
+      {
+        "name": "pad",
+        "instrument": "pad",
+        "gain": -9
+      },
+      {
+        "name": "bass",
+        "instrument": "bass",
+        "gain": -12
+      },
+      {
+        "name": "arp",
+        "instrument": "pluck",
+        "gain": -15
+      },
+      {
+        "name": "bell",
+        "instrument": "bell",
+        "gain": -19
+      },
+      {
+        "name": "drums",
+        "instrument": "drums",
+        "gain": -16
+      }
+    ],
+    "sections": [
+      {
+        "name": "intro",
+        "bars": 2,
+        "loop": false,
+        "start_bar": 0,
+        "start_s": 0,
+        "end_s": 5.217391,
+        "duration_s": 5.217391
+      },
+      {
+        "name": "loop",
+        "bars": 8,
+        "loop": true,
+        "start_bar": 2,
+        "start_s": 5.217391,
+        "end_s": 26.086957,
+        "duration_s": 20.869565
+      },
+      {
+        "name": "outro",
+        "bars": 2,
+        "loop": false,
+        "start_bar": 10,
+        "start_s": 26.086957,
+        "end_s": 31.304348,
+        "duration_s": 5.217391
+      }
+    ],
+    "waveform": [
+      [
+        -0.316,
+        0.269
+      ],
+      [
+        -0.25,
+        0.246
+      ],
+      [
+        -0.267,
+        0.211
+      ],
+      [
+        -0.276,
+        0.274
+      ],
+      [
+        -0.224,
+        0.201
+      ],
+      [
+        -0.261,
+        0.253
+      ],
+      [
+        -0.269,
+        0.285
+      ],
+      [
+        -0.281,
+        0.25
+      ],
+      [
+        -0.277,
+        0.237
+      ],
+      [
+        -0.26,
+        0.271
+      ],
+      [
+        -0.214,
+        0.262
+      ],
+      [
+        -0.244,
+        0.211
+      ],
+      [
+        -0.298,
+        0.313
+      ],
+      [
+        -0.282,
+        0.239
+      ],
+      [
+        -0.256,
+        0.207
+      ],
+      [
+        -0.296,
+        0.29
+      ],
+      [
+        -0.226,
+        0.259
+      ],
+      [
+        -0.259,
+        0.238
+      ],
+      [
+        -0.24,
+        0.28
+      ],
+      [
+        -0.222,
+        0.297
+      ],
+      [
+        -0.182,
+        0.238
+      ],
+      [
+        -0.264,
+        0.268
+      ],
+      [
+        -0.262,
+        0.266
+      ],
+      [
+        -0.241,
+        0.257
+      ],
+      [
+        -0.213,
+        0.186
+      ],
+      [
+        -0.343,
+        0.275
+      ],
+      [
+        -0.292,
+        0.258
+      ],
+      [
+        -0.258,
+        0.301
+      ],
+      [
+        -0.279,
+        0.285
+      ],
+      [
+        -0.281,
+        0.283
+      ],
+      [
+        -0.234,
+        0.215
+      ],
+      [
+        -0.233,
+        0.261
+      ],
+      [
+        -0.233,
+        0.205
+      ],
+      [
+        -0.237,
+        0.237
+      ],
+      [
+        -0.223,
+        0.249
+      ],
+      [
+        -0.24,
+        0.235
+      ],
+      [
+        -0.264,
+        0.233
+      ],
+      [
+        -0.328,
+        0.484
+      ],
+      [
+        -0.315,
+        0.267
+      ],
+      [
+        -0.278,
+        0.244
+      ],
+      [
+        -0.256,
+        0.28
+      ],
+      [
+        -0.256,
+        0.25
+      ],
+      [
+        -0.23,
+        0.2
+      ],
+      [
+        -0.209,
+        0.248
+      ],
+      [
+        -0.251,
+        0.24
+      ],
+      [
+        -0.246,
+        0.232
+      ],
+      [
+        -0.233,
+        0.266
+      ],
+      [
+        -0.213,
+        0.239
+      ],
+      [
+        -0.202,
+        0.192
+      ],
+      [
+        -0.234,
+        0.184
+      ],
+      [
+        -0.399,
+        0.306
+      ],
+      [
+        -0.266,
+        0.319
+      ],
+      [
+        -0.243,
+        0.224
+      ],
+      [
+        -0.25,
+        0.268
+      ],
+      [
+        -0.256,
+        0.207
+      ],
+      [
+        -0.232,
+        0.237
+      ],
+      [
+        -0.285,
+        0.353
+      ],
+      [
+        -0.277,
+        0.365
+      ],
+      [
+        -0.276,
+        0.288
+      ],
+      [
+        -0.283,
+        0.271
+      ],
+      [
+        -0.238,
+        0.25
+      ],
+      [
+        -0.258,
+        0.242
+      ],
+      [
+        -0.292,
+        0.263
+      ],
+      [
+        -0.303,
+        0.269
+      ],
+      [
+        -0.243,
+        0.234
+      ],
+      [
+        -0.283,
+        0.25
+      ],
+      [
+        -0.27,
+        0.303
+      ],
+      [
+        -0.213,
+        0.264
+      ],
+      [
+        -0.234,
+        0.286
+      ],
+      [
+        -0.222,
+        0.288
+      ],
+      [
+        -0.237,
+        0.222
+      ],
+      [
+        -0.282,
+        0.231
+      ],
+      [
+        -0.288,
+        0.269
+      ],
+      [
+        -0.279,
+        0.334
+      ],
+      [
+        -0.29,
+        0.223
+      ],
+      [
+        -0.378,
+        0.277
+      ],
+      [
+        -0.249,
+        0.278
+      ],
+      [
+        -0.269,
+        0.278
+      ],
+      [
+        -0.305,
+        0.315
+      ],
+      [
+        -0.278,
+        0.238
+      ],
+      [
+        -0.249,
+        0.196
+      ],
+      [
+        -0.221,
+        0.237
+      ],
+      [
+        -0.261,
+        0.225
+      ],
+      [
+        -0.235,
+        0.232
+      ],
+      [
+        -0.222,
+        0.298
+      ],
+      [
+        -0.248,
+        0.212
+      ],
+      [
+        -0.244,
+        0.258
+      ],
+      [
+        -0.32,
+        0.377
+      ],
+      [
+        -0.331,
+        0.241
+      ],
+      [
+        -0.227,
+        0.271
+      ],
+      [
+        -0.273,
+        0.293
+      ],
+      [
+        -0.282,
+        0.217
+      ],
+      [
+        -0.202,
+        0.189
+      ],
+      [
+        -0.235,
+        0.24
+      ],
+      [
+        -0.242,
+        0.213
+      ],
+      [
+        -0.217,
+        0.214
+      ],
+      [
+        -0.278,
+        0.229
+      ],
+      [
+        -0.245,
+        0.257
+      ],
+      [
+        -0.253,
+        0.216
+      ],
+      [
+        -0.296,
+        0.177
+      ],
+      [
+        -0.277,
+        0.307
+      ],
+      [
+        -0.253,
+        0.252
+      ],
+      [
+        -0.238,
+        0.238
+      ],
+      [
+        -0.294,
+        0.293
+      ],
+      [
+        -0.234,
+        0.255
+      ],
+      [
+        -0.245,
+        0.237
+      ],
+      [
+        -0.252,
+        0.305
+      ],
+      [
+        -0.279,
+        0.248
+      ],
+      [
+        -0.259,
+        0.183
+      ],
+      [
+        -0.271,
+        0.245
+      ],
+      [
+        -0.285,
+        0.225
+      ],
+      [
+        -0.218,
+        0.254
+      ],
+      [
+        -0.262,
+        0.286
+      ],
+      [
+        -0.331,
+        0.238
+      ],
+      [
+        -0.303,
+        0.207
+      ],
+      [
+        -0.263,
+        0.258
+      ],
+      [
+        -0.268,
+        0.247
+      ],
+      [
+        -0.249,
+        0.196
+      ],
+      [
+        -0.234,
+        0.223
+      ],
+      [
+        -0.27,
+        0.25
+      ],
+      [
+        -0.304,
+        0.257
+      ],
+      [
+        -0.3,
+        0.252
+      ],
+      [
+        -0.249,
+        0.249
+      ],
+      [
+        -0.222,
+        0.245
+      ],
+      [
+        -0.185,
+        0.209
+      ],
+      [
+        -0.34,
+        0.319
+      ],
+      [
+        -0.261,
+        0.242
+      ],
+      [
+        -0.268,
+        0.218
+      ],
+      [
+        -0.284,
+        0.267
+      ],
+      [
+        -0.31,
+        0.279
+      ],
+      [
+        -0.27,
+        0.226
+      ],
+      [
+        -0.225,
+        0.274
+      ],
+      [
+        -0.281,
+        0.243
+      ],
+      [
+        -0.253,
+        0.204
+      ],
+      [
+        -0.269,
+        0.226
+      ],
+      [
+        -0.271,
+        0.287
+      ],
+      [
+        -0.315,
+        0.24
+      ],
+      [
+        -0.26,
+        0.313
+      ],
+      [
+        -0.256,
+        0.277
+      ],
+      [
+        -0.259,
+        0.218
+      ],
+      [
+        -0.249,
+        0.227
+      ],
+      [
+        -0.297,
+        0.222
+      ],
+      [
+        -0.254,
+        0.219
+      ],
+      [
+        -0.209,
+        0.214
+      ],
+      [
+        -0.209,
+        0.235
+      ],
+      [
+        -0.226,
+        0.212
+      ],
+      [
+        -0.227,
+        0.237
+      ],
+      [
+        -0.22,
+        0.251
+      ],
+      [
+        -0.173,
+        0.203
+      ],
+      [
+        -0.189,
+        0.171
+      ],
+      [
+        -0.303,
+        0.355
+      ],
+      [
+        -0.241,
+        0.262
+      ],
+      [
+        -0.244,
+        0.225
+      ],
+      [
+        -0.219,
+        0.229
+      ],
+      [
+        -0.238,
+        0.236
+      ],
+      [
+        -0.254,
+        0.272
+      ],
+      [
+        -0.329,
+        0.304
+      ],
+      [
+        -0.263,
+        0.299
+      ],
+      [
+        -0.322,
+        0.226
+      ],
+      [
+        -0.227,
+        0.217
+      ],
+      [
+        -0.235,
+        0.225
+      ],
+      [
+        -0.188,
+        0.21
+      ],
+      [
+        -0.261,
+        0.309
+      ],
+      [
+        -0.269,
+        0.226
+      ],
+      [
+        -0.317,
+        0.224
+      ],
+      [
+        -0.256,
+        0.263
+      ],
+      [
+        -0.253,
+        0.228
+      ],
+      [
+        -0.201,
+        0.245
+      ],
+      [
+        -0.246,
+        0.241
+      ],
+      [
+        -0.261,
+        0.276
+      ],
+      [
+        -0.271,
+        0.219
+      ],
+      [
+        -0.254,
+        0.201
+      ],
+      [
+        -0.262,
+        0.233
+      ],
+      [
+        -0.249,
+        0.196
+      ],
+      [
+        -0.22,
+        0.258
+      ],
+      [
+        -0.311,
+        0.341
+      ],
+      [
+        -0.231,
+        0.228
+      ],
+      [
+        -0.288,
+        0.221
+      ],
+      [
+        -0.286,
+        0.24
+      ],
+      [
+        -0.267,
+        0.283
+      ],
+      [
+        -0.22,
+        0.208
+      ],
+      [
+        -0.244,
+        0.245
+      ],
+      [
+        -0.246,
+        0.203
+      ],
+      [
+        -0.225,
+        0.249
+      ],
+      [
+        -0.251,
+        0.247
+      ],
+      [
+        -0.258,
+        0.252
+      ],
+      [
+        -0.256,
+        0.23
+      ],
+      [
+        -0.218,
+        0.291
+      ],
+      [
+        -0.238,
+        0.306
+      ],
+      [
+        -0.261,
+        0.216
+      ],
+      [
+        -0.227,
+        0.265
+      ],
+      [
+        -0.241,
+        0.24
+      ],
+      [
+        -0.252,
+        0.271
+      ],
+      [
+        -0.267,
+        0.257
+      ],
+      [
+        -0.261,
+        0.221
+      ],
+      [
+        -0.238,
+        0.198
+      ],
+      [
+        -0.227,
+        0.192
+      ],
+      [
+        -0.248,
+        0.212
+      ],
+      [
+        -0.201,
+        0.254
+      ],
+      [
+        -0.219,
+        0.245
+      ]
+    ],
+    "metadata_file": "audio/music/metadata/reactor_calm.json"
+  }
+}

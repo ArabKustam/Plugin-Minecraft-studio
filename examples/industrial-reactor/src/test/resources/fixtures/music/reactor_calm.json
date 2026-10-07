@@ -1,0 +1,4 @@
+{"title":"reactor_calm","state":"calm","bpm":92,"meter":[4,4],"key":"D minor","sample_rate":48000,"beat_seconds":0.652174,"bar_seconds":2.608696,
+ "sections":[{"name":"intro","bars":2,"loop":false,"start_bar":0,"start_s":0,"end_s":5.217391,"duration_s":5.217391},{"name":"loop","bars":8,"loop":true,"start_bar":2,"start_s":5.217391,"end_s":26.086957,"duration_s":20.869565},{"name":"outro","bars":2,"loop":false,"start_bar":10,"start_s":26.086957,"end_s":31.304348,"duration_s":5.217391}],
+ "loop":{"section":"loop","bars":8,"duration_s":20.869565,"samples":1001739,"ticks":417},"transition_points_s":[0,5.2174,10.4348,15.6522,20.8696],"transition_every_bars":2,
+ "stems":[{"name":"pad","instrument":"pad","gain":-8}],"files":{}}

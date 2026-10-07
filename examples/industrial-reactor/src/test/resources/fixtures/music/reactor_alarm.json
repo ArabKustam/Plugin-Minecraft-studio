@@ -1,0 +1,4 @@
+{"title":"reactor_alarm","state":"alarm","bpm":132,"meter":[4,4],"key":"D minor","sample_rate":48000,"beat_seconds":0.454545,"bar_seconds":1.818182,
+ "sections":[{"name":"intro","bars":2,"loop":false,"start_bar":0,"start_s":0,"end_s":3.636364,"duration_s":3.636364},{"name":"loop","bars":8,"loop":true,"start_bar":2,"start_s":3.636364,"end_s":18.181818,"duration_s":14.545455}],
+ "loop":{"section":"loop","bars":8,"duration_s":14.545455,"samples":698182,"ticks":291},"transition_points_s":[0,3.6364,7.2727,10.9091,14.5455],"transition_every_bars":2,
+ "stems":[{"name":"drums","instrument":"drums","gain":-4}],"files":{}}

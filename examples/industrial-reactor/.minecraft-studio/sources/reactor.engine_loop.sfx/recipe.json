@@ -1,0 +1,69 @@
+{
+  "duration": 4,
+  "loop": true,
+  "layers": [
+    {
+      "name": "fundamental",
+      "type": "osc",
+      "wave": "saw",
+      "freq": {
+        "center": 55,
+        "depth": 1.2,
+        "rate": 0.25
+      },
+      "harmonics": [
+        1,
+        0.5,
+        0.33,
+        0.25
+      ],
+      "gain": -6,
+      "filter": {
+        "type": "lowpass",
+        "freq": 650
+      }
+    },
+    {
+      "name": "turbulence",
+      "type": "noise",
+      "color": "brown",
+      "gain": -16,
+      "filter": {
+        "type": "bandpass",
+        "freq": 120,
+        "q": 1.5
+      }
+    },
+    {
+      "name": "whine",
+      "type": "osc",
+      "wave": "sine",
+      "freq": 880,
+      "gain": -30
+    },
+    {
+      "name": "rotor_beat",
+      "type": "osc",
+      "wave": "sine",
+      "freq": 220,
+      "gain": -24,
+      "effects": [
+        {
+          "type": "tremolo",
+          "rate": 12,
+          "depth": 0.6
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "type": "compress",
+      "threshold": -16,
+      "ratio": 3
+    }
+  ],
+  "normalize": {
+    "lufs": -20
+  }
+}

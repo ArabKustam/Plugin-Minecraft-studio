@@ -1,0 +1,113 @@
+{
+  "id": "reactor.lamp_off.texture",
+  "type": "texture",
+  "name": "Warning lamp (off)",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/reactor/textures/item/lamp_off.png",
+      "role": "primary",
+      "sha256": "5e78cd3ae8c4ed3ab656da9783b85008f34602abd23d47f46cc541d87a1b3db5",
+      "bytes": 342
+    }
+  ],
+  "source": {
+    "provider": "pixel-spec",
+    "method": "texture_render_spec",
+    "source_files": [
+      "art/textures/reactor/lamp.pixelspec.json"
+    ],
+    "parameters": {
+      "size": [
+        16,
+        16
+      ],
+      "frames": 1
+    }
+  },
+  "created_at": "2026-10-07T04:41:15.061Z",
+  "modified_at": "2026-10-07T04:41:15.101Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "reactor:item/lamp_off"
+  ],
+  "preview": ".minecraft-studio/previews/reactor_lamp_off_texture.png",
+  "tags": [
+    "reactor"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:41:15.097Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "style 80/100",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "all checks pass"
+        },
+        {
+          "name": "style match",
+          "status": "pass",
+          "detail": "score 80; nearest: steel_grate.png, vent.png, pipe_block.png, machine_casing.png"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Reviewed 1600%/800%/tiled/100% sheet: readable silhouette, pack ramps, top-left light."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:15.063Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/reactor/textures/item/lamp_off.png",
+          "sha256": "5e78cd3ae8c4ed3ab656da9783b85008f34602abd23d47f46cc541d87a1b3db5"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/reactor.lamp_off.texture/v1",
+      "source": {
+        "provider": "pixel-spec",
+        "method": "texture_render_spec",
+        "source_files": [
+          "art/textures/reactor/lamp.pixelspec.json"
+        ],
+        "parameters": {
+          "size": [
+            16,
+            16
+          ],
+          "frames": 1
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "palette": {
+      ".": "transparent",
+      "o": "#1b1e24",
+      "d": "#2b3038",
+      "n": "#535b67",
+      "l": "#6c7683",
+      "h": "#8e99a6",
+      "w": "#b9c3ce",
+      "a": "#6b4a14",
+      "A": "#a8782a"
+    }
+  }
+}

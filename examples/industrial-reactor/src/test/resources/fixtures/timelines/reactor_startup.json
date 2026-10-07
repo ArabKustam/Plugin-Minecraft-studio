@@ -1,0 +1,12 @@
+{"id":"reactor_startup","title":"Reactor startup sequence","trigger":"reactor.start","duration_ticks":100,"duration":5,
+ "cues":[{"tick":0,"t":0,"track":"sfx","sound":"reactor:reactor.button","volume":1,"pitch":1},
+         {"tick":2,"t":0.1,"track":"voice","line":"startup","sound":"reactor:reactor.voice.startup","duration":3.2},
+         {"tick":8,"t":0.4,"track":"sfx","sound":"reactor:reactor.relay"},
+         {"tick":30,"t":1.5,"track":"animation","animation":"spin_up","target":"rotor","duration":2.0},
+         {"tick":40,"t":2.0,"track":"particles","particle":"minecraft:cloud","count":12,"spread":[0.4,1,0.4],"duration":1.0},
+         {"tick":40,"t":2.0,"track":"sfx","sound":"reactor:reactor.engine_loop","loop":true,"loop_ticks":80},
+         {"tick":70,"t":3.5,"track":"texture","state":"active"},
+         {"tick":70,"t":3.5,"track":"lighting","level":12},
+         {"tick":80,"t":4.0,"track":"music","action":"transition","state":"calm","quantize":"bar"},
+         {"tick":100,"t":5.0,"track":"ui","bossbar":"Reactor ONLINE","progress":1.0},
+         {"tick":100,"t":5.0,"track":"state","state":"RUNNING"}]}

@@ -1,0 +1,580 @@
+{
+  "textures": {
+    "side": "reactor:item/core_side_off",
+    "top": "reactor:item/core_top",
+    "plate": "reactor:block/steel_plate",
+    "particle": "reactor:item/core_side_off"
+  },
+  "elements": [
+    {
+      "name": "core/plinth",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        2,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            2
+          ],
+          "texture": "#plate"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            2
+          ],
+          "texture": "#plate"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            2
+          ],
+          "texture": "#plate"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            2
+          ],
+          "texture": "#plate"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#plate"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#plate"
+        }
+      }
+    },
+    {
+      "name": "core/body",
+      "from": [
+        2,
+        2,
+        2
+      ],
+      "to": [
+        14,
+        15,
+        14
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2,
+            2,
+            14,
+            15
+          ],
+          "texture": "#side"
+        },
+        "south": {
+          "uv": [
+            2,
+            2,
+            14,
+            15
+          ],
+          "texture": "#side"
+        },
+        "east": {
+          "uv": [
+            2,
+            2,
+            14,
+            15
+          ],
+          "texture": "#side"
+        },
+        "west": {
+          "uv": [
+            2,
+            2,
+            14,
+            15
+          ],
+          "texture": "#side"
+        },
+        "up": {
+          "uv": [
+            2,
+            2,
+            14,
+            14
+          ],
+          "texture": "#top"
+        },
+        "down": {
+          "uv": [
+            2,
+            2,
+            14,
+            14
+          ],
+          "texture": "#plate"
+        }
+      }
+    },
+    {
+      "name": "core/cap",
+      "from": [
+        1,
+        15,
+        1
+      ],
+      "to": [
+        15,
+        17,
+        15
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            1,
+            0,
+            15,
+            2
+          ],
+          "texture": "#plate"
+        },
+        "south": {
+          "uv": [
+            1,
+            0,
+            15,
+            2
+          ],
+          "texture": "#plate"
+        },
+        "east": {
+          "uv": [
+            1,
+            0,
+            15,
+            2
+          ],
+          "texture": "#plate"
+        },
+        "west": {
+          "uv": [
+            1,
+            0,
+            15,
+            2
+          ],
+          "texture": "#plate"
+        },
+        "up": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#top"
+        },
+        "down": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#plate"
+        }
+      }
+    },
+    {
+      "name": "core/strut_0.5_0.5",
+      "from": [
+        0.5,
+        2,
+        0.5
+      ],
+      "to": [
+        2.5,
+        15,
+        2.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "south": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "east": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "west": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#plate"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#plate"
+        }
+      }
+    },
+    {
+      "name": "core/strut_13.5_0.5",
+      "from": [
+        13.5,
+        2,
+        0.5
+      ],
+      "to": [
+        15.5,
+        15,
+        2.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "south": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "east": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "west": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#plate"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#plate"
+        }
+      }
+    },
+    {
+      "name": "core/strut_0.5_13.5",
+      "from": [
+        0.5,
+        2,
+        13.5
+      ],
+      "to": [
+        2.5,
+        15,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "south": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "east": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "west": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#plate"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#plate"
+        }
+      }
+    },
+    {
+      "name": "core/strut_13.5_13.5",
+      "from": [
+        13.5,
+        2,
+        13.5
+      ],
+      "to": [
+        15.5,
+        15,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "south": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "east": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "west": {
+          "uv": [
+            0,
+            2,
+            2,
+            15
+          ],
+          "texture": "#plate"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#plate"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2,
+            2
+          ],
+          "texture": "#plate"
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    }
+  }
+}

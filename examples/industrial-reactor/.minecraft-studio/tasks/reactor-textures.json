@@ -1,0 +1,40 @@
+{
+  "id": "reactor-textures",
+  "goal": "Core (side/top), rotor, control panel (front/side) and warning lamp textures + core and lamp state variants.",
+  "agent": "texture-artist",
+  "inputs": [
+    ".minecraft-studio/style-profile.json",
+    "art/textures/reactor/*.pixelspec.json"
+  ],
+  "outputs": [
+    "resourcepack/assets/reactor/textures/item/*.png"
+  ],
+  "allowed_tools": [],
+  "dependencies": [
+    "style-profile"
+  ],
+  "constraints": [
+    "16x16",
+    "pack palette ramps + one accent",
+    "top-left light"
+  ],
+  "quality": [
+    "style score ≥ 75",
+    "readable at 100%",
+    "states read as one object"
+  ],
+  "validation": [
+    "texture_validate",
+    "texture_style_compare",
+    "texture_variants strip"
+  ],
+  "destination": "resourcepack/assets/reactor/textures/item/",
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T04:41:14.624Z",
+  "started_at": "2026-10-07T04:41:14.732Z",
+  "finished_at": "2026-10-07T04:41:15.196Z",
+  "updated_at": "2026-10-07T04:41:15.196Z",
+  "plan": null
+}

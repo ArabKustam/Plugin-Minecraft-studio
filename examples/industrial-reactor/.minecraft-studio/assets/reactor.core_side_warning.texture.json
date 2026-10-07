@@ -1,0 +1,104 @@
+{
+  "id": "reactor.core_side_warning.texture",
+  "type": "texture",
+  "name": "warning",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/reactor/textures/item/core_side_warning.png",
+      "role": "primary",
+      "sha256": "66df6aa5aada7a336cfe1004f4674ac89ce356e1d545d1d43eb88c715da91c74",
+      "bytes": 284
+    }
+  ],
+  "source": {
+    "provider": "variant-ops",
+    "source_files": [
+      "resourcepack/assets/reactor/textures/item/core_side_off.png"
+    ],
+    "parameters": {
+      "ops": [
+        {
+          "op": "replace",
+          "map": {
+            "#0f2a30": "#5a3a0c",
+            "#1d4a54": "#ffc24a",
+            "#1f4a30": "#ffd27a"
+          }
+        }
+      ]
+    }
+  },
+  "created_at": "2026-10-07T04:41:15.131Z",
+  "modified_at": "2026-10-07T04:41:15.183Z",
+  "created_by": "texture-artist",
+  "dependencies": [
+    "reactor.core_side_off.texture"
+  ],
+  "minecraft_ids": [
+    "reactor:item/core_side_warning"
+  ],
+  "preview": null,
+  "tags": [
+    "variant",
+    "warning"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:41:15.180Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "warning state",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "state consistency",
+          "status": "pass",
+          "detail": "Variant strip reviewed: identical silhouette/material, only state colours change."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:15.132Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/reactor/textures/item/core_side_warning.png",
+          "sha256": "66df6aa5aada7a336cfe1004f4674ac89ce356e1d545d1d43eb88c715da91c74"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/reactor.core_side_warning.texture/v1",
+      "source": {
+        "provider": "variant-ops",
+        "source_files": [
+          "resourcepack/assets/reactor/textures/item/core_side_off.png"
+        ],
+        "parameters": {
+          "ops": [
+            {
+              "op": "replace",
+              "map": {
+                "#0f2a30": "#5a3a0c",
+                "#1d4a54": "#ffc24a",
+                "#1f4a30": "#ffd27a"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {}
+}

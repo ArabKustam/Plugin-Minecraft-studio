@@ -1,0 +1,47 @@
+{
+  "duration": 0.3,
+  "layers": [
+    {
+      "name": "contact",
+      "type": "click",
+      "freq": 1500,
+      "decay": 0.009,
+      "gain": -4
+    },
+    {
+      "name": "armature",
+      "type": "impact",
+      "freq": 260,
+      "decay": 0.05,
+      "noise": 0.9,
+      "gain": -10
+    },
+    {
+      "name": "hum",
+      "type": "osc",
+      "wave": "square",
+      "freq": 50,
+      "start": 0.012,
+      "duration": 0.16,
+      "gain": -26,
+      "envelope": {
+        "attack": 0.002,
+        "release": 0.06
+      },
+      "filter": {
+        "type": "lowpass",
+        "freq": 700
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.35,
+      "mix": 0.12
+    }
+  ],
+  "normalize": {
+    "lufs": -17
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "format": "minecraft-studio-model/1",
+  "name": "lamp_off",
+  "texture_size": [
+    16,
+    16
+  ],
+  "textures": {
+    "lamp": "resourcepack/assets/reactor/textures/item/lamp_off.png"
+  },
+  "texture_refs": {
+    "lamp": "reactor:item/lamp_off"
+  },
+  "bones": [
+    {
+      "name": "lamp",
+      "pivot": [
+        8,
+        0,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "base",
+          "from": [
+            5,
+            0,
+            5
+          ],
+          "to": [
+            11,
+            2,
+            11
+          ],
+          "faces": {
+            "north": {
+              "texture": "lamp",
+              "uv": [
+                3,
+                13,
+                9,
+                15
+              ]
+            },
+            "south": {
+              "texture": "lamp",
+              "uv": [
+                3,
+                13,
+                9,
+                15
+              ]
+            },
+            "east": {
+              "texture": "lamp",
+              "uv": [
+                3,
+                13,
+                9,
+                15
+              ]
+            },
+            "west": {
+              "texture": "lamp",
+              "uv": [
+                3,
+                13,
+                9,
+                15
+              ]
+            },
+            "up": {
+              "texture": "lamp",
+              "uv": [
+                4,
+                9,
+                10,
+                15
+              ]
+            },
+            "down": {
+              "texture": "lamp",
+              "uv": [
+                4,
+                9,
+                10,
+                15
+              ]
+            }
+          }
+        },
+        {
+          "name": "bulb",
+          "from": [
+            6,
+            2,
+            6
+          ],
+          "to": [
+            10,
+            7,
+            10
+          ],
+          "emissive": false,
+          "faces": {
+            "north": {
+              "texture": "lamp",
+              "uv": [
+                6,
+                2,
+                10,
+                7
+              ]
+            },
+            "south": {
+              "texture": "lamp",
+              "uv": [
+                6,
+                2,
+                10,
+                7
+              ]
+            },
+            "east": {
+              "texture": "lamp",
+              "uv": [
+                6,
+                2,
+                10,
+                7
+              ]
+            },
+            "west": {
+              "texture": "lamp",
+              "uv": [
+                6,
+                2,
+                10,
+                7
+              ]
+            },
+            "up": {
+              "texture": "lamp",
+              "uv": [
+                6,
+                2,
+                10,
+                6
+              ]
+            },
+            "down": {
+              "texture": "lamp",
+              "uv": [
+                6,
+                2,
+                10,
+                6
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    }
+  }
+}

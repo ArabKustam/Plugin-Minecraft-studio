@@ -1,0 +1,1157 @@
+{
+  "id": "reactor.music.alarm",
+  "type": "music",
+  "name": "reactor alarm",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "audio/music/source/reactor_alarm.score.json",
+      "role": "source",
+      "sha256": "0a4a397500821d71101b94bcc05d52456a0e062fd68b8e6b05ac148eb38dfaa4",
+      "bytes": 2238
+    },
+    {
+      "path": "audio/music/rendered/reactor_alarm_intro.flac",
+      "role": "section",
+      "sha256": "36cd8860aa834d6d06a2cbf0283bdddc104aa34aef35db5fcdd85fd8db70123f",
+      "bytes": 168434
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_alarm_intro.ogg",
+      "role": "minecraft",
+      "sha256": "9fc799a9e65dfc131a4b68e276364ff7653b0aa719fd25fda084bf886f6cc0c5",
+      "bytes": 51380
+    },
+    {
+      "path": "audio/music/rendered/reactor_alarm_loop.flac",
+      "role": "section",
+      "sha256": "1152d6b23cada229a619622237b2007dff5e9d4a31100cdfe8b66babba513a57",
+      "bytes": 832809
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop.ogg",
+      "role": "minecraft",
+      "sha256": "46508133dd8a464d5809111914db5cf07aac807e92b61514bfb243f6f75eb11f",
+      "bytes": 175946
+    },
+    {
+      "path": "audio/music/rendered/reactor_alarm_stinger.flac",
+      "role": "section",
+      "sha256": "2ef2e2622d0dfca400ba56fc6cf0d85e697916e3afce96af1fa9169b30774fe1",
+      "bytes": 152524
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_alarm_stinger.ogg",
+      "role": "minecraft",
+      "sha256": "5b1b202f7148026b796bfd9da5ae4e15d3607e62b2009f1818a90e682047f289",
+      "bytes": 52118
+    },
+    {
+      "path": "audio/music/stems/reactor_alarm_loop_drums.flac",
+      "role": "stem",
+      "sha256": "033d7ff6be10d2e43cababbaef2d0cfd876c1f8b9ff30ab6f9dd7a2903a41c1c",
+      "bytes": 627308
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop_drums.ogg",
+      "role": "minecraft",
+      "sha256": "c890ffccccf3bcb2609c39e4ec03bc223ba5f159f83e841be259f515446f2523",
+      "bytes": 141845
+    },
+    {
+      "path": "audio/music/stems/reactor_alarm_loop_bass.flac",
+      "role": "stem",
+      "sha256": "22197e6466d32bd8d6c6d84da783fb0121115707f2f34bf8b0eeefaf39375488",
+      "bytes": 258186
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop_bass.ogg",
+      "role": "minecraft",
+      "sha256": "4d161042af2c73b4961e4b2e925cbb0c9a551f7b7d4d530fa213e90939e1c330",
+      "bytes": 104873
+    },
+    {
+      "path": "audio/music/stems/reactor_alarm_loop_choir.flac",
+      "role": "stem",
+      "sha256": "98856a5ba89f5c7423cc7453d6e2e6d039d9ccdbe06bf8bfa8f5c1bbfd97059e",
+      "bytes": 555279
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop_choir.ogg",
+      "role": "minecraft",
+      "sha256": "ff3fa10401ec97ca690f3fb00da4a4d746d89ae7a3724ba331f2a2e20127c5f1",
+      "bytes": 165528
+    },
+    {
+      "path": "audio/music/stems/reactor_alarm_loop_lead.flac",
+      "role": "stem",
+      "sha256": "a291c58921a3c07b9867c52c04848dd818eaeaf4abdddd2cb944edd5f04d3d78",
+      "bytes": 325061
+    },
+    {
+      "path": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop_lead.ogg",
+      "role": "minecraft",
+      "sha256": "b54083adaae968e3fa2790fe704f446ad51971ccbf36e3270d7d79cc6c1c82fa",
+      "bytes": 158157
+    },
+    {
+      "path": "audio/music/metadata/reactor_alarm.json",
+      "role": "metadata",
+      "sha256": "658e2e4456670fda02c037dfad76a8ec4e6bcad7c06f255fead677a568b762fa",
+      "bytes": 2720
+    }
+  ],
+  "source": {
+    "provider": "local-composer",
+    "format": "minecraft-studio-score/1",
+    "source_files": [
+      "audio/music/source/reactor_alarm.score.json"
+    ]
+  },
+  "created_at": "2026-10-07T04:41:27.983Z",
+  "modified_at": "2026-10-07T04:41:28.023Z",
+  "created_by": "composer",
+  "dependencies": [],
+  "minecraft_ids": [
+    "reactor:reactor.music.alarm_intro",
+    "reactor:reactor.music.alarm_loop",
+    "reactor:reactor.music.alarm_stinger",
+    "reactor:reactor.music.alarm_loop_drums",
+    "reactor:reactor.music.alarm_loop_bass",
+    "reactor:reactor.music.alarm_loop_choir",
+    "reactor:reactor.music.alarm_loop_lead"
+  ],
+  "preview": null,
+  "tags": [
+    "reactor",
+    "adaptive"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:41:28.019Z",
+      "by": "audio-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "loop 14.545455s / 291 ticks",
+      "checks": [
+        {
+          "name": "format",
+          "status": "warn",
+          "detail": "not Ogg Vorbis yet: export with studio_audio_export_minecraft before integration"
+        },
+        {
+          "name": "channels",
+          "status": "pass",
+          "detail": "stereo music (non-positional)"
+        },
+        {
+          "name": "clipping",
+          "status": "pass",
+          "detail": "0 clipped samples, peak -5.89 dBFS"
+        },
+        {
+          "name": "headroom",
+          "status": "pass",
+          "detail": "peak -5.89 dBFS (keep ≤ -1 dBFS)"
+        },
+        {
+          "name": "loudness",
+          "status": "pass",
+          "detail": "-20 LUFS (target -20 ±3 for music)"
+        },
+        {
+          "name": "leading silence",
+          "status": "pass",
+          "detail": "0s before first sound (delays sync with game events)"
+        },
+        {
+          "name": "duration",
+          "status": "pass",
+          "detail": "14.545s"
+        },
+        {
+          "name": "loop seam",
+          "status": "pass",
+          "detail": "jump ratio 1.52, level diff 3.66 dB"
+        },
+        {
+          "name": "file size",
+          "status": "pass",
+          "detail": "813.3 KiB (458 kbps)"
+        },
+        {
+          "name": "transition grid",
+          "status": "pass",
+          "detail": "every 2 bars: 0, 3.6364, 7.2727, 10.9091, 14.5455s"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:27.999Z",
+      "by": "composer",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "audio/music/source/reactor_alarm.score.json",
+          "sha256": "0a4a397500821d71101b94bcc05d52456a0e062fd68b8e6b05ac148eb38dfaa4"
+        },
+        {
+          "path": "audio/music/rendered/reactor_alarm_intro.flac",
+          "sha256": "36cd8860aa834d6d06a2cbf0283bdddc104aa34aef35db5fcdd85fd8db70123f"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_alarm_intro.ogg",
+          "sha256": "9fc799a9e65dfc131a4b68e276364ff7653b0aa719fd25fda084bf886f6cc0c5"
+        },
+        {
+          "path": "audio/music/rendered/reactor_alarm_loop.flac",
+          "sha256": "1152d6b23cada229a619622237b2007dff5e9d4a31100cdfe8b66babba513a57"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop.ogg",
+          "sha256": "46508133dd8a464d5809111914db5cf07aac807e92b61514bfb243f6f75eb11f"
+        },
+        {
+          "path": "audio/music/rendered/reactor_alarm_stinger.flac",
+          "sha256": "2ef2e2622d0dfca400ba56fc6cf0d85e697916e3afce96af1fa9169b30774fe1"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_alarm_stinger.ogg",
+          "sha256": "5b1b202f7148026b796bfd9da5ae4e15d3607e62b2009f1818a90e682047f289"
+        },
+        {
+          "path": "audio/music/stems/reactor_alarm_loop_drums.flac",
+          "sha256": "033d7ff6be10d2e43cababbaef2d0cfd876c1f8b9ff30ab6f9dd7a2903a41c1c"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop_drums.ogg",
+          "sha256": "c890ffccccf3bcb2609c39e4ec03bc223ba5f159f83e841be259f515446f2523"
+        },
+        {
+          "path": "audio/music/stems/reactor_alarm_loop_bass.flac",
+          "sha256": "22197e6466d32bd8d6c6d84da783fb0121115707f2f34bf8b0eeefaf39375488"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop_bass.ogg",
+          "sha256": "4d161042af2c73b4961e4b2e925cbb0c9a551f7b7d4d530fa213e90939e1c330"
+        },
+        {
+          "path": "audio/music/stems/reactor_alarm_loop_choir.flac",
+          "sha256": "98856a5ba89f5c7423cc7453d6e2e6d039d9ccdbe06bf8bfa8f5c1bbfd97059e"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop_choir.ogg",
+          "sha256": "ff3fa10401ec97ca690f3fb00da4a4d746d89ae7a3724ba331f2a2e20127c5f1"
+        },
+        {
+          "path": "audio/music/stems/reactor_alarm_loop_lead.flac",
+          "sha256": "a291c58921a3c07b9867c52c04848dd818eaeaf4abdddd2cb944edd5f04d3d78"
+        },
+        {
+          "path": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop_lead.ogg",
+          "sha256": "b54083adaae968e3fa2790fe704f446ad51971ccbf36e3270d7d79cc6c1c82fa"
+        },
+        {
+          "path": "audio/music/metadata/reactor_alarm.json",
+          "sha256": "658e2e4456670fda02c037dfad76a8ec4e6bcad7c06f255fead677a568b762fa"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/reactor.music.alarm/v1",
+      "source": {
+        "provider": "local-composer",
+        "format": "minecraft-studio-score/1",
+        "source_files": [
+          "audio/music/source/reactor_alarm.score.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "bpm": 132,
+    "key": "D minor",
+    "meter": [
+      4,
+      4
+    ],
+    "state": "alarm",
+    "loop": {
+      "section": "loop",
+      "bars": 8,
+      "duration_s": 14.545455,
+      "samples": 698182,
+      "ticks": 291
+    },
+    "transition_points_s": [
+      0,
+      3.6364,
+      7.2727,
+      10.9091,
+      14.5455
+    ],
+    "stems": [
+      {
+        "name": "drums",
+        "instrument": "drums",
+        "gain": -8
+      },
+      {
+        "name": "bass",
+        "instrument": "bass",
+        "gain": -10
+      },
+      {
+        "name": "choir",
+        "instrument": "choir",
+        "gain": -10
+      },
+      {
+        "name": "lead",
+        "instrument": "pulse",
+        "gain": -17
+      },
+      {
+        "name": "brass",
+        "instrument": "brass",
+        "gain": -12
+      }
+    ],
+    "sections": [
+      {
+        "name": "intro",
+        "bars": 2,
+        "loop": false,
+        "start_bar": 0,
+        "start_s": 0,
+        "end_s": 3.636364,
+        "duration_s": 3.636364
+      },
+      {
+        "name": "loop",
+        "bars": 8,
+        "loop": true,
+        "start_bar": 2,
+        "start_s": 3.636364,
+        "end_s": 18.181818,
+        "duration_s": 14.545455
+      },
+      {
+        "name": "stinger",
+        "bars": 1,
+        "loop": false,
+        "start_bar": 10,
+        "start_s": 18.181818,
+        "end_s": 20,
+        "duration_s": 1.818182
+      }
+    ],
+    "waveform": [
+      [
+        -0.389,
+        0.295
+      ],
+      [
+        -0.268,
+        0.223
+      ],
+      [
+        -0.229,
+        0.212
+      ],
+      [
+        -0.244,
+        0.268
+      ],
+      [
+        -0.189,
+        0.176
+      ],
+      [
+        -0.214,
+        0.188
+      ],
+      [
+        -0.459,
+        0.389
+      ],
+      [
+        -0.293,
+        0.301
+      ],
+      [
+        -0.29,
+        0.219
+      ],
+      [
+        -0.243,
+        0.276
+      ],
+      [
+        -0.171,
+        0.168
+      ],
+      [
+        -0.21,
+        0.155
+      ],
+      [
+        -0.374,
+        0.214
+      ],
+      [
+        -0.253,
+        0.234
+      ],
+      [
+        -0.226,
+        0.201
+      ],
+      [
+        -0.25,
+        0.249
+      ],
+      [
+        -0.22,
+        0.194
+      ],
+      [
+        -0.173,
+        0.164
+      ],
+      [
+        -0.452,
+        0.406
+      ],
+      [
+        -0.354,
+        0.378
+      ],
+      [
+        -0.188,
+        0.16
+      ],
+      [
+        -0.159,
+        0.247
+      ],
+      [
+        -0.21,
+        0.213
+      ],
+      [
+        -0.197,
+        0.166
+      ],
+      [
+        -0.202,
+        0.163
+      ],
+      [
+        -0.37,
+        0.252
+      ],
+      [
+        -0.22,
+        0.22
+      ],
+      [
+        -0.218,
+        0.179
+      ],
+      [
+        -0.241,
+        0.238
+      ],
+      [
+        -0.221,
+        0.172
+      ],
+      [
+        -0.22,
+        0.171
+      ],
+      [
+        -0.439,
+        0.36
+      ],
+      [
+        -0.248,
+        0.268
+      ],
+      [
+        -0.231,
+        0.203
+      ],
+      [
+        -0.258,
+        0.273
+      ],
+      [
+        -0.222,
+        0.177
+      ],
+      [
+        -0.23,
+        0.187
+      ],
+      [
+        -0.373,
+        0.268
+      ],
+      [
+        -0.215,
+        0.225
+      ],
+      [
+        -0.217,
+        0.193
+      ],
+      [
+        -0.24,
+        0.226
+      ],
+      [
+        -0.252,
+        0.219
+      ],
+      [
+        -0.246,
+        0.198
+      ],
+      [
+        -0.424,
+        0.345
+      ],
+      [
+        -0.319,
+        0.285
+      ],
+      [
+        -0.191,
+        0.173
+      ],
+      [
+        -0.178,
+        0.274
+      ],
+      [
+        -0.233,
+        0.211
+      ],
+      [
+        -0.161,
+        0.161
+      ],
+      [
+        -0.188,
+        0.15
+      ],
+      [
+        -0.363,
+        0.262
+      ],
+      [
+        -0.254,
+        0.233
+      ],
+      [
+        -0.24,
+        0.204
+      ],
+      [
+        -0.241,
+        0.203
+      ],
+      [
+        -0.194,
+        0.167
+      ],
+      [
+        -0.18,
+        0.206
+      ],
+      [
+        -0.381,
+        0.37
+      ],
+      [
+        -0.303,
+        0.281
+      ],
+      [
+        -0.247,
+        0.197
+      ],
+      [
+        -0.211,
+        0.204
+      ],
+      [
+        -0.193,
+        0.182
+      ],
+      [
+        -0.189,
+        0.173
+      ],
+      [
+        -0.318,
+        0.271
+      ],
+      [
+        -0.3,
+        0.261
+      ],
+      [
+        -0.222,
+        0.222
+      ],
+      [
+        -0.225,
+        0.212
+      ],
+      [
+        -0.227,
+        0.175
+      ],
+      [
+        -0.171,
+        0.177
+      ],
+      [
+        -0.361,
+        0.458
+      ],
+      [
+        -0.371,
+        0.334
+      ],
+      [
+        -0.263,
+        0.204
+      ],
+      [
+        -0.182,
+        0.179
+      ],
+      [
+        -0.207,
+        0.18
+      ],
+      [
+        -0.175,
+        0.204
+      ],
+      [
+        -0.187,
+        0.179
+      ],
+      [
+        -0.321,
+        0.308
+      ],
+      [
+        -0.221,
+        0.19
+      ],
+      [
+        -0.192,
+        0.189
+      ],
+      [
+        -0.218,
+        0.228
+      ],
+      [
+        -0.237,
+        0.207
+      ],
+      [
+        -0.233,
+        0.211
+      ],
+      [
+        -0.398,
+        0.364
+      ],
+      [
+        -0.268,
+        0.284
+      ],
+      [
+        -0.21,
+        0.205
+      ],
+      [
+        -0.245,
+        0.248
+      ],
+      [
+        -0.226,
+        0.205
+      ],
+      [
+        -0.21,
+        0.203
+      ],
+      [
+        -0.439,
+        0.294
+      ],
+      [
+        -0.324,
+        0.267
+      ],
+      [
+        -0.281,
+        0.18
+      ],
+      [
+        -0.291,
+        0.318
+      ],
+      [
+        -0.316,
+        0.23
+      ],
+      [
+        -0.244,
+        0.2
+      ],
+      [
+        -0.458,
+        0.493
+      ],
+      [
+        -0.306,
+        0.345
+      ],
+      [
+        -0.277,
+        0.287
+      ],
+      [
+        -0.201,
+        0.328
+      ],
+      [
+        -0.342,
+        0.239
+      ],
+      [
+        -0.266,
+        0.244
+      ],
+      [
+        -0.191,
+        0.205
+      ],
+      [
+        -0.407,
+        0.279
+      ],
+      [
+        -0.281,
+        0.246
+      ],
+      [
+        -0.241,
+        0.203
+      ],
+      [
+        -0.281,
+        0.263
+      ],
+      [
+        -0.213,
+        0.17
+      ],
+      [
+        -0.229,
+        0.205
+      ],
+      [
+        -0.433,
+        0.317
+      ],
+      [
+        -0.282,
+        0.318
+      ],
+      [
+        -0.282,
+        0.228
+      ],
+      [
+        -0.229,
+        0.277
+      ],
+      [
+        -0.2,
+        0.15
+      ],
+      [
+        -0.228,
+        0.188
+      ],
+      [
+        -0.409,
+        0.239
+      ],
+      [
+        -0.25,
+        0.213
+      ],
+      [
+        -0.211,
+        0.182
+      ],
+      [
+        -0.235,
+        0.232
+      ],
+      [
+        -0.204,
+        0.19
+      ],
+      [
+        -0.198,
+        0.162
+      ],
+      [
+        -0.442,
+        0.39
+      ],
+      [
+        -0.35,
+        0.364
+      ],
+      [
+        -0.196,
+        0.162
+      ],
+      [
+        -0.157,
+        0.279
+      ],
+      [
+        -0.262,
+        0.238
+      ],
+      [
+        -0.169,
+        0.176
+      ],
+      [
+        -0.182,
+        0.156
+      ],
+      [
+        -0.375,
+        0.228
+      ],
+      [
+        -0.23,
+        0.206
+      ],
+      [
+        -0.225,
+        0.172
+      ],
+      [
+        -0.255,
+        0.243
+      ],
+      [
+        -0.239,
+        0.177
+      ],
+      [
+        -0.23,
+        0.179
+      ],
+      [
+        -0.434,
+        0.373
+      ],
+      [
+        -0.249,
+        0.261
+      ],
+      [
+        -0.224,
+        0.183
+      ],
+      [
+        -0.235,
+        0.331
+      ],
+      [
+        -0.226,
+        0.181
+      ],
+      [
+        -0.229,
+        0.195
+      ],
+      [
+        -0.392,
+        0.228
+      ],
+      [
+        -0.231,
+        0.237
+      ],
+      [
+        -0.232,
+        0.198
+      ],
+      [
+        -0.224,
+        0.228
+      ],
+      [
+        -0.247,
+        0.193
+      ],
+      [
+        -0.227,
+        0.17
+      ],
+      [
+        -0.445,
+        0.415
+      ],
+      [
+        -0.323,
+        0.293
+      ],
+      [
+        -0.214,
+        0.174
+      ],
+      [
+        -0.213,
+        0.296
+      ],
+      [
+        -0.256,
+        0.22
+      ],
+      [
+        -0.162,
+        0.154
+      ],
+      [
+        -0.16,
+        0.148
+      ],
+      [
+        -0.277,
+        0.289
+      ],
+      [
+        -0.216,
+        0.165
+      ],
+      [
+        -0.244,
+        0.232
+      ],
+      [
+        -0.3,
+        0.284
+      ],
+      [
+        -0.254,
+        0.178
+      ],
+      [
+        -0.195,
+        0.222
+      ],
+      [
+        -0.483,
+        0.477
+      ],
+      [
+        -0.258,
+        0.24
+      ],
+      [
+        -0.264,
+        0.2
+      ],
+      [
+        -0.296,
+        0.286
+      ],
+      [
+        -0.265,
+        0.233
+      ],
+      [
+        -0.216,
+        0.179
+      ],
+      [
+        -0.382,
+        0.367
+      ],
+      [
+        -0.307,
+        0.238
+      ],
+      [
+        -0.269,
+        0.227
+      ],
+      [
+        -0.274,
+        0.287
+      ],
+      [
+        -0.244,
+        0.278
+      ],
+      [
+        -0.244,
+        0.185
+      ],
+      [
+        -0.304,
+        0.413
+      ],
+      [
+        -0.45,
+        0.41
+      ],
+      [
+        -0.238,
+        0.177
+      ],
+      [
+        -0.208,
+        0.273
+      ],
+      [
+        -0.262,
+        0.248
+      ],
+      [
+        -0.163,
+        0.183
+      ],
+      [
+        -0.16,
+        0.163
+      ],
+      [
+        -0.275,
+        0.297
+      ],
+      [
+        -0.285,
+        0.158
+      ],
+      [
+        -0.217,
+        0.24
+      ],
+      [
+        -0.199,
+        0.212
+      ],
+      [
+        -0.191,
+        0.159
+      ],
+      [
+        -0.2,
+        0.179
+      ],
+      [
+        -0.37,
+        0.392
+      ],
+      [
+        -0.251,
+        0.211
+      ],
+      [
+        -0.236,
+        0.213
+      ],
+      [
+        -0.201,
+        0.225
+      ],
+      [
+        -0.192,
+        0.167
+      ],
+      [
+        -0.215,
+        0.177
+      ],
+      [
+        -0.309,
+        0.373
+      ],
+      [
+        -0.243,
+        0.311
+      ],
+      [
+        -0.253,
+        0.201
+      ],
+      [
+        -0.246,
+        0.316
+      ],
+      [
+        -0.232,
+        0.233
+      ],
+      [
+        -0.255,
+        0.213
+      ],
+      [
+        -0.416,
+        0.508
+      ],
+      [
+        -0.343,
+        0.373
+      ],
+      [
+        -0.232,
+        0.279
+      ],
+      [
+        -0.213,
+        0.359
+      ],
+      [
+        -0.205,
+        0.236
+      ],
+      [
+        -0.228,
+        0.248
+      ],
+      [
+        -0.222,
+        0.192
+      ]
+    ],
+    "metadata_file": "audio/music/metadata/reactor_alarm.json"
+  }
+}

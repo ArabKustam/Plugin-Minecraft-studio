@@ -1,0 +1,114 @@
+{
+  "id": "reactor.core_side_critical.texture",
+  "type": "texture",
+  "name": "critical",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/reactor/textures/item/core_side_critical.png",
+      "role": "primary",
+      "sha256": "4fc01e678f9ff106d6843fc0042984649f4a26230ba3efc2a51de8d50b48adef",
+      "bytes": 282
+    }
+  ],
+  "source": {
+    "provider": "variant-ops",
+    "source_files": [
+      "resourcepack/assets/reactor/textures/item/core_side_off.png"
+    ],
+    "parameters": {
+      "ops": [
+        {
+          "op": "replace",
+          "map": {
+            "#0f2a30": "#5e1410",
+            "#1d4a54": "#ff6a4a",
+            "#1f4a30": "#ff8a70"
+          }
+        },
+        {
+          "op": "tint",
+          "color": "#ff3020",
+          "strength": 0.08
+        }
+      ]
+    }
+  },
+  "created_at": "2026-10-07T04:41:15.144Z",
+  "modified_at": "2026-10-07T04:41:15.189Z",
+  "created_by": "texture-artist",
+  "dependencies": [
+    "reactor.core_side_off.texture"
+  ],
+  "minecraft_ids": [
+    "reactor:item/core_side_critical"
+  ],
+  "preview": null,
+  "tags": [
+    "variant",
+    "critical"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:41:15.185Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "critical state",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "state consistency",
+          "status": "pass",
+          "detail": "Variant strip reviewed: identical silhouette/material, only state colours change."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:15.145Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/reactor/textures/item/core_side_critical.png",
+          "sha256": "4fc01e678f9ff106d6843fc0042984649f4a26230ba3efc2a51de8d50b48adef"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/reactor.core_side_critical.texture/v1",
+      "source": {
+        "provider": "variant-ops",
+        "source_files": [
+          "resourcepack/assets/reactor/textures/item/core_side_off.png"
+        ],
+        "parameters": {
+          "ops": [
+            {
+              "op": "replace",
+              "map": {
+                "#0f2a30": "#5e1410",
+                "#1d4a54": "#ff6a4a",
+                "#1f4a30": "#ff8a70"
+              }
+            },
+            {
+              "op": "tint",
+              "color": "#ff3020",
+              "strength": 0.08
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {}
+}

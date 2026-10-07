@@ -1,0 +1,77 @@
+{
+  "id": "reactor_shutdown",
+  "title": "Controlled shutdown",
+  "trigger": "reactor.stop",
+  "duration_ticks": 80,
+  "duration": 4,
+  "cues": [
+    {
+      "tick": 0,
+      "t": 0,
+      "track": "sfx",
+      "sound": "reactor:reactor.button"
+    },
+    {
+      "tick": 0,
+      "t": 0,
+      "track": "ui",
+      "bossbar": "Reactor: SHUTTING DOWN",
+      "progress": 0.5,
+      "color": "white"
+    },
+    {
+      "tick": 7,
+      "t": 0.35,
+      "track": "sfx",
+      "sound": "reactor:reactor.relay"
+    },
+    {
+      "tick": 10,
+      "t": 0.5,
+      "track": "sfx",
+      "sound": "reactor:reactor.power_down"
+    },
+    {
+      "tick": 10,
+      "t": 0.5,
+      "track": "animation",
+      "animation": "spin_down",
+      "target": "rotor",
+      "duration": 3
+    },
+    {
+      "tick": 10,
+      "t": 0.5,
+      "track": "music",
+      "action": "stop",
+      "state": "none",
+      "quantize": "bar"
+    },
+    {
+      "tick": 50,
+      "t": 2.5,
+      "track": "texture",
+      "state": "off"
+    },
+    {
+      "tick": 50,
+      "t": 2.5,
+      "track": "lighting",
+      "level": 0
+    },
+    {
+      "tick": 80,
+      "t": 4,
+      "track": "ui",
+      "bossbar": "Reactor: OFF",
+      "progress": 0,
+      "color": "white"
+    },
+    {
+      "tick": 80,
+      "t": 4,
+      "track": "state",
+      "state": "OFF"
+    }
+  ]
+}

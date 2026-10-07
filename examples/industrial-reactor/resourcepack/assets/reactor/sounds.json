@@ -1,0 +1,194 @@
+{
+  "reactor.button": {
+    "subtitle": "subtitles.reactor.button",
+    "sounds": [
+      "reactor:reactor/button"
+    ]
+  },
+  "reactor.relay": {
+    "subtitle": "subtitles.reactor.relay",
+    "sounds": [
+      "reactor:reactor/relay"
+    ]
+  },
+  "reactor.hydraulic": {
+    "subtitle": "subtitles.reactor.hydraulic",
+    "sounds": [
+      "reactor:reactor/hydraulic"
+    ]
+  },
+  "reactor.engine_loop": {
+    "subtitle": "subtitles.reactor.engine_loop",
+    "sounds": [
+      "reactor:reactor/engine_loop"
+    ]
+  },
+  "reactor.siren": {
+    "subtitle": "subtitles.reactor.siren",
+    "sounds": [
+      "reactor:reactor/siren"
+    ]
+  },
+  "reactor.alarm_beep": {
+    "subtitle": "subtitles.reactor.alarm_beep",
+    "sounds": [
+      "reactor:reactor/alarm_beep"
+    ]
+  },
+  "reactor.power_down": {
+    "subtitle": "subtitles.reactor.power_down",
+    "sounds": [
+      "reactor:reactor/power_down"
+    ]
+  },
+  "reactor.music.calm_intro": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_calm_intro",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.music.calm_loop": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_calm_loop",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.music.calm_outro": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_calm_outro",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.music.calm_loop_pad": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_calm_loop_pad",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.music.calm_loop_bass": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_calm_loop_bass",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.music.calm_loop_arp": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_calm_loop_arp",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.music.calm_loop_bell": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_calm_loop_bell",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.music.calm_loop_drums": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_calm_loop_drums",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.music.alarm_intro": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_alarm_intro",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.music.alarm_loop": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_alarm_loop",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.music.alarm_stinger": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_alarm_stinger",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.music.alarm_loop_drums": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_alarm_loop_drums",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.music.alarm_loop_bass": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_alarm_loop_bass",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.music.alarm_loop_choir": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_alarm_loop_choir",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.music.alarm_loop_lead": {
+    "sounds": [
+      {
+        "name": "reactor:music/reactor_alarm_loop_lead",
+        "stream": true
+      }
+    ]
+  },
+  "reactor.voice.startup": {
+    "subtitle": "subtitles.reactor.voice.startup",
+    "sounds": [
+      "reactor:voice/startup"
+    ]
+  },
+  "reactor.voice.online": {
+    "subtitle": "subtitles.reactor.voice.online",
+    "sounds": [
+      "reactor:voice/online"
+    ]
+  },
+  "reactor.voice.warning": {
+    "subtitle": "subtitles.reactor.voice.warning",
+    "sounds": [
+      "reactor:voice/warning"
+    ]
+  },
+  "reactor.voice.critical": {
+    "subtitle": "subtitles.reactor.voice.critical",
+    "sounds": [
+      "reactor:voice/critical"
+    ]
+  },
+  "reactor.voice.shutdown": {
+    "subtitle": "subtitles.reactor.voice.shutdown",
+    "sounds": [
+      "reactor:voice/shutdown"
+    ]
+  }
+}

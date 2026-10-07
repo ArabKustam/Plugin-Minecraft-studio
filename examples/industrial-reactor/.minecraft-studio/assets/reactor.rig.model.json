@@ -1,0 +1,111 @@
+{
+  "id": "reactor.rig.model",
+  "type": "model",
+  "name": "Reactor assembly rig",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "models/reactor_rig.geo.json",
+      "role": "primary",
+      "sha256": "5eceb3fe7440975a9c7d7c31d4864f694b01e07e5b7a86463458e91737120397",
+      "bytes": 20954
+    },
+    {
+      "path": "models/reactor_rig.bbmodel",
+      "role": "primary",
+      "sha256": "277e96aac2c7d055d3d7d27c9ce4c59b9d789a1ff43e782c1c7e981593ffe74e",
+      "bytes": 51453
+    },
+    {
+      "path": "art/models/reactor_rig.model.json",
+      "role": "source",
+      "sha256": "f2b33ebfdaddce119af203e1f1e9d09592512c5c714ff761a32cea22f84af0bc",
+      "bytes": 18369
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "minecraft-studio-model/1",
+    "source_files": [
+      "art/models/reactor_rig.model.json"
+    ]
+  },
+  "created_at": "2026-10-07T04:41:15.974Z",
+  "modified_at": "2026-10-07T04:41:15.985Z",
+  "created_by": "modeler",
+  "dependencies": [
+    "reactor.core_off.model",
+    "reactor.rotor.model",
+    "reactor.lamp_off.model"
+  ],
+  "minecraft_ids": [],
+  "preview": ".minecraft-studio/previews/model_reactor_rig.png",
+  "tags": [
+    "rig"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:41:15.982Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "rig ok",
+      "checks": [
+        {
+          "name": "rig validation",
+          "status": "pass",
+          "detail": "12 cubes, bones core/rotor/lamp"
+        },
+        {
+          "name": "pivots",
+          "status": "pass",
+          "detail": "rotor pivot on the Y axis at the hub centre (8,17,8); lamp pivot at its base"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:15.977Z",
+      "by": "modeler",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "models/reactor_rig.geo.json",
+          "sha256": "5eceb3fe7440975a9c7d7c31d4864f694b01e07e5b7a86463458e91737120397"
+        },
+        {
+          "path": "models/reactor_rig.bbmodel",
+          "sha256": "277e96aac2c7d055d3d7d27c9ce4c59b9d789a1ff43e782c1c7e981593ffe74e"
+        },
+        {
+          "path": "art/models/reactor_rig.model.json",
+          "sha256": "f2b33ebfdaddce119af203e1f1e9d09592512c5c714ff761a32cea22f84af0bc"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/reactor.rig.model/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "minecraft-studio-model/1",
+        "source_files": [
+          "art/models/reactor_rig.model.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "bones": [
+      "core",
+      "rotor",
+      "lamp"
+    ],
+    "texture_size": [
+      16,
+      16
+    ]
+  }
+}

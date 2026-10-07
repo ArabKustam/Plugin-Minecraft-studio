@@ -1,0 +1,886 @@
+{
+  "format": "minecraft-studio-model/1",
+  "name": "reactor_rig",
+  "texture_size": [
+    16,
+    16
+  ],
+  "textures": {
+    "side": "resourcepack/assets/reactor/textures/item/core_side_off.png",
+    "top": "resourcepack/assets/reactor/textures/item/core_top.png",
+    "plate": "resourcepack/assets/reactor/textures/block/steel_plate.png",
+    "rotor": "resourcepack/assets/reactor/textures/item/rotor.png",
+    "lamp": "resourcepack/assets/reactor/textures/item/lamp_off.png"
+  },
+  "texture_refs": {
+    "side": "reactor:item/core_side_off",
+    "top": "reactor:item/core_top",
+    "plate": "reactor:block/steel_plate",
+    "rotor": "reactor:item/rotor",
+    "lamp": "reactor:item/lamp_off"
+  },
+  "bones": [
+    {
+      "name": "core",
+      "pivot": [
+        8,
+        0,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "plinth",
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            16,
+            2,
+            16
+          ],
+          "faces": {
+            "north": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                16,
+                2
+              ]
+            },
+            "south": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                16,
+                2
+              ]
+            },
+            "east": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                16,
+                2
+              ]
+            },
+            "west": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                16,
+                2
+              ]
+            },
+            "up": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ]
+            },
+            "down": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ]
+            }
+          }
+        },
+        {
+          "name": "body",
+          "from": [
+            2,
+            2,
+            2
+          ],
+          "to": [
+            14,
+            15,
+            14
+          ],
+          "faces": {
+            "north": {
+              "texture": "side",
+              "uv": [
+                2,
+                2,
+                14,
+                15
+              ]
+            },
+            "south": {
+              "texture": "side",
+              "uv": [
+                2,
+                2,
+                14,
+                15
+              ]
+            },
+            "east": {
+              "texture": "side",
+              "uv": [
+                2,
+                2,
+                14,
+                15
+              ]
+            },
+            "west": {
+              "texture": "side",
+              "uv": [
+                2,
+                2,
+                14,
+                15
+              ]
+            },
+            "up": {
+              "texture": "top",
+              "uv": [
+                2,
+                2,
+                14,
+                14
+              ]
+            },
+            "down": {
+              "texture": "plate",
+              "uv": [
+                2,
+                2,
+                14,
+                14
+              ]
+            }
+          }
+        },
+        {
+          "name": "cap",
+          "from": [
+            1,
+            15,
+            1
+          ],
+          "to": [
+            15,
+            17,
+            15
+          ],
+          "faces": {
+            "north": {
+              "texture": "plate",
+              "uv": [
+                1,
+                0,
+                15,
+                2
+              ]
+            },
+            "south": {
+              "texture": "plate",
+              "uv": [
+                1,
+                0,
+                15,
+                2
+              ]
+            },
+            "east": {
+              "texture": "plate",
+              "uv": [
+                1,
+                0,
+                15,
+                2
+              ]
+            },
+            "west": {
+              "texture": "plate",
+              "uv": [
+                1,
+                0,
+                15,
+                2
+              ]
+            },
+            "up": {
+              "texture": "top",
+              "uv": [
+                1,
+                1,
+                15,
+                15
+              ]
+            },
+            "down": {
+              "texture": "plate",
+              "uv": [
+                1,
+                1,
+                15,
+                15
+              ]
+            }
+          }
+        },
+        {
+          "name": "strut_0.5_0.5",
+          "from": [
+            0.5,
+            2,
+            0.5
+          ],
+          "to": [
+            2.5,
+            15,
+            2.5
+          ],
+          "faces": {
+            "north": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "south": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "east": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "west": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "up": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            },
+            "down": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            }
+          }
+        },
+        {
+          "name": "strut_13.5_0.5",
+          "from": [
+            13.5,
+            2,
+            0.5
+          ],
+          "to": [
+            15.5,
+            15,
+            2.5
+          ],
+          "faces": {
+            "north": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "south": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "east": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "west": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "up": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            },
+            "down": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            }
+          }
+        },
+        {
+          "name": "strut_0.5_13.5",
+          "from": [
+            0.5,
+            2,
+            13.5
+          ],
+          "to": [
+            2.5,
+            15,
+            15.5
+          ],
+          "faces": {
+            "north": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "south": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "east": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "west": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "up": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            },
+            "down": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            }
+          }
+        },
+        {
+          "name": "strut_13.5_13.5",
+          "from": [
+            13.5,
+            2,
+            13.5
+          ],
+          "to": [
+            15.5,
+            15,
+            15.5
+          ],
+          "faces": {
+            "north": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "south": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "east": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "west": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "up": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            },
+            "down": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "rotor",
+      "parent": "core",
+      "pivot": [
+        8,
+        17,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "hub",
+          "from": [
+            4,
+            17,
+            4
+          ],
+          "to": [
+            12,
+            20,
+            12
+          ],
+          "faces": {
+            "north": {
+              "texture": "rotor",
+              "uv": [
+                4,
+                8,
+                12,
+                11
+              ]
+            },
+            "south": {
+              "texture": "rotor",
+              "uv": [
+                4,
+                8,
+                12,
+                11
+              ]
+            },
+            "east": {
+              "texture": "rotor",
+              "uv": [
+                4,
+                8,
+                12,
+                11
+              ]
+            },
+            "west": {
+              "texture": "rotor",
+              "uv": [
+                4,
+                8,
+                12,
+                11
+              ]
+            },
+            "up": {
+              "texture": "rotor",
+              "uv": [
+                4,
+                4,
+                12,
+                12
+              ]
+            },
+            "down": {
+              "texture": "rotor",
+              "uv": [
+                4,
+                4,
+                12,
+                12
+              ]
+            }
+          }
+        },
+        {
+          "name": "blade_x",
+          "from": [
+            0,
+            18,
+            7
+          ],
+          "to": [
+            16,
+            19,
+            9
+          ],
+          "faces": {
+            "up": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                0,
+                16,
+                2
+              ]
+            },
+            "down": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                0,
+                16,
+                2
+              ]
+            },
+            "north": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                16,
+                3
+              ]
+            },
+            "south": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                16,
+                3
+              ]
+            },
+            "east": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                2,
+                3
+              ]
+            },
+            "west": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                2,
+                3
+              ]
+            }
+          }
+        },
+        {
+          "name": "blade_z",
+          "from": [
+            7,
+            18,
+            0
+          ],
+          "to": [
+            9,
+            19,
+            16
+          ],
+          "faces": {
+            "up": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                0,
+                2,
+                16
+              ]
+            },
+            "down": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                0,
+                2,
+                16
+              ]
+            },
+            "east": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                16,
+                3
+              ]
+            },
+            "west": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                16,
+                3
+              ]
+            },
+            "north": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                2,
+                3
+              ]
+            },
+            "south": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "lamp",
+      "parent": "core",
+      "pivot": [
+        14,
+        17,
+        2
+      ],
+      "cubes": [
+        {
+          "name": "base",
+          "from": [
+            11,
+            17,
+            -1
+          ],
+          "to": [
+            17,
+            19,
+            5
+          ],
+          "faces": {
+            "north": {
+              "texture": "lamp",
+              "uv": [
+                3,
+                13,
+                9,
+                15
+              ]
+            },
+            "south": {
+              "texture": "lamp",
+              "uv": [
+                3,
+                13,
+                9,
+                15
+              ]
+            },
+            "east": {
+              "texture": "lamp",
+              "uv": [
+                3,
+                13,
+                9,
+                15
+              ]
+            },
+            "west": {
+              "texture": "lamp",
+              "uv": [
+                3,
+                13,
+                9,
+                15
+              ]
+            },
+            "up": {
+              "texture": "lamp",
+              "uv": [
+                4,
+                9,
+                10,
+                15
+              ]
+            },
+            "down": {
+              "texture": "lamp",
+              "uv": [
+                4,
+                9,
+                10,
+                15
+              ]
+            }
+          }
+        },
+        {
+          "name": "bulb",
+          "from": [
+            12,
+            19,
+            0
+          ],
+          "to": [
+            16,
+            24,
+            4
+          ],
+          "emissive": false,
+          "faces": {
+            "north": {
+              "texture": "lamp",
+              "uv": [
+                6,
+                2,
+                10,
+                7
+              ]
+            },
+            "south": {
+              "texture": "lamp",
+              "uv": [
+                6,
+                2,
+                10,
+                7
+              ]
+            },
+            "east": {
+              "texture": "lamp",
+              "uv": [
+                6,
+                2,
+                10,
+                7
+              ]
+            },
+            "west": {
+              "texture": "lamp",
+              "uv": [
+                6,
+                2,
+                10,
+                7
+              ]
+            },
+            "up": {
+              "texture": "lamp",
+              "uv": [
+                6,
+                2,
+                10,
+                6
+              ]
+            },
+            "down": {
+              "texture": "lamp",
+              "uv": [
+                6,
+                2,
+                10,
+                6
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "notes": "Assembly rig used to author and review animations. In game the parts are separate ItemDisplay entities driven by code."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "station-ai",
+  "name": "Station AI (ПА-система)",
+  "language": "ru",
+  "character": [
+    "cold",
+    "calm",
+    "professional",
+    "emotionally restrained"
+  ],
+  "pace": 0.92,
+  "pitch_semitones": 0,
+  "direction": "Automated public-address system of the reactor hall. Even pacing, short pause after 'Внимание', no emotion even in emergencies.",
+  "providers": {
+    "elevenlabs": {
+      "voice_id": "<set your ElevenLabs voice id>",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.8,
+        "similarity_boost": 0.8,
+        "style": 0
+      },
+      "seed": 4242
+    },
+    "system": {
+      "espeak_voice": "ru"
+    }
+  },
+  "processing": [
+    {
+      "type": "pa_speaker",
+      "drive": 0.06,
+      "mix": 0.2
+    },
+    {
+      "type": "compress",
+      "threshold": -20,
+      "ratio": 3
+    }
+  ],
+  "loudness_lufs": -18,
+  "notes": ""
+}

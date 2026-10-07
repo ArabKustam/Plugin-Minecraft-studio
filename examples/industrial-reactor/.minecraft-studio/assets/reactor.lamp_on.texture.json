@@ -1,0 +1,104 @@
+{
+  "id": "reactor.lamp_on.texture",
+  "type": "texture",
+  "name": "on",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/reactor/textures/item/lamp_on.png",
+      "role": "primary",
+      "sha256": "53bc4a8c277f0065650e790c0575bb489d6be60307fa9d983901d10b07782709",
+      "bytes": 320
+    }
+  ],
+  "source": {
+    "provider": "variant-ops",
+    "source_files": [
+      "resourcepack/assets/reactor/textures/item/lamp_off.png"
+    ],
+    "parameters": {
+      "ops": [
+        {
+          "op": "replace",
+          "map": {
+            "#6b4a14": "#ff9d1e",
+            "#a8782a": "#ffd36b",
+            "#b9c3ce": "#fff6d8"
+          }
+        }
+      ]
+    }
+  },
+  "created_at": "2026-10-07T04:41:15.166Z",
+  "modified_at": "2026-10-07T04:41:15.194Z",
+  "created_by": "texture-artist",
+  "dependencies": [
+    "reactor.lamp_off.texture"
+  ],
+  "minecraft_ids": [
+    "reactor:item/lamp_on"
+  ],
+  "preview": null,
+  "tags": [
+    "variant",
+    "on"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:41:15.191Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "on state",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "warn"
+        },
+        {
+          "name": "state consistency",
+          "status": "pass",
+          "detail": "Variant strip reviewed: identical silhouette/material, only state colours change."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:15.168Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/reactor/textures/item/lamp_on.png",
+          "sha256": "53bc4a8c277f0065650e790c0575bb489d6be60307fa9d983901d10b07782709"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/reactor.lamp_on.texture/v1",
+      "source": {
+        "provider": "variant-ops",
+        "source_files": [
+          "resourcepack/assets/reactor/textures/item/lamp_off.png"
+        ],
+        "parameters": {
+          "ops": [
+            {
+              "op": "replace",
+              "map": {
+                "#6b4a14": "#ff9d1e",
+                "#a8782a": "#ffd36b",
+                "#b9c3ce": "#fff6d8"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {}
+}

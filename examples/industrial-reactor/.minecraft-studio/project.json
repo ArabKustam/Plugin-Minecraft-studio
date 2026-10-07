@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "name": "Industrial Reactor",
+  "minecraft_version": "1.21.11",
+  "platform": "paper",
+  "platforms": [
+    {
+      "adapter": "paper",
+      "name": "Paper / Bukkit server plugin",
+      "kind": "server-plugin",
+      "confidence": 0.95,
+      "evidence": [
+        "src/main/resources/plugin.yml",
+        "paper-api dependency"
+      ]
+    },
+    {
+      "adapter": "resourcepack",
+      "name": "Java resource pack",
+      "kind": "resourcepack",
+      "confidence": 0.9,
+      "evidence": [
+        "resourcepack/pack.mcmeta"
+      ]
+    }
+  ],
+  "build_system": "maven",
+  "languages": {
+    "Java": 61
+  },
+  "namespaces": [
+    "reactor"
+  ],
+  "default_namespace": "reactor",
+  "packs": [
+    {
+      "dir": "resourcepack",
+      "kind": "resourcepack",
+      "pack_format": 75,
+      "min_format": null,
+      "max_format": null,
+      "description": "Industrial Reactor — demo resource pack (Minecraft Studio)",
+      "namespaces": [
+        "reactor"
+      ],
+      "counts": {
+        "textures": 6,
+        "models": 6,
+        "item_definitions": 0,
+        "blockstates": 0,
+        "sounds": 0,
+        "sound_events": 0,
+        "particles": 0,
+        "animated_textures": 0,
+        "functions": 0
+      },
+      "texture_resolutions": {
+        "16x16": 6
+      }
+    }
+  ],
+  "plugin_descriptor": {
+    "file": "src/main/resources/plugin.yml",
+    "name": "IndustrialReactor",
+    "main": "dev.minecraftstudio.reactor.ReactorPlugin",
+    "version": "${project.version}",
+    "api_version": "1.21"
+  },
+  "conventions": {
+    "asset_ids": "<system>.<part>[_<state>]",
+    "textures": "16x16, top-left light, steel ramps + one accent",
+    "sound_events": "reactor.<group>.<name>"
+  },
+  "created_at": "2026-10-07T04:41:14.577Z",
+  "updated_at": "2026-10-07T04:41:14.602Z",
+  "plugin_version": "0.1.0",
+  "resource_pack_version": "0.1.0",
+  "resource_pack_dir": "resourcepack"
+}

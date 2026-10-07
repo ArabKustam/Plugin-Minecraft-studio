@@ -1,0 +1,51 @@
+{
+  "duration": 4.0,
+  "loop": true,
+  "layers": [
+    {
+      "name": "fundamental",
+      "type": "osc",
+      "wave": "saw",
+      "freq": {
+        "center": 720,
+        "depth": 260,
+        "rate": 0.5,
+        "shape": "triangle"
+      },
+      "harmonics": [
+        1,
+        0.45,
+        0.2
+      ],
+      "gain": -6,
+      "filter": {
+        "type": "lowpass",
+        "freq": 3500
+      }
+    },
+    {
+      "name": "motor",
+      "type": "noise",
+      "color": "brown",
+      "gain": -20,
+      "filter": {
+        "type": "bandpass",
+        "freq": 160,
+        "q": 2
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "distortion",
+      "amount": 0.12
+    },
+    {
+      "type": "pa_speaker",
+      "mix": 0.18
+    }
+  ],
+  "normalize": {
+    "lufs": -15
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "reactor.lamp_off.model",
+  "type": "model",
+  "name": "Warning lamp (off)",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/reactor/models/item/lamp_off.json",
+      "role": "primary",
+      "sha256": "f34e377f76656f8d14de38e225aa2cf166f95841df17f5c686a784748792dcf5",
+      "bytes": 3388
+    },
+    {
+      "path": ".minecraft-studio/sources/reactor.lamp_off.model/lamp_off.model.json",
+      "role": "source",
+      "sha256": "fea1b602a3c4ca8ef42fb3279ed58159d24a50962e759f162de80ec46f6c7f0d",
+      "bytes": 4216
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "minecraft-studio-model/1",
+    "source_files": [
+      ".minecraft-studio/sources/reactor.lamp_off.model/lamp_off.model.json"
+    ]
+  },
+  "created_at": "2026-10-07T04:41:15.804Z",
+  "modified_at": "2026-10-07T04:41:15.814Z",
+  "created_by": "modeler",
+  "dependencies": [
+    "reactor.lamp_off.texture"
+  ],
+  "minecraft_ids": [
+    "reactor:lamp_off"
+  ],
+  "preview": ".minecraft-studio/previews/model_lamp_off.png",
+  "tags": [
+    "reactor"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:41:15.811Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "2 cubes",
+      "checks": [
+        {
+          "name": "java validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "turnaround review",
+          "status": "pass",
+          "detail": "Reviewed .minecraft-studio/previews/model_lamp_off.png: silhouette reads at GUI size, no clipping."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:15.806Z",
+      "by": "modeler",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/reactor/models/item/lamp_off.json",
+          "sha256": "f34e377f76656f8d14de38e225aa2cf166f95841df17f5c686a784748792dcf5"
+        },
+        {
+          "path": ".minecraft-studio/sources/reactor.lamp_off.model/lamp_off.model.json",
+          "sha256": "fea1b602a3c4ca8ef42fb3279ed58159d24a50962e759f162de80ec46f6c7f0d"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/reactor.lamp_off.model/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "minecraft-studio-model/1",
+        "source_files": [
+          ".minecraft-studio/sources/reactor.lamp_off.model/lamp_off.model.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "bones": [
+      "lamp"
+    ],
+    "texture_size": [
+      16,
+      16
+    ]
+  }
+}

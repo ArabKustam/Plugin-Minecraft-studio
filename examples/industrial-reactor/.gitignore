@@ -1,0 +1,9 @@
+
+# Minecraft Studio (secrets & transient state)
+.env
+.env.local
+.minecraft-studio/test-server/
+.minecraft-studio/cache/
+
+# Build output
+target/

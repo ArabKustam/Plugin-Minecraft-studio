@@ -1,0 +1,70 @@
+{
+  "id": "reactor_shutdown",
+  "title": "Controlled shutdown",
+  "trigger": "reactor.stop",
+  "duration": 4,
+  "tracks": {
+    "sfx": [
+      {
+        "t": 0,
+        "sound": "reactor:reactor.button"
+      },
+      {
+        "t": 0.35,
+        "sound": "reactor:reactor.relay"
+      },
+      {
+        "t": 0.5,
+        "sound": "reactor:reactor.power_down"
+      }
+    ],
+    "animation": [
+      {
+        "t": 0.5,
+        "animation": "spin_down",
+        "target": "rotor",
+        "duration": 3
+      }
+    ],
+    "texture": [
+      {
+        "t": 2.5,
+        "state": "off"
+      }
+    ],
+    "lighting": [
+      {
+        "t": 2.5,
+        "level": 0
+      }
+    ],
+    "music": [
+      {
+        "t": 0.5,
+        "action": "stop",
+        "state": "none",
+        "quantize": "bar"
+      }
+    ],
+    "ui": [
+      {
+        "t": 0,
+        "bossbar": "Reactor: SHUTTING DOWN",
+        "progress": 0.5,
+        "color": "white"
+      },
+      {
+        "t": 4,
+        "bossbar": "Reactor: OFF",
+        "progress": 0,
+        "color": "white"
+      }
+    ],
+    "state": [
+      {
+        "t": 4,
+        "state": "OFF"
+      }
+    ]
+  }
+}

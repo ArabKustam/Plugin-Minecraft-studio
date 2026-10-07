@@ -1,0 +1,107 @@
+{
+  "title": "reactor_alarm",
+  "state": "alarm",
+  "bpm": 132,
+  "meter": [
+    4,
+    4
+  ],
+  "key": "D minor",
+  "sample_rate": 48000,
+  "beat_seconds": 0.454545,
+  "bar_seconds": 1.818182,
+  "sections": [
+    {
+      "name": "intro",
+      "bars": 2,
+      "loop": false,
+      "start_bar": 0,
+      "start_s": 0,
+      "end_s": 3.636364,
+      "duration_s": 3.636364
+    },
+    {
+      "name": "loop",
+      "bars": 8,
+      "loop": true,
+      "start_bar": 2,
+      "start_s": 3.636364,
+      "end_s": 18.181818,
+      "duration_s": 14.545455
+    },
+    {
+      "name": "stinger",
+      "bars": 1,
+      "loop": false,
+      "start_bar": 10,
+      "start_s": 18.181818,
+      "end_s": 20,
+      "duration_s": 1.818182
+    }
+  ],
+  "loop": {
+    "section": "loop",
+    "bars": 8,
+    "duration_s": 14.545455,
+    "samples": 698182,
+    "ticks": 291
+  },
+  "transition_points_s": [
+    0,
+    3.6364,
+    7.2727,
+    10.9091,
+    14.5455
+  ],
+  "transition_every_bars": 2,
+  "stems": [
+    {
+      "name": "drums",
+      "instrument": "drums",
+      "gain": -8
+    },
+    {
+      "name": "bass",
+      "instrument": "bass",
+      "gain": -10
+    },
+    {
+      "name": "choir",
+      "instrument": "choir",
+      "gain": -10
+    },
+    {
+      "name": "lead",
+      "instrument": "pulse",
+      "gain": -17
+    },
+    {
+      "name": "brass",
+      "instrument": "brass",
+      "gain": -12
+    }
+  ],
+  "files": {
+    "source": "audio/music/source/reactor_alarm.score.json",
+    "sections": {
+      "intro": "audio/music/rendered/reactor_alarm_intro.flac",
+      "loop": "audio/music/rendered/reactor_alarm_loop.flac",
+      "stinger": "audio/music/rendered/reactor_alarm_stinger.flac"
+    },
+    "stems": {
+      "drums": "audio/music/stems/reactor_alarm_loop_drums.flac",
+      "bass": "audio/music/stems/reactor_alarm_loop_bass.flac",
+      "choir": "audio/music/stems/reactor_alarm_loop_choir.flac",
+      "lead": "audio/music/stems/reactor_alarm_loop_lead.flac"
+    },
+    "ogg": {
+      "reactor_alarm_intro": "resourcepack/assets/reactor/sounds/music/reactor_alarm_intro.ogg",
+      "reactor_alarm_loop": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop.ogg",
+      "reactor_alarm_stinger": "resourcepack/assets/reactor/sounds/music/reactor_alarm_stinger.ogg",
+      "reactor_alarm_loop_drums": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop_drums.ogg",
+      "reactor_alarm_loop_bass": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop_bass.ogg",
+      "reactor_alarm_loop_choir": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop_choir.ogg",
+      "reactor_alarm_loop_lead": "resourcepack/assets/reactor/sounds/music/reactor_alarm_loop_lead.ogg"
+    }
+  }
+}

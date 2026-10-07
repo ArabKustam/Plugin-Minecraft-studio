@@ -1,0 +1,115 @@
+{
+  "id": "reactor.rotor.texture",
+  "type": "texture",
+  "name": "Cooling rotor",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/reactor/textures/item/rotor.png",
+      "role": "primary",
+      "sha256": "46b5c5d8207779cb33b1efd2de75ab1f8222c32c0dd7766c4cf9e1f264216c75",
+      "bytes": 292
+    }
+  ],
+  "source": {
+    "provider": "pixel-spec",
+    "method": "texture_render_spec",
+    "source_files": [
+      "art/textures/reactor/rotor.pixelspec.json"
+    ],
+    "parameters": {
+      "size": [
+        16,
+        16
+      ],
+      "frames": 1
+    }
+  },
+  "created_at": "2026-10-07T04:41:14.889Z",
+  "modified_at": "2026-10-07T04:41:14.926Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "reactor:item/rotor"
+  ],
+  "preview": ".minecraft-studio/previews/reactor_rotor_texture.png",
+  "tags": [
+    "reactor"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:41:14.923Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "style 94/100",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "all checks pass"
+        },
+        {
+          "name": "style match",
+          "status": "pass",
+          "detail": "score 94; nearest: machine_casing.png, pipe_block.png, vent.png, steel_plate.png"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Reviewed 1600%/800%/tiled/100% sheet: readable silhouette, pack ramps, top-left light."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:14.890Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/reactor/textures/item/rotor.png",
+          "sha256": "46b5c5d8207779cb33b1efd2de75ab1f8222c32c0dd7766c4cf9e1f264216c75"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/reactor.rotor.texture/v1",
+      "source": {
+        "provider": "pixel-spec",
+        "method": "texture_render_spec",
+        "source_files": [
+          "art/textures/reactor/rotor.pixelspec.json"
+        ],
+        "parameters": {
+          "size": [
+            16,
+            16
+          ],
+          "frames": 1
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "palette": {
+      "o": "#1b1e24",
+      "d": "#2b3038",
+      "m": "#3d444e",
+      "n": "#535b67",
+      "l": "#6c7683",
+      "h": "#8e99a6",
+      "w": "#b9c3ce",
+      "y": "#d9b42a",
+      "k": "#17191d",
+      "c": "#23798f",
+      "C": "#3fb0c8"
+    }
+  }
+}

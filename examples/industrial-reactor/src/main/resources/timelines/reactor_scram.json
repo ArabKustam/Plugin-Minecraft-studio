@@ -1,0 +1,96 @@
+{
+  "id": "reactor_scram",
+  "title": "Emergency shutdown (SCRAM)",
+  "trigger": "reactor.scram",
+  "duration_ticks": 119,
+  "duration": 5.95,
+  "cues": [
+    {
+      "tick": 0,
+      "t": 0,
+      "track": "sfx",
+      "sound": "reactor:reactor.button"
+    },
+    {
+      "tick": 0,
+      "t": 0,
+      "track": "ui",
+      "bossbar": "Reactor: SCRAM",
+      "progress": 1,
+      "color": "red"
+    },
+    {
+      "tick": 2,
+      "t": 0.1,
+      "track": "sfx",
+      "sound": "reactor:reactor.relay"
+    },
+    {
+      "tick": 4,
+      "t": 0.2,
+      "track": "sfx",
+      "sound": "reactor:reactor.hydraulic"
+    },
+    {
+      "tick": 4,
+      "t": 0.2,
+      "track": "animation",
+      "animation": "spin_down",
+      "target": "rotor",
+      "duration": 1.5
+    },
+    {
+      "tick": 4,
+      "t": 0.2,
+      "track": "particles",
+      "particle": "minecraft:cloud",
+      "count": 24,
+      "spread": [
+        0.6,
+        0.4,
+        0.6
+      ],
+      "duration": 1.2
+    },
+    {
+      "tick": 4,
+      "t": 0.2,
+      "track": "music",
+      "action": "transition",
+      "state": "none",
+      "quantize": "beat"
+    },
+    {
+      "tick": 6,
+      "t": 0.3,
+      "track": "sfx",
+      "sound": "reactor:reactor.power_down"
+    },
+    {
+      "tick": 12,
+      "t": 0.6,
+      "track": "voice",
+      "line": "shutdown",
+      "sound": "reactor:reactor.voice.shutdown",
+      "duration": 5.073
+    },
+    {
+      "tick": 30,
+      "t": 1.5,
+      "track": "texture",
+      "state": "off"
+    },
+    {
+      "tick": 30,
+      "t": 1.5,
+      "track": "lighting",
+      "level": 0
+    },
+    {
+      "tick": 119,
+      "t": 5.95,
+      "track": "state",
+      "state": "OFF"
+    }
+  ]
+}

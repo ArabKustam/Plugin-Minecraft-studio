@@ -1,0 +1,27 @@
+{
+  "id": "reactor-models",
+  "goal": "Core, rotor, control panel and lamp item models (display-entity rig) + assembly rig for animation.",
+  "agent": "modeler",
+  "inputs": [],
+  "outputs": [
+    "resourcepack/assets/reactor/models/item/*.json",
+    "resourcepack/assets/reactor/items/*.json",
+    "models/reactor_rig.bbmodel"
+  ],
+  "allowed_tools": [],
+  "dependencies": [
+    "reactor-textures"
+  ],
+  "constraints": [],
+  "quality": [],
+  "validation": [],
+  "destination": "resourcepack/assets/reactor/models/item/",
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T04:41:14.627Z",
+  "started_at": "2026-10-07T04:41:15.198Z",
+  "finished_at": "2026-10-07T04:41:15.987Z",
+  "updated_at": "2026-10-07T04:41:15.987Z",
+  "plan": null
+}

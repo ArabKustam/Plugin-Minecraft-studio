@@ -1,0 +1,79 @@
+{
+  "id": "timeline.reactor_scram",
+  "type": "timeline",
+  "name": "Emergency shutdown (SCRAM)",
+  "description": "Synchronised timeline (sfx, voice, animation, particles, texture, lighting, music, ui, state)",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": ".minecraft-studio/timelines/reactor_scram.json",
+      "role": "primary",
+      "sha256": "fe3230fa060e0058203e37cc21d858e66fd5527bc99889201ce6e96417a9939d",
+      "bytes": 1506
+    },
+    {
+      "path": "src/main/resources/timelines/reactor_scram.json",
+      "role": "primary",
+      "sha256": "5ce81fcfee1913eda0c2d0ec73ef45890d5de9cf991020fd9aabf478a646bc77",
+      "bytes": 1705
+    }
+  ],
+  "source": {
+    "format": "minecraft-studio-timeline/1"
+  },
+  "created_at": "2026-10-07T04:41:32.709Z",
+  "modified_at": "2026-10-07T04:41:32.717Z",
+  "created_by": "animator",
+  "dependencies": [],
+  "minecraft_ids": [],
+  "preview": null,
+  "tags": [
+    "timeline"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:41:32.714Z",
+      "by": "integration-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "5.95s, 12 cues",
+      "checks": [
+        {
+          "name": "timeline validation",
+          "status": "pass",
+          "detail": "all cues valid"
+        },
+        {
+          "name": "sound events exist",
+          "status": "pass",
+          "detail": "checked against sounds.json"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:32.711Z",
+      "by": "animator",
+      "note": "initial version",
+      "files": [
+        {
+          "path": ".minecraft-studio/timelines/reactor_scram.json",
+          "sha256": "fe3230fa060e0058203e37cc21d858e66fd5527bc99889201ce6e96417a9939d"
+        },
+        {
+          "path": "src/main/resources/timelines/reactor_scram.json",
+          "sha256": "5ce81fcfee1913eda0c2d0ec73ef45890d5de9cf991020fd9aabf478a646bc77"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/timeline.reactor_scram/v1",
+      "source": {
+        "format": "minecraft-studio-timeline/1"
+      }
+    }
+  ],
+  "metadata": {}
+}

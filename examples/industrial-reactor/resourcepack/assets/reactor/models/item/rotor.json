@@ -1,0 +1,302 @@
+{
+  "textures": {
+    "rotor": "reactor:item/rotor",
+    "particle": "reactor:item/rotor"
+  },
+  "elements": [
+    {
+      "name": "rotor/hub",
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        3,
+        12
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            8,
+            12,
+            11
+          ],
+          "texture": "#rotor"
+        },
+        "south": {
+          "uv": [
+            4,
+            8,
+            12,
+            11
+          ],
+          "texture": "#rotor"
+        },
+        "east": {
+          "uv": [
+            4,
+            8,
+            12,
+            11
+          ],
+          "texture": "#rotor"
+        },
+        "west": {
+          "uv": [
+            4,
+            8,
+            12,
+            11
+          ],
+          "texture": "#rotor"
+        },
+        "up": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#rotor"
+        },
+        "down": {
+          "uv": [
+            4,
+            4,
+            12,
+            12
+          ],
+          "texture": "#rotor"
+        }
+      }
+    },
+    {
+      "name": "rotor/blade_x",
+      "from": [
+        0,
+        1,
+        7
+      ],
+      "to": [
+        16,
+        2,
+        9
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            2,
+            16,
+            3
+          ],
+          "texture": "#rotor"
+        },
+        "south": {
+          "uv": [
+            0,
+            2,
+            16,
+            3
+          ],
+          "texture": "#rotor"
+        },
+        "east": {
+          "uv": [
+            0,
+            2,
+            2,
+            3
+          ],
+          "texture": "#rotor"
+        },
+        "west": {
+          "uv": [
+            0,
+            2,
+            2,
+            3
+          ],
+          "texture": "#rotor"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            2
+          ],
+          "texture": "#rotor"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            2
+          ],
+          "texture": "#rotor"
+        }
+      }
+    },
+    {
+      "name": "rotor/blade_z",
+      "from": [
+        7,
+        1,
+        0
+      ],
+      "to": [
+        9,
+        2,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            2,
+            2,
+            3
+          ],
+          "texture": "#rotor"
+        },
+        "south": {
+          "uv": [
+            0,
+            2,
+            2,
+            3
+          ],
+          "texture": "#rotor"
+        },
+        "east": {
+          "uv": [
+            0,
+            2,
+            16,
+            3
+          ],
+          "texture": "#rotor"
+        },
+        "west": {
+          "uv": [
+            0,
+            2,
+            16,
+            3
+          ],
+          "texture": "#rotor"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            2,
+            16
+          ],
+          "texture": "#rotor"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            2,
+            16
+          ],
+          "texture": "#rotor"
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    }
+  }
+}

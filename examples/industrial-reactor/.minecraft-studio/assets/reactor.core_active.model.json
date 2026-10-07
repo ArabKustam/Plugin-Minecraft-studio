@@ -1,0 +1,100 @@
+{
+  "id": "reactor.core_active.model",
+  "type": "model",
+  "name": "Reactor core (active)",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/reactor/models/item/core_active.json",
+      "role": "primary",
+      "sha256": "167220bbcc820519256e60c0017d329a9e799081e6281da5da876ac7fa8dc13c",
+      "bytes": 8952
+    },
+    {
+      "path": ".minecraft-studio/sources/reactor.core_active.model/core_active.model.json",
+      "role": "source",
+      "sha256": "a64e04b1cae040d5d1621fbc375163944dff5b1917492f7715a53763ce20f583",
+      "bytes": 11334
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "minecraft-studio-model/1",
+    "source_files": [
+      ".minecraft-studio/sources/reactor.core_active.model/core_active.model.json"
+    ]
+  },
+  "created_at": "2026-10-07T04:41:15.399Z",
+  "modified_at": "2026-10-07T04:41:15.411Z",
+  "created_by": "modeler",
+  "dependencies": [
+    "reactor.core_side_active.texture",
+    "reactor.core_top.texture"
+  ],
+  "minecraft_ids": [
+    "reactor:core_active"
+  ],
+  "preview": ".minecraft-studio/previews/model_core_active.png",
+  "tags": [
+    "reactor"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:41:15.407Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "7 cubes",
+      "checks": [
+        {
+          "name": "java validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "turnaround review",
+          "status": "pass",
+          "detail": "Reviewed .minecraft-studio/previews/model_core_active.png: silhouette reads at GUI size, no clipping."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:15.401Z",
+      "by": "modeler",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/reactor/models/item/core_active.json",
+          "sha256": "167220bbcc820519256e60c0017d329a9e799081e6281da5da876ac7fa8dc13c"
+        },
+        {
+          "path": ".minecraft-studio/sources/reactor.core_active.model/core_active.model.json",
+          "sha256": "a64e04b1cae040d5d1621fbc375163944dff5b1917492f7715a53763ce20f583"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/reactor.core_active.model/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "minecraft-studio-model/1",
+        "source_files": [
+          ".minecraft-studio/sources/reactor.core_active.model/core_active.model.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "bones": [
+      "core"
+    ],
+    "texture_size": [
+      16,
+      16
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "duration": 0.2,
+  "layers": [
+    {
+      "name": "click",
+      "type": "click",
+      "freq": 3400,
+      "decay": 0.004,
+      "gain": -6
+    },
+    {
+      "name": "release",
+      "type": "click",
+      "start": 0.07,
+      "freq": 2100,
+      "decay": 0.007,
+      "gain": -11
+    },
+    {
+      "name": "body",
+      "type": "impact",
+      "freq": 420,
+      "drop": 0.8,
+      "decay": 0.03,
+      "noise": 0.3,
+      "gain": -18
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.25,
+      "mix": 0.1
+    }
+  ],
+  "normalize": {
+    "lufs": -18
+  }
+}

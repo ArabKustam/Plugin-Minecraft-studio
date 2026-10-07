@@ -1,0 +1,47 @@
+{
+  "id": "texture.reactor_textures_block_machine_casing",
+  "type": "texture",
+  "name": "machine_casing.png",
+  "description": "Existing project asset (indexed by init)",
+  "status": "integrated",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/reactor/textures/block/machine_casing.png",
+      "role": "primary",
+      "sha256": "c9e9a0104d9572daedabf497e0d64aa4c9a1e2553ba70597b53399d1e784732f",
+      "bytes": 192
+    }
+  ],
+  "source": {},
+  "created_at": "2026-10-07T04:41:14.588Z",
+  "modified_at": "2026-10-07T04:41:14.588Z",
+  "created_by": "import",
+  "dependencies": [],
+  "minecraft_ids": [
+    "reactor:block/machine_casing"
+  ],
+  "preview": null,
+  "tags": [
+    "existing"
+  ],
+  "qa_status": "n/a",
+  "qa_history": [],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:14.588Z",
+      "by": "import",
+      "note": "imported existing project file",
+      "files": [
+        {
+          "path": "resourcepack/assets/reactor/textures/block/machine_casing.png",
+          "sha256": "c9e9a0104d9572daedabf497e0d64aa4c9a1e2553ba70597b53399d1e784732f"
+        }
+      ],
+      "archived_dir": null,
+      "source": {}
+    }
+  ],
+  "metadata": {}
+}

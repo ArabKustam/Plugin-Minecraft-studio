@@ -1,0 +1,321 @@
+{
+  "format": "minecraft-studio-model/1",
+  "name": "reactor_rotor",
+  "texture_size": [
+    16,
+    16
+  ],
+  "textures": {
+    "rotor": "resourcepack/assets/reactor/textures/item/rotor.png"
+  },
+  "texture_refs": {
+    "rotor": "reactor:item/rotor"
+  },
+  "bones": [
+    {
+      "name": "rotor",
+      "pivot": [
+        8,
+        0,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "hub",
+          "from": [
+            4,
+            0,
+            4
+          ],
+          "to": [
+            12,
+            3,
+            12
+          ],
+          "faces": {
+            "north": {
+              "texture": "rotor",
+              "uv": [
+                4,
+                8,
+                12,
+                11
+              ]
+            },
+            "south": {
+              "texture": "rotor",
+              "uv": [
+                4,
+                8,
+                12,
+                11
+              ]
+            },
+            "east": {
+              "texture": "rotor",
+              "uv": [
+                4,
+                8,
+                12,
+                11
+              ]
+            },
+            "west": {
+              "texture": "rotor",
+              "uv": [
+                4,
+                8,
+                12,
+                11
+              ]
+            },
+            "up": {
+              "texture": "rotor",
+              "uv": [
+                4,
+                4,
+                12,
+                12
+              ]
+            },
+            "down": {
+              "texture": "rotor",
+              "uv": [
+                4,
+                4,
+                12,
+                12
+              ]
+            }
+          }
+        },
+        {
+          "name": "blade_x",
+          "from": [
+            0,
+            1,
+            7
+          ],
+          "to": [
+            16,
+            2,
+            9
+          ],
+          "faces": {
+            "up": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                0,
+                16,
+                2
+              ]
+            },
+            "down": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                0,
+                16,
+                2
+              ]
+            },
+            "north": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                16,
+                3
+              ]
+            },
+            "south": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                16,
+                3
+              ]
+            },
+            "east": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                2,
+                3
+              ]
+            },
+            "west": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                2,
+                3
+              ]
+            }
+          }
+        },
+        {
+          "name": "blade_z",
+          "from": [
+            7,
+            1,
+            0
+          ],
+          "to": [
+            9,
+            2,
+            16
+          ],
+          "faces": {
+            "up": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                0,
+                2,
+                16
+              ]
+            },
+            "down": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                0,
+                2,
+                16
+              ]
+            },
+            "east": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                16,
+                3
+              ]
+            },
+            "west": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                16,
+                3
+              ]
+            },
+            "north": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                2,
+                3
+              ]
+            },
+            "south": {
+              "texture": "rotor",
+              "uv": [
+                0,
+                2,
+                2,
+                3
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    }
+  },
+  "notes": "Spinning cooling rotor; displayed above the core by an ItemDisplay entity and rotated around Y from code."
+}

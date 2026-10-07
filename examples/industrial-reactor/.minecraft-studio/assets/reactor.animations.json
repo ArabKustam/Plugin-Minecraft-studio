@@ -1,0 +1,137 @@
+{
+  "id": "reactor.animations",
+  "type": "animation",
+  "name": "Reactor animations",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "models/reactor.animation.json",
+      "role": "primary",
+      "sha256": "36d5435815135f3ae6a6b39b0b54111a16f419e46f112b2078255c6dc55189c0",
+      "bytes": 8383
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "bedrock-animation/1.8.0"
+  },
+  "created_at": "2026-10-07T04:41:15.992Z",
+  "modified_at": "2026-10-07T04:41:16.317Z",
+  "created_by": "animator",
+  "dependencies": [
+    "reactor.rig.model"
+  ],
+  "minecraft_ids": [],
+  "preview": null,
+  "tags": [
+    "reactor"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:41:16.314Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "contact sheets reviewed: anticipation on spin-up, eased spin-down, seamless loops",
+      "checks": [
+        {
+          "name": "animation.reactor.startup",
+          "status": "pass",
+          "detail": "eased, seamless, no snaps"
+        },
+        {
+          "name": "animation.reactor.idle_spin",
+          "status": "pass",
+          "detail": "eased, seamless, no snaps"
+        },
+        {
+          "name": "animation.reactor.shutdown",
+          "status": "pass",
+          "detail": "eased, seamless, no snaps"
+        },
+        {
+          "name": "animation.reactor.warning",
+          "status": "pass",
+          "detail": "eased, seamless, no snaps"
+        },
+        {
+          "name": "animation.reactor.failed",
+          "status": "pass",
+          "detail": "eased, seamless, no snaps"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:15.993Z",
+      "by": "animator",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "models/reactor.animation.json",
+          "sha256": "36d5435815135f3ae6a6b39b0b54111a16f419e46f112b2078255c6dc55189c0"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/reactor.animations/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "bedrock-animation/1.8.0"
+      }
+    }
+  ],
+  "metadata": {
+    "animations": [
+      {
+        "name": "animation.reactor.startup",
+        "length": 5,
+        "loop": false,
+        "bones": [
+          "rotor",
+          "core",
+          "lamp"
+        ]
+      },
+      {
+        "name": "animation.reactor.idle_spin",
+        "length": 1,
+        "loop": true,
+        "bones": [
+          "rotor"
+        ]
+      },
+      {
+        "name": "animation.reactor.shutdown",
+        "length": 4,
+        "loop": false,
+        "bones": [
+          "rotor",
+          "lamp"
+        ]
+      },
+      {
+        "name": "animation.reactor.warning",
+        "length": 0.5,
+        "loop": true,
+        "bones": [
+          "core",
+          "lamp",
+          "rotor"
+        ]
+      },
+      {
+        "name": "animation.reactor.failed",
+        "length": 2,
+        "loop": false,
+        "bones": [
+          "core",
+          "rotor"
+        ]
+      }
+    ]
+  }
+}

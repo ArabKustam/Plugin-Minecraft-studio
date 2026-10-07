@@ -1,0 +1,98 @@
+{
+  "title": "reactor_calm",
+  "state": "calm",
+  "bpm": 92,
+  "meter": [
+    4,
+    4
+  ],
+  "key": "D minor",
+  "transition_every_bars": 2,
+  "sections": [
+    {
+      "name": "intro",
+      "bars": 2
+    },
+    {
+      "name": "loop",
+      "bars": 8,
+      "loop": true
+    },
+    {
+      "name": "outro",
+      "bars": 2
+    }
+  ],
+  "stems": [
+    {
+      "name": "pad",
+      "instrument": "pad",
+      "gain": -9,
+      "effects": [
+        {
+          "type": "reverb",
+          "room": 0.7,
+          "mix": 0.3
+        }
+      ],
+      "parts": {
+        "intro": "[D3 F3 A3]:8",
+        "loop": "[D3 F3 A3]:8 [Bb2 D3 F3]:8 [F2 A2 C3]:8 [C3 E3 G3]:8",
+        "outro": "[D3 F3 A3]:8"
+      }
+    },
+    {
+      "name": "bass",
+      "instrument": "bass",
+      "gain": -12,
+      "parts": {
+        "intro": "D2:8",
+        "loop": "D2:4 D2:2 A1:2 D2:4 D2:2 A1:2 Bb1:4 Bb1:2 F1:2 Bb1:4 Bb1:2 F1:2 F1:4 F1:2 C2:2 F1:4 F1:2 C2:2 C2:4 C2:2 G1:2 C2:4 A1:4",
+        "outro": "D2:8"
+      }
+    },
+    {
+      "name": "arp",
+      "instrument": "pluck",
+      "gain": -15,
+      "effects": [
+        {
+          "type": "delay",
+          "time": 0.489,
+          "feedback": 0.3,
+          "mix": 0.25
+        }
+      ],
+      "parts": {
+        "loop": "D4:1/2 F4:1/2 A4:1/2 D5:1/2 A4:1/2 F4:1/2 D4:1/2 A4:1/2 D4:1/2 F4:1/2 A4:1/2 D5:1/2 A4:1/2 F4:1/2 D4:1/2 A4:1/2 | Bb3:1/2 D4:1/2 F4:1/2 Bb4:1/2 F4:1/2 D4:1/2 Bb3:1/2 F4:1/2 Bb3:1/2 D4:1/2 F4:1/2 Bb4:1/2 F4:1/2 D4:1/2 Bb3:1/2 F4:1/2 | F3:1/2 A3:1/2 C4:1/2 F4:1/2 C4:1/2 A3:1/2 F3:1/2 C4:1/2 F3:1/2 A3:1/2 C4:1/2 F4:1/2 C4:1/2 A3:1/2 F3:1/2 C4:1/2 | C4:1/2 E4:1/2 G4:1/2 C5:1/2 G4:1/2 E4:1/2 C4:1/2 G4:1/2 C4:1/2 E4:1/2 G4:1/2 C5:1/2 G4:1/2 E4:1/2 C4:1/2 G4:1/2"
+      }
+    },
+    {
+      "name": "bell",
+      "instrument": "bell",
+      "gain": -19,
+      "effects": [
+        {
+          "type": "reverb",
+          "room": 0.8,
+          "mix": 0.35
+        }
+      ],
+      "parts": {
+        "loop": "r:4 A4:2 G4:2 F4:4 E4:2 D4:2 r:4 F4:2 G4:2 A4:6 r:2",
+        "outro": "D5:4 A4:4"
+      }
+    },
+    {
+      "name": "drums",
+      "instrument": "drums",
+      "gain": -16,
+      "parts": {
+        "loop": {
+          "kick": "x.......x.......",
+          "hat": "..o...o...o...o."
+        }
+      }
+    }
+  ]
+}

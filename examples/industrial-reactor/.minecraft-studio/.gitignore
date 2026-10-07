@@ -1,0 +1,5 @@
+# Minecraft Studio: transient state that should not be committed
+test-server/
+cache/
+tmp/
+*.tmp

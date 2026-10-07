@@ -1,0 +1,148 @@
+{
+  "id": "reactor_startup",
+  "title": "Reactor start sequence",
+  "trigger": "reactor.start",
+  "duration_ticks": 155,
+  "duration": 7.75,
+  "cues": [
+    {
+      "tick": 0,
+      "t": 0,
+      "track": "event",
+      "id": "start_command"
+    },
+    {
+      "tick": 0,
+      "t": 0,
+      "track": "sfx",
+      "sound": "reactor:reactor.button"
+    },
+    {
+      "tick": 0,
+      "t": 0,
+      "track": "ui",
+      "bossbar": "Reactor: STARTING",
+      "progress": 0,
+      "color": "yellow"
+    },
+    {
+      "tick": 3,
+      "t": 0.15,
+      "track": "voice",
+      "line": "startup",
+      "sound": "reactor:reactor.voice.startup",
+      "duration": 7.269
+    },
+    {
+      "tick": 8,
+      "t": 0.4,
+      "track": "sfx",
+      "sound": "reactor:reactor.relay"
+    },
+    {
+      "tick": 22,
+      "t": 1.1,
+      "track": "sfx",
+      "sound": "reactor:reactor.hydraulic"
+    },
+    {
+      "tick": 22,
+      "t": 1.1,
+      "track": "particles",
+      "particle": "minecraft:cloud",
+      "count": 10,
+      "spread": [
+        0.4,
+        0.2,
+        0.4
+      ],
+      "duration": 1
+    },
+    {
+      "tick": 28,
+      "t": 1.4,
+      "track": "animation",
+      "animation": "spin_up",
+      "target": "rotor",
+      "duration": 2
+    },
+    {
+      "tick": 40,
+      "t": 2,
+      "track": "sfx",
+      "sound": "reactor:reactor.engine_loop",
+      "loop": true,
+      "loop_ticks": 80
+    },
+    {
+      "tick": 40,
+      "t": 2,
+      "track": "particles",
+      "particle": "minecraft:electric_spark",
+      "count": 6,
+      "spread": [
+        0.3,
+        0.6,
+        0.3
+      ],
+      "duration": 1.5
+    },
+    {
+      "tick": 50,
+      "t": 2.5,
+      "track": "ui",
+      "bossbar": "Reactor: STARTING",
+      "progress": 0.5,
+      "color": "yellow"
+    },
+    {
+      "tick": 68,
+      "t": 3.4,
+      "track": "animation",
+      "animation": "idle_spin",
+      "target": "rotor"
+    },
+    {
+      "tick": 70,
+      "t": 3.5,
+      "track": "texture",
+      "state": "active"
+    },
+    {
+      "tick": 70,
+      "t": 3.5,
+      "track": "lighting",
+      "level": 12
+    },
+    {
+      "tick": 80,
+      "t": 4,
+      "track": "music",
+      "action": "transition",
+      "state": "calm",
+      "quantize": "bar"
+    },
+    {
+      "tick": 100,
+      "t": 5,
+      "track": "ui",
+      "bossbar": "Reactor: ONLINE",
+      "progress": 1,
+      "color": "green"
+    },
+    {
+      "tick": 100,
+      "t": 5,
+      "track": "state",
+      "state": "RUNNING"
+    },
+    {
+      "tick": 154,
+      "t": 7.7,
+      "track": "voice",
+      "line": "online",
+      "sound": "reactor:reactor.voice.online",
+      "duration": 3.064
+    }
+  ]
+}

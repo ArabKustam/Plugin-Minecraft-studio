@@ -1,0 +1,49 @@
+{
+  "duration": 1,
+  "loop": true,
+  "layers": [
+    {
+      "name": "high",
+      "type": "osc",
+      "wave": "square",
+      "freq": 1046,
+      "duration": 0.25,
+      "gain": -8,
+      "envelope": {
+        "attack": 0.003,
+        "release": 0.02
+      },
+      "filter": {
+        "type": "lowpass",
+        "freq": 4000
+      }
+    },
+    {
+      "name": "low",
+      "type": "osc",
+      "wave": "square",
+      "freq": 784,
+      "start": 0.5,
+      "duration": 0.25,
+      "gain": -8,
+      "envelope": {
+        "attack": 0.003,
+        "release": 0.02
+      },
+      "filter": {
+        "type": "lowpass",
+        "freq": 4000
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.6,
+      "mix": 0.2
+    }
+  ],
+  "normalize": {
+    "lufs": -16
+  }
+}

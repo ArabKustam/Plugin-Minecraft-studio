@@ -1,0 +1,47 @@
+{
+  "id": "model.reactor_models_block_vent",
+  "type": "model",
+  "name": "vent.json",
+  "description": "Existing project asset (indexed by init)",
+  "status": "integrated",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/reactor/models/block/vent.json",
+      "role": "primary",
+      "sha256": "58bdea883db3cdc4fb55f9d96fcc391f2f2156a8f27ae8f17e7625097be29b07",
+      "bytes": 96
+    }
+  ],
+  "source": {},
+  "created_at": "2026-10-07T04:41:14.586Z",
+  "modified_at": "2026-10-07T04:41:14.586Z",
+  "created_by": "import",
+  "dependencies": [],
+  "minecraft_ids": [
+    "reactor:block/vent"
+  ],
+  "preview": null,
+  "tags": [
+    "existing"
+  ],
+  "qa_status": "n/a",
+  "qa_history": [],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:14.586Z",
+      "by": "import",
+      "note": "imported existing project file",
+      "files": [
+        {
+          "path": "resourcepack/assets/reactor/models/block/vent.json",
+          "sha256": "58bdea883db3cdc4fb55f9d96fcc391f2f2156a8f27ae8f17e7625097be29b07"
+        }
+      ],
+      "archived_dir": null,
+      "source": {}
+    }
+  ],
+  "metadata": {}
+}

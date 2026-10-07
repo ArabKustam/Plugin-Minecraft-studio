@@ -1,0 +1,601 @@
+{
+  "format": "minecraft-studio-model/1",
+  "name": "core_active",
+  "texture_size": [
+    16,
+    16
+  ],
+  "textures": {
+    "side": "resourcepack/assets/reactor/textures/item/core_side_active.png",
+    "top": "resourcepack/assets/reactor/textures/item/core_top.png",
+    "plate": "resourcepack/assets/reactor/textures/block/steel_plate.png"
+  },
+  "texture_refs": {
+    "side": "reactor:item/core_side_active",
+    "top": "reactor:item/core_top",
+    "plate": "reactor:block/steel_plate"
+  },
+  "bones": [
+    {
+      "name": "core",
+      "pivot": [
+        8,
+        0,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "plinth",
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            16,
+            2,
+            16
+          ],
+          "faces": {
+            "north": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                16,
+                2
+              ]
+            },
+            "south": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                16,
+                2
+              ]
+            },
+            "east": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                16,
+                2
+              ]
+            },
+            "west": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                16,
+                2
+              ]
+            },
+            "up": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ]
+            },
+            "down": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ]
+            }
+          }
+        },
+        {
+          "name": "body",
+          "from": [
+            2,
+            2,
+            2
+          ],
+          "to": [
+            14,
+            15,
+            14
+          ],
+          "faces": {
+            "north": {
+              "texture": "side",
+              "uv": [
+                2,
+                2,
+                14,
+                15
+              ]
+            },
+            "south": {
+              "texture": "side",
+              "uv": [
+                2,
+                2,
+                14,
+                15
+              ]
+            },
+            "east": {
+              "texture": "side",
+              "uv": [
+                2,
+                2,
+                14,
+                15
+              ]
+            },
+            "west": {
+              "texture": "side",
+              "uv": [
+                2,
+                2,
+                14,
+                15
+              ]
+            },
+            "up": {
+              "texture": "top",
+              "uv": [
+                2,
+                2,
+                14,
+                14
+              ]
+            },
+            "down": {
+              "texture": "plate",
+              "uv": [
+                2,
+                2,
+                14,
+                14
+              ]
+            }
+          }
+        },
+        {
+          "name": "cap",
+          "from": [
+            1,
+            15,
+            1
+          ],
+          "to": [
+            15,
+            17,
+            15
+          ],
+          "faces": {
+            "north": {
+              "texture": "plate",
+              "uv": [
+                1,
+                0,
+                15,
+                2
+              ]
+            },
+            "south": {
+              "texture": "plate",
+              "uv": [
+                1,
+                0,
+                15,
+                2
+              ]
+            },
+            "east": {
+              "texture": "plate",
+              "uv": [
+                1,
+                0,
+                15,
+                2
+              ]
+            },
+            "west": {
+              "texture": "plate",
+              "uv": [
+                1,
+                0,
+                15,
+                2
+              ]
+            },
+            "up": {
+              "texture": "top",
+              "uv": [
+                1,
+                1,
+                15,
+                15
+              ]
+            },
+            "down": {
+              "texture": "plate",
+              "uv": [
+                1,
+                1,
+                15,
+                15
+              ]
+            }
+          }
+        },
+        {
+          "name": "strut_0.5_0.5",
+          "from": [
+            0.5,
+            2,
+            0.5
+          ],
+          "to": [
+            2.5,
+            15,
+            2.5
+          ],
+          "faces": {
+            "north": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "south": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "east": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "west": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "up": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            },
+            "down": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            }
+          }
+        },
+        {
+          "name": "strut_13.5_0.5",
+          "from": [
+            13.5,
+            2,
+            0.5
+          ],
+          "to": [
+            15.5,
+            15,
+            2.5
+          ],
+          "faces": {
+            "north": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "south": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "east": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "west": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "up": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            },
+            "down": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            }
+          }
+        },
+        {
+          "name": "strut_0.5_13.5",
+          "from": [
+            0.5,
+            2,
+            13.5
+          ],
+          "to": [
+            2.5,
+            15,
+            15.5
+          ],
+          "faces": {
+            "north": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "south": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "east": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "west": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "up": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            },
+            "down": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            }
+          }
+        },
+        {
+          "name": "strut_13.5_13.5",
+          "from": [
+            13.5,
+            2,
+            13.5
+          ],
+          "to": [
+            15.5,
+            15,
+            15.5
+          ],
+          "faces": {
+            "north": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "south": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "east": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "west": {
+              "texture": "plate",
+              "uv": [
+                0,
+                2,
+                2,
+                15
+              ]
+            },
+            "up": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            },
+            "down": {
+              "texture": "plate",
+              "uv": [
+                0,
+                0,
+                2,
+                2
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    }
+  },
+  "notes": "Static core of the reactor. State variants (active/warning/critical) swap the side texture only."
+}

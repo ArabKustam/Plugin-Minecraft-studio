@@ -1,0 +1,9 @@
+{"id":"reactor_scram","title":"Reactor emergency SCRAM","trigger":"reactor.scram","duration_ticks":60,"duration":3,
+ "cues":[{"tick":0,"t":0,"track":"sfx","sound":"reactor:reactor.siren","action":"stop"},
+         {"tick":0,"t":0,"track":"sfx","sound":"reactor:reactor.hydraulic","volume":1.2,"pitch":0.9},
+         {"tick":2,"t":0.1,"track":"voice","line":"shutdown","sound":"reactor:reactor.voice.shutdown"},
+         {"tick":4,"t":0.2,"track":"animation","animation":"spin_down","target":"rotor","duration":1.0},
+         {"tick":6,"t":0.3,"track":"particles","particle":"minecraft:large_smoke","count":16,"spread":[0.5,1,0.5],"duration":1.5},
+         {"tick":30,"t":1.5,"track":"texture","state":"off"},
+         {"tick":30,"t":1.5,"track":"lighting","level":0},
+         {"tick":60,"t":3.0,"track":"state","state":"OFF"}]}

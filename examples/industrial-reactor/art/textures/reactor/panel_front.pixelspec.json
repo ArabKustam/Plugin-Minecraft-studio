@@ -1,0 +1,38 @@
+{
+  "size": [
+    16,
+    16
+  ],
+  "palette": {
+    "o": "#1b1e24",
+    "d": "#2b3038",
+    "n": "#535b67",
+    "l": "#6c7683",
+    "h": "#8e99a6",
+    "w": "#b9c3ce",
+    "y": "#d9b42a",
+    "k": "#17191d",
+    "C": "#3fb0c8",
+    "x": "#0f2a30",
+    "g": "#2e9e58",
+    "r": "#a8281f"
+  },
+  "rows": [
+    "oooooooooooooooo",
+    "ohhhhhhhhhhhhhlo",
+    "ohoooooooooolldo",
+    "ohoxCCxCxxxoggdo",
+    "ohoxCxCCCxxogddo",
+    "ohoxCxxxxxxolldo",
+    "ohoxCCCxCxxorrdo",
+    "ohoooooooooorkdo",
+    "ohlllllllllllldo",
+    "ohykykyklllllldo",
+    "ohkrrrrynwnwnwdo",
+    "ohyrrrkknnnnnndo",
+    "ohkrrkkynwnwnwdo",
+    "ohykykyklllllldo",
+    "oddddddddddddddo",
+    "oooooooooooooooo"
+  ]
+}

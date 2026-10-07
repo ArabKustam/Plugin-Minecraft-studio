@@ -1,0 +1,99 @@
+{
+  "id": "reactor.rotor.model",
+  "type": "model",
+  "name": "Cooling rotor",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/reactor/models/item/rotor.json",
+      "role": "primary",
+      "sha256": "5148257988456e5d3d08cf8274a664970b597d1c44262b6cc75544606e5d7e67",
+      "bytes": 4475
+    },
+    {
+      "path": ".minecraft-studio/sources/reactor.rotor.model/reactor_rotor.model.json",
+      "role": "source",
+      "sha256": "7f61c3772e9ae5c1d99fd32e245b4adca6d4db459fc03f4f4681b5e179381c10",
+      "bytes": 5663
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "minecraft-studio-model/1",
+    "source_files": [
+      ".minecraft-studio/sources/reactor.rotor.model/reactor_rotor.model.json"
+    ]
+  },
+  "created_at": "2026-10-07T04:41:15.646Z",
+  "modified_at": "2026-10-07T04:41:15.657Z",
+  "created_by": "modeler",
+  "dependencies": [
+    "reactor.rotor.texture"
+  ],
+  "minecraft_ids": [
+    "reactor:rotor"
+  ],
+  "preview": ".minecraft-studio/previews/model_reactor_rotor.png",
+  "tags": [
+    "reactor"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:41:15.654Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "3 cubes",
+      "checks": [
+        {
+          "name": "java validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "turnaround review",
+          "status": "pass",
+          "detail": "Reviewed .minecraft-studio/previews/model_reactor_rotor.png: silhouette reads at GUI size, no clipping."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:15.649Z",
+      "by": "modeler",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/reactor/models/item/rotor.json",
+          "sha256": "5148257988456e5d3d08cf8274a664970b597d1c44262b6cc75544606e5d7e67"
+        },
+        {
+          "path": ".minecraft-studio/sources/reactor.rotor.model/reactor_rotor.model.json",
+          "sha256": "7f61c3772e9ae5c1d99fd32e245b4adca6d4db459fc03f4f4681b5e179381c10"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/reactor.rotor.model/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "minecraft-studio-model/1",
+        "source_files": [
+          ".minecraft-studio/sources/reactor.rotor.model/reactor_rotor.model.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "bones": [
+      "rotor"
+    ],
+    "texture_size": [
+      16,
+      16
+    ]
+  }
+}

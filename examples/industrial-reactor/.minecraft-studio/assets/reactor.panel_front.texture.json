@@ -1,0 +1,116 @@
+{
+  "id": "reactor.panel_front.texture",
+  "type": "texture",
+  "name": "Control panel console",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/reactor/textures/item/panel_front.png",
+      "role": "primary",
+      "sha256": "a0c4112cedb89fac1adeb66bb81dd6797999d5b4fba6eda7f9e4625bef0a72d6",
+      "bytes": 459
+    }
+  ],
+  "source": {
+    "provider": "pixel-spec",
+    "method": "texture_render_spec",
+    "source_files": [
+      "art/textures/reactor/panel_front.pixelspec.json"
+    ],
+    "parameters": {
+      "size": [
+        16,
+        16
+      ],
+      "frames": 1
+    }
+  },
+  "created_at": "2026-10-07T04:41:14.946Z",
+  "modified_at": "2026-10-07T04:41:14.985Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "reactor:item/panel_front"
+  ],
+  "preview": ".minecraft-studio/previews/reactor_panel_front_texture.png",
+  "tags": [
+    "reactor"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T04:41:14.981Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "style 82/100",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "all checks pass"
+        },
+        {
+          "name": "style match",
+          "status": "pass",
+          "detail": "score 82; nearest: steel_grate.png, hazard_stripes.png, vent.png, steel_plate.png"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Reviewed 1600%/800%/tiled/100% sheet: readable silhouette, pack ramps, top-left light."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T04:41:14.947Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/reactor/textures/item/panel_front.png",
+          "sha256": "a0c4112cedb89fac1adeb66bb81dd6797999d5b4fba6eda7f9e4625bef0a72d6"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/reactor.panel_front.texture/v1",
+      "source": {
+        "provider": "pixel-spec",
+        "method": "texture_render_spec",
+        "source_files": [
+          "art/textures/reactor/panel_front.pixelspec.json"
+        ],
+        "parameters": {
+          "size": [
+            16,
+            16
+          ],
+          "frames": 1
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "palette": {
+      "o": "#1b1e24",
+      "d": "#2b3038",
+      "n": "#535b67",
+      "l": "#6c7683",
+      "h": "#8e99a6",
+      "w": "#b9c3ce",
+      "y": "#d9b42a",
+      "k": "#17191d",
+      "C": "#3fb0c8",
+      "x": "#0f2a30",
+      "g": "#2e9e58",
+      "r": "#a8281f"
+    }
+  }
+}

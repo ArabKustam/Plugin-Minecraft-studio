@@ -1,0 +1,94 @@
+{
+  "entries": [
+    {
+      "id": "platform-0001",
+      "category": "platform",
+      "title": "Primary platform: paper",
+      "content": "Detected paper (95%: src/main/resources/plugin.yml, paper-api dependency); resourcepack (90%: resourcepack/pack.mcmeta). Minecraft version: 1.21.11.",
+      "tags": [],
+      "by": "project-director",
+      "at": "2026-10-07T04:41:14.595Z",
+      "superseded_by": null
+    },
+    {
+      "id": "naming-0002",
+      "category": "naming",
+      "title": "Default namespace \"reactor\"",
+      "content": "New resource locations, sound events and item models use this namespace unless the user says otherwise.",
+      "tags": [],
+      "by": "project-director",
+      "at": "2026-10-07T04:41:14.596Z",
+      "superseded_by": null
+    },
+    {
+      "id": "visual-style-0003",
+      "category": "visual-style",
+      "title": "Texture resolution 16x16",
+      "content": "Most existing textures are 16x16. New textures must match unless the user asks for a different resolution.",
+      "tags": [],
+      "by": "project-director",
+      "at": "2026-10-07T04:41:14.598Z",
+      "superseded_by": null
+    },
+    {
+      "id": "decision-0004",
+      "category": "decision",
+      "title": "Display-entity rig for machines",
+      "content": "Java block models cannot animate: reactor parts (core, rotor, lamp) are separate item models shown by ItemDisplay entities and animated from code with Transformation interpolation. Animations are authored on reactor_rig for review.",
+      "tags": [],
+      "by": "project-director",
+      "at": "2026-10-07T04:41:14.605Z",
+      "superseded_by": null
+    },
+    {
+      "id": "music-0005",
+      "category": "music",
+      "title": "Adaptive music: calm ↔ alarm",
+      "content": "calm 92 BPM D minor, alarm 132 BPM D minor (shared key). Transitions every 2 bars from loop start; loops re-triggered by metadata duration.",
+      "tags": [],
+      "by": "composer",
+      "at": "2026-10-07T04:41:14.606Z",
+      "superseded_by": null
+    },
+    {
+      "id": "voice-0006",
+      "category": "voice",
+      "title": "Station AI voice",
+      "content": "Russian PA announcer: cold, calm, restrained, pace 0.92, PA-speaker processing, −18 LUFS. Pronunciation dictionary holds stresses for реактор/активной/мощность/заглушен.",
+      "tags": [],
+      "by": "voice-director",
+      "at": "2026-10-07T04:41:14.609Z",
+      "superseded_by": null
+    },
+    {
+      "id": "decision-0007",
+      "category": "decision",
+      "title": "Reactor states",
+      "content": "OFF → STARTING (startup timeline) → RUNNING → WARNING (heat ≥ 70) → CRITICAL (≥ 90) → FAILED (100, visual explosion only). SCRAM from any active state → SHUTTING_DOWN → OFF. Media per state: core texture off/active/warning/critical, lamp off/on blinking, engine loop, alarm beep (warning), siren (critical), calm/alarm music.",
+      "tags": [],
+      "by": "project-director",
+      "at": "2026-10-07T04:41:14.678Z",
+      "superseded_by": null
+    },
+    {
+      "id": "platform-0008",
+      "category": "platform",
+      "title": "Paper 1.21.11 / Java 21",
+      "content": "paper-api 1.21.11-R0.1-SNAPSHOT (last pre-26.x version; 26.x needs Java 25 and build versions). Item models via ItemMeta#setItemModel + assets/<ns>/items/<id>.json; resource pack format 75.",
+      "tags": [],
+      "by": "researcher",
+      "at": "2026-10-07T04:41:14.684Z",
+      "superseded_by": null
+    },
+    {
+      "id": "visual-style-0009",
+      "category": "visual-style",
+      "title": "Style profile \"default\"",
+      "content": "restrained palette (~5.5 colours per 16×16); high contrast (L* range 51.55); muted colours; noisy material surfaces (noise 10.985); little or no dithering; highlights shift -6.55° in hue from shadows; no distinct outline; chunky pixel clusters (mean 10.875 px). Pixel density 16x16. Lighting bottom-right.",
+      "tags": [],
+      "by": "style-analyst",
+      "at": "2026-10-07T04:41:14.726Z",
+      "superseded_by": null
+    }
+  ]
+}

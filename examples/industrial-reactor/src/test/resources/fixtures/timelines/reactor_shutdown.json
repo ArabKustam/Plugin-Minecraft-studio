@@ -1,0 +1,10 @@
+{"id":"reactor_shutdown","title":"Reactor controlled shutdown","trigger":"reactor.stop","duration_ticks":80,"duration":4,
+ "cues":[{"tick":0,"t":0,"track":"sfx","sound":"reactor:reactor.button"},
+         {"tick":4,"t":0.2,"track":"voice","line":"shutdown","sound":"reactor:reactor.voice.shutdown"},
+         {"tick":10,"t":0.5,"track":"sfx","sound":"reactor:reactor.relay"},
+         {"tick":12,"t":0.6,"track":"music","action":"stop","quantize":"bar"},
+         {"tick":20,"t":1.0,"track":"sfx","sound":"reactor:reactor.power_down"},
+         {"tick":20,"t":1.0,"track":"animation","animation":"spin_down","target":"rotor","duration":2.5},
+         {"tick":60,"t":3.0,"track":"texture","state":"off"},
+         {"tick":60,"t":3.0,"track":"lighting","level":0},
+         {"tick":80,"t":4.0,"track":"state","state":"OFF"}]}

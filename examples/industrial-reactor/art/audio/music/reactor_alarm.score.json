@@ -1,0 +1,92 @@
+{
+  "title": "reactor_alarm",
+  "state": "alarm",
+  "bpm": 132,
+  "meter": [
+    4,
+    4
+  ],
+  "key": "D minor",
+  "transition_every_bars": 2,
+  "sections": [
+    {
+      "name": "intro",
+      "bars": 2
+    },
+    {
+      "name": "loop",
+      "bars": 8,
+      "loop": true
+    },
+    {
+      "name": "stinger",
+      "bars": 1
+    }
+  ],
+  "stems": [
+    {
+      "name": "drums",
+      "instrument": "drums",
+      "gain": -8,
+      "parts": {
+        "intro": {
+          "impact": "x...............................",
+          "tom": "........................x.x.xxxx"
+        },
+        "loop": {
+          "kick": "x...x...x...x...",
+          "snare": "....x.......x...",
+          "hat": "x.x.x.x.x.x.x.x.",
+          "tom": "........................................................x.x.xxxx"
+        },
+        "stinger": {
+          "impact": "x..............."
+        }
+      }
+    },
+    {
+      "name": "bass",
+      "instrument": "bass",
+      "gain": -10,
+      "parts": {
+        "intro": "D2:8",
+        "loop": "D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 Bb1:1/2 Bb1:1/2 Bb1:1/2 Bb1:1/2 Bb1:1/2 Bb1:1/2 Bb1:1/2 Bb1:1/2 C2:1/2 C2:1/2 C2:1/2 C2:1/2 C2:1/2 C2:1/2 C2:1/2 C2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 D2:1/2 F2:1/2 F2:1/2 F2:1/2 F2:1/2 F2:1/2 F2:1/2 F2:1/2 F2:1/2 A1:1/2 A1:1/2 A1:1/2 A1:1/2 A1:1/2 A1:1/2 A1:1/2 A1:1/2",
+        "stinger": "D2:4"
+      }
+    },
+    {
+      "name": "choir",
+      "instrument": "choir",
+      "vowel": "a",
+      "gain": -10,
+      "effects": [
+        {
+          "type": "reverb",
+          "room": 0.85,
+          "mix": 0.35
+        }
+      ],
+      "parts": {
+        "intro": "[D4 A4]:8",
+        "loop": "[D4 F4 A4]:8 [D4 F4 A4]:8 [Bb3 D4 F4]:8 [C4 E4 G4 A4]:8",
+        "stinger": "[D4 F4 A4 D5]:4"
+      }
+    },
+    {
+      "name": "lead",
+      "instrument": "pulse",
+      "gain": -17,
+      "parts": {
+        "loop": "A4:1 G#4:1 A4:1 r:1 A4:1 G#4:1 A4:1 r:1"
+      }
+    },
+    {
+      "name": "brass",
+      "instrument": "brass",
+      "gain": -12,
+      "parts": {
+        "stinger": "[D3 A3 D4]:4"
+      }
+    }
+  ]
+}

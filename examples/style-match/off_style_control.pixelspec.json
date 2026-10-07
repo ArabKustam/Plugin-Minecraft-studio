@@ -1,0 +1,31 @@
+{
+  "size": [
+    16,
+    16
+  ],
+  "palette": {
+    "a": "#ff2d95",
+    "b": "#21e6ff",
+    "c": "#ffe600",
+    "e": "#7a00ff",
+    "f": "#00ff6a"
+  },
+  "rows": [
+    "bffbcfefafaecfbb",
+    "effeebbbfeaabfac",
+    "acefeeefebcaabeb",
+    "cecefefcffefbcac",
+    "fbcfffabfccaaeea",
+    "caebaceeaaffaefc",
+    "fcfbacaaaffabecf",
+    "cbacccbeeefeffaf",
+    "fcebcecfcfcaefca",
+    "effbaceccfceafaa",
+    "ccecffcbcbccfcce",
+    "aafbcfbcbcbeaafc",
+    "cbebacbfecbaafbc",
+    "fbccafcfbecfcece",
+    "cefeaebbaeffefba",
+    "efcfcbafcabaafbe"
+  ]
+}
