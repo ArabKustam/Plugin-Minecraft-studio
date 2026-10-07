@@ -145,6 +145,8 @@ tool(server, 'audio_music_render', {
     out_dir: z.string().describe('Project-relative directory, e.g. audio/music'),
     ogg_dir: z.string().optional().describe('Resource-pack sounds directory for Ogg exports, e.g. resourcepack/assets/ns/sounds/music'),
     lufs: z.number().optional(), asset: assetInput,
+    full_mix: z.boolean().optional().describe('Also render the whole arrangement as one continuous track <title>_full (default: true for songs without a loop section). Tails ring across section borders.'),
+    loop_repeats: z.number().int().min(1).max(8).optional().describe('How many times the loop section plays inside the full mix (default 1).'),
     ogg_stems: z.boolean().optional().describe('Also export per-stem loops as Ogg into ogg_dir (default true). Set false when the game will not layer stems, to keep the pack small.'),
   },
 }, async (a, { studio }) => {
@@ -155,20 +157,21 @@ tool(server, 'audio_music_render', {
   const title = slugify(score.title || 'cue');
   const sampled = score.stems.some((s) => stemEngine(s)?.engine === 'sampled');
   const sf = sampled ? resolveSoundfont({ scorePath: score.soundfont, configPath: studio.isInitialized() ? studio.config().audio?.soundfont : null, root: studio.root }) : null;
-  const { outputs, metadata } = renderScore(score, { lufs: a.lufs ?? -20, soundfont: sf?.path });
+  const { outputs, metadata } = renderScore(score, { lufs: a.lufs ?? -20, soundfont: sf?.path, fullMix: a.full_mix ?? null, loopRepeats: a.loop_repeats ?? null });
   if (sf) metadata.soundfont = { file: path.basename(sf.path), source: sf.source, ...(sf.source === 'default' ? { name: DEFAULT_SOUNDFONT.name, sha256: DEFAULT_SOUNDFONT.sha256 } : {}) };
   const base = a.out_dir.replace(/\/$/, '');
   const sourceFile = `${base}/source/${title}.score.json`;
   writeJson(studio.abs(sourceFile), score);
   const files = [{ path: sourceFile, role: 'source' }];
   metadata.files = { source: sourceFile, sections: {}, stems: {}, ogg: {} };
+  const stemSuffix = (o) => (o.section === 'full' ? 'full' : o.section);
   for (const o of outputs) {
-    const name = o.kind === 'section' ? `${title}_${o.section}` : `${title}_${o.section}_${slugify(o.stem)}`;
-    const wav = o.kind === 'section' ? `${base}/rendered/${name}.${masterExt(studio)}` : `${base}/stems/${name}.${masterExt(studio)}`;
+    const name = o.kind === 'section' ? `${title}_${o.section}` : o.kind === 'full' ? `${title}_full` : `${title}_${stemSuffix(o)}_${slugify(o.stem)}`;
+    const wav = o.kind === 'stem' ? `${base}/stems/${name}.${masterExt(studio)}` : `${base}/rendered/${name}.${masterExt(studio)}`;
     writeMaster(studio.abs(wav), o.audio);
     files.push({ path: wav, role: o.kind });
-    if (o.kind === 'section') metadata.files.sections[o.section] = wav; else metadata.files.stems[o.stem] = wav;
-    if (a.ogg_dir && (o.kind === 'section' || a.ogg_stems !== false)) {
+    if (o.kind === 'section') metadata.files.sections[o.section] = wav; else if (o.kind === 'full') metadata.files.full = wav; else metadata.files.stems[o.stem] = wav;
+    if (a.ogg_dir && (o.kind !== 'stem' || a.ogg_stems !== false)) {
       const ogg = `${a.ogg_dir.replace(/\/$/, '')}/${name}.ogg`;
       encodeOgg(o.audio, studio.abs(ogg));
       files.push({ path: ogg, role: 'minecraft' });
@@ -178,10 +181,10 @@ tool(server, 'audio_music_render', {
   const metaFile = `${base}/metadata/${title}.json`;
   writeJson(studio.abs(metaFile), metadata);
   files.push({ path: metaFile, role: 'metadata' });
-  const loopWav = metadata.files.sections[metadata.loop?.section || score.sections[0].name];
+  const loopWav = metadata.loop ? metadata.files.sections[metadata.loop.section] : (metadata.files.full || metadata.files.sections[score.sections[0].name]);
   const loopAudit = auditAudioFile(studio.abs(loopWav), { role: 'music', loop: !!metadata.loop, positional: false, targetLufs: a.lufs ?? -20 });
   const reg = registerOutput(studio, a.asset, { type: 'music', files, source: { provider: sampled ? 'local-composer+soundfont' : 'local-composer', format: 'minecraft-studio-score/1', source_files: [sourceFile], ...(metadata.soundfont ? { soundfont: metadata.soundfont } : {}) }, metadata: { bpm: metadata.bpm, key: metadata.key, meter: metadata.meter, state: metadata.state, loop: metadata.loop, transition_points_s: metadata.transition_points_s, stems: metadata.stems, sections: metadata.sections, waveform: loopAudit.waveform, metadata_file: metaFile } });
-  return { metadata_file: metaFile, files: files.map((f) => f.path), loop: metadata.loop, transition_points_s: metadata.transition_points_s, loop_audit: { verdict: loopAudit.verdict, checks: loopAudit.checks }, asset: reg };
+  return { metadata_file: metaFile, files: files.map((f) => f.path), ...(metadata.full_mix ? { full_mix: { file: metadata.files.full, ...metadata.full_mix } } : {}), loop: metadata.loop, transition_points_s: metadata.transition_points_s, loop_audit: { verdict: loopAudit.verdict, checks: loopAudit.checks }, asset: reg };
 });
 
 tool(server, 'audio_instruments', {

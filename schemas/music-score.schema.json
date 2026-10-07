@@ -375,10 +375,31 @@
             "additionalProperties": {
               "oneOf": [
                 {
-                  "type": "string"
+                  "type": "string",
+                  "description": "Melodic part"
                 },
                 {
-                  "type": "object"
+                  "type": "object",
+                  "description": "Melodic part with options, or a drum step-pattern object",
+                  "properties": {
+                    "notes": {
+                      "type": "string"
+                    },
+                    "velocity": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 2,
+                      "description": "Velocity multiplier for this section (dynamics)"
+                    },
+                    "transpose": {
+                      "type": "number",
+                      "description": "Semitones for this section (key change)"
+                    },
+                    "pattern": {
+                      "type": "object",
+                      "description": "Drum step patterns when the part also sets velocity"
+                    }
+                  }
                 }
               ]
             }
@@ -399,6 +420,20 @@
     "soundfont": {
       "type": "string",
       "description": "Optional .sf2/.sf3 sound bank for sampled instruments (project-relative or absolute). Default: GeneralUser GS installed by audio_soundfont_install."
+    },
+    "full_mix": {
+      "type": "boolean",
+      "description": "Also render the whole arrangement as one continuous track (<title>_full). Default: true when there is no loop section (a song)."
+    },
+    "loop_repeats": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8,
+      "description": "How many times the loop section plays inside the full mix."
+    },
+    "normalize_on": {
+      "type": "string",
+      "description": "What the loudness target is measured on: \"full\", \"loop\" or a section name. Default: full mix for songs, else the loop."
     }
   }
 }

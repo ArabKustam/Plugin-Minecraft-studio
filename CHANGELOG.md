@@ -4,6 +4,16 @@ All notable changes to Minecraft Studio are documented here. The format follows 
 
 ## [Unreleased]
 
+## [0.3.0] — 2026-10-07
+
+### Added
+- **Songs.** `audio_music_render` renders the whole arrangement as one continuous track (`<title>_full`) when a score has no loop section (or with `full_mix: true`), so notes and reverb tails ring across section borders; song stems span the whole arrangement. Options `loop_repeats` and `normalize_on` (loudness measured on the full song by default for songs).
+- Per-section part options: `{ notes, velocity }` for dynamics, `{ notes, transpose }` for key changes, `{ pattern, velocity }` for drums.
+- Composer reference: how to write and mix a full song (form, dynamic arc, key change, arrangement, balance check).
+
+### Changed
+- Stem rendering is one code path for sections, loops and full songs; sampled instruments play each stem in one pass.
+
 ## [0.2.0] — 2026-10-07
 
 ### Added

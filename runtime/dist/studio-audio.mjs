@@ -17973,7 +17973,7 @@ function validateScore(score) {
           problems.push(`stem ${st.name}: drum kit parts are objects of step patterns`);
           continue;
         }
-        for (const d of Object.keys(part)) if (!(d in GM_DRUM_KEYS) && !/^\d+$/.test(d)) problems.push(`stem ${st.name}: unknown drum ${d} (use ${Object.keys(GM_DRUM_KEYS).join(", ")} or a GM key number)`);
+        for (const d of Object.keys(part.pattern || part)) if (!(d in GM_DRUM_KEYS) && !/^\d+$/.test(d)) problems.push(`stem ${st.name}: unknown drum ${d} (use ${Object.keys(GM_DRUM_KEYS).join(", ")} or a GM key number)`);
       }
     }
     for (const sec of Object.keys(st.parts || {})) if (!names.has(sec)) problems.push(`stem ${st.name}: part for unknown section ${sec}`);
@@ -17993,32 +17993,86 @@ function timing(score) {
   });
   return { meter, beatSec, barBeats, barSec, sections, totalBars: bar };
 }
-function partNotes(stem, part, sectionBeats, beatSec) {
-  const { events, beats } = parseSequence(typeof part === "string" ? part : part.notes);
+var partText = (part) => typeof part === "string" ? part : part.notes;
+var partVel = (part) => typeof part === "object" && part.velocity != null ? part.velocity : 1;
+var partShift = (part) => typeof part === "object" && part.transpose ? part.transpose : 0;
+function partNotes(stem, part, sectionBeats, beatSec, offsetS = 0) {
+  const { events, beats } = parseSequence(partText(part));
   const repeat = stem.repeat !== false && beats > 0 && beats < sectionBeats;
+  const vel = (stem.velocity ?? 1) * partVel(part);
+  const shift = partShift(part);
   const notes = [];
   for (let rep = 0; rep * beats < sectionBeats && (rep === 0 || repeat); rep++) {
     for (const ev of events) {
       const b = ev.beat + rep * beats;
       if (b >= sectionBeats) continue;
-      notes.push({ beat: b, start_s: b * beatSec, dur_s: Math.min(ev.beats, sectionBeats - b) * beatSec * (stem.legato ?? 0.98), midi: ev.midi, vel: Math.min(1, ev.vel * (stem.velocity ?? 1)), rep });
+      notes.push({ beat: b, start_s: offsetS + b * beatSec, dur_s: Math.min(ev.beats, sectionBeats - b) * beatSec * (stem.legato ?? 0.98), midi: ev.midi + shift, vel: Math.min(1, ev.vel * vel), rep });
     }
   }
   return notes;
 }
-function patternHits(part, sectionBeats, beatSec) {
+function patternHits(part, sectionBeats, beatSec, offsetS = 0) {
   const steps = 4;
+  const pats = part.pattern || part;
+  const pv = part.pattern ? part.velocity ?? 1 : 1;
   const hits = [];
-  for (const [drum, pattern] of Object.entries(part)) {
+  for (const [drum, pattern] of Object.entries(pats)) {
     const p = pattern.replace(/\s|\|/g, "");
     const total = Math.round(sectionBeats * steps);
     for (let k2 = 0; k2 < total; k2++) {
       const ch = p[k2 % p.length];
       if (ch === "." || ch === "-") continue;
-      hits.push({ drum, k: k2, start_s: k2 / steps * beatSec, vel: ch === "X" ? 1 : ch === "o" ? 0.45 : 0.75 });
+      hits.push({ drum, k: k2, start_s: offsetS + k2 / steps * beatSec, vel: (ch === "X" ? 1 : ch === "o" ? 0.45 : 0.75) * pv });
     }
   }
   return hits;
+}
+function renderStem(stem, si, placements, tm, { length, sampleRate, soundfont }) {
+  const g = dbToGain(stem.gain ?? -10);
+  const pan = stem.pan || 0;
+  const gl = Math.cos((pan + 1) * Math.PI / 4) * Math.SQRT2, gr = Math.sin((pan + 1) * Math.PI / 4) * Math.SQRT2;
+  const used = placements.filter((p) => stem.parts?.[p.sec.name]);
+  if (!used.length) return null;
+  const eng = stemEngine(stem);
+  const L2 = new Float32Array(length), R = new Float32Array(length);
+  if (eng?.engine === "sampled") {
+    const notes = [];
+    for (const { sec, offset_s } of used) {
+      const part = stem.parts[sec.name];
+      const sectionBeats = sec.bars * tm.barBeats;
+      if (eng.patch.kind === "kit") {
+        for (const h2 of patternHits(part, sectionBeats, tm.beatSec, offset_s)) notes.push({ start_s: h2.start_s, key: GM_DRUM_KEYS[h2.drum] ?? Number(h2.drum), vel: Math.min(1, h2.vel * (stem.velocity ?? 1)) });
+      } else notes.push(...partNotes(stem, part, sectionBeats, tm.beatSec, offset_s));
+    }
+    const { left, right } = renderSampledStem(eng.patch, notes, { length, sampleRate, soundfont, transpose: stem.transpose || 0, pedal: !!stem.pedal });
+    const l = applyEffects(left, sampleRate, stem.effects || []);
+    const r = applyEffects(right, sampleRate, stem.effects || []);
+    for (let i = 0; i < length && i < l.length; i++) {
+      L2[i] = l[i] * g * gl;
+      R[i] = r[i] * g * gr;
+    }
+    return { L: L2, R };
+  }
+  const mono = new Float32Array(length);
+  for (const { sec, offset_s } of used) {
+    const part = stem.parts[sec.name];
+    const sectionBeats = sec.bars * tm.barBeats;
+    const off = Math.round(offset_s * sampleRate);
+    if (synthName(stem.instrument) === "drums") {
+      for (const h2 of patternHits(part, sectionBeats, tm.beatSec)) addAt(mono, renderDrum(h2.drum, sampleRate, h2.vel, si * 977 + h2.k), off + Math.round(h2.start_s * sampleRate), 1);
+    } else {
+      for (const n of partNotes(stem, part, sectionBeats, tm.beatSec)) {
+        const note = renderNote(synthName(stem.instrument), midiToFreq(n.midi + (stem.transpose || 0)), n.dur_s, n.vel, sampleRate, { vowel: stem.vowel }, n.midi * 31 + n.rep);
+        addAt(mono, note, off + Math.round(n.start_s * sampleRate), 1);
+      }
+    }
+  }
+  const processed = applyEffects(mono, sampleRate, stem.effects || []);
+  for (let i = 0; i < length && i < processed.length; i++) {
+    L2[i] = processed[i] * g * gl;
+    R[i] = processed[i] * g * gr;
+  }
+  return { L: L2, R };
 }
 function renderSection(score, sectionName, { stems = null, sampleRate = 48e3, soundfont = null } = {}) {
   const tm = timing(score);
@@ -18027,56 +18081,13 @@ function renderSection(score, sectionName, { stems = null, sampleRate = 48e3, so
   const tail = 3;
   const len = Math.round(sec.duration_s * sampleRate);
   const buf = makeAudio(sampleRate, sec.duration_s + tail, 2);
-  const chosen = score.stems.filter((s) => !stems || stems.includes(s.name));
-  chosen.forEach((stem, si) => {
-    const part = stem.parts?.[sectionName];
-    if (!part) return;
-    const sectionBeats = sec.bars * tm.barBeats;
-    const g = dbToGain(stem.gain ?? -10);
-    const pan = stem.pan || 0;
-    const gl = Math.cos((pan + 1) * Math.PI / 4) * Math.SQRT2, gr = Math.sin((pan + 1) * Math.PI / 4) * Math.SQRT2;
-    const eng = stemEngine(stem);
-    if (eng?.engine === "sampled") {
-      const notes = eng.patch.kind === "kit" ? patternHits(part, sectionBeats, tm.beatSec).map((h2) => ({ start_s: h2.start_s, key: GM_DRUM_KEYS[h2.drum] ?? Number(h2.drum), vel: Math.min(1, h2.vel * (stem.velocity ?? 1)) })) : partNotes(stem, part, sectionBeats, tm.beatSec);
-      const { left, right } = renderSampledStem(eng.patch, notes, { length: buf.channels[0].length, sampleRate, soundfont, transpose: stem.transpose || 0, pedal: !!stem.pedal });
-      const l = applyEffects(left, sampleRate, stem.effects || []);
-      const r = applyEffects(right, sampleRate, stem.effects || []);
-      for (let i = 0; i < l.length && i < buf.channels[0].length; i++) {
-        buf.channels[0][i] += l[i] * g * gl;
-        buf.channels[1][i] += r[i] * g * gr;
-      }
-      return;
-    }
-    const mono = new Float32Array(buf.channels[0].length);
-    if (synthName(stem.instrument) === "drums") {
-      const steps = 4;
-      for (const [drum, pattern] of Object.entries(part)) {
-        const p = pattern.replace(/\s|\|/g, "");
-        const total = Math.round(sectionBeats * steps);
-        for (let k2 = 0; k2 < total; k2++) {
-          const ch = p[k2 % p.length];
-          if (ch === "." || ch === "-") continue;
-          const vel = ch === "X" ? 1 : ch === "o" ? 0.45 : 0.75;
-          addAt(mono, renderDrum(drum, sampleRate, vel, si * 977 + k2), Math.round(k2 / steps * tm.beatSec * sampleRate), 1);
-        }
-      }
-    } else {
-      const { events, beats } = parseSequence(typeof part === "string" ? part : part.notes);
-      const repeat = stem.repeat !== false && beats > 0 && beats < sectionBeats;
-      for (let rep = 0; rep * beats < sectionBeats && (rep === 0 || repeat); rep++) {
-        for (const ev of events) {
-          const b = ev.beat + rep * beats;
-          if (b >= sectionBeats) continue;
-          const dur = Math.min(ev.beats, sectionBeats - b) * tm.beatSec * (stem.legato ?? 0.98);
-          const note = renderNote(synthName(stem.instrument), midiToFreq(ev.midi + (stem.transpose || 0)), dur, ev.vel, sampleRate, { vowel: stem.vowel }, ev.midi * 31 + rep);
-          addAt(mono, note, Math.round(b * tm.beatSec * sampleRate), 1);
-        }
-      }
-    }
-    const processed = applyEffects(mono, sampleRate, stem.effects || []);
-    for (let i = 0; i < processed.length && i < buf.channels[0].length; i++) {
-      buf.channels[0][i] += processed[i] * g * gl;
-      buf.channels[1][i] += processed[i] * g * gr;
+  const length = buf.channels[0].length;
+  score.stems.filter((s) => !stems || stems.includes(s.name)).forEach((stem, si) => {
+    const out = renderStem(stem, si, [{ sec, offset_s: 0 }], tm, { length, sampleRate, soundfont });
+    if (!out) return;
+    for (let i = 0; i < length; i++) {
+      buf.channels[0][i] += out.L[i];
+      buf.channels[1][i] += out.R[i];
     }
   });
   for (let c = 0; c < 2; c++) {
@@ -18094,7 +18105,32 @@ function renderSection(score, sectionName, { stems = null, sampleRate = 48e3, so
   }
   return { audio: buf, section: sec };
 }
-function renderScore(score, { sampleRate = 48e3, lufs = -20, soundfont = null } = {}) {
+function renderArrangement(score, { sampleRate = 48e3, soundfont = null, loopRepeats = 1 } = {}) {
+  const tm = timing(score);
+  const placements = [];
+  let t = 0;
+  for (const sec of tm.sections) {
+    const n = sec.loop ? Math.max(1, loopRepeats) : 1;
+    for (let k2 = 0; k2 < n; k2++) {
+      placements.push({ sec, offset_s: t });
+      t += sec.duration_s;
+    }
+  }
+  const buf = makeAudio(sampleRate, t + 6, 2);
+  const length = buf.channels[0].length;
+  score.stems.forEach((stem, si) => {
+    const out = renderStem(stem, si, placements, tm, { length, sampleRate, soundfont });
+    if (!out) return;
+    for (let i = 0; i < length; i++) {
+      buf.channels[0][i] += out.L[i];
+      buf.channels[1][i] += out.R[i];
+    }
+  });
+  const f = Math.round(1.5 * sampleRate);
+  for (const ch of buf.channels) for (let i = 0; i < f; i++) ch[ch.length - 1 - i] *= i / f;
+  return { audio: buf, duration_s: t, placements: placements.map((p) => ({ section: p.sec.name, start_s: Number(p.offset_s.toFixed(4)) })) };
+}
+function renderScore(score, { sampleRate = 48e3, lufs = -20, soundfont = null, fullMix = null, loopRepeats = null } = {}) {
   const problems = validateScore(score);
   if (problems.length) throw new StudioError("E_SCORE", `Invalid score: ${problems.join("; ")}`);
   const tm = timing(score);
@@ -18104,6 +18140,19 @@ function renderScore(score, { sampleRate = 48e3, lufs = -20, soundfont = null } 
     outputs.push({ kind: "section", section: sec.name, audio });
   }
   const loopSec = tm.sections.find((s) => s.loop);
+  const wantFull = fullMix ?? score.full_mix ?? !loopSec;
+  let arrangement = null;
+  if (wantFull) {
+    arrangement = renderArrangement(score, { sampleRate, soundfont, loopRepeats: loopRepeats ?? score.loop_repeats ?? 1 });
+    outputs.push({ kind: "full", section: "full", audio: arrangement.audio });
+  }
+  if (!loopSec && arrangement && score.stems.length > 1) {
+    const tmp = { ...score };
+    for (const stem of score.stems) {
+      const single = renderArrangement({ ...tmp, stems: [stem] }, { sampleRate, soundfont, loopRepeats: 1 });
+      outputs.push({ kind: "stem", section: "full", stem: stem.name, audio: single.audio });
+    }
+  }
   if (loopSec && score.stems.length > 1) {
     for (const stem of score.stems) {
       if (!stem.parts?.[loopSec.name]) continue;
@@ -18111,7 +18160,8 @@ function renderScore(score, { sampleRate = 48e3, lufs = -20, soundfont = null } 
       outputs.push({ kind: "stem", section: loopSec.name, stem: stem.name, audio });
     }
   }
-  const ref = outputs.find((o) => o.kind === "section" && o.section === (loopSec?.name || tm.sections[0].name));
+  const on = score.normalize_on || (arrangement && !loopSec ? "full" : loopSec?.name || tm.sections[0].name);
+  const ref = on === "full" && outputs.find((o) => o.kind === "full") || outputs.find((o) => o.kind === "section" && o.section === (on === "loop" ? loopSec?.name : on)) || outputs.find((o) => o.kind === "section");
   const measured = integratedLoudness(ref.audio);
   const gain = Number.isFinite(measured) ? dbToGain(lufs - measured) : 1;
   for (const o of outputs) {
@@ -18134,6 +18184,8 @@ function renderScore(score, { sampleRate = 48e3, lufs = -20, soundfont = null } 
     loop: loopSec ? { section: loopSec.name, bars: loopSec.bars, duration_s: loopSec.duration_s, samples: Math.round(loopSec.duration_s * sampleRate), ticks: Math.round(loopSec.duration_s * 20), ticks_exact: Number((loopSec.duration_s * 20).toFixed(4)) } : null,
     transition_points_s: loopSec ? Array.from({ length: Math.floor(loopSec.bars / every) + 1 }, (_, k2) => Number((k2 * every * tm.barSec).toFixed(4))) : [],
     transition_every_bars: every,
+    ...arrangement ? { full_mix: { duration_s: Number(arrangement.duration_s.toFixed(4)), sections: arrangement.placements } } : {},
+    normalized_on: on,
     stems: score.stems.map((s) => {
       const eng = stemEngine(s);
       return { name: s.name, instrument: s.instrument, engine: eng?.engine, ...eng?.engine === "sampled" ? { gm: eng.patch.name, gm_program: eng.patch.program, kit: eng.patch.kind === "kit" } : {}, gain: s.gain ?? -10 };
@@ -18374,6 +18426,8 @@ tool(server, "audio_music_render", {
     ogg_dir: external_exports.string().optional().describe("Resource-pack sounds directory for Ogg exports, e.g. resourcepack/assets/ns/sounds/music"),
     lufs: external_exports.number().optional(),
     asset: assetInput,
+    full_mix: external_exports.boolean().optional().describe("Also render the whole arrangement as one continuous track <title>_full (default: true for songs without a loop section). Tails ring across section borders."),
+    loop_repeats: external_exports.number().int().min(1).max(8).optional().describe("How many times the loop section plays inside the full mix (default 1)."),
     ogg_stems: external_exports.boolean().optional().describe("Also export per-stem loops as Ogg into ogg_dir (default true). Set false when the game will not layer stems, to keep the pack small.")
   }
 }, async (a, { studio }) => {
@@ -18384,21 +18438,23 @@ tool(server, "audio_music_render", {
   const title = slugify(score.title || "cue");
   const sampled = score.stems.some((s) => stemEngine(s)?.engine === "sampled");
   const sf = sampled ? resolveSoundfont({ scorePath: score.soundfont, configPath: studio.isInitialized() ? studio.config().audio?.soundfont : null, root: studio.root }) : null;
-  const { outputs, metadata } = renderScore(score, { lufs: a.lufs ?? -20, soundfont: sf?.path });
+  const { outputs, metadata } = renderScore(score, { lufs: a.lufs ?? -20, soundfont: sf?.path, fullMix: a.full_mix ?? null, loopRepeats: a.loop_repeats ?? null });
   if (sf) metadata.soundfont = { file: path.basename(sf.path), source: sf.source, ...sf.source === "default" ? { name: DEFAULT_SOUNDFONT.name, sha256: DEFAULT_SOUNDFONT.sha256 } : {} };
   const base = a.out_dir.replace(/\/$/, "");
   const sourceFile = `${base}/source/${title}.score.json`;
   writeJson(studio.abs(sourceFile), score);
   const files = [{ path: sourceFile, role: "source" }];
   metadata.files = { source: sourceFile, sections: {}, stems: {}, ogg: {} };
+  const stemSuffix = (o) => o.section === "full" ? "full" : o.section;
   for (const o of outputs) {
-    const name = o.kind === "section" ? `${title}_${o.section}` : `${title}_${o.section}_${slugify(o.stem)}`;
-    const wav = o.kind === "section" ? `${base}/rendered/${name}.${masterExt(studio)}` : `${base}/stems/${name}.${masterExt(studio)}`;
+    const name = o.kind === "section" ? `${title}_${o.section}` : o.kind === "full" ? `${title}_full` : `${title}_${stemSuffix(o)}_${slugify(o.stem)}`;
+    const wav = o.kind === "stem" ? `${base}/stems/${name}.${masterExt(studio)}` : `${base}/rendered/${name}.${masterExt(studio)}`;
     writeMaster(studio.abs(wav), o.audio);
     files.push({ path: wav, role: o.kind });
     if (o.kind === "section") metadata.files.sections[o.section] = wav;
+    else if (o.kind === "full") metadata.files.full = wav;
     else metadata.files.stems[o.stem] = wav;
-    if (a.ogg_dir && (o.kind === "section" || a.ogg_stems !== false)) {
+    if (a.ogg_dir && (o.kind !== "stem" || a.ogg_stems !== false)) {
       const ogg = `${a.ogg_dir.replace(/\/$/, "")}/${name}.ogg`;
       encodeOgg(o.audio, studio.abs(ogg));
       files.push({ path: ogg, role: "minecraft" });
@@ -18408,10 +18464,10 @@ tool(server, "audio_music_render", {
   const metaFile = `${base}/metadata/${title}.json`;
   writeJson(studio.abs(metaFile), metadata);
   files.push({ path: metaFile, role: "metadata" });
-  const loopWav = metadata.files.sections[metadata.loop?.section || score.sections[0].name];
+  const loopWav = metadata.loop ? metadata.files.sections[metadata.loop.section] : metadata.files.full || metadata.files.sections[score.sections[0].name];
   const loopAudit = auditAudioFile(studio.abs(loopWav), { role: "music", loop: !!metadata.loop, positional: false, targetLufs: a.lufs ?? -20 });
   const reg = registerOutput(studio, a.asset, { type: "music", files, source: { provider: sampled ? "local-composer+soundfont" : "local-composer", format: "minecraft-studio-score/1", source_files: [sourceFile], ...metadata.soundfont ? { soundfont: metadata.soundfont } : {} }, metadata: { bpm: metadata.bpm, key: metadata.key, meter: metadata.meter, state: metadata.state, loop: metadata.loop, transition_points_s: metadata.transition_points_s, stems: metadata.stems, sections: metadata.sections, waveform: loopAudit.waveform, metadata_file: metaFile } });
-  return { metadata_file: metaFile, files: files.map((f) => f.path), loop: metadata.loop, transition_points_s: metadata.transition_points_s, loop_audit: { verdict: loopAudit.verdict, checks: loopAudit.checks }, asset: reg };
+  return { metadata_file: metaFile, files: files.map((f) => f.path), ...metadata.full_mix ? { full_mix: { file: metadata.files.full, ...metadata.full_mix } } : {}, loop: metadata.loop, transition_points_s: metadata.transition_points_s, loop_audit: { verdict: loopAudit.verdict, checks: loopAudit.checks }, asset: reg };
 });
 tool(server, "audio_instruments", {
   title: "List music instruments",

@@ -4,7 +4,7 @@
 
 **[Install](#installation)** · **[Quick start](#quick-start)** · **[Docs](docs/)** · **[Demo project](examples/industrial-reactor)** · **[Report a bug](https://github.com/ArabKustam/Plugin-Minecraft-studio/issues/new/choose)** · **[🇷🇺 Русский](README.ru.md)**
 
-[![Version](https://img.shields.io/badge/version-0.2.0-5ccf6a?style=flat-square)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.3.0-5ccf6a?style=flat-square)](CHANGELOG.md)
 [![CI](https://img.shields.io/github/actions/workflow/status/ArabKustam/Plugin-Minecraft-studio/ci.yml?branch=main&style=flat-square&label=CI&color=5ccf6a)](https://github.com/ArabKustam/Plugin-Minecraft-studio/actions/workflows/ci.yml)
 [![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-d9b42a?style=flat-square)](.claude-plugin/plugin.json)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11%20·%2026.x-794f2f?style=flat-square)](docs/compatibility.md)

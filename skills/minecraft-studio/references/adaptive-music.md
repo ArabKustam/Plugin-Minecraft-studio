@@ -25,6 +25,16 @@ Game music is a **system**, not an MP3: states, sections, stems and musically-ti
   - Levels: sampled and synth stems share one gain scale; start piano/lead at about −8 dB, pads −16…−20, accents (celesta, bells) −12, sub −30 and check the per-stem loudness.
 - **Synth voices** (no sound bank; good for retro, sci-fi and sound-design layers, not for acoustic instruments): `pad, strings, bass, sub, pluck, bell, choir (vowel a/o/u/e/i), lead, pulse, brass, drone, drums (kick, snare, hat, openhat, tom, clap, impact)`; `synth:<name>` is the explicit form. `pluck` is a Karplus-Strong string, so it sounds like a banjo or dombra, not a piano.
 - Set `ogg_stems: false` in `audio_music_render` unless game logic layers the stems; otherwise they bloat the resource pack.
+
+## Songs (full arrangements)
+
+For a standalone piece (menu theme, cutscene, event song) write a score **without a loop section** and with real song form, e.g. `intro · verse · verse2 · pre · chorus · bridge · lift · chorus2 · outro` (section names are free). `audio_music_render` then also renders `<title>_full`: the whole arrangement on one timeline, so notes and reverb tails ring across section borders. Loudness is normalised on the full song (`normalize_on` overrides: `full`, `loop` or a section name); loop cues can get a full mix too with `full_mix: true` and `loop_repeats`.
+
+- **Dynamics per section:** a part can be `{ "notes": "...", "velocity": 0.5 }`; drum parts `{ "pattern": {...}, "velocity": 0.6 }`. Build an arc: intro ≈ −27 LUFS, verses −27…−24, chorus −18, bridge dips (−22), final chorus peaks (−15), outro −28. Measure each section of the full mix and fix the arc, not just the total.
+- **Key change:** `{ "notes": "...", "transpose": 2 }` on every pitched stem of the final chorus; prepare it with a short "lift" (bVII–I of the new key, timpani roll with rising `@velocity`, a pickup in the lead).
+- **Arrangement:** introduce instruments gradually (piano alone → + strings/cello → + bass/choir → full tutti in the chorus), give the hook to a strong lead (violin, flute an octave below for body), add a countermelody (horn) and sparkle (glockenspiel/celesta), then strip down for the bridge with a new lead (cello) and a new texture (harp, oohs).
+- **Balance check:** in the loudest section the lead should sit ~4–6 dB above everything else; solo the stems (`stems/<title>_full_<stem>`) to measure.
+
 - One loop section per cue; make one cue per music state (`calm`, `exploration`, `danger`, `alarm`, `combat`, `boss`, `critical`, `victory`, `failure`).
 
 Output layout under `out_dir` (keep it — sources stay editable):

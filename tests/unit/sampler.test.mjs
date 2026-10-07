@@ -40,6 +40,28 @@ test('synth-only scores render without a sound bank', () => {
   assert.equal(metadata.loop.ticks_exact, 40);
 });
 
+test('songs render as one continuous arrangement with per-section velocity and key change', () => {
+  const score = {
+    bpm: 120, sections: [{ name: 'a', bars: 1 }, { name: 'b', bars: 1 }, { name: 'c', bars: 1 }],
+    stems: [{ name: 'p', instrument: 'synth:lead', parts: { a: { notes: 'A3:4', velocity: 0.3 }, b: 'A3:4', c: { notes: 'A3:4', transpose: 12 } } }],
+  };
+  const sr = 22050, bar = 2 * sr;
+  const { outputs, metadata } = renderScore(score, { sampleRate: sr });
+  const full = outputs.find((o) => o.kind === 'full');
+  assert.ok(full, 'full mix rendered for a song without a loop');
+  assert.equal(metadata.normalized_on, 'full');
+  assert.deepEqual(metadata.full_mix.sections.map((s) => s.section), ['a', 'b', 'c']);
+  const ch = full.audio.channels[0];
+  const win = (k) => ch.slice(k * bar + 0.25 * sr, k * bar + 1.5 * sr);
+  const rms = (w) => Math.sqrt(w.reduce((t, x) => t + x * x, 0) / w.length);
+  const crossings = (w) => w.reduce((n, x, i) => n + (i && (w[i - 1] < 0) !== (x < 0) ? 1 : 0), 0);
+  assert.ok(rms(win(1)) > rms(win(0)) * 1.5, 'section b (velocity 1) is louder than section a (velocity 0.3)');
+  const ratio = crossings(win(2)) / crossings(win(1));
+  assert.ok(ratio > 1.7 && ratio < 2.3, `section c sounds an octave higher (zero-crossing ratio ${ratio.toFixed(2)})`);
+  const two = renderScore({ ...score, stems: [...score.stems, { name: 'b', instrument: 'synth:sub', parts: { a: 'A1:4' } }] }, { sampleRate: sr });
+  assert.deepEqual(two.outputs.filter((o) => o.kind === 'stem').map((o) => `${o.section}:${o.stem}`), ['full:p', 'full:b'], 'song stems span the whole arrangement');
+});
+
 test('a sampled piano renders real stereo audio (needs the sound bank)', (t) => {
   const sf = resolveSoundfont({});
   if (!sf.exists) return t.skip('sound bank not installed (audio_soundfont_install)');
