@@ -1,0 +1,228 @@
+<div align="center">
+
+<img src="docs/images/readme/banner-ru.png" alt="Minecraft Studio — ИИ-студия разработки для Minecraft" width="100%">
+
+**[Установка](#установка)** · **[Быстрый старт](#быстрый-старт)** · **[Документация](docs/)** · **[Демо-проект](examples/industrial-reactor)** · **[Сообщить об ошибке](https://github.com/ArabKustam/Plugin-Minecraft-studio/issues/new/choose)** · **[🇬🇧 English](README.md)**
+
+[![Версия](https://img.shields.io/badge/версия-0.1.0-5ccf6a?style=flat-square)](CHANGELOG.md)
+[![CI](https://img.shields.io/github/actions/workflow/status/ArabKustam/Plugin-Minecraft-studio/ci.yml?branch=main&style=flat-square&label=CI&color=5ccf6a)](https://github.com/ArabKustam/Plugin-Minecraft-studio/actions/workflows/ci.yml)
+[![Плагин Claude Code](https://img.shields.io/badge/Claude%20Code-плагин-d9b42a?style=flat-square)](.claude-plugin/plugin.json)
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11%20·%2026.x-794f2f?style=flat-square)](docs/compatibility.md)
+[![MCP-инструменты](https://img.shields.io/badge/MCP--инструментов-82-3fb0c8?style=flat-square)](docs/mcp.md)
+[![Лицензия: MIT](https://img.shields.io/badge/лицензия-MIT-6c7683?style=flat-square)](LICENSE)
+
+</div>
+
+**Minecraft Studio** — плагин для Claude Code, который превращает Claude в небольшую студию разработки игр. Вы описываете задачу, например «аварийный реактор с сиренами, голосом оповещения и адаптивной музыкой». Агент «Директор проекта» раскладывает её на граф задач и распределяет работу между 14 агентами-специалистами. Текстуры, модели, анимации, звуки, музыка, голосовые реплики и код проходят QA, документируются и коммитятся в Git. За работой можно следить в локальном дашборде.
+
+<div align="center">
+<img src="docs/images/readme/dashboard-tour.gif" alt="Тур по дашборду: обзор, граф задач, инспектор текстур, 3D-просмотр, анимации, адаптивная музыка" width="860">
+<br><sub>Настоящий Studio Dashboard на встроенном демо Industrial Reactor. Все ассеты в нём сделаны конвейером самого плагина. Интерфейс дашборда пока только на английском.</sub>
+</div>
+
+---
+
+<img src="docs/images/readme/panel-1-ru.png" alt="План · Агенты · Релиз" width="100%">
+
+**Директор проекта** читает ваш проект и его память, проверяет Git и делит запрос на задачи. У каждой задачи есть контракт: цель, входы, выходы, разрешённые инструменты, ограничения, критерии качества и папка, куда класть результат. Независимые задачи выполняются параллельно. В дашборде видны все задачи, агенты и результаты.
+
+<img src="docs/images/dashboard-tasks.png" alt="Граф производственных задач в дашборде" width="100%">
+
+<img src="docs/images/readme/panel-2-ru.png" alt="Пиксель-арт в вашем стиле" width="100%">
+
+Студия **измеряет ваш ресурспак**: палитру, контраст, насыщенность, сдвиг оттенка от теней к бликам, обводку, шум, дизеринг и направление света. По этому профилю «Художник текстур» рисует настоящий пиксель-арт, а не уменьшает ИИ-картинки. Каждая новая текстура получает оценку соответствия паку, неподходящие по стилю возвращаются на доработку. Варианты состояний строятся из одной базы, поэтому все они читаются как один и тот же объект.
+
+<p align="center"><img src="docs/images/texture-sheet.png" alt="Набор текстур" width="100%"><br><img src="docs/images/texture-states.png" alt="Состояния: выключен, работает, предупреждение, критично" width="420"></p>
+
+<img src="docs/images/readme/panel-3-ru.png" alt="Модели, которые движутся" width="100%">
+
+Модели пишутся как редактируемые исходники и экспортируются в **модели блоков и предметов Java, геометрию Bedrock и `.bbmodel` для Blockbench**. Анимации получают замах, сглаживание и бесшовные циклы. Перед QA студия рендерит модель с четырёх сторон и раскадровку анимации и **смотрит на результат**: файл, который проходит валидацию, ещё не значит хороший. Через опциональный MCP-мост можно управлять Blockbench вживую.
+
+<p align="center"><img src="docs/images/readme/reactor-states-ru.gif" alt="Запуск, работа, критическое состояние и останов реактора, отрендеренные студией" width="360"> <img src="docs/images/dashboard-3d.png" alt="3D-просмотр" width="470"></p>
+
+<img src="docs/images/readme/panel-4-ru.png" alt="Звук как система" width="100%">
+
+- **Звуковые эффекты** собираются из слоёв: тон, мотор, щелчок, акустика помещения, эффект громкоговорителя. Громкость выравнивается по LUFS, результат экспортируется в моно Ogg Vorbis вместе с записями в `sounds.json`.
+- **Музыка** записывается как партитура с секциями вступления, цикла и стингера, стемами и метаданными BPM, тональности и тактов. Поэтому игра переключает музыку ровно на границе такта.
+- **Голосовые реплики** звучат одним персонажем на десятках записей благодаря голосовым профилям и словарю произношения с русскими ударениями. Озвучка идёт через ElevenLabs, если он подключён, иначе через системный TTS.
+
+<img src="docs/images/dashboard-music.png" alt="Адаптивная музыка: метки секций, цикла и переходов, микшер стемов" width="100%">
+
+<img src="docs/images/readme/panel-5-ru.png" alt="QA до утверждения" width="100%">
+
+Ассет получает статус **approved** только после пройденной QA-проверки текущей версии. Проверки делятся на визуальные, звуковые, ревью кода и интеграционные. Среди них:
+
+- сборка и юнит-тесты;
+- валидация ресурспака: битые ссылки, форматы;
+- целостность реестра ассетов;
+- сверка таймлайнов с `sounds.json`;
+- опционально — смоук-тест `selftest` на временном сервере Paper.
+
+Git-чекпоинты — это Conventional Commits только указанных путей, с проверкой на секреты.
+
+## Как это работает
+
+<img src="docs/images/readme/how-it-works-ru.png" alt="Вы → Директор проекта → агенты-специалисты → QA-проверка → реестр ассетов → проект Minecraft, дашборд, Git" width="100%">
+
+Плагин состоит из четырёх слоёв:
+
+1. **Плагин Claude** — skills, агенты и хуки.
+2. **Агенты.**
+3. **Оркестрация** — граф задач, таймлайны и жизненный цикл QA.
+4. **Пять MCP-серверов** — `studio-core`, `studio-texture`, `studio-model`, `studio-audio`, `studio-minecraft`.
+
+Внешние сервисы подключаются через адаптеры: ElevenLabs, системный TTS, Blockbench MCP, GitHub MCP, а также Paper, Fabric, NeoForge, ресурспаки и Bedrock. Всё состояние хранится в обычных JSON-файлах в папке `.minecraft-studio/` вашего проекта. [Архитектура →](docs/architecture.md)
+
+## Требования
+
+| | Для чего |
+|---|---|
+| **Claude Code** (CLI или десктоп) | запуск плагина; Cowork может установить файл `.plugin` |
+| **Node.js ≥ 20** | встроенные MCP-серверы (без `npm install`) |
+| Git | чекпоинты и история *(рекомендуется)* |
+| FFmpeg с libvorbis | экспорт Ogg для Minecraft *(рекомендуется)* |
+| Java 21 (MC ≤ 1.21.11) или 25 (MC 26.x) + Maven/Gradle | сборка и тесты плагинов и модов |
+| Ключ ElevenLabs | качественные голоса, ИИ-звуки и музыка *(опционально)* |
+| Blockbench + MCP-мост | живое редактирование моделей *(опционально)* |
+
+## Установка
+
+```
+/plugin marketplace add ArabKustam/Plugin-Minecraft-studio
+/plugin install minecraft-studio@minecraft-studio
+```
+
+После установки перезапустите Claude Code. Чтобы попробовать локальную копию без установки, запустите `claude --plugin-dir /путь/к/Plugin-Minecraft-studio`. Подробности, в том числе установка файла `.plugin` в Cowork, — в [docs/installation.md](docs/installation.md) (на английском).
+
+## Быстрый старт
+
+```
+cd my-minecraft-project
+claude
+> /minecraft-studio:init
+> Сделай блок промышленной панели управления в стиле моего ресурспака,
+  с анимированным экраном и звуком нажатия кнопки.
+```
+
+`init` анализирует проект и спрашивает платформу и версию, если они неочевидны. Затем он индексирует существующие ассеты, снимает профиль стиля текстур и открывает дашборд. Проверить окружение можно в любой момент командой `/minecraft-studio:doctor`.
+
+## Настройка
+
+Настройки лежат в `.minecraft-studio/config.json`, Claude меняет их через `studio_config_set`. Секреты там никогда не хранятся.
+
+| Ключ | По умолчанию | Значение |
+|---|---|---|
+| `providers.voice` | `auto` | `auto` (ElevenLabs → системный TTS → заглушка), `elevenlabs`, `system`, `mock` |
+| `providers.sfx` / `providers.music` | `local-synth` / `local-composer` | локальные генераторы; инструменты ElevenLabs отдельные и спрашивают подтверждение расходов |
+| `audio.master_format` | `flac` | формат мастер-файлов без потерь (`wav`, если нет FFmpeg) |
+| `costs.max_generations_per_asset` | `6` | лимит платных генераций на один ассет |
+| `dashboard.port` | `4777` | порт дашборда (всегда только 127.0.0.1) |
+| `minecraft.accept_eula` | `false` | включает тестовый сервер Paper; ставьте только после того, как **вы** приняли EULA Minecraft |
+| `minecraft.startup_timeout_s` | `180` | таймаут запуска тестового сервера |
+
+| Переменная окружения | Назначение |
+|---|---|
+| `ELEVENLABS_API_KEY` | ключ ElevenLabs. Можно также указать в настройке плагина (защищённое хранилище) или в `.env` проекта |
+| `MINECRAFT_STUDIO_CAPABILITIES` | ограничивает MCP-сервер инструментами уровней `read`, `write`, `execute` или `publish` |
+| `MINECRAFT_STUDIO_FFMPEG` | путь к конкретному FFmpeg |
+
+## Команды
+
+| Slash-команда | Что делает |
+|---|---|
+| `/minecraft-studio:init` | анализ и инициализация проекта, профиль стиля, запуск дашборда |
+| `/minecraft-studio:doctor` | диагностика Node, Git, Java, FFmpeg, TTS, ElevenLabs, Blockbench, GitHub и дашборда |
+| `/minecraft-studio:dashboard` | открыть Studio Dashboard |
+
+Хуки и CI используют CLI `node runtime/dist/cli.mjs <команда>`. Доступные команды: `doctor`, `init`, `analyze`, `status`, `integrity`, `dashboard`, `validate-pack <папка>`, `package-pack <папка> <zip>`, `scan-secrets`.
+
+## API
+
+Агенты работают через MCP-инструменты, например `mcp__plugin_minecraft-studio_studio-texture__texture_render_spec`. Каждый генерирующий инструмент принимает блок `asset`: результат регистрируется в реестре вместе с исходником, из которого его можно воспроизвести.
+
+```jsonc
+// texture_render_spec: исходник — палитра и по одному символу на пиксель
+{
+  "spec": {
+    "size": [16, 16],
+    "palette": { "o": "#1b1e24", "l": "#6c7683", "h": "#8e99a6", "g": "#62e89a" },
+    "rows": ["oooooooooooooooo", "ohhhhhhhhhhhhhlo", "…ещё 14 строк…"]
+  },
+  "output": "resourcepack/assets/reactor/textures/item/core_side_active.png",
+  "purpose": "item",
+  "asset": { "id": "reactor.core_side_active.texture", "minecraft_ids": ["reactor:item/core_side_active"], "agent": "texture-artist" }
+}
+// → PNG записан, исходник сохранён, лист для проверки вернулся картинкой, ассет зарегистрирован как черновик (ждёт QA)
+```
+
+Таймлайн синхронизирует все виды медиа. Код игры выполняет скомпилированный список тиков:
+
+```json
+{ "id": "reactor_startup", "duration": 5, "tracks": {
+    "sfx":       [{ "t": 0.0, "sound": "reactor:reactor.button" }, { "t": 0.4, "sound": "reactor:reactor.relay" }],
+    "voice":     [{ "t": 0.15, "line": "startup", "sound": "reactor:reactor.voice.startup" }],
+    "animation": [{ "t": 1.4, "animation": "spin_up", "target": "rotor", "duration": 2.0 }],
+    "texture":   [{ "t": 3.5, "state": "active" }],
+    "music":     [{ "t": 4.0, "action": "transition", "state": "calm", "quantize": "bar" }],
+    "state":     [{ "t": 5.0, "state": "RUNNING" }] } }
+```
+
+Все 82 инструмента описаны в [docs/mcp.md](docs/mcp.md), форматы файлов — в виде [JSON Schema](schemas/).
+
+## Демо: Industrial Reactor
+
+[`examples/industrial-reactor`](examples/industrial-reactor) — сквозной интеграционный тест всей студии.
+
+- **Плагин Paper 1.21.11** (52 класса, 81 юнит-тест), в нём:
+  - машина состояний реактора и симуляция нагрева;
+  - вращающийся ротор и мигающая лампа на display-сущностях;
+  - GUI панели управления;
+  - адаптивная музыка с переходами по тактам;
+  - команда `selftest`.
+- **Ресурспак, сделанный студией:** 16 текстур, 8 моделей, 7 звуков, 2 музыкальные темы со стемами, 5 голосовых объявлений на русском, 3 таймлайна.
+- **Состояние студии:** 51 ассет с историей QA и [инструкция оператора](examples/industrial-reactor/docs/guides/reactor.md).
+
+Всё производство можно воспроизвести реальными MCP-вызовами командой `node examples/industrial-reactor/studio/produce.mjs --fresh`.
+
+## FAQ
+
+<details><summary><b>Нужны ли API-ключи?</b></summary>
+
+Нет. Текстуры, модели, анимации, звуки, музыка и черновые голоса работают локально. ElevenLabs опционален: он даёт качественные голоса и всегда спрашивает разрешение, прежде чем тратить кредиты.
+</details>
+
+<details><summary><b>Какие версии и платформы Minecraft поддерживаются?</b></summary>
+
+Демо-плагин для Paper 1.21.11 собран и покрыт юнит-тестами. Paper 26.x определяется: студия знает его форматы паков и требование Java 25. Fabric, NeoForge, датапаки, ресурспаки, Bedrock и прокси определяются через адаптеры. В [матрице совместимости](docs/compatibility.md) проверенное отделено от ожидаемого.
+</details>
+
+<details><summary><b>Подойдёт ли для моего существующего проекта и ресурспака?</b></summary>
+
+Да, это основной сценарий. `init` индексирует ваши ассеты, ничего в них не меняя. Новые текстуры подгоняются под измеренный стиль пака, а код следует вашей архитектуре и соглашениям.
+</details>
+
+<details><summary><b>Почему пиксельные спецификации, а не генератор картинок?</b></summary>
+
+В текстуре 16×16 важен каждый кластер пикселей, а уменьшенные ИИ-картинки превращаются в шум. Исходник «палитра + сетка символов» даёт читаемые и редактируемые текстуры: просьба «сделай чуть темнее» превращается в правку одной строки и новую версию. Концепт в высоком разрешении тоже можно уменьшить до нужного размера и потом дочистить вручную.
+</details>
+
+<details><summary><b>Нужен ли Blockbench?</b></summary>
+
+Нет. Встроенные экспортёры и рендерер покрывают весь конвейер, а файлы `.bbmodel` открываются в Blockbench для ручной доводки. Про живое управление Blockbench читайте в разделе [интеграция с Blockbench](docs/modeling.md#blockbench).
+</details>
+
+<details><summary><b>Куда-нибудь отправляются данные проекта?</b></summary>
+
+Телеметрии нет. Данные уходят только тем провайдерам, которых вы сами настроили и одобрили. Секреты хранятся в переменных окружения или защищённом хранилище и не попадают в файлы, логи и коммиты. Дашборд локальный и работает только на чтение. Подробнее в [SECURITY.md](SECURITY.md).
+</details>
+
+## Поддержка
+
+- 📖 [Документация](docs/) (на английском) · [Установка](docs/installation.md) · [Архитектура](docs/architecture.md) · [Тестирование](docs/testing.md)
+- 🐞 [Ошибки, проблемы совместимости, качество ассетов](https://github.com/ArabKustam/Plugin-Minecraft-studio/issues/new/choose)
+- 🔒 [Сообщить об уязвимости приватно](SECURITY.md)
+- 🤝 [Как помочь проекту](CONTRIBUTING.md) · [Список изменений](CHANGELOG.md)
+
+## Лицензия
+
+[MIT](LICENSE). Сторонние пакеты, которые входят в сборку, перечислены в [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Blockbench, FFmpeg, Paper и eSpeak NG — отдельные программы: плагин их вызывает, но не включает в себя. Проект не связан с Mojang, Microsoft или Anthropic.
