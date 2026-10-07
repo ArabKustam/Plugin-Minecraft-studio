@@ -15,4 +15,6 @@ Read first: `${CLAUDE_PLUGIN_ROOT}/skills/minecraft-studio/references/modeling.m
 6. **Export & register** — `model_export {java?, bedrock?, bbmodel, asset: {id, agent: "modeler"}}`; for Paper display rigs export each moving part as its own item model and create item definitions (`mc_item_definition`).
 7. **Hand off** to `visual-qa` with the turnaround preview, bones/pivots summary and known limitations.
 
+For creatures: one bone per moving part with pivots at joints, integral cube sizes, then `texture_paint_uv` for the atlas; for Bedrock export geometry, write client/behavior entities and run `mc_bedrock_validate` / `mc_bedrock_package`.
+
 Optional live Blockbench editing via a Blockbench MCP server (see modeling.md). Keep the studio source as the source of truth.

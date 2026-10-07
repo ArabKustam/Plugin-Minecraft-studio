@@ -2,6 +2,14 @@
 
 All notable changes to Minecraft Studio are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+- **Creature Pack example** (`examples/creatures`). Six rigged, textured, animated and voiced creatures: 3 animals (Ember Fox, Highland Ox, Marsh Heron), 2 monsters (Rust Crawler, Hollow Wraith) and 1 anthropomorphic NPC (Badger Smith). Each ships with idle, walk and attack animations plus specials, and with ambient, hurt and attack sounds. Output: a Bedrock add-on (`.mcaddon`) and Blockbench projects.
+- `texture_paint_uv`: automatic box-UV packing and pixel-art atlas painting from materials (ramps, patterns) with per-face shading and hand-authored face overlays.
+- `mc_bedrock_validate` / `mc_bedrock_package`: checks Bedrock add-on manifests, entity, geometry, texture, animation and sound references, and packages `.mcpack`/`.mcaddon` files.
+- `paint-spec` JSON Schema. Creature lineup and walk-cycle artwork in both READMEs.
+
 ## [0.1.0] — 2026-10-07
 
 First public release.

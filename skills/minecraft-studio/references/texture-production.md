@@ -57,6 +57,17 @@ Check the returned strip image: silhouettes and material must stay identical; on
 
 `texture_validate` (power-of-two, square/strip + mcmeta, palette size, isolated pixels), `texture_check_tiling` for blocks that repeat, `texture_style_compare` (score ≥ 75 to send to QA). Then hand to `visual-qa`.
 
+## Entity & creature atlases
+
+Mobs, NPCs and other box-UV models use `texture_paint_uv`. Drawing a 64×64 atlas character by character is impractical, so this tool does the layout and painting:
+
+- It packs the box-UV islands automatically and writes the packed model back to the source.
+- It paints every face from **materials**: a dark→light `ramp`, plus a `pattern` (`fur`, `shaggy`, `plates`, `feathers`, `stripes`, `scales`). It uses top-left Minecraft shading, with a darker bottom rim on side faces.
+- It applies **hand-authored face overlays** for eyes, mouths and markings. Use the face-local pixel rows: `cubes.<cube>.faces.north.rows`.
+- `face_materials` changes the material of a single face, e.g. a cream belly on a `down` face.
+
+It returns the atlas at 4× plus a textured turnaround. Review both: do the eyes land on the front face, and does every material read at game scale? Keep the paint spec as the source (`art/paint/<id>.paint.json`). See `examples/creatures` for six worked examples: animals, monsters and an anthropomorphic NPC.
+
 ## 7. Integrate
 
 Reference the texture from a model (`textures` map), validate the pack (`mc_resourcepack_validate`), and if possible look at it in-game (test server + client) or via `model_render`.

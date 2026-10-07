@@ -32,6 +32,18 @@
 
 `mc_build` → fix errors → `mc_test` (unit tests for pure logic) → `mc_test_server` smoke test (requires the user's EULA consent) with commands like `<plugin> selftest`. Iterate: detect → diagnose → fix → rebuild → retest. Record results (the tools store test runs for the dashboard).
 
+## Bedrock add-ons
+
+- **Packs.**
+  - The behavior pack depends on the resource pack via `dependencies`.
+  - UUIDs are stable: generate them deterministically from the project name.
+- **Entities.**
+  - Every `minecraft:entity` needs a matching `minecraft:client_entity`.
+  - Animations are chosen in `scripts.animate` with Molang. Typical conditions: `query.modified_move_speed`, `variable.attack_time`, `query.is_on_ground`.
+  - Animation `timeline` entries must be Molang or commands, not labels.
+- **Sounds.** Define them in `sounds/sound_definitions.json` and map entity events in `sounds.json`. Supported events: `ambient`, `hurt`, `death`, …
+- **Release.** Validate with `mc_bedrock_validate`, then package a `.mcaddon` with `mc_bedrock_package`.
+
 ## Code review
 
 Send non-trivial changes to `code-reviewer` (architecture, thread safety, tick cost, persistence, permissions, error handling) before integration QA.

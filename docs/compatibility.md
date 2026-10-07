@@ -29,7 +29,7 @@ What has actually been tested is marked ✅ tested. Things that should work by d
 | NeoForge / Forge | 🟡 | 🟡 Gradle | — | ✅ resource pack side |
 | Datapack | ✅ detect | — | — | 🟡 |
 | Java resource pack | ✅ | ✅ validate & package | — | ✅ |
-| Bedrock add-on | 🟡 detect | — | — | 🟡 Bedrock geometry/animation export |
+| Bedrock add-on | ✅ detect | — | — | ✅ add-on generation + static validation (Creature Pack); 🟡 not yet loaded in a Bedrock client |
 
 ## Minecraft versions
 

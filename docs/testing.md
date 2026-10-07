@@ -12,6 +12,7 @@ node --test "tests/**/*.test.mjs"
 | `tests/unit/media.test.mjs` | Pixel specs, animated strips, tiling, validation, style profile ranking, variant ops, model validation and export (Java, Bedrock, `.bbmodel`), rendering, animation checks and sampling, WAV round-trip, SFX loudness and loop, music timing and seamless loops, Russian numbers and stress, resource-pack broken references, deterministic zips, platform detection (Paper 26.x + resource pack) |
 | `tests/unit/schemas.test.mjs` | Demo sources and the generated registry conform to `schemas/` |
 | `tests/integration/mcp.test.mjs` | All five bundled servers over stdio: capability gating, the init → texture → QA → registry → activity slice, path rejection, the paid-provider cost gate, the audio render and audit, timeline export |
+| `tests/unit/creatures.test.mjs` | UV packing & painting, stable UUIDs, Bedrock validator (broken refs), Creature Pack add-on validates |
 | `tests/integration/style-match.test.mjs` | §71: a new block matches the pack style; an off-style control fails |
 
 ## Plugin validation

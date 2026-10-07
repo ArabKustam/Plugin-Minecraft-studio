@@ -13,7 +13,7 @@ Generation → Technical validation → Specialised QA → Integration QA → Fi
 | animation | `animation_validate`, `animation_render` |
 | audio | `audio_audit` (role, loop, positional) |
 | timeline | `studio_timeline_validate` |
-| pack | `mc_resourcepack_validate` |
+| pack | `mc_resourcepack_validate` (Java), `mc_bedrock_validate` (Bedrock add-ons) |
 | code | `mc_build`, `mc_test` |
 
 ## Specialised QA (separate agents)

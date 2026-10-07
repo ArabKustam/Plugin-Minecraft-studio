@@ -5,10 +5,10 @@ Five stdio servers are declared in `.mcp.json`. They are bundled ES modules star
 | Server | Default capabilities | Tools |
 |---|---|---|
 | `studio-core` | read, write, execute | 38: project analyse/init/profile/update, config, asset create/update/get/list/set_status/revert, QA record, registry integrity, task plan/update/list/graph, memory add/recall, log/activity, timeline save/validate/list, git status/checkpoint/secret scan, agent define, tool scaffold/list/run/test, providers, usage, test record, doctor, dashboard start |
-| `studio-texture` | read, write | 11: render spec, from PNG, analyze, style profile, style compare, validate, tiling, palette pass, variants, concept reduce, preview |
+| `studio-texture` | read, write | 12: render spec, from PNG, analyze, style profile, style compare, validate, tiling, palette pass, variants, concept reduce, preview, UV paint (creature/entity atlases) |
 | `studio-model` | read, write | 7: validate, render, export, import Java, animation validate/render/save |
 | `studio-audio` | read, write, publish | 14: SFX presets/render/AI generate, analyze, audit, process, music render/AI generate, voice profile save/get, pronunciation add/preview, voice line, Minecraft export |
-| `studio-minecraft` | read, write, execute | 12: adapters, detect, build, test, test server, parse log, Java check, pack validate/package, sound event, item definition, pack formats |
+| `studio-minecraft` | read, write, execute | 14: adapters, detect, build, test, test server, parse log, Java check, pack validate/package, sound event, item definition, pack formats, Bedrock add-on validate/package |
 
 ## Capabilities and security
 

@@ -8,7 +8,7 @@
 [![CI](https://img.shields.io/github/actions/workflow/status/ArabKustam/Plugin-Minecraft-studio/ci.yml?branch=main&style=flat-square&label=CI&color=5ccf6a)](https://github.com/ArabKustam/Plugin-Minecraft-studio/actions/workflows/ci.yml)
 [![Claude Code plugin](https://img.shields.io/badge/Claude%20Code-plugin-d9b42a?style=flat-square)](.claude-plugin/plugin.json)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11%20·%2026.x-794f2f?style=flat-square)](docs/compatibility.md)
-[![MCP tools](https://img.shields.io/badge/MCP%20tools-82-3fb0c8?style=flat-square)](docs/mcp.md)
+[![MCP tools](https://img.shields.io/badge/MCP%20tools-85-3fb0c8?style=flat-square)](docs/mcp.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-6c7683?style=flat-square)](LICENSE)
 
 </div>
@@ -59,6 +59,45 @@ An asset is **approved** only after a passing QA record for its current version.
 - timeline checks against `sounds.json`
 - an optional disposable Paper test server with a `selftest` smoke test
 - Git checkpoints: Conventional Commits of explicit paths, scanned for secrets
+
+## Examples
+
+Both examples are full productions made with the plugin's own tools. Each can be replayed with `node studio/produce.mjs --fresh`.
+
+### 🧪 [Industrial Reactor](examples/industrial-reactor): Paper 1.21.11 plugin
+
+The plugin has 52 classes and 81 unit tests. It implements a reactor state machine, heat simulation, a display-entity rig, a control-panel GUI, timelines and an adaptive music director. It ships with a studio-made resource pack:
+
+- 16 textures
+- 8 models
+- 7 SFX
+- 2 adaptive music cues
+- 5 Russian PA announcements
+
+### 🐾 [Creature Pack](examples/creatures): 3 animals, 2 monsters, 1 anthropomorphic NPC
+
+<img src="docs/images/readme/creatures-lineup-en.png" alt="Ember Fox, Highland Ox, Marsh Heron, Rust Crawler, Hollow Wraith and Badger Smith at the same scale" width="100%">
+
+<div align="center"><img src="docs/images/readme/creatures-walk-en.gif" alt="Walk cycles of all six creatures" width="720"></div>
+
+| Creature | Type | Rig and animations | Sounds |
+|---|---|---|---|
+| **Ember Fox** | animal | quadruped · idle, trot, pounce | yip, yelp, snarl |
+| **Highland Ox** | animal | shaggy quadruped with horns · grazing idle, walk, headbutt | low call, hurt, impact |
+| **Marsh Heron** | animal | long-legged bird · idle, walk, peck, wing flap | croak, squawk, peck clicks |
+| **Rust Crawler** | monster | six-legged scrap scorpion · tripod gait, tail sting | chitter, hiss, sting |
+| **Hollow Wraith** | monster | hovering hooded spirit · hover, drift, shriek | whisper, wail, shriek |
+| **Badger Smith** | anthropomorphic | humanoid badger with a hammer · walk, hammer strike, forge loop | anvil clang, grunt, impact |
+
+Each creature includes:
+
+- a UV-painted 64×64 atlas (`texture_paint_uv`)
+- Bedrock geometry and animations
+- client and behavior entities with spawn eggs
+- 3 sounds
+- a Blockbench `.bbmodel`
+
+All of it is packaged as `studio-creatures.mcaddon`, which passes the studio's Bedrock validator. The pack has not been run in a Bedrock client yet. Field guide: [examples/creatures/docs/creatures.md](examples/creatures/docs/creatures.md).
 
 ## How it works
 
@@ -167,7 +206,7 @@ A timeline keeps every medium in sync. The game code runs the compiled list of t
     "state":     [{ "t": 5.0, "state": "RUNNING" }] } }
 ```
 
-All 82 tools are listed in [docs/mcp.md](docs/mcp.md). The file formats are published as [JSON Schemas](schemas/).
+All 85 tools are listed in [docs/mcp.md](docs/mcp.md). The file formats are published as [JSON Schemas](schemas/).
 
 ## FAQ
 

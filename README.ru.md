@@ -8,7 +8,7 @@
 [![CI](https://img.shields.io/github/actions/workflow/status/ArabKustam/Plugin-Minecraft-studio/ci.yml?branch=main&style=flat-square&label=CI&color=5ccf6a)](https://github.com/ArabKustam/Plugin-Minecraft-studio/actions/workflows/ci.yml)
 [![Плагин Claude Code](https://img.shields.io/badge/Claude%20Code-плагин-d9b42a?style=flat-square)](.claude-plugin/plugin.json)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11%20·%2026.x-794f2f?style=flat-square)](docs/compatibility.md)
-[![MCP-инструменты](https://img.shields.io/badge/MCP--инструментов-82-3fb0c8?style=flat-square)](docs/mcp.md)
+[![MCP-инструменты](https://img.shields.io/badge/MCP--инструментов-85-3fb0c8?style=flat-square)](docs/mcp.md)
 [![Лицензия: MIT](https://img.shields.io/badge/лицензия-MIT-6c7683?style=flat-square)](LICENSE)
 
 </div>
@@ -167,9 +167,36 @@ claude
     "state":     [{ "t": 5.0, "state": "RUNNING" }] } }
 ```
 
-Все 82 инструмента описаны в [docs/mcp.md](docs/mcp.md), форматы файлов — в виде [JSON Schema](schemas/).
+Все 85 инструментов описаны в [docs/mcp.md](docs/mcp.md), форматы файлов — в виде [JSON Schema](schemas/).
 
-## Демо: Industrial Reactor
+## Примеры
+
+### 🐾 [Набор существ](examples/creatures): 3 животных, 2 монстра, 1 антропоморфный персонаж
+
+<img src="docs/images/readme/creatures-lineup-ru.png" alt="Огненный лис, горный бык, болотная цапля, ржавый ползун, полый призрак и барсук-кузнец в одном масштабе" width="100%">
+
+<div align="center"><img src="docs/images/readme/creatures-walk-ru.gif" alt="Циклы ходьбы всех шести существ" width="720"></div>
+
+| Существо | Тип | Риг и анимации | Звуки |
+|---|---|---|---|
+| **Огненный лис** | животное | четвероногое · покой, рысь, прыжок-атака | тявканье, визг, рычание |
+| **Горный бык** | животное | лохматое четвероногое с рогами · пасётся, шаг, удар головой | низкий зов, боль, удар |
+| **Болотная цапля** | животное | длинноногая птица · покой, шаг, клевок, взмах крыльями | кваканье, крик, щелчки клюва |
+| **Ржавый ползун** | монстр | шестиногий скорпион из металлолома · походка «треногой», удар жалом | стрекот, шипение, жало |
+| **Полый призрак** | монстр | парящий дух в капюшоне · парение, дрейф, вопль | шёпот, стон, вопль |
+| **Барсук-кузнец** | антропоморфный | барсук-гуманоид с молотом · шаг, удар молотом, работа у наковальни | звон наковальни, кряхтение, удар |
+
+Что есть у каждого существа:
+
+- атлас текстур 64×64, нарисованный инструментом `texture_paint_uv`;
+- геометрия и анимации Bedrock;
+- клиентская и поведенческая сущности с яйцом призыва;
+- 3 звука;
+- проект `.bbmodel` для Blockbench.
+
+Всё упаковано в `studio-creatures.mcaddon`. Аддон проходит Bedrock-валидатор студии, но в клиенте Bedrock пока не запускался. Описание существ — в [руководстве](examples/creatures/docs/creatures.md) (на английском).
+
+### 🧪 Industrial Reactor
 
 [`examples/industrial-reactor`](examples/industrial-reactor) — сквозной интеграционный тест всей студии.
 

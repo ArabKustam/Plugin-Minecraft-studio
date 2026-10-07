@@ -50,6 +50,16 @@ Built-in exporters and the software renderer work without Blockbench. For live, 
 
 `studio_doctor` reports whether a bridge is reachable. When it is, you may use its tools for painting/screenshots; still save the final result as files, register them, and keep the studio source in sync (export from Blockbench, or re-import). Never run arbitrary script tools (`execute_script`, `risky_eval`) unless the user asks.
 
+## Creatures and mobs
+
+- **Rig.** Model the rig with one bone per moving part. Use a body root, give the head its own bone, and put each leg pivot at the hip, each wing at the shoulder and the tail at its base.
+- **Layout.** Keep cube sizes integral so box UV stays crisp. `texture_paint_uv` packs the islands and paints the atlas.
+- **Bedrock.**
+  - Export `model_export {bedrock, bbmodel}`, then write the client entity with geometry, textures, animations and `scripts.animate` conditions, and a behavior entity.
+  - Check every reference with `mc_bedrock_validate`.
+  - Ship a `.mcaddon` with `mc_bedrock_package`.
+- **Java.** Custom entities need a client mod or a model engine plugin. Ship the `.bbmodel` (textures and animations embedded) for those users.
+
 ## Display-entity rigs (Paper)
 
 Java block models cannot animate. For machines, split moving parts into separate item models (e.g. `core`, `rotor`, `lamp`), spawn `ItemDisplay` entities, and animate with `Transformation` + interpolation from code. Keep pivots at the model origin you rotate around (center the rotor at 8,8,8).

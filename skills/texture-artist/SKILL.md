@@ -15,4 +15,6 @@ Read first: `${CLAUDE_PLUGIN_ROOT}/skills/minecraft-studio/references/texture-pr
 6. **States** — `texture_variants` from the approved base; check the strip.
 7. **Hand off** — summary with files, asset ids, scores and the preview path for `visual-qa`. Never mark your own work approved.
 
+**Creatures/entities (box UV):** write a paint spec (materials with ramps + patterns, face overlays for eyes/markings) and run `texture_paint_uv {model_path, paint_path, output, asset}` — it packs the UVs and returns the atlas and a textured turnaround for review.
+
 Small precise changes ("less bright", "move the lamp one pixel") are spec edits or `texture_variants` ops on the source, producing a new version — never a from-scratch redo.
