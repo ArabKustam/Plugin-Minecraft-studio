@@ -85,15 +85,18 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/ember_staff.png",
-          "sha256": "40b5549ad9b6320ff5a0289844dbf7220cfb4544e4f2cb1e20623466cb5a8642"
+          "sha256": "40b5549ad9b6320ff5a0289844dbf7220cfb4544e4f2cb1e20623466cb5a8642",
+          "archived": "0-ember_staff.png"
         },
         {
           "path": "resourcepack/assets/studio/textures/item/ember_staff.png.mcmeta",
-          "sha256": "61d9ed0268db7dffd14d04ad022ec2da66c2d5f52c3b3f689331ae53880f9e40"
+          "sha256": "61d9ed0268db7dffd14d04ad022ec2da66c2d5f52c3b3f689331ae53880f9e40",
+          "archived": "1-ember_staff.png.mcmeta"
         },
         {
           "path": "art/items/ember_staff.item.json",
-          "sha256": "8ecedde4037f540ad87dea3d686846d73a3f57b306a6c86ec79cfd9340b5dda1"
+          "sha256": "8ecedde4037f540ad87dea3d686846d73a3f57b306a6c86ec79cfd9340b5dda1",
+          "archived": "2-ember_staff.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.ember_staff.texture/v1",

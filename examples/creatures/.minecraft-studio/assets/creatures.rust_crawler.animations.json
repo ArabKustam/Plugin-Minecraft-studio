@@ -65,7 +65,8 @@
       "files": [
         {
           "path": "bedrock/RP/animations/rust_crawler.animation.json",
-          "sha256": "1bc1c7a8c0f494bbb76cbb607323c760b8f83e898adee45a51165238e1016e48"
+          "sha256": "1bc1c7a8c0f494bbb76cbb607323c760b8f83e898adee45a51165238e1016e48",
+          "archived": "0-rust_crawler.animation.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.rust_crawler.animations/v1",

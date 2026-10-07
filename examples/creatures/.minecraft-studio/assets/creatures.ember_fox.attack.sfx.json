@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/ember_fox/attack.flac",
-          "sha256": "3b2c579739f480e5f88bcfe57799d29f8b2874ba2d7d6d4ee4fb546c3df101a0"
+          "sha256": "3b2c579739f480e5f88bcfe57799d29f8b2874ba2d7d6d4ee4fb546c3df101a0",
+          "archived": "0-attack.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/ember_fox/attack.ogg",
-          "sha256": "d39fd52a30e0b75ff22d26252dd7a6abc97df5c63a6afca2e4f104fe9e7b2fd4"
+          "sha256": "d39fd52a30e0b75ff22d26252dd7a6abc97df5c63a6afca2e4f104fe9e7b2fd4",
+          "archived": "1-attack.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.ember_fox.attack.sfx/v1",

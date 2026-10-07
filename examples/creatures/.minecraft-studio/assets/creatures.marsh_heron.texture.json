@@ -83,11 +83,13 @@
       "files": [
         {
           "path": "bedrock/RP/textures/entity/marsh_heron.png",
-          "sha256": "7476019d518605cbd38772644e6737288cd3e2732e3bca21914fb87a17b177c0"
+          "sha256": "7476019d518605cbd38772644e6737288cd3e2732e3bca21914fb87a17b177c0",
+          "archived": "0-marsh_heron.png"
         },
         {
           "path": "art/paint/marsh_heron.paint.json",
-          "sha256": "4ad7e6375e1b230710c726d2b3319d6cf716d33791d49056be49ad1aa9074305"
+          "sha256": "4ad7e6375e1b230710c726d2b3319d6cf716d33791d49056be49ad1aa9074305",
+          "archived": "1-marsh_heron.paint.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.marsh_heron.texture/v1",

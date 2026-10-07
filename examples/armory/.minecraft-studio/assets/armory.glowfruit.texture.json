@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/glowfruit.png",
-          "sha256": "15ca4dbebdc247fc4e58169559f713e6b3989ca01055c0f1505d0374d87f8ce2"
+          "sha256": "15ca4dbebdc247fc4e58169559f713e6b3989ca01055c0f1505d0374d87f8ce2",
+          "archived": "0-glowfruit.png"
         },
         {
           "path": "art/items/glowfruit.item.json",
-          "sha256": "d66fd08b074ab7de223b895172105fac624dddf3dcb8e0a5915e5cbbb638b9cb"
+          "sha256": "d66fd08b074ab7de223b895172105fac624dddf3dcb8e0a5915e5cbbb638b9cb",
+          "archived": "1-glowfruit.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.glowfruit.texture/v1",

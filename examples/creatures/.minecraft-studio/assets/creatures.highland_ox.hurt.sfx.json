@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/highland_ox/hurt.flac",
-          "sha256": "392a0e59917499dd61d74ba7f4da8098c037b0d388eeb8cc7e276702fcbfd608"
+          "sha256": "392a0e59917499dd61d74ba7f4da8098c037b0d388eeb8cc7e276702fcbfd608",
+          "archived": "0-hurt.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/highland_ox/hurt.ogg",
-          "sha256": "89a9b5f6f8b757d26d6854d283abb0168eef8e88c89939362e1eee3b8d29f9b6"
+          "sha256": "89a9b5f6f8b757d26d6854d283abb0168eef8e88c89939362e1eee3b8d29f9b6",
+          "archived": "1-hurt.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.highland_ox.hurt.sfx/v1",

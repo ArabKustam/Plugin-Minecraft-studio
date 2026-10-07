@@ -116,11 +116,13 @@
       "files": [
         {
           "path": "audio/voice/warning.flac",
-          "sha256": "ec2e29220f47cdc497d094f7c928be6d3f5c38759d57f5b6bd7e6030bb7c4113"
+          "sha256": "ec2e29220f47cdc497d094f7c928be6d3f5c38759d57f5b6bd7e6030bb7c4113",
+          "archived": "0-warning.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/voice/warning.ogg",
-          "sha256": "9a6ebd866fd83d120983958aa52e840ba4dea6cb6ef10e7f27d59fef17333044"
+          "sha256": "9a6ebd866fd83d120983958aa52e840ba4dea6cb6ef10e7f27d59fef17333044",
+          "archived": "1-warning.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.voice.warning/v1",

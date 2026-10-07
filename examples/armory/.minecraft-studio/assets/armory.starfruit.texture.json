@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/starfruit.png",
-          "sha256": "a02c0948ad6b5b959f8cb20db34a81159418efd982f18625d633a620c9a5df35"
+          "sha256": "a02c0948ad6b5b959f8cb20db34a81159418efd982f18625d633a620c9a5df35",
+          "archived": "0-starfruit.png"
         },
         {
           "path": "art/items/starfruit.item.json",
-          "sha256": "2f8a3f4faa460aa9f42f3fafa5819672e48856e9d62f11ecca1dabd29d09c692"
+          "sha256": "2f8a3f4faa460aa9f42f3fafa5819672e48856e9d62f11ecca1dabd29d09c692",
+          "archived": "1-starfruit.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.starfruit.texture/v1",

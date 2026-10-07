@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/ember_blade.png",
-          "sha256": "bd288b2f6ab0bf13848272315f567f7c8e4e543ee2366fc94970c5f3e881a374"
+          "sha256": "bd288b2f6ab0bf13848272315f567f7c8e4e543ee2366fc94970c5f3e881a374",
+          "archived": "0-ember_blade.png"
         },
         {
           "path": "art/items/ember_blade.item.json",
-          "sha256": "370fa8843a659b2d00432a951b55ef439f3750dbff93f48bae8cfcc8d806cecf"
+          "sha256": "370fa8843a659b2d00432a951b55ef439f3750dbff93f48bae8cfcc8d806cecf",
+          "archived": "1-ember_blade.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.ember_blade.texture/v1",

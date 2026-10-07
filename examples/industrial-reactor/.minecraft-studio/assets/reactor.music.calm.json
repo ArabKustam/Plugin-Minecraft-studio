@@ -212,75 +212,93 @@
       "files": [
         {
           "path": "audio/music/source/reactor_calm.score.json",
-          "sha256": "e31198dd5797ecfafd88fcfc276f476073e7e33a25334bb8a3738f9c3c6cfe2b"
+          "sha256": "e31198dd5797ecfafd88fcfc276f476073e7e33a25334bb8a3738f9c3c6cfe2b",
+          "archived": "0-reactor_calm.score.json"
         },
         {
           "path": "audio/music/rendered/reactor_calm_intro.flac",
-          "sha256": "185b0c7f0f18fc27d1920de445af2db2f7b08c8f46909d1ca28d463dad3dca48"
+          "sha256": "185b0c7f0f18fc27d1920de445af2db2f7b08c8f46909d1ca28d463dad3dca48",
+          "archived": "1-reactor_calm_intro.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_intro.ogg",
-          "sha256": "825f3d6c53e6bc70c372f093af7d8f2a10b30b9b1fe0aaa78ea928e1015c6beb"
+          "sha256": "825f3d6c53e6bc70c372f093af7d8f2a10b30b9b1fe0aaa78ea928e1015c6beb",
+          "archived": "2-reactor_calm_intro.ogg"
         },
         {
           "path": "audio/music/rendered/reactor_calm_loop.flac",
-          "sha256": "fb46494c3de9eed22fff7d85e40c20d761348b18fa52f460a54321984f7e0aa4"
+          "sha256": "fb46494c3de9eed22fff7d85e40c20d761348b18fa52f460a54321984f7e0aa4",
+          "archived": "3-reactor_calm_loop.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop.ogg",
-          "sha256": "0c9bae8ac7c02ca8a73a55723ed8e7847ec5704ce48c634b656431e501f90ade"
+          "sha256": "0c9bae8ac7c02ca8a73a55723ed8e7847ec5704ce48c634b656431e501f90ade",
+          "archived": "4-reactor_calm_loop.ogg"
         },
         {
           "path": "audio/music/rendered/reactor_calm_outro.flac",
-          "sha256": "9d9e6af10407dabc42d14254108670814ba59327108c18d0c00c05ffeef45a6c"
+          "sha256": "9d9e6af10407dabc42d14254108670814ba59327108c18d0c00c05ffeef45a6c",
+          "archived": "5-reactor_calm_outro.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_outro.ogg",
-          "sha256": "84988b0cc33da17c2919169ed6dcbb513ffc1860c0c6a5e17343360ab131251f"
+          "sha256": "84988b0cc33da17c2919169ed6dcbb513ffc1860c0c6a5e17343360ab131251f",
+          "archived": "6-reactor_calm_outro.ogg"
         },
         {
           "path": "audio/music/stems/reactor_calm_loop_pad.flac",
-          "sha256": "ec4781753254a864e303fe39a3497e86bd9f1ce4e1c20e0aede2f53a5b66160a"
+          "sha256": "ec4781753254a864e303fe39a3497e86bd9f1ce4e1c20e0aede2f53a5b66160a",
+          "archived": "7-reactor_calm_loop_pad.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_pad.ogg",
-          "sha256": "273bdd2c0a857c5ddeb4f022cf1bddde3bbaf589f8baf9b54d6926509e96da61"
+          "sha256": "273bdd2c0a857c5ddeb4f022cf1bddde3bbaf589f8baf9b54d6926509e96da61",
+          "archived": "8-reactor_calm_loop_pad.ogg"
         },
         {
           "path": "audio/music/stems/reactor_calm_loop_bass.flac",
-          "sha256": "316a20b10901763f76a50f5e35a053bbfa067d4e97a4637eb9006f7cb2f64ca9"
+          "sha256": "316a20b10901763f76a50f5e35a053bbfa067d4e97a4637eb9006f7cb2f64ca9",
+          "archived": "9-reactor_calm_loop_bass.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_bass.ogg",
-          "sha256": "d97820e538ca91477bedf49cf3a92f5a115b766c5c7dc76567f925b5fdbf115c"
+          "sha256": "d97820e538ca91477bedf49cf3a92f5a115b766c5c7dc76567f925b5fdbf115c",
+          "archived": "10-reactor_calm_loop_bass.ogg"
         },
         {
           "path": "audio/music/stems/reactor_calm_loop_arp.flac",
-          "sha256": "f47b748cd522c725f40f354ea9be5e9ac534c344bd0f2a433d0fcd14a8d4c054"
+          "sha256": "f47b748cd522c725f40f354ea9be5e9ac534c344bd0f2a433d0fcd14a8d4c054",
+          "archived": "11-reactor_calm_loop_arp.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_arp.ogg",
-          "sha256": "64af58e4ad85a9badd8ba9c9c81f353ce26d31d7054dc495a231aa491d427f0d"
+          "sha256": "64af58e4ad85a9badd8ba9c9c81f353ce26d31d7054dc495a231aa491d427f0d",
+          "archived": "12-reactor_calm_loop_arp.ogg"
         },
         {
           "path": "audio/music/stems/reactor_calm_loop_bell.flac",
-          "sha256": "45ef3deedbc6d64f6ab74736c2fe0b7d7db1ab990b0381e61e471cf2e6fcc911"
+          "sha256": "45ef3deedbc6d64f6ab74736c2fe0b7d7db1ab990b0381e61e471cf2e6fcc911",
+          "archived": "13-reactor_calm_loop_bell.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_bell.ogg",
-          "sha256": "0dd9323d83d637f59973801907da6b4459e3ec608fadb6fd629f7817abf1f250"
+          "sha256": "0dd9323d83d637f59973801907da6b4459e3ec608fadb6fd629f7817abf1f250",
+          "archived": "14-reactor_calm_loop_bell.ogg"
         },
         {
           "path": "audio/music/stems/reactor_calm_loop_drums.flac",
-          "sha256": "c45cd15ab114ddeaa321448d39b6c3d3f69a0e72d925ae0f97b4aeedeb6703cf"
+          "sha256": "c45cd15ab114ddeaa321448d39b6c3d3f69a0e72d925ae0f97b4aeedeb6703cf",
+          "archived": "15-reactor_calm_loop_drums.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/music/reactor_calm_loop_drums.ogg",
-          "sha256": "d35e3a045cb390b5865d29b6d389f5bb9e119f56b9a4ac33056a52e2cd7c6b7b"
+          "sha256": "d35e3a045cb390b5865d29b6d389f5bb9e119f56b9a4ac33056a52e2cd7c6b7b",
+          "archived": "16-reactor_calm_loop_drums.ogg"
         },
         {
           "path": "audio/music/metadata/reactor_calm.json",
-          "sha256": "9b156c0daccd7e7f3477cf1ac9cb5f584ec423375d6bc79c917cbf39cada51d3"
+          "sha256": "9b156c0daccd7e7f3477cf1ac9cb5f584ec423375d6bc79c917cbf39cada51d3",
+          "archived": "17-reactor_calm.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.music.calm/v1",

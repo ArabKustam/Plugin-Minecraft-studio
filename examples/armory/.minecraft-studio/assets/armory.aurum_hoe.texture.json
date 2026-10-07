@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/aurum_hoe.png",
-          "sha256": "29680df0605172eb443f3e88511b0a655719db90e264cc1c30eb532b131502f5"
+          "sha256": "29680df0605172eb443f3e88511b0a655719db90e264cc1c30eb532b131502f5",
+          "archived": "0-aurum_hoe.png"
         },
         {
           "path": "art/items/aurum_hoe.item.json",
-          "sha256": "1a11fd7b5ea7959f3e7fc4a411836a3dc37db24f5c086495c4245a24c82785b8"
+          "sha256": "1a11fd7b5ea7959f3e7fc4a411836a3dc37db24f5c086495c4245a24c82785b8",
+          "archived": "1-aurum_hoe.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.aurum_hoe.texture/v1",

@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/knight_cuirass.png",
-          "sha256": "13d2c0e335b3959730fade7e311aa140b162e7fdc8155c24f4161076959c69bc"
+          "sha256": "13d2c0e335b3959730fade7e311aa140b162e7fdc8155c24f4161076959c69bc",
+          "archived": "0-knight_cuirass.png"
         },
         {
           "path": "art/items/knight_cuirass.item.json",
-          "sha256": "479e3e6947b62aafe8f3dfc7f45454427226a712806c7addeac09b5e9f0bee2a"
+          "sha256": "479e3e6947b62aafe8f3dfc7f45454427226a712806c7addeac09b5e9f0bee2a",
+          "archived": "1-knight_cuirass.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.knight_cuirass.texture/v1",

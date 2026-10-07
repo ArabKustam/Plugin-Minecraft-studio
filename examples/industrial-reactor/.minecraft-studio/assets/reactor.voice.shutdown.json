@@ -120,11 +120,13 @@
       "files": [
         {
           "path": "audio/voice/shutdown.flac",
-          "sha256": "dfbab6c6d05d6d1986e89be25319d540be951c8cc005537ddaf67bfcdcf31317"
+          "sha256": "dfbab6c6d05d6d1986e89be25319d540be951c8cc005537ddaf67bfcdcf31317",
+          "archived": "0-shutdown.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/voice/shutdown.ogg",
-          "sha256": "ddad29323d691b9e1b284da3367c9fb1e2091fcfd85fe3fabeb4653bc0fc26bf"
+          "sha256": "ddad29323d691b9e1b284da3367c9fb1e2091fcfd85fe3fabeb4653bc0fc26bf",
+          "archived": "1-shutdown.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.voice.shutdown/v1",

@@ -70,11 +70,13 @@
       "files": [
         {
           "path": "resourcepack/assets/reactor/models/item/rotor.json",
-          "sha256": "5148257988456e5d3d08cf8274a664970b597d1c44262b6cc75544606e5d7e67"
+          "sha256": "5148257988456e5d3d08cf8274a664970b597d1c44262b6cc75544606e5d7e67",
+          "archived": "0-rotor.json"
         },
         {
           "path": ".minecraft-studio/sources/reactor.rotor.model/reactor_rotor.model.json",
-          "sha256": "7f61c3772e9ae5c1d99fd32e245b4adca6d4db459fc03f4f4681b5e179381c10"
+          "sha256": "7f61c3772e9ae5c1d99fd32e245b4adca6d4db459fc03f4f4681b5e179381c10",
+          "archived": "1-reactor_rotor.model.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.rotor.model/v1",

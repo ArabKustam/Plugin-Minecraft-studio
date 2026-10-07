@@ -116,11 +116,13 @@
       "files": [
         {
           "path": "audio/voice/critical.flac",
-          "sha256": "f40b8e8132b6ccdac28f1bdd927d296c803317abdf54fd96a5c378de0bdbec33"
+          "sha256": "f40b8e8132b6ccdac28f1bdd927d296c803317abdf54fd96a5c378de0bdbec33",
+          "archived": "0-critical.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/voice/critical.ogg",
-          "sha256": "5f5542594512ec4551c98cd3a68f236adfa830e2612f26d35f9b06f5a6de607e"
+          "sha256": "5f5542594512ec4551c98cd3a68f236adfa830e2612f26d35f9b06f5a6de607e",
+          "archived": "1-critical.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.voice.critical/v1",

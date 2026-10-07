@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/badger_smith/hurt.flac",
-          "sha256": "6b86bc885894179a6b58e264680a555905dc33a6886b6ee1d0e783547b2e83d8"
+          "sha256": "6b86bc885894179a6b58e264680a555905dc33a6886b6ee1d0e783547b2e83d8",
+          "archived": "0-hurt.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/badger_smith/hurt.ogg",
-          "sha256": "f9594322f7d6c61f5e6770400d03d5aab314f2a24d8354f0ddf5171a31aa5db9"
+          "sha256": "f9594322f7d6c61f5e6770400d03d5aab314f2a24d8354f0ddf5171a31aa5db9",
+          "archived": "1-hurt.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.badger_smith.hurt.sfx/v1",

@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/storm_bow.png",
-          "sha256": "8bd2f995d1cc5bee0df1d282fc9556c3e8da31a25c70b5845cebf0ce012a2e85"
+          "sha256": "8bd2f995d1cc5bee0df1d282fc9556c3e8da31a25c70b5845cebf0ce012a2e85",
+          "archived": "0-storm_bow.png"
         },
         {
           "path": "art/items/storm_bow.item.json",
-          "sha256": "ed23726b71be7caf3bb301b07d73a177d26bd2cbc5865e4a84b54f91f863f04d"
+          "sha256": "ed23726b71be7caf3bb301b07d73a177d26bd2cbc5865e4a84b54f91f863f04d",
+          "archived": "1-storm_bow.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.storm_bow.texture/v1",

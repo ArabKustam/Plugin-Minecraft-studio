@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/badger_smith/attack.flac",
-          "sha256": "9afb924b55dfb6aa1eab829c9adc595cf37f827bc1ef707036e68c4de3cf17cb"
+          "sha256": "9afb924b55dfb6aa1eab829c9adc595cf37f827bc1ef707036e68c4de3cf17cb",
+          "archived": "0-attack.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/badger_smith/attack.ogg",
-          "sha256": "558762a0da5a1923ad7701491b7789d80a4dfb1f0de4e742337870bf5fa62085"
+          "sha256": "558762a0da5a1923ad7701491b7789d80a4dfb1f0de4e742337870bf5fa62085",
+          "archived": "1-attack.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.badger_smith.attack.sfx/v1",

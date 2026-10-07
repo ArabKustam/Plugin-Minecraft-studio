@@ -62,11 +62,13 @@
       "files": [
         {
           "path": ".minecraft-studio/timelines/reactor_startup.json",
-          "sha256": "4433b07ce6c9a2c1d5be44a3780fbb251e47de7b469e7527018efb281e45c2a2"
+          "sha256": "4433b07ce6c9a2c1d5be44a3780fbb251e47de7b469e7527018efb281e45c2a2",
+          "archived": "0-reactor_startup.json"
         },
         {
           "path": "src/main/resources/timelines/reactor_startup.json",
-          "sha256": "9916049190060dbe5885743aa16b37a38e4e5d388e8ffe4e1dc0fbcedb15dd43"
+          "sha256": "9916049190060dbe5885743aa16b37a38e4e5d388e8ffe4e1dc0fbcedb15dd43",
+          "archived": "1-reactor_startup.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/timeline.reactor_startup/v1",

@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/hollow_wraith/hurt.flac",
-          "sha256": "ffe919b627ced1fb00b871a2ca026ef3282fbf191fd744378c9ecdf1590ce9d3"
+          "sha256": "ffe919b627ced1fb00b871a2ca026ef3282fbf191fd744378c9ecdf1590ce9d3",
+          "archived": "0-hurt.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/hollow_wraith/hurt.ogg",
-          "sha256": "38d7c1832eb75b8f38936390c0858c4781d9850ceb14e23c3807c1a86e6c7f9c"
+          "sha256": "38d7c1832eb75b8f38936390c0858c4781d9850ceb14e23c3807c1a86e6c7f9c",
+          "archived": "1-hurt.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.hollow_wraith.hurt.sfx/v1",

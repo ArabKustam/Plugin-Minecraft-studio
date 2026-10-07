@@ -62,11 +62,13 @@
       "files": [
         {
           "path": ".minecraft-studio/timelines/reactor_scram.json",
-          "sha256": "fe3230fa060e0058203e37cc21d858e66fd5527bc99889201ce6e96417a9939d"
+          "sha256": "fe3230fa060e0058203e37cc21d858e66fd5527bc99889201ce6e96417a9939d",
+          "archived": "0-reactor_scram.json"
         },
         {
           "path": "src/main/resources/timelines/reactor_scram.json",
-          "sha256": "5ce81fcfee1913eda0c2d0ec73ef45890d5de9cf991020fd9aabf478a646bc77"
+          "sha256": "5ce81fcfee1913eda0c2d0ec73ef45890d5de9cf991020fd9aabf478a646bc77",
+          "archived": "1-reactor_scram.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/timeline.reactor_scram/v1",

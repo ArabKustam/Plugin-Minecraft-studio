@@ -87,11 +87,13 @@
       "files": [
         {
           "path": "bedrock/RP/textures/entity/abyssal_seer.png",
-          "sha256": "9cd9a2d6477ba005d899c3775a0a4fe7af9952d8a11e01eb0fe413cf3caed81e"
+          "sha256": "9cd9a2d6477ba005d899c3775a0a4fe7af9952d8a11e01eb0fe413cf3caed81e",
+          "archived": "0-abyssal_seer.png"
         },
         {
           "path": "art/paint/abyssal_seer.paint.json",
-          "sha256": "648a47aa3a4671cb6b4b8d9548856dd19e21d319fd25a0e2ab7294637ca9e9ce"
+          "sha256": "648a47aa3a4671cb6b4b8d9548856dd19e21d319fd25a0e2ab7294637ca9e9ce",
+          "archived": "1-abyssal_seer.paint.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.abyssal_seer.texture/v1",

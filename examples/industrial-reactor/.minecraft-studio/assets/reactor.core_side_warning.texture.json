@@ -76,7 +76,8 @@
       "files": [
         {
           "path": "resourcepack/assets/reactor/textures/item/core_side_warning.png",
-          "sha256": "66df6aa5aada7a336cfe1004f4674ac89ce356e1d545d1d43eb88c715da91c74"
+          "sha256": "66df6aa5aada7a336cfe1004f4674ac89ce356e1d545d1d43eb88c715da91c74",
+          "archived": "0-core_side_warning.png"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.core_side_warning.texture/v1",

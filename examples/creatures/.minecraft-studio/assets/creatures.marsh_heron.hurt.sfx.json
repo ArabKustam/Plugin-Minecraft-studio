@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/marsh_heron/hurt.flac",
-          "sha256": "7de9f39d7cd05b09bdd593f5dbee563f96b16fa7e1231d35b92f00d0a8ed9809"
+          "sha256": "7de9f39d7cd05b09bdd593f5dbee563f96b16fa7e1231d35b92f00d0a8ed9809",
+          "archived": "0-hurt.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/marsh_heron/hurt.ogg",
-          "sha256": "4e48e0112381ac52b4b0b024bafb31619da739eb9180df4d805839c2a425fd92"
+          "sha256": "4e48e0112381ac52b4b0b024bafb31619da739eb9180df4d805839c2a425fd92",
+          "archived": "1-hurt.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.marsh_heron.hurt.sfx/v1",

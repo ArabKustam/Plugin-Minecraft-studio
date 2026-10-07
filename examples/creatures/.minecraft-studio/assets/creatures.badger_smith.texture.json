@@ -86,11 +86,13 @@
       "files": [
         {
           "path": "bedrock/RP/textures/entity/badger_smith.png",
-          "sha256": "fc0ff5aa789b7ee4b894b9d40b235a6a6ccb09bcd182003440dff964c08f6c2d"
+          "sha256": "fc0ff5aa789b7ee4b894b9d40b235a6a6ccb09bcd182003440dff964c08f6c2d",
+          "archived": "0-badger_smith.png"
         },
         {
           "path": "art/paint/badger_smith.paint.json",
-          "sha256": "dbb8210cf39fbe6caacddb09e20a6e80b2fd7462be5f3d4bb7d3cdcf54c94c3f"
+          "sha256": "dbb8210cf39fbe6caacddb09e20a6e80b2fd7462be5f3d4bb7d3cdcf54c94c3f",
+          "archived": "1-badger_smith.paint.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.badger_smith.texture/v1",

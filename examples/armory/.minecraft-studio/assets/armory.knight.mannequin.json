@@ -71,11 +71,13 @@
       "files": [
         {
           "path": "models/mannequin_knight.bbmodel",
-          "sha256": "acfd24fe0c63024ce0bacf33d3daab36e2f8a42ed45c216e2c36fe5f27bf42fe"
+          "sha256": "acfd24fe0c63024ce0bacf33d3daab36e2f8a42ed45c216e2c36fe5f27bf42fe",
+          "archived": "0-mannequin_knight.bbmodel"
         },
         {
           "path": "art/equipment/mannequin_knight.model.json",
-          "sha256": "2e75e8e6a4fb0a1d7ba4748afe04e48854e51765a04fb7bd7fa18108932da7b1"
+          "sha256": "2e75e8e6a4fb0a1d7ba4748afe04e48854e51765a04fb7bd7fa18108932da7b1",
+          "archived": "1-mannequin_knight.model.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.knight.mannequin/v1",

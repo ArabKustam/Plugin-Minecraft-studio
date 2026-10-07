@@ -74,7 +74,8 @@
       "files": [
         {
           "path": "resourcepack/assets/reactor/textures/item/panel_side.png",
-          "sha256": "9c5426e87418f449e6421e7f0180efb8404a32e8f1ce829b564833e389992b9d"
+          "sha256": "9c5426e87418f449e6421e7f0180efb8404a32e8f1ce829b564833e389992b9d",
+          "archived": "0-panel_side.png"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.panel_side.texture/v1",

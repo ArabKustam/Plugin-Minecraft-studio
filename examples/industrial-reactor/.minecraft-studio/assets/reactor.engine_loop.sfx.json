@@ -103,11 +103,13 @@
       "files": [
         {
           "path": "audio/sfx/engine_loop.flac",
-          "sha256": "eca0ba04e0bb8ef2ced3d8ee4517bb2e081d8a7a66ba75605c5003541111939a"
+          "sha256": "eca0ba04e0bb8ef2ced3d8ee4517bb2e081d8a7a66ba75605c5003541111939a",
+          "archived": "0-engine_loop.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/reactor/engine_loop.ogg",
-          "sha256": "42965fc3b0e9dabcf560c997066dc7c0a6e133995eee8ebfa2fb80c0ceb25965"
+          "sha256": "42965fc3b0e9dabcf560c997066dc7c0a6e133995eee8ebfa2fb80c0ceb25965",
+          "archived": "1-engine_loop.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.engine_loop.sfx/v1",

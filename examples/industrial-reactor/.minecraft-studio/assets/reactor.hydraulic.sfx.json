@@ -98,11 +98,13 @@
       "files": [
         {
           "path": "audio/sfx/hydraulic.flac",
-          "sha256": "72ffc45ca988ab86db63a06a9078cfe272e5878b5f4795bdd08d553470a0e1f1"
+          "sha256": "72ffc45ca988ab86db63a06a9078cfe272e5878b5f4795bdd08d553470a0e1f1",
+          "archived": "0-hydraulic.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/reactor/hydraulic.ogg",
-          "sha256": "e1324c172d1e2d8745944dd8118fb6bed9d5262c6215d0fb8d6593bcef07c266"
+          "sha256": "e1324c172d1e2d8745944dd8118fb6bed9d5262c6215d0fb8d6593bcef07c266",
+          "archived": "1-hydraulic.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.hydraulic.sfx/v1",

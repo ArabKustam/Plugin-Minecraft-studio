@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/ranger_tunic.png",
-          "sha256": "f62338ebf279f9ff58f4f6ae5ba7e6cc92b88028f2c8c788c6bda5253f926e0f"
+          "sha256": "f62338ebf279f9ff58f4f6ae5ba7e6cc92b88028f2c8c788c6bda5253f926e0f",
+          "archived": "0-ranger_tunic.png"
         },
         {
           "path": "art/items/ranger_tunic.item.json",
-          "sha256": "da706be6daf63144c63f1c5df18f2fd95cfcab27a8173ac80e4922319179ca20"
+          "sha256": "da706be6daf63144c63f1c5df18f2fd95cfcab27a8173ac80e4922319179ca20",
+          "archived": "1-ranger_tunic.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.ranger_tunic.texture/v1",

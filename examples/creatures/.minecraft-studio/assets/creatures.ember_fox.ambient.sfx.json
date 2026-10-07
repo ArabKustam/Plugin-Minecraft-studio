@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/ember_fox/ambient.flac",
-          "sha256": "dd35494a14411ab0ae746c20df5e0c22a6e5b1ce57a48bc17b7d854a50885f2b"
+          "sha256": "dd35494a14411ab0ae746c20df5e0c22a6e5b1ce57a48bc17b7d854a50885f2b",
+          "archived": "0-ambient.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/ember_fox/ambient.ogg",
-          "sha256": "7e5ff0bd73c571bdbee5aad68775879622e0ad0475a3447a0e8583aa3e631ea1"
+          "sha256": "7e5ff0bd73c571bdbee5aad68775879622e0ad0475a3447a0e8583aa3e631ea1",
+          "archived": "1-ambient.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.ember_fox.ambient.sfx/v1",

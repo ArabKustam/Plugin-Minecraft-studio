@@ -65,7 +65,8 @@
       "files": [
         {
           "path": "bedrock/RP/animations/ember_fox.animation.json",
-          "sha256": "2da9e072e936352511ca5a9e70df3abd2bba08577cc69fb2995a556823e13839"
+          "sha256": "2da9e072e936352511ca5a9e70df3abd2bba08577cc69fb2995a556823e13839",
+          "archived": "0-ember_fox.animation.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.ember_fox.animations/v1",

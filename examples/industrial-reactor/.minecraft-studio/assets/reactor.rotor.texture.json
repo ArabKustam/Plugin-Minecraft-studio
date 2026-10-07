@@ -74,7 +74,8 @@
       "files": [
         {
           "path": "resourcepack/assets/reactor/textures/item/rotor.png",
-          "sha256": "46b5c5d8207779cb33b1efd2de75ab1f8222c32c0dd7766c4cf9e1f264216c75"
+          "sha256": "46b5c5d8207779cb33b1efd2de75ab1f8222c32c0dd7766c4cf9e1f264216c75",
+          "archived": "0-rotor.png"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.rotor.texture/v1",

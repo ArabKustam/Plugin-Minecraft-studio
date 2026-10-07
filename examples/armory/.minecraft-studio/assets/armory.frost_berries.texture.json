@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/frost_berries.png",
-          "sha256": "9699cba9c02c36e6d27ca9928c983fd016cd8ca4442ef5f72b369ee2a31d0f82"
+          "sha256": "9699cba9c02c36e6d27ca9928c983fd016cd8ca4442ef5f72b369ee2a31d0f82",
+          "archived": "0-frost_berries.png"
         },
         {
           "path": "art/items/frost_berries.item.json",
-          "sha256": "8e7adaccde608be43e1305fefe974e144916e133d47ebbe2cb25e75e3893c769"
+          "sha256": "8e7adaccde608be43e1305fefe974e144916e133d47ebbe2cb25e75e3893c769",
+          "archived": "1-frost_berries.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.frost_berries.texture/v1",

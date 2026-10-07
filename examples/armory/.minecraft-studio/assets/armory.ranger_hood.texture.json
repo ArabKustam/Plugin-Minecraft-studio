@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/ranger_hood.png",
-          "sha256": "a29a39d8cc2c24c52bbeb9fa8f1f4a1c513c98fcf6cee5f08d2fc719a23af42a"
+          "sha256": "a29a39d8cc2c24c52bbeb9fa8f1f4a1c513c98fcf6cee5f08d2fc719a23af42a",
+          "archived": "0-ranger_hood.png"
         },
         {
           "path": "art/items/ranger_hood.item.json",
-          "sha256": "466ab7c65b10cae4f4519bab4dafb4d386e23c08749c2f0981c0475b3ba949fd"
+          "sha256": "466ab7c65b10cae4f4519bab4dafb4d386e23c08749c2f0981c0475b3ba949fd",
+          "archived": "1-ranger_hood.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.ranger_hood.texture/v1",

@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/rust_crawler/ambient.flac",
-          "sha256": "220fd2364b0e3211db717c4e3ef76aa771facf34e28da847e0ffef4f42c549a7"
+          "sha256": "220fd2364b0e3211db717c4e3ef76aa771facf34e28da847e0ffef4f42c549a7",
+          "archived": "0-ambient.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/rust_crawler/ambient.ogg",
-          "sha256": "1da7c9bdde4c7c0ec1e1e0bb25f2a469d4b192c82434601b1653df4dcad33b14"
+          "sha256": "1da7c9bdde4c7c0ec1e1e0bb25f2a469d4b192c82434601b1653df4dcad33b14",
+          "archived": "1-ambient.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.rust_crawler.ambient.sfx/v1",

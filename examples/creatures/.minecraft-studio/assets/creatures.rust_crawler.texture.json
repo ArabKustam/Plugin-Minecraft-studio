@@ -82,11 +82,13 @@
       "files": [
         {
           "path": "bedrock/RP/textures/entity/rust_crawler.png",
-          "sha256": "d66ffe01647cd5e27bb73336bf8e7d26fe50f5808d4628417a1c12ac61a81298"
+          "sha256": "d66ffe01647cd5e27bb73336bf8e7d26fe50f5808d4628417a1c12ac61a81298",
+          "archived": "0-rust_crawler.png"
         },
         {
           "path": "art/paint/rust_crawler.paint.json",
-          "sha256": "506032dec8629ce1fbb81c4b8f17d90b41f5dd19348a55a48222ed0f9978b371"
+          "sha256": "506032dec8629ce1fbb81c4b8f17d90b41f5dd19348a55a48222ed0f9978b371",
+          "archived": "1-rust_crawler.paint.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.rust_crawler.texture/v1",

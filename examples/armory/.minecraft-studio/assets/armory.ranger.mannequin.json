@@ -71,11 +71,13 @@
       "files": [
         {
           "path": "models/mannequin_ranger.bbmodel",
-          "sha256": "3ac31b5308c04fd301b0981ded2ce843b534e8d68cb9a5b0eb36848b3b653163"
+          "sha256": "3ac31b5308c04fd301b0981ded2ce843b534e8d68cb9a5b0eb36848b3b653163",
+          "archived": "0-mannequin_ranger.bbmodel"
         },
         {
           "path": "art/equipment/mannequin_ranger.model.json",
-          "sha256": "c646ee5179044ab92ac9daaaf277e7cec5a9c1f03686aabb3807298e5fc23879"
+          "sha256": "c646ee5179044ab92ac9daaaf277e7cec5a9c1f03686aabb3807298e5fc23879",
+          "archived": "1-mannequin_ranger.model.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.ranger.mannequin/v1",

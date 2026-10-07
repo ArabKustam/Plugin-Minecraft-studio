@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/golden_pear.png",
-          "sha256": "033d527b4e67cfd7e9497332dacd33f9f2bcb481fb78de6662b558f48348d47f"
+          "sha256": "033d527b4e67cfd7e9497332dacd33f9f2bcb481fb78de6662b558f48348d47f",
+          "archived": "0-golden_pear.png"
         },
         {
           "path": "art/items/golden_pear.item.json",
-          "sha256": "bbbbc9b8dc13154e291b5fde7b94dd927f4e401c4dee4573cada565d941a784e"
+          "sha256": "bbbbc9b8dc13154e291b5fde7b94dd927f4e401c4dee4573cada565d941a784e",
+          "archived": "1-golden_pear.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.golden_pear.texture/v1",

@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/marsh_heron/attack.flac",
-          "sha256": "31ae2f501eb5915917041754f90aa65b4b226cfa001c47b3ee0bf1de102e446c"
+          "sha256": "31ae2f501eb5915917041754f90aa65b4b226cfa001c47b3ee0bf1de102e446c",
+          "archived": "0-attack.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/marsh_heron/attack.ogg",
-          "sha256": "20a31b598b8c54807744344e995ce9de2492e277866d4703615e455acf5a5d2a"
+          "sha256": "20a31b598b8c54807744344e995ce9de2492e277866d4703615e455acf5a5d2a",
+          "archived": "1-attack.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.marsh_heron.attack.sfx/v1",

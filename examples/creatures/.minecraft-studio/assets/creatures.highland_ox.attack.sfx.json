@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/highland_ox/attack.flac",
-          "sha256": "91d69f7f0fed5d2e2845f216e08c7624b325cb2b3a911ffab0ddd20262523b1e"
+          "sha256": "91d69f7f0fed5d2e2845f216e08c7624b325cb2b3a911ffab0ddd20262523b1e",
+          "archived": "0-attack.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/highland_ox/attack.ogg",
-          "sha256": "af07fc4814ef8a5d3f812fa33a75c4098fd4f2ca1afcc7c15884109d59513bf9"
+          "sha256": "af07fc4814ef8a5d3f812fa33a75c4098fd4f2ca1afcc7c15884109d59513bf9",
+          "archived": "1-attack.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.highland_ox.attack.sfx/v1",

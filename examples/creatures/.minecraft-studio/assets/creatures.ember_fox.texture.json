@@ -83,11 +83,13 @@
       "files": [
         {
           "path": "bedrock/RP/textures/entity/ember_fox.png",
-          "sha256": "4a1260823b5266323bdcadaca6d140703fa6424558341b8b2743fcbd23be8cc0"
+          "sha256": "4a1260823b5266323bdcadaca6d140703fa6424558341b8b2743fcbd23be8cc0",
+          "archived": "0-ember_fox.png"
         },
         {
           "path": "art/paint/ember_fox.paint.json",
-          "sha256": "7a68ecf37db1318fd0f03ad3576644d056bab7225e532c99143dc1a408169e0b"
+          "sha256": "7a68ecf37db1318fd0f03ad3576644d056bab7225e532c99143dc1a408169e0b",
+          "archived": "1-ember_fox.paint.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.ember_fox.texture/v1",

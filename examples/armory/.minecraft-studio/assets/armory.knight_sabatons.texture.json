@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/knight_sabatons.png",
-          "sha256": "ca05435945935bd21101398c077824254584a9a3a967ec6695952bc5aebde99f"
+          "sha256": "ca05435945935bd21101398c077824254584a9a3a967ec6695952bc5aebde99f",
+          "archived": "0-knight_sabatons.png"
         },
         {
           "path": "art/items/knight_sabatons.item.json",
-          "sha256": "152606b4042fad6ccff450a7c1a6453571f29fddd4a2e71baacb901129c42016"
+          "sha256": "152606b4042fad6ccff450a7c1a6453571f29fddd4a2e71baacb901129c42016",
+          "archived": "1-knight_sabatons.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.knight_sabatons.texture/v1",

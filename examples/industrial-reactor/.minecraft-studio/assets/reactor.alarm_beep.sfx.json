@@ -103,11 +103,13 @@
       "files": [
         {
           "path": "audio/sfx/alarm_beep.flac",
-          "sha256": "ab4bee29daba37dab1d8c1e1e8bdb7e286eb88602add6694dec53d5a514f05dc"
+          "sha256": "ab4bee29daba37dab1d8c1e1e8bdb7e286eb88602add6694dec53d5a514f05dc",
+          "archived": "0-alarm_beep.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/reactor/alarm_beep.ogg",
-          "sha256": "d25369dd503ad2d279b9662e06d3bc507da0e71224dc1793f1ad9376ff889393"
+          "sha256": "d25369dd503ad2d279b9662e06d3bc507da0e71224dc1793f1ad9376ff889393",
+          "archived": "1-alarm_beep.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.alarm_beep.sfx/v1",

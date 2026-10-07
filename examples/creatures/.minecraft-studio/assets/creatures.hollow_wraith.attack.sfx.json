@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/hollow_wraith/attack.flac",
-          "sha256": "5191c91bfc3affdaa435e273a37b8981eead06052bbb43e2207be881c26e54cb"
+          "sha256": "5191c91bfc3affdaa435e273a37b8981eead06052bbb43e2207be881c26e54cb",
+          "archived": "0-attack.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/hollow_wraith/attack.ogg",
-          "sha256": "7bf9fb1547c831ad5c74268724f44b2c684f0c6ee241e994fe5685633c6d877e"
+          "sha256": "7bf9fb1547c831ad5c74268724f44b2c684f0c6ee241e994fe5685633c6d877e",
+          "archived": "1-attack.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.hollow_wraith.attack.sfx/v1",

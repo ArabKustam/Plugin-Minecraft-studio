@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/aurum_pickaxe.png",
-          "sha256": "30263c0f0e5af3061bdc16961cb6e4ede00adceb4511bca9f2a2e5d1b575e858"
+          "sha256": "30263c0f0e5af3061bdc16961cb6e4ede00adceb4511bca9f2a2e5d1b575e858",
+          "archived": "0-aurum_pickaxe.png"
         },
         {
           "path": "art/items/aurum_pickaxe.item.json",
-          "sha256": "d8d92444df2a2334818c8f3f5c6ee5a11c45e325f5938d225ec3860aeec6bfa2"
+          "sha256": "d8d92444df2a2334818c8f3f5c6ee5a11c45e325f5938d225ec3860aeec6bfa2",
+          "archived": "1-aurum_pickaxe.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.aurum_pickaxe.texture/v1",

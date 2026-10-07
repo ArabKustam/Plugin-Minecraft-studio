@@ -103,11 +103,13 @@
       "files": [
         {
           "path": "audio/sfx/siren.flac",
-          "sha256": "02b45b385c8176073ddb223a465fcead9cfb4501d3dc4be626ba5a66214589e3"
+          "sha256": "02b45b385c8176073ddb223a465fcead9cfb4501d3dc4be626ba5a66214589e3",
+          "archived": "0-siren.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/reactor/siren.ogg",
-          "sha256": "e5116bcc948346fe0c6dac72b3c290af576cb19db9a625e68de9985bd6363293"
+          "sha256": "e5116bcc948346fe0c6dac72b3c290af576cb19db9a625e68de9985bd6363293",
+          "archived": "1-siren.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.siren.sfx/v1",

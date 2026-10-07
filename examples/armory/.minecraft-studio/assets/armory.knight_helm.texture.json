@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/knight_helm.png",
-          "sha256": "5be891d23bd2ae6c48d3145795b8cc56e80104b953d56c871cf550e7eff39e4e"
+          "sha256": "5be891d23bd2ae6c48d3145795b8cc56e80104b953d56c871cf550e7eff39e4e",
+          "archived": "0-knight_helm.png"
         },
         {
           "path": "art/items/knight_helm.item.json",
-          "sha256": "9bd9c8d0dad2c321a64bc49af35000c0404b3b1c40634a0b97d29999910c3f2d"
+          "sha256": "9bd9c8d0dad2c321a64bc49af35000c0404b3b1c40634a0b97d29999910c3f2d",
+          "archived": "1-knight_helm.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.knight_helm.texture/v1",

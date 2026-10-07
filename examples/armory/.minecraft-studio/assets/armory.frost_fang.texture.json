@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/frost_fang.png",
-          "sha256": "2ed32c3227d3e5e1215a600c8e22de7df510569afcf3f8c897bec0f176aec649"
+          "sha256": "2ed32c3227d3e5e1215a600c8e22de7df510569afcf3f8c897bec0f176aec649",
+          "archived": "0-frost_fang.png"
         },
         {
           "path": "art/items/frost_fang.item.json",
-          "sha256": "99dcf8a48d7e0ae1ac96bd03d87a0c464d64dedab150b4bd0240765fd9066756"
+          "sha256": "99dcf8a48d7e0ae1ac96bd03d87a0c464d64dedab150b4bd0240765fd9066756",
+          "archived": "1-frost_fang.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.frost_fang.texture/v1",

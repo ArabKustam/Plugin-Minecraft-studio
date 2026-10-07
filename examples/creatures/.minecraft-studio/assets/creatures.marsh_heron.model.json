@@ -77,15 +77,18 @@
       "files": [
         {
           "path": "bedrock/RP/models/entity/marsh_heron.geo.json",
-          "sha256": "fe584260d108605e7cbb5737d602123fe2a673784854c59d47d2b2303c7e33a1"
+          "sha256": "fe584260d108605e7cbb5737d602123fe2a673784854c59d47d2b2303c7e33a1",
+          "archived": "0-marsh_heron.geo.json"
         },
         {
           "path": "models/marsh_heron.bbmodel",
-          "sha256": "3468a812e54a0c256b3675a9cc9b1b259bdf73ba4cc0efd46aaf0e016407fe75"
+          "sha256": "3468a812e54a0c256b3675a9cc9b1b259bdf73ba4cc0efd46aaf0e016407fe75",
+          "archived": "1-marsh_heron.bbmodel"
         },
         {
           "path": "art/models/marsh_heron.model.json",
-          "sha256": "74c11bf9597cf13490cd51fb1e9d430594fb8a7273f96a7b6ba655b0f048105c"
+          "sha256": "74c11bf9597cf13490cd51fb1e9d430594fb8a7273f96a7b6ba655b0f048105c",
+          "archived": "2-marsh_heron.model.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.marsh_heron.model/v1",

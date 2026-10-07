@@ -77,15 +77,18 @@
       "files": [
         {
           "path": "bedrock/RP/models/entity/hollow_wraith.geo.json",
-          "sha256": "48de13a962d25d7d9dd3b277b16689d3438b3987cfc7e3b387f8953431b8057c"
+          "sha256": "48de13a962d25d7d9dd3b277b16689d3438b3987cfc7e3b387f8953431b8057c",
+          "archived": "0-hollow_wraith.geo.json"
         },
         {
           "path": "models/hollow_wraith.bbmodel",
-          "sha256": "07bdb3910685abe99cd942526de38dec34a11629fece74e791b7db78edcef403"
+          "sha256": "07bdb3910685abe99cd942526de38dec34a11629fece74e791b7db78edcef403",
+          "archived": "1-hollow_wraith.bbmodel"
         },
         {
           "path": "art/models/hollow_wraith.model.json",
-          "sha256": "33847dd3185054ad57a697504ad3b30d5ae84a9e86d99b277953ed033bd9b28c"
+          "sha256": "33847dd3185054ad57a697504ad3b30d5ae84a9e86d99b277953ed033bd9b28c",
+          "archived": "2-hollow_wraith.model.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.hollow_wraith.model/v1",

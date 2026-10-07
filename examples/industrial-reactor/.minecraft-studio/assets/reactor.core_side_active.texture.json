@@ -76,7 +76,8 @@
       "files": [
         {
           "path": "resourcepack/assets/reactor/textures/item/core_side_active.png",
-          "sha256": "6d73696f9acd1175b1e555c092cd9be03ce6855250759681aaee935e36c4300c"
+          "sha256": "6d73696f9acd1175b1e555c092cd9be03ce6855250759681aaee935e36c4300c",
+          "archived": "0-core_side_active.png"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.core_side_active.texture/v1",

@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/abyssal_seer/hurt.flac",
-          "sha256": "2df6875a664d841961162b67fb099924fce9e2a617329869e26731803ef35836"
+          "sha256": "2df6875a664d841961162b67fb099924fce9e2a617329869e26731803ef35836",
+          "archived": "0-hurt.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/abyssal_seer/hurt.ogg",
-          "sha256": "12f67b7cd5eb97f5e9f5554c6b3e03ac5737a10147958bd78f6dc7c9586a4ba6"
+          "sha256": "12f67b7cd5eb97f5e9f5554c6b3e03ac5737a10147958bd78f6dc7c9586a4ba6",
+          "archived": "1-hurt.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.abyssal_seer.hurt.sfx/v1",

@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/void_katana.png",
-          "sha256": "3b2298413c496cf49060ef459a908d15b531c9dd16023c4202b72c90edfdb660"
+          "sha256": "3b2298413c496cf49060ef459a908d15b531c9dd16023c4202b72c90edfdb660",
+          "archived": "0-void_katana.png"
         },
         {
           "path": "art/items/void_katana.item.json",
-          "sha256": "0577a571e5a7902a48034d122fd6ec9c394034b38e04d1b44f9033504856f3ef"
+          "sha256": "0577a571e5a7902a48034d122fd6ec9c394034b38e04d1b44f9033504856f3ef",
+          "archived": "1-void_katana.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.void_katana.texture/v1",

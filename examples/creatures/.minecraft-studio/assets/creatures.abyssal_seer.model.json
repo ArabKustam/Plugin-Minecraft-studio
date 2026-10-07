@@ -77,15 +77,18 @@
       "files": [
         {
           "path": "bedrock/RP/models/entity/abyssal_seer.geo.json",
-          "sha256": "400d0be714d44e0242040d4217e391c38b46af862ecaddf49dcc94ada077a6cc"
+          "sha256": "400d0be714d44e0242040d4217e391c38b46af862ecaddf49dcc94ada077a6cc",
+          "archived": "0-abyssal_seer.geo.json"
         },
         {
           "path": "models/abyssal_seer.bbmodel",
-          "sha256": "8f953a2341849c7c4b152704953d184b2ac1ab860bc95f58647e969d0206c44b"
+          "sha256": "8f953a2341849c7c4b152704953d184b2ac1ab860bc95f58647e969d0206c44b",
+          "archived": "1-abyssal_seer.bbmodel"
         },
         {
           "path": "art/models/abyssal_seer.model.json",
-          "sha256": "bd0e0b72621f64cdf7a476c94216465338049ab830de16a24f5fa2377ceba1ad"
+          "sha256": "bd0e0b72621f64cdf7a476c94216465338049ab830de16a24f5fa2377ceba1ad",
+          "archived": "2-abyssal_seer.model.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.abyssal_seer.model/v1",

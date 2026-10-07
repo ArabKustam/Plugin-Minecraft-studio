@@ -83,11 +83,13 @@
       "files": [
         {
           "path": "bedrock/RP/textures/entity/highland_ox.png",
-          "sha256": "daa0665cd072b57f4c351159dc25d261937eb7d2ee85541e05fb13e5d2d9149e"
+          "sha256": "daa0665cd072b57f4c351159dc25d261937eb7d2ee85541e05fb13e5d2d9149e",
+          "archived": "0-highland_ox.png"
         },
         {
           "path": "art/paint/highland_ox.paint.json",
-          "sha256": "b418f7f8c984388f9a60df0842ee90a4a74045c3fdf7c789af45154c574fbd88"
+          "sha256": "b418f7f8c984388f9a60df0842ee90a4a74045c3fdf7c789af45154c574fbd88",
+          "archived": "1-highland_ox.paint.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.highland_ox.texture/v1",

@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/aurum_shovel.png",
-          "sha256": "73bab8dc27fdf5ed26ecd5c472e6a2d5f95edda09004a4329557a8ff7492980c"
+          "sha256": "73bab8dc27fdf5ed26ecd5c472e6a2d5f95edda09004a4329557a8ff7492980c",
+          "archived": "0-aurum_shovel.png"
         },
         {
           "path": "art/items/aurum_shovel.item.json",
-          "sha256": "5e72520d1e148847580ab3706b96f1674a52fdc8b7534cb748adaed2fd23c614"
+          "sha256": "5e72520d1e148847580ab3706b96f1674a52fdc8b7534cb748adaed2fd23c614",
+          "archived": "1-aurum_shovel.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.aurum_shovel.texture/v1",

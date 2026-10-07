@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/ranger_boots.png",
-          "sha256": "23e0c955437e6ff7eacb67a8bd97ae7d542b400267b35dada1a1432a7e693187"
+          "sha256": "23e0c955437e6ff7eacb67a8bd97ae7d542b400267b35dada1a1432a7e693187",
+          "archived": "0-ranger_boots.png"
         },
         {
           "path": "art/items/ranger_boots.item.json",
-          "sha256": "1b167331385e55b6d2ef882aef51e815353e309a984f1fccdc5c4d6dfd4e0aad"
+          "sha256": "1b167331385e55b6d2ef882aef51e815353e309a984f1fccdc5c4d6dfd4e0aad",
+          "archived": "1-ranger_boots.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.ranger_boots.texture/v1",

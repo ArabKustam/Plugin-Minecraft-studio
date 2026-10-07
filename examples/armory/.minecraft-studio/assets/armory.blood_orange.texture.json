@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/blood_orange.png",
-          "sha256": "d7c00129f591cd13fedf1602c822fe1781951ee6dd3a2c68fb7998242bfede86"
+          "sha256": "d7c00129f591cd13fedf1602c822fe1781951ee6dd3a2c68fb7998242bfede86",
+          "archived": "0-blood_orange.png"
         },
         {
           "path": "art/items/blood_orange.item.json",
-          "sha256": "c2815b755e1ea0e409240674bbac0657f35c42e07bbc8fecbec76d78321b5071"
+          "sha256": "c2815b755e1ea0e409240674bbac0657f35c42e07bbc8fecbec76d78321b5071",
+          "archived": "1-blood_orange.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.blood_orange.texture/v1",

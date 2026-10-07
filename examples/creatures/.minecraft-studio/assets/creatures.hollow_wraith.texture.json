@@ -82,11 +82,13 @@
       "files": [
         {
           "path": "bedrock/RP/textures/entity/hollow_wraith.png",
-          "sha256": "c83f13ff61fc27ff37ef47742a6b1210ca40f1734628470dbfead05ecb6d5392"
+          "sha256": "c83f13ff61fc27ff37ef47742a6b1210ca40f1734628470dbfead05ecb6d5392",
+          "archived": "0-hollow_wraith.png"
         },
         {
           "path": "art/paint/hollow_wraith.paint.json",
-          "sha256": "668e19f35a0a479ab72ddee285904fea9fd97140b9586fdbe341cd3407a07666"
+          "sha256": "668e19f35a0a479ab72ddee285904fea9fd97140b9586fdbe341cd3407a07666",
+          "archived": "1-hollow_wraith.paint.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.hollow_wraith.texture/v1",

@@ -71,11 +71,13 @@
       "files": [
         {
           "path": "resourcepack/assets/reactor/models/item/control_panel.json",
-          "sha256": "f6b0e4b8c1de7a7d01796ac7d11a4cd149297270902fc64dd1bfa5d3a6919e1b"
+          "sha256": "f6b0e4b8c1de7a7d01796ac7d11a4cd149297270902fc64dd1bfa5d3a6919e1b",
+          "archived": "0-control_panel.json"
         },
         {
           "path": ".minecraft-studio/sources/reactor.control_panel.model/control_panel.model.json",
-          "sha256": "d2bbda9dd0d60df012f31edd5d723fd3d8a22afe00a9494e3f768c28ecd78575"
+          "sha256": "d2bbda9dd0d60df012f31edd5d723fd3d8a22afe00a9494e3f768c28ecd78575",
+          "archived": "1-control_panel.model.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.control_panel.model/v1",

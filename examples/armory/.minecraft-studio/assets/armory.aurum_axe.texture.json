@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/aurum_axe.png",
-          "sha256": "acb8c5a2fe491f380862b1995fc0418320d75550253c690e4baee36593d1dc4d"
+          "sha256": "acb8c5a2fe491f380862b1995fc0418320d75550253c690e4baee36593d1dc4d",
+          "archived": "0-aurum_axe.png"
         },
         {
           "path": "art/items/aurum_axe.item.json",
-          "sha256": "f0f256f58d886e762880c5e34f6575e1efd4f70619b13758668b0b56383f55d9"
+          "sha256": "f0f256f58d886e762880c5e34f6575e1efd4f70619b13758668b0b56383f55d9",
+          "archived": "1-aurum_axe.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.aurum_axe.texture/v1",

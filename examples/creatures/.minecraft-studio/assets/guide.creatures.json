@@ -54,7 +54,8 @@
       "files": [
         {
           "path": "docs/creatures.md",
-          "sha256": "3c6826aba38b23705210ae35e1a2ac3b62364aca8863dbea25d10cae3ad91d6b"
+          "sha256": "3c6826aba38b23705210ae35e1a2ac3b62364aca8863dbea25d10cae3ad91d6b",
+          "archived": "0-creatures.md"
         }
       ],
       "archived_dir": ".minecraft-studio/history/guide.creatures/v1",

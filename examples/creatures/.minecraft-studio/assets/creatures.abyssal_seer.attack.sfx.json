@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/abyssal_seer/attack.flac",
-          "sha256": "784c5a4dec3017b99f0092c898fe441257ae5d1c7ad6eac7777ffad5291ce4d4"
+          "sha256": "784c5a4dec3017b99f0092c898fe441257ae5d1c7ad6eac7777ffad5291ce4d4",
+          "archived": "0-attack.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/abyssal_seer/attack.ogg",
-          "sha256": "5b2c79c7f3c87f7da44aeb96768a18bb31d9927df31afe0d997884c7b12d2da5"
+          "sha256": "5b2c79c7f3c87f7da44aeb96768a18bb31d9927df31afe0d997884c7b12d2da5",
+          "archived": "1-attack.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.abyssal_seer.attack.sfx/v1",

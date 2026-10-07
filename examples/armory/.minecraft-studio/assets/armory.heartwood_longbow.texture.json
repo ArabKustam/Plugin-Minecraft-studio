@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/heartwood_longbow.png",
-          "sha256": "c91baa93b5c26435c09364676a27ef87a004e4789c70807bf1c0d9add8e121fa"
+          "sha256": "c91baa93b5c26435c09364676a27ef87a004e4789c70807bf1c0d9add8e121fa",
+          "archived": "0-heartwood_longbow.png"
         },
         {
           "path": "art/items/heartwood_longbow.item.json",
-          "sha256": "5ff6764535bd16b479065d275aff4bc806eee830ed7ade0d08aa0107860dc297"
+          "sha256": "5ff6764535bd16b479065d275aff4bc806eee830ed7ade0d08aa0107860dc297",
+          "archived": "1-heartwood_longbow.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.heartwood_longbow.texture/v1",

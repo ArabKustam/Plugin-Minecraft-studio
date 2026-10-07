@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/rust_crawler/attack.flac",
-          "sha256": "6e7b672f8d4a8718fb9076d7a1765ed0ddf31e7dc1d7f8fb477515fdf39e1607"
+          "sha256": "6e7b672f8d4a8718fb9076d7a1765ed0ddf31e7dc1d7f8fb477515fdf39e1607",
+          "archived": "0-attack.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/rust_crawler/attack.ogg",
-          "sha256": "566a253dbe559e4832aedef109cb6789908e478054ae505fe74a892a19f3747f"
+          "sha256": "566a253dbe559e4832aedef109cb6789908e478054ae505fe74a892a19f3747f",
+          "archived": "1-attack.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.rust_crawler.attack.sfx/v1",

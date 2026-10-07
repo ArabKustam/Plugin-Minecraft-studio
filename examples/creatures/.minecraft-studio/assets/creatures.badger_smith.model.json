@@ -77,15 +77,18 @@
       "files": [
         {
           "path": "bedrock/RP/models/entity/badger_smith.geo.json",
-          "sha256": "e286442a26c76934f1451d1227cb92424492742062b5ea633e23d4a9fc9fab52"
+          "sha256": "e286442a26c76934f1451d1227cb92424492742062b5ea633e23d4a9fc9fab52",
+          "archived": "0-badger_smith.geo.json"
         },
         {
           "path": "models/badger_smith.bbmodel",
-          "sha256": "4b83e7e76ed6a7be7660a174ba26ca3ea3b83f37b000207b20cb5a29cab3958d"
+          "sha256": "4b83e7e76ed6a7be7660a174ba26ca3ea3b83f37b000207b20cb5a29cab3958d",
+          "archived": "1-badger_smith.bbmodel"
         },
         {
           "path": "art/models/badger_smith.model.json",
-          "sha256": "efff4f3e07f35939d1c84de60de7dff021dbd98b4b2ea88467cbeadd83748a51"
+          "sha256": "efff4f3e07f35939d1c84de60de7dff021dbd98b4b2ea88467cbeadd83748a51",
+          "archived": "2-badger_smith.model.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.badger_smith.model/v1",

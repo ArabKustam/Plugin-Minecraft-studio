@@ -70,11 +70,13 @@
       "files": [
         {
           "path": "resourcepack/assets/reactor/models/item/lamp_on.json",
-          "sha256": "856533fed49e2730ca3ad99d2b07362a1c5066a61888a81276bdf2d9cf66cbe6"
+          "sha256": "856533fed49e2730ca3ad99d2b07362a1c5066a61888a81276bdf2d9cf66cbe6",
+          "archived": "0-lamp_on.json"
         },
         {
           "path": ".minecraft-studio/sources/reactor.lamp_on.model/lamp_on.model.json",
-          "sha256": "2f77c0c7b542e01f76906164f2c14def1738cd4290f32bd4299baf44a1f41da2"
+          "sha256": "2f77c0c7b542e01f76906164f2c14def1738cd4290f32bd4299baf44a1f41da2",
+          "archived": "1-lamp_on.model.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.lamp_on.model/v1",

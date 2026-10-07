@@ -98,11 +98,13 @@
       "files": [
         {
           "path": "audio/sfx/relay.flac",
-          "sha256": "5f1dc3d6e43352102a96350f6833650c80e34ea49960067c01f0c63feecfabd1"
+          "sha256": "5f1dc3d6e43352102a96350f6833650c80e34ea49960067c01f0c63feecfabd1",
+          "archived": "0-relay.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/reactor/relay.ogg",
-          "sha256": "74be1539672170acde89cacae33035be2a3939b9a7ff72e72591beb7a82edeee"
+          "sha256": "74be1539672170acde89cacae33035be2a3939b9a7ff72e72591beb7a82edeee",
+          "archived": "1-relay.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.relay.sfx/v1",

@@ -77,15 +77,18 @@
       "files": [
         {
           "path": "bedrock/RP/models/entity/rust_crawler.geo.json",
-          "sha256": "fdeab1b64322209144339058655f469c7063de45ce4cdbd97347db3e0e63c1c7"
+          "sha256": "fdeab1b64322209144339058655f469c7063de45ce4cdbd97347db3e0e63c1c7",
+          "archived": "0-rust_crawler.geo.json"
         },
         {
           "path": "models/rust_crawler.bbmodel",
-          "sha256": "7274aef00c5170e88361b180d72dae0ef4e8d2fa2199577c326fae0eb0049ff5"
+          "sha256": "7274aef00c5170e88361b180d72dae0ef4e8d2fa2199577c326fae0eb0049ff5",
+          "archived": "1-rust_crawler.bbmodel"
         },
         {
           "path": "art/models/rust_crawler.model.json",
-          "sha256": "90787526a077dda6a5a0430aff2447eea41fbbceb464e40f75944465ef681a79"
+          "sha256": "90787526a077dda6a5a0430aff2447eea41fbbceb464e40f75944465ef681a79",
+          "archived": "2-rust_crawler.model.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.rust_crawler.model/v1",

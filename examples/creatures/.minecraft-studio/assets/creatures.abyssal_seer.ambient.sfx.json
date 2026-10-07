@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/abyssal_seer/ambient.flac",
-          "sha256": "e59dce4eb848d59d4808a0a95c365a2cb27215fafdd6967f526c496a37fcb41c"
+          "sha256": "e59dce4eb848d59d4808a0a95c365a2cb27215fafdd6967f526c496a37fcb41c",
+          "archived": "0-ambient.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/abyssal_seer/ambient.ogg",
-          "sha256": "83b242c8c866436cf1efcda3f2948305709489b16e1f53ff51299c6f8757892d"
+          "sha256": "83b242c8c866436cf1efcda3f2948305709489b16e1f53ff51299c6f8757892d",
+          "archived": "1-ambient.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.abyssal_seer.ambient.sfx/v1",

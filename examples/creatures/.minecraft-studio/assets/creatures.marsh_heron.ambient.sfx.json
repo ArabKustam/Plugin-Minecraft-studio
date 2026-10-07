@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/marsh_heron/ambient.flac",
-          "sha256": "dd41c01611d3d840879bac8dcc438d02498ef090b936e4562440ec6104050114"
+          "sha256": "dd41c01611d3d840879bac8dcc438d02498ef090b936e4562440ec6104050114",
+          "archived": "0-ambient.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/marsh_heron/ambient.ogg",
-          "sha256": "19e725b43fe76d4f6cccb56ad76cd3863fe840099ce160fa1ba927d158d68f54"
+          "sha256": "19e725b43fe76d4f6cccb56ad76cd3863fe840099ce160fa1ba927d158d68f54",
+          "archived": "1-ambient.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.marsh_heron.ambient.sfx/v1",

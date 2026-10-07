@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/knight_greaves.png",
-          "sha256": "f221f1bc753b9aa5884ee07d14cbd5ecf5c7837a88d178e17e05668282900e99"
+          "sha256": "f221f1bc753b9aa5884ee07d14cbd5ecf5c7837a88d178e17e05668282900e99",
+          "archived": "0-knight_greaves.png"
         },
         {
           "path": "art/items/knight_greaves.item.json",
-          "sha256": "eb0e502433dc9ce3f291ada772c45db0bc7af9585a0b556973105a8c1306a179"
+          "sha256": "eb0e502433dc9ce3f291ada772c45db0bc7af9585a0b556973105a8c1306a179",
+          "archived": "1-knight_greaves.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.knight_greaves.texture/v1",

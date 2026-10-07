@@ -71,11 +71,13 @@
       "files": [
         {
           "path": "resourcepack/assets/reactor/models/item/core_active.json",
-          "sha256": "167220bbcc820519256e60c0017d329a9e799081e6281da5da876ac7fa8dc13c"
+          "sha256": "167220bbcc820519256e60c0017d329a9e799081e6281da5da876ac7fa8dc13c",
+          "archived": "0-core_active.json"
         },
         {
           "path": ".minecraft-studio/sources/reactor.core_active.model/core_active.model.json",
-          "sha256": "a64e04b1cae040d5d1621fbc375163944dff5b1917492f7715a53763ce20f583"
+          "sha256": "a64e04b1cae040d5d1621fbc375163944dff5b1917492f7715a53763ce20f583",
+          "archived": "1-core_active.model.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.core_active.model/v1",

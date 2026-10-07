@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/dragonfruit.png",
-          "sha256": "3a403f6c1b52015a9188f2a1ab25f0cc867711ff4a75f776e68bca334644d8c2"
+          "sha256": "3a403f6c1b52015a9188f2a1ab25f0cc867711ff4a75f776e68bca334644d8c2",
+          "archived": "0-dragonfruit.png"
         },
         {
           "path": "art/items/dragonfruit.item.json",
-          "sha256": "7edd392da23530a239d59b3ea5688f649fdc050a1ac784c21e7d1cfa4107a82e"
+          "sha256": "7edd392da23530a239d59b3ea5688f649fdc050a1ac784c21e7d1cfa4107a82e",
+          "archived": "1-dragonfruit.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.dragonfruit.texture/v1",

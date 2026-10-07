@@ -74,7 +74,8 @@
       "files": [
         {
           "path": "resourcepack/assets/reactor/textures/item/core_top.png",
-          "sha256": "8bcb9ad6e732dff1e3453c8759e2de967a4feae8baea2bbfafb38620c6b5c7cd"
+          "sha256": "8bcb9ad6e732dff1e3453c8759e2de967a4feae8baea2bbfafb38620c6b5c7cd",
+          "archived": "0-core_top.png"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.core_top.texture/v1",

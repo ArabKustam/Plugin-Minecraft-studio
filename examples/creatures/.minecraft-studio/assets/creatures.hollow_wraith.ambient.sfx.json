@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/hollow_wraith/ambient.flac",
-          "sha256": "0b61ca2f3733ca82d07885b3b37fe74ef73300b4de5387f552fd39b66d53a7de"
+          "sha256": "0b61ca2f3733ca82d07885b3b37fe74ef73300b4de5387f552fd39b66d53a7de",
+          "archived": "0-ambient.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/hollow_wraith/ambient.ogg",
-          "sha256": "56dcb315ce676ecbeedf936544db7d3eb4e66c84ed4dece1a9ff9c461caaf31c"
+          "sha256": "56dcb315ce676ecbeedf936544db7d3eb4e66c84ed4dece1a9ff9c461caaf31c",
+          "archived": "1-ambient.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.hollow_wraith.ambient.sfx/v1",

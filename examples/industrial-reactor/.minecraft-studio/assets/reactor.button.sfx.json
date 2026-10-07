@@ -98,11 +98,13 @@
       "files": [
         {
           "path": "audio/sfx/button.flac",
-          "sha256": "1fc970fd9518bc3135fde751f2cc8d9bd3def7335597c4afe0c28f84d50f8eb4"
+          "sha256": "1fc970fd9518bc3135fde751f2cc8d9bd3def7335597c4afe0c28f84d50f8eb4",
+          "archived": "0-button.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/reactor/button.ogg",
-          "sha256": "4434790ffd9e47dc96ddfe22d5367f0ec9c3cee47c387f315099990d227a5368"
+          "sha256": "4434790ffd9e47dc96ddfe22d5367f0ec9c3cee47c387f315099990d227a5368",
+          "archived": "1-button.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.button.sfx/v1",

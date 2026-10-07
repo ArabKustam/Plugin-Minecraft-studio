@@ -74,7 +74,8 @@
       "files": [
         {
           "path": "resourcepack/assets/reactor/textures/item/core_side_off.png",
-          "sha256": "a1a01822a94e8232c310e9a5fe693c14bc2c592bb59317ce5142920399c19dd0"
+          "sha256": "a1a01822a94e8232c310e9a5fe693c14bc2c592bb59317ce5142920399c19dd0",
+          "archived": "0-core_side_off.png"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.core_side_off.texture/v1",

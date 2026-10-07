@@ -74,7 +74,8 @@
       "files": [
         {
           "path": "resourcepack/assets/reactor/textures/item/lamp_off.png",
-          "sha256": "5e78cd3ae8c4ed3ab656da9783b85008f34602abd23d47f46cc541d87a1b3db5"
+          "sha256": "5e78cd3ae8c4ed3ab656da9783b85008f34602abd23d47f46cc541d87a1b3db5",
+          "archived": "0-lamp_off.png"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.lamp_off.texture/v1",

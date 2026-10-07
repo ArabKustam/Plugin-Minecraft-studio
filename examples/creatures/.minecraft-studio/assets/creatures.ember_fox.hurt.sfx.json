@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/ember_fox/hurt.flac",
-          "sha256": "6b5911581fc394baf87dd9a6efac44338aafa25c7ebc34eb89f0499146a5b94d"
+          "sha256": "6b5911581fc394baf87dd9a6efac44338aafa25c7ebc34eb89f0499146a5b94d",
+          "archived": "0-hurt.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/ember_fox/hurt.ogg",
-          "sha256": "9b0fd4e59103a0a01688637e6b7309bbcac1b8425730163df4c079a5cc94dfd3"
+          "sha256": "9b0fd4e59103a0a01688637e6b7309bbcac1b8425730163df4c079a5cc94dfd3",
+          "archived": "1-hurt.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.ember_fox.hurt.sfx/v1",

@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/highland_ox/ambient.flac",
-          "sha256": "6aa8f287eff12b3ab01d03ef179bc7bb68fb321f75836c2e4cb6adda82b3f0a5"
+          "sha256": "6aa8f287eff12b3ab01d03ef179bc7bb68fb321f75836c2e4cb6adda82b3f0a5",
+          "archived": "0-ambient.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/highland_ox/ambient.ogg",
-          "sha256": "958435989991f14c7459085f70afb3c98ee1788b9c1fa76386ee583cb81b5da5"
+          "sha256": "958435989991f14c7459085f70afb3c98ee1788b9c1fa76386ee583cb81b5da5",
+          "archived": "1-ambient.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.highland_ox.ambient.sfx/v1",

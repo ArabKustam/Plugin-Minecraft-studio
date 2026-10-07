@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/ranger_trousers.png",
-          "sha256": "fc8e2b6c73b79083b9d6531bb41653630490a3bd31c41cea4a4d3fb4a8231f7a"
+          "sha256": "fc8e2b6c73b79083b9d6531bb41653630490a3bd31c41cea4a4d3fb4a8231f7a",
+          "archived": "0-ranger_trousers.png"
         },
         {
           "path": "art/items/ranger_trousers.item.json",
-          "sha256": "c2df39a5069197a126b1f918fb0911844f4256dea9635aed819607ea7278b1e0"
+          "sha256": "c2df39a5069197a126b1f918fb0911844f4256dea9635aed819607ea7278b1e0",
+          "archived": "1-ranger_trousers.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.ranger_trousers.texture/v1",

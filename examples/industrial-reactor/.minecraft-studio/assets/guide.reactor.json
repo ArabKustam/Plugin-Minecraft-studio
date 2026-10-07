@@ -54,7 +54,8 @@
       "files": [
         {
           "path": "docs/guides/reactor.md",
-          "sha256": "36c667e1505db1ad54b75e8a28ed669e9c33ba14fedfd02437bf325bdeeda7a8"
+          "sha256": "36c667e1505db1ad54b75e8a28ed669e9c33ba14fedfd02437bf325bdeeda7a8",
+          "archived": "0-reactor.md"
         }
       ],
       "archived_dir": ".minecraft-studio/history/guide.reactor/v1",

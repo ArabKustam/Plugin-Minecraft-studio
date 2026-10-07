@@ -75,11 +75,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/entity/equipment/humanoid/knight.png",
-          "sha256": "a42072b34141defee6ef01df173f471ad1b7138f080fed11ff68c882fa19c07d"
+          "sha256": "a42072b34141defee6ef01df173f471ad1b7138f080fed11ff68c882fa19c07d",
+          "archived": "0-knight.png"
         },
         {
           "path": "art/equipment/knight_humanoid.paint.json",
-          "sha256": "68988bff33bbe0d3123a3970cf849390ab89b3ad9d85342714f2a0c559bdaa8e"
+          "sha256": "68988bff33bbe0d3123a3970cf849390ab89b3ad9d85342714f2a0c559bdaa8e",
+          "archived": "1-knight_humanoid.paint.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.knight.humanoid/v1",

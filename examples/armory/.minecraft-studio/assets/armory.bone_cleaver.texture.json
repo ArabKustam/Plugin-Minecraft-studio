@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/bone_cleaver.png",
-          "sha256": "b569ac94946de3835123c848238550081a60c68e6e323e220975845b939387bb"
+          "sha256": "b569ac94946de3835123c848238550081a60c68e6e323e220975845b939387bb",
+          "archived": "0-bone_cleaver.png"
         },
         {
           "path": "art/items/bone_cleaver.item.json",
-          "sha256": "f694aca6797603aff6851b34bd8898aa44f6d1a1f6593a2e9fd922fbf887b733"
+          "sha256": "f694aca6797603aff6851b34bd8898aa44f6d1a1f6593a2e9fd922fbf887b733",
+          "archived": "1-bone_cleaver.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.bone_cleaver.texture/v1",

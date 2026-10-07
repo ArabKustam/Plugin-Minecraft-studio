@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/heartwood_longbow_pulling_2.png",
-          "sha256": "3fce26cc9d776141472829389fc8cefbec25ada7e8f83ea81f0ce2f5a1d0e1e1"
+          "sha256": "3fce26cc9d776141472829389fc8cefbec25ada7e8f83ea81f0ce2f5a1d0e1e1",
+          "archived": "0-heartwood_longbow_pulling_2.png"
         },
         {
           "path": "art/items/heartwood_longbow_pulling_2.item.json",
-          "sha256": "80c03fdcd662c258c72692facf03ba5f4b4a3e7973784d5871c1bd8e4a04ed6a"
+          "sha256": "80c03fdcd662c258c72692facf03ba5f4b4a3e7973784d5871c1bd8e4a04ed6a",
+          "archived": "1-heartwood_longbow_pulling_2.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.heartwood_longbow_pulling_2.texture/v1",

@@ -75,11 +75,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/entity/equipment/humanoid_leggings/knight.png",
-          "sha256": "cd13ed36668ba2dff4686df82d3436e051efb92399c7480028ee73019b71777e"
+          "sha256": "cd13ed36668ba2dff4686df82d3436e051efb92399c7480028ee73019b71777e",
+          "archived": "0-knight.png"
         },
         {
           "path": "art/equipment/knight_humanoid_leggings.paint.json",
-          "sha256": "9b2698dad376e5be9ef5aaa04ad9677832f0ae46165ef885f7efc3cd76819e10"
+          "sha256": "9b2698dad376e5be9ef5aaa04ad9677832f0ae46165ef885f7efc3cd76819e10",
+          "archived": "1-knight_humanoid_leggings.paint.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.knight.humanoid_leggings/v1",

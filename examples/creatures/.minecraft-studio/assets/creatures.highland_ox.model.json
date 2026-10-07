@@ -77,15 +77,18 @@
       "files": [
         {
           "path": "bedrock/RP/models/entity/highland_ox.geo.json",
-          "sha256": "74a331703634baff89994963914d426249b45108697880782fc4bd8ea308c1b5"
+          "sha256": "74a331703634baff89994963914d426249b45108697880782fc4bd8ea308c1b5",
+          "archived": "0-highland_ox.geo.json"
         },
         {
           "path": "models/highland_ox.bbmodel",
-          "sha256": "ea9c3cadcbdeace4ac86933919d4bffd4d8a92f20aad18f136a74f60a09e5f32"
+          "sha256": "ea9c3cadcbdeace4ac86933919d4bffd4d8a92f20aad18f136a74f60a09e5f32",
+          "archived": "1-highland_ox.bbmodel"
         },
         {
           "path": "art/models/highland_ox.model.json",
-          "sha256": "946fe8d7cbe7f03d2a17428305e1ef1c03e4784609ca9bcff4b1391388cfe469"
+          "sha256": "946fe8d7cbe7f03d2a17428305e1ef1c03e4784609ca9bcff4b1391388cfe469",
+          "archived": "2-highland_ox.model.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.highland_ox.model/v1",

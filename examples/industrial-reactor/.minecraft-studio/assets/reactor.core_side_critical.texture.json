@@ -81,7 +81,8 @@
       "files": [
         {
           "path": "resourcepack/assets/reactor/textures/item/core_side_critical.png",
-          "sha256": "4fc01e678f9ff106d6843fc0042984649f4a26230ba3efc2a51de8d50b48adef"
+          "sha256": "4fc01e678f9ff106d6843fc0042984649f4a26230ba3efc2a51de8d50b48adef",
+          "archived": "0-core_side_critical.png"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.core_side_critical.texture/v1",

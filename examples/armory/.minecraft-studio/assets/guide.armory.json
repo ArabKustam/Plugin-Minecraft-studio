@@ -54,7 +54,8 @@
       "files": [
         {
           "path": "docs/armory.md",
-          "sha256": "4c917adaa496e685164992af81d11af1ce0642519b1113a5e39a998b8c8c74ca"
+          "sha256": "4c917adaa496e685164992af81d11af1ce0642519b1113a5e39a998b8c8c74ca",
+          "archived": "0-armory.md"
         }
       ],
       "archived_dir": ".minecraft-studio/history/guide.armory/v1",

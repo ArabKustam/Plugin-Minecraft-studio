@@ -76,15 +76,18 @@
       "files": [
         {
           "path": "models/reactor_rig.geo.json",
-          "sha256": "5eceb3fe7440975a9c7d7c31d4864f694b01e07e5b7a86463458e91737120397"
+          "sha256": "5eceb3fe7440975a9c7d7c31d4864f694b01e07e5b7a86463458e91737120397",
+          "archived": "0-reactor_rig.geo.json"
         },
         {
           "path": "models/reactor_rig.bbmodel",
-          "sha256": "5da1435e9ef20064f0aeebccf350c4d459ce80d21bd6e189a00bf01723f43801"
+          "sha256": "5da1435e9ef20064f0aeebccf350c4d459ce80d21bd6e189a00bf01723f43801",
+          "archived": "1-reactor_rig.bbmodel"
         },
         {
           "path": "art/models/reactor_rig.model.json",
-          "sha256": "f2b33ebfdaddce119af203e1f1e9d09592512c5c714ff761a32cea22f84af0bc"
+          "sha256": "f2b33ebfdaddce119af203e1f1e9d09592512c5c714ff761a32cea22f84af0bc",
+          "archived": "2-reactor_rig.model.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.rig.model/v1",

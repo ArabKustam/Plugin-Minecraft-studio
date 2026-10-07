@@ -98,11 +98,13 @@
       "files": [
         {
           "path": "audio/sfx/power_down.flac",
-          "sha256": "6e2257cfb35988621c17185b4726ac4077395c305732a6e247d023c60805f897"
+          "sha256": "6e2257cfb35988621c17185b4726ac4077395c305732a6e247d023c60805f897",
+          "archived": "0-power_down.flac"
         },
         {
           "path": "resourcepack/assets/reactor/sounds/reactor/power_down.ogg",
-          "sha256": "32b0a3125c31529e7538c14e040171f7c45e125d9acba865fb53e3370e422141"
+          "sha256": "32b0a3125c31529e7538c14e040171f7c45e125d9acba865fb53e3370e422141",
+          "archived": "1-power_down.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.power_down.sfx/v1",

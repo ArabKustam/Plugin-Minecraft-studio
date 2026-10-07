@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/rust_crawler/hurt.flac",
-          "sha256": "bb766e3b667559f31f2ed2e1e3d0d90082e75059291e5e7b649cc710f2103dbf"
+          "sha256": "bb766e3b667559f31f2ed2e1e3d0d90082e75059291e5e7b649cc710f2103dbf",
+          "archived": "0-hurt.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/rust_crawler/hurt.ogg",
-          "sha256": "9e46c3361271f1d3877b384b14965848d598509788c8d1e35c285208050fa236"
+          "sha256": "9e46c3361271f1d3877b384b14965848d598509788c8d1e35c285208050fa236",
+          "archived": "1-hurt.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.rust_crawler.hurt.sfx/v1",

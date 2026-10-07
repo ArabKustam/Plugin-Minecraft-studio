@@ -75,11 +75,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/entity/equipment/humanoid_leggings/ranger.png",
-          "sha256": "422dae7d18cc26cc0fdd09d176fcd1667c8d0ec9a92b33dcc74f3556ea208fe9"
+          "sha256": "422dae7d18cc26cc0fdd09d176fcd1667c8d0ec9a92b33dcc74f3556ea208fe9",
+          "archived": "0-ranger.png"
         },
         {
           "path": "art/equipment/ranger_humanoid_leggings.paint.json",
-          "sha256": "8d14efe1157fef51fe3973c7102644d133d509f81f3675e8d45f10affd978532"
+          "sha256": "8d14efe1157fef51fe3973c7102644d133d509f81f3675e8d45f10affd978532",
+          "archived": "1-ranger_humanoid_leggings.paint.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.ranger.humanoid_leggings/v1",

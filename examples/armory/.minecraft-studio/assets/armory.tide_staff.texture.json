@@ -85,15 +85,18 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/tide_staff.png",
-          "sha256": "4e84d61cb475c7fcaf1021a1f20ccc871be7467997eb4c88ab799a3bf2610338"
+          "sha256": "4e84d61cb475c7fcaf1021a1f20ccc871be7467997eb4c88ab799a3bf2610338",
+          "archived": "0-tide_staff.png"
         },
         {
           "path": "resourcepack/assets/studio/textures/item/tide_staff.png.mcmeta",
-          "sha256": "e4b5cce019fc5a41d76dd2a70b5ab4ee447468b92b699c211a2dc85ab5a94bce"
+          "sha256": "e4b5cce019fc5a41d76dd2a70b5ab4ee447468b92b699c211a2dc85ab5a94bce",
+          "archived": "1-tide_staff.png.mcmeta"
         },
         {
           "path": "art/items/tide_staff.item.json",
-          "sha256": "3f660407e902f9e8444334161563cd25b196999d18de64b135334a9ac2714bc7"
+          "sha256": "3f660407e902f9e8444334161563cd25b196999d18de64b135334a9ac2714bc7",
+          "archived": "2-tide_staff.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.tide_staff.texture/v1",

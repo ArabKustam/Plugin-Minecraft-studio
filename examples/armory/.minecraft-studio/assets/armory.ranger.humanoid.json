@@ -76,11 +76,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/entity/equipment/humanoid/ranger.png",
-          "sha256": "187f39b178f2c7ae71d9cb3cdbc511a82d83f6951e848354c35b9d8ab481db63"
+          "sha256": "187f39b178f2c7ae71d9cb3cdbc511a82d83f6951e848354c35b9d8ab481db63",
+          "archived": "0-ranger.png"
         },
         {
           "path": "art/equipment/ranger_humanoid.paint.json",
-          "sha256": "6b5ad5b04720ddd2817177307d5f91fb74f546d21868af5eb5a9af3d91e11796"
+          "sha256": "6b5ad5b04720ddd2817177307d5f91fb74f546d21868af5eb5a9af3d91e11796",
+          "archived": "1-ranger_humanoid.paint.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.ranger.humanoid/v1",

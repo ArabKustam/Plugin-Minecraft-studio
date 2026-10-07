@@ -76,7 +76,8 @@
       "files": [
         {
           "path": "resourcepack/assets/reactor/textures/item/lamp_on.png",
-          "sha256": "53bc4a8c277f0065650e790c0575bb489d6be60307fa9d983901d10b07782709"
+          "sha256": "53bc4a8c277f0065650e790c0575bb489d6be60307fa9d983901d10b07782709",
+          "archived": "0-lamp_on.png"
         }
       ],
       "archived_dir": ".minecraft-studio/history/reactor.lamp_on.texture/v1",

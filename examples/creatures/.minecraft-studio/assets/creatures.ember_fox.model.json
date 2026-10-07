@@ -77,15 +77,18 @@
       "files": [
         {
           "path": "bedrock/RP/models/entity/ember_fox.geo.json",
-          "sha256": "af06b836459b4e8afb9205079023f19b19f81fced7bded19a8b24d139b155795"
+          "sha256": "af06b836459b4e8afb9205079023f19b19f81fced7bded19a8b24d139b155795",
+          "archived": "0-ember_fox.geo.json"
         },
         {
           "path": "models/ember_fox.bbmodel",
-          "sha256": "3ee1a53bdae0b99bce78be7244e6d2b889ed0307567788a13353e4a7dd894d1e"
+          "sha256": "3ee1a53bdae0b99bce78be7244e6d2b889ed0307567788a13353e4a7dd894d1e",
+          "archived": "1-ember_fox.bbmodel"
         },
         {
           "path": "art/models/ember_fox.model.json",
-          "sha256": "6f556d7b4ccc88adbd32e636f229323843ed4670f98b31383d244d35198c6288"
+          "sha256": "6f556d7b4ccc88adbd32e636f229323843ed4670f98b31383d244d35198c6288",
+          "archived": "2-ember_fox.model.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.ember_fox.model/v1",

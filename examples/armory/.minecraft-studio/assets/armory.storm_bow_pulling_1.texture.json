@@ -79,11 +79,13 @@
       "files": [
         {
           "path": "resourcepack/assets/studio/textures/item/storm_bow_pulling_1.png",
-          "sha256": "c7f6bb4ebdfdf364c36e6ff4c62221ab57bfb517d14408f111853743666d4f38"
+          "sha256": "c7f6bb4ebdfdf364c36e6ff4c62221ab57bfb517d14408f111853743666d4f38",
+          "archived": "0-storm_bow_pulling_1.png"
         },
         {
           "path": "art/items/storm_bow_pulling_1.item.json",
-          "sha256": "1471032eaad2dc0de50d464a942f856f74eff3555c5a7f0e36f238f2d0087a1f"
+          "sha256": "1471032eaad2dc0de50d464a942f856f74eff3555c5a7f0e36f238f2d0087a1f",
+          "archived": "1-storm_bow_pulling_1.item.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/armory.storm_bow_pulling_1.texture/v1",

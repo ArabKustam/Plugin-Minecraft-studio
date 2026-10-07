@@ -203,87 +203,108 @@
       "files": [
         {
           "path": "bedrock/RP/entity/ember_fox.entity.json",
-          "sha256": "5697dd14c741ec8bba426a23946be81b98ba4722ce30c809d760c0b361d2372f"
+          "sha256": "5697dd14c741ec8bba426a23946be81b98ba4722ce30c809d760c0b361d2372f",
+          "archived": "0-ember_fox.entity.json"
         },
         {
           "path": "bedrock/BP/entities/ember_fox.json",
-          "sha256": "9be3d7a6653112b7e4926b35373597fa781345d2503c2278b856aac64e1f78a8"
+          "sha256": "9be3d7a6653112b7e4926b35373597fa781345d2503c2278b856aac64e1f78a8",
+          "archived": "1-ember_fox.json"
         },
         {
           "path": "bedrock/RP/entity/highland_ox.entity.json",
-          "sha256": "eda8aafdea8cf41726d20019ac7f6158ebd2cc64d5dae9c2a7e6ddb33e13ac35"
+          "sha256": "eda8aafdea8cf41726d20019ac7f6158ebd2cc64d5dae9c2a7e6ddb33e13ac35",
+          "archived": "2-highland_ox.entity.json"
         },
         {
           "path": "bedrock/BP/entities/highland_ox.json",
-          "sha256": "6fbaecabef74d251364d36a9d0d3a252b34876a8901a1efcca7bee96d307cf71"
+          "sha256": "6fbaecabef74d251364d36a9d0d3a252b34876a8901a1efcca7bee96d307cf71",
+          "archived": "3-highland_ox.json"
         },
         {
           "path": "bedrock/RP/entity/marsh_heron.entity.json",
-          "sha256": "75a1c2b820cdb481e4fcd70df4bbf83b2a8f856bf6caec4c74fd6b61ef43691e"
+          "sha256": "75a1c2b820cdb481e4fcd70df4bbf83b2a8f856bf6caec4c74fd6b61ef43691e",
+          "archived": "4-marsh_heron.entity.json"
         },
         {
           "path": "bedrock/BP/entities/marsh_heron.json",
-          "sha256": "4ca59face535f79f145c0b60c049b6f5ac012b20510ae1aa178c3981c0cb80ad"
+          "sha256": "4ca59face535f79f145c0b60c049b6f5ac012b20510ae1aa178c3981c0cb80ad",
+          "archived": "5-marsh_heron.json"
         },
         {
           "path": "bedrock/RP/entity/rust_crawler.entity.json",
-          "sha256": "d4da993bb7c7922de6018f978bd6b5b09dc655199943c6259912ec135ce1e6fe"
+          "sha256": "d4da993bb7c7922de6018f978bd6b5b09dc655199943c6259912ec135ce1e6fe",
+          "archived": "6-rust_crawler.entity.json"
         },
         {
           "path": "bedrock/BP/entities/rust_crawler.json",
-          "sha256": "5d7902448f24beef7fd4e9345267aa3882386252c61ee6258856c6417cecc6f2"
+          "sha256": "5d7902448f24beef7fd4e9345267aa3882386252c61ee6258856c6417cecc6f2",
+          "archived": "7-rust_crawler.json"
         },
         {
           "path": "bedrock/RP/entity/hollow_wraith.entity.json",
-          "sha256": "df224f3f0248a0d09f5e95ccc9a0da6d77aa5fdba9eb5d4a3d7cdb5dbff09da2"
+          "sha256": "df224f3f0248a0d09f5e95ccc9a0da6d77aa5fdba9eb5d4a3d7cdb5dbff09da2",
+          "archived": "8-hollow_wraith.entity.json"
         },
         {
           "path": "bedrock/BP/entities/hollow_wraith.json",
-          "sha256": "bc51e8630292e2f6ba6be13ba2fed08b51c1472439976e14803adfd3c96c087b"
+          "sha256": "bc51e8630292e2f6ba6be13ba2fed08b51c1472439976e14803adfd3c96c087b",
+          "archived": "9-hollow_wraith.json"
         },
         {
           "path": "bedrock/RP/entity/badger_smith.entity.json",
-          "sha256": "f72a04aee767d3bba648bb0a7f8688f3af37c9186ac35b1863d954f97856cacf"
+          "sha256": "f72a04aee767d3bba648bb0a7f8688f3af37c9186ac35b1863d954f97856cacf",
+          "archived": "10-badger_smith.entity.json"
         },
         {
           "path": "bedrock/BP/entities/badger_smith.json",
-          "sha256": "c47796fba9a328298a093d63339f356ae3be133318114b348514827d6cb95ab4"
+          "sha256": "c47796fba9a328298a093d63339f356ae3be133318114b348514827d6cb95ab4",
+          "archived": "11-badger_smith.json"
         },
         {
           "path": "bedrock/RP/entity/abyssal_seer.entity.json",
-          "sha256": "cd6dadbebae0cb4f0db149820bb787d6bad1560c282af3248279be11996f3749"
+          "sha256": "cd6dadbebae0cb4f0db149820bb787d6bad1560c282af3248279be11996f3749",
+          "archived": "12-abyssal_seer.entity.json"
         },
         {
           "path": "bedrock/BP/entities/abyssal_seer.json",
-          "sha256": "9016aa20356f6695bb40a0f2dd1604b7372deb124ee7f2d73de704f2997642aa"
+          "sha256": "9016aa20356f6695bb40a0f2dd1604b7372deb124ee7f2d73de704f2997642aa",
+          "archived": "13-abyssal_seer.json"
         },
         {
           "path": "bedrock/RP/sounds/sound_definitions.json",
-          "sha256": "e988600b3397f86dbb618f8c278ba6a60b49fa1d7b7ec6dac41d63e92cf0ff59"
+          "sha256": "e988600b3397f86dbb618f8c278ba6a60b49fa1d7b7ec6dac41d63e92cf0ff59",
+          "archived": "14-sound_definitions.json"
         },
         {
           "path": "bedrock/RP/sounds.json",
-          "sha256": "e907243cb9e84e4a79639c8ee4482932e71e90d43fc0dc4b079d0aef245d9b26"
+          "sha256": "e907243cb9e84e4a79639c8ee4482932e71e90d43fc0dc4b079d0aef245d9b26",
+          "archived": "15-sounds.json"
         },
         {
           "path": "bedrock/RP/texts/languages.json",
-          "sha256": "08da6da98589855f355bd1cd31f1250999e8b9b2aa2c68ea1b93b84ebc627489"
+          "sha256": "08da6da98589855f355bd1cd31f1250999e8b9b2aa2c68ea1b93b84ebc627489",
+          "archived": "16-languages.json"
         },
         {
           "path": "bedrock/RP/texts/en_US.lang",
-          "sha256": "992e595e0b7073677d8434e1830a1f62059b651702a6c7fde6465d2c15edc5d4"
+          "sha256": "992e595e0b7073677d8434e1830a1f62059b651702a6c7fde6465d2c15edc5d4",
+          "archived": "17-en_US.lang"
         },
         {
           "path": "bedrock/RP/texts/ru_RU.lang",
-          "sha256": "93998074b10bd8e5a1776a790befb1e7a391ad9ba095636b8691094ec8d9b9fc"
+          "sha256": "93998074b10bd8e5a1776a790befb1e7a391ad9ba095636b8691094ec8d9b9fc",
+          "archived": "18-ru_RU.lang"
         },
         {
           "path": "bedrock/RP/manifest.json",
-          "sha256": "939cae2c30ebc4555f2c2af9d68f2b6f147feb096e3f37c19e66792f3bb69520"
+          "sha256": "939cae2c30ebc4555f2c2af9d68f2b6f147feb096e3f37c19e66792f3bb69520",
+          "archived": "19-manifest.json"
         },
         {
           "path": "bedrock/BP/manifest.json",
-          "sha256": "fa7348f736e2e6a9d7a93d8026658c31ff3f5d9d9f10029c99a3b014d091f72a"
+          "sha256": "fa7348f736e2e6a9d7a93d8026658c31ff3f5d9d9f10029c99a3b014d091f72a",
+          "archived": "20-manifest.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.bedrock/v1",

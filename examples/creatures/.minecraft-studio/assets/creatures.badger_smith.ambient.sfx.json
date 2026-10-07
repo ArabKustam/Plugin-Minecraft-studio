@@ -99,11 +99,13 @@
       "files": [
         {
           "path": "audio/badger_smith/ambient.flac",
-          "sha256": "abbfda5062585f40014af7621287d81e9e83152f8e3d9bad728bfdcdf3050a61"
+          "sha256": "abbfda5062585f40014af7621287d81e9e83152f8e3d9bad728bfdcdf3050a61",
+          "archived": "0-ambient.flac"
         },
         {
           "path": "bedrock/RP/sounds/creatures/badger_smith/ambient.ogg",
-          "sha256": "d81f6f034b2eae897303dce227d04c070928578d5af302eabb2e71a193d6b4ad"
+          "sha256": "d81f6f034b2eae897303dce227d04c070928578d5af302eabb2e71a193d6b4ad",
+          "archived": "1-ambient.ogg"
         }
       ],
       "archived_dir": ".minecraft-studio/history/creatures.badger_smith.ambient.sfx/v1",

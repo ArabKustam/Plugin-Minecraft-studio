@@ -62,11 +62,13 @@
       "files": [
         {
           "path": ".minecraft-studio/timelines/reactor_shutdown.json",
-          "sha256": "d8cb215d6e024169d6156583fab1601e19ef1b21a9699df508dfa2a1f42b7e2c"
+          "sha256": "d8cb215d6e024169d6156583fab1601e19ef1b21a9699df508dfa2a1f42b7e2c",
+          "archived": "0-reactor_shutdown.json"
         },
         {
           "path": "src/main/resources/timelines/reactor_shutdown.json",
-          "sha256": "b5809eda5200cd38e6049f8ed728606786986454ae31283f20136d0216e6b61c"
+          "sha256": "b5809eda5200cd38e6049f8ed728606786986454ae31283f20136d0216e6b61c",
+          "archived": "1-reactor_shutdown.json"
         }
       ],
       "archived_dir": ".minecraft-studio/history/timeline.reactor_shutdown/v1",
