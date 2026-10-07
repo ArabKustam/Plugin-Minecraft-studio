@@ -65,6 +65,21 @@ function paramFn(p, dur) {
       return curve === "exp" && from > 0 && to > 0 ? from * (to / from) ** u : curve === "ease" ? from + (to - from) * (u * u * (3 - 2 * u)) : from + (to - from) * u;
     };
   }
+  if (p && typeof p === "object" && Array.isArray(p.points) && p.points.length) {
+    const pts = [...p.points].sort((a, b) => a[0] - b[0]);
+    const curve = p.curve || "linear";
+    return (t) => {
+      if (t <= pts[0][0]) return pts[0][1];
+      for (let k2 = 1; k2 < pts.length; k2++) {
+        if (t <= pts[k2][0]) {
+          const [t0, v0] = pts[k2 - 1], [t1, v1] = pts[k2];
+          const u = (t - t0) / Math.max(1e-6, t1 - t0);
+          return curve === "exp" && v0 > 0 && v1 > 0 ? v0 * (v1 / v0) ** u : curve === "ease" ? v0 + (v1 - v0) * (u * u * (3 - 2 * u)) : v0 + (v1 - v0) * u;
+        }
+      }
+      return pts[pts.length - 1][1];
+    };
+  }
   if (p && typeof p === "object" && "center" in p) {
     const { center, depth = 0, rate = 1, shape = "sine" } = p;
     return (t) => center + depth * (shape === "triangle" ? 1 - 4 * Math.abs(t * rate % 1 - 0.5) : shape === "square" ? Math.sin(2 * Math.PI * rate * t) >= 0 ? 1 : -1 : Math.sin(2 * Math.PI * rate * t));
@@ -546,8 +561,199 @@ function auditAudioFile(file, { role = "sfx", targetLufs = null, loop = false, p
   return { verdict, file, analysis: { ...a, waveform: void 0 }, waveform: a.waveform, checks };
 }
 
+// src/lib/audio/sfxmodels.js
+var VOWELS = {
+  a: [800, 1150, 2900, 3900],
+  e: [400, 1700, 2600, 3300],
+  i: [300, 2200, 3e3, 3700],
+  o: [450, 800, 2830, 3800],
+  u: [325, 700, 2530, 3500],
+  ae: [660, 1700, 2400, 3500],
+  uh: [600, 1200, 2500, 3500],
+  er: [490, 1350, 1690, 3300],
+  ah: [750, 1200, 2600, 3500],
+  oo: [350, 750, 2400, 3400],
+  h: [700, 1300, 2500, 3500]
+};
+var FORMANT_GAINS = [1, 0.62, 0.32, 0.18];
+var FORMANT_BW = [90, 110, 170, 250];
+function vowelAt(spec, t) {
+  if (typeof spec === "string") return VOWELS[spec] || VOWELS.a;
+  if (Array.isArray(spec) && spec.length) {
+    if (t <= spec[0][0]) return VOWELS[spec[0][1]];
+    for (let k2 = 1; k2 < spec.length; k2++) {
+      if (t <= spec[k2][0]) {
+        const [t0, v0] = spec[k2 - 1], [t1, v1] = spec[k2];
+        const u = (t - t0) / Math.max(1e-6, t1 - t0);
+        const a = VOWELS[v0] || VOWELS.a, b = VOWELS[v1] || VOWELS.a;
+        return a.map((f, i) => f + (b[i] - f) * u);
+      }
+    }
+    return VOWELS[spec[spec.length - 1][1]] || VOWELS.a;
+  }
+  return VOWELS.a;
+}
+function renderVoice(layer, n, sr, env, seed) {
+  const out = new Float32Array(n);
+  const dur = n / sr;
+  const f0 = paramFn(layer.pitch ?? 140, dur);
+  const size = layer.size ?? 1;
+  const breath = paramFn(layer.breath ?? 0.15, dur);
+  const rough = paramFn(layer.rough ?? 0, dur);
+  const strain = layer.strain ?? 0;
+  const jitter = layer.jitter ?? 0.15;
+  const vib = layer.vibrato || null;
+  const pulses = layer.pulses || null;
+  const pulseRate = pulses ? paramFn(pulses.rate ?? 6, dur) : null;
+  const r = rng(seed);
+  const noise = noiseGen("white", seed + 7);
+  const slow = noiseGen("pink", seed + 13);
+  const bands = FORMANT_BW.map(() => new Biquad("bandpass", sr));
+  const tilt = new Biquad("lowpass", sr);
+  tilt.set(2800 + 2400 * strain, 0.6);
+  let ph = 0, sub = 0, pulsePh = 0, pulseOn = 1, nextJit = 0;
+  let pScale = 1, pPitch = 1, pAmp = 1;
+  for (let i = 0; i < n; i++) {
+    const t = i / sr;
+    if (i % 32 === 0) {
+      const fm = vowelAt(layer.vowel ?? "a", t).map((f2) => f2 / size);
+      bands.forEach((b, k2) => b.set(fm[k2], fm[k2] / (FORMANT_BW[k2] * (1 + strain * 0.6))));
+    }
+    let f = f0(t) * pPitch;
+    if (vib) f *= 2 ** ((vib.depth ?? 0.3) * Math.sin(2 * Math.PI * (vib.rate ?? 5.5) * t) / 12);
+    f *= 1 + jitter * 0.03 * slow();
+    ph += f / sr;
+    if (ph >= 1) {
+      ph -= 1;
+      sub = 1 - sub;
+    }
+    const saw = 1 - 2 * ph;
+    const rg = rough(t);
+    let src = saw * (1 - rg * 0.5 * sub) + rg * 0.35 * Math.sin(2 * Math.PI * ph * 0.5);
+    if (strain > 0) src = Math.tanh(src * (1 + strain * 3));
+    src = tilt.process(src);
+    const br = breath(t);
+    src = src * (1 - br) + noise() * br * 1.4;
+    let gate = 1;
+    if (pulses) {
+      pulsePh += pulseRate(t) / (sr * pScale);
+      if (pulsePh >= 1) {
+        pulsePh -= 1;
+        pulseOn = r() > -1 + 2 * (pulses.skip ?? 0) ? 1 : 0;
+        nextJit = r() * (pulses.jitter ?? 0.2);
+        pScale = 1 + (pulses.jitter ?? 0.2) * 0.8 * r();
+        pPitch = 2 ** ((pulses.pitch_jitter ?? 1.5) * r() / 12);
+        pAmp = 1 - (pulses.accent ?? 0.35) * Math.abs(r());
+      }
+      const duty = Math.min(0.95, Math.max(0.05, (pulses.duty ?? 0.5) + nextJit * 0.2));
+      const p = pulsePh;
+      gate = pulseOn * pAmp * (p < duty ? Math.sin(Math.PI * p / duty) ** 0.7 : 0);
+    }
+    let y2 = 0;
+    for (let k2 = 0; k2 < 4; k2++) y2 += bands[k2].process(src) * FORMANT_GAINS[k2];
+    out[i] = y2 * gate * env(t);
+  }
+  return out;
+}
+var MATERIALS = {
+  metal: [[1, 1, 1], [2.76, 0.7, 0.8], [5.4, 0.5, 0.65], [8.93, 0.35, 0.5], [13.34, 0.25, 0.4], [18.64, 0.18, 0.3], [24.9, 0.12, 0.25]],
+  metal_plate: [[1, 1, 1], [1.59, 0.8, 0.9], [2.14, 0.7, 0.85], [2.3, 0.6, 0.8], [2.65, 0.55, 0.7], [2.92, 0.5, 0.7], [3.16, 0.45, 0.6], [3.5, 0.4, 0.55], [4.2, 0.35, 0.5], [5.1, 0.3, 0.4]],
+  pipe: [[1, 1, 1], [2.01, 0.65, 0.9], [3.03, 0.45, 0.75], [4.06, 0.3, 0.6], [5.1, 0.2, 0.5], [6.15, 0.15, 0.4]],
+  glass: [[1, 1, 1], [2.32, 0.8, 0.7], [4.25, 0.6, 0.5], [6.63, 0.45, 0.4], [9.38, 0.3, 0.3], [12.6, 0.2, 0.25]],
+  wood: [[1, 1, 1], [2.57, 0.55, 0.5], [4.2, 0.35, 0.35], [5.8, 0.2, 0.25], [7.6, 0.12, 0.2]],
+  stone: [[1, 1, 1], [1.8, 0.7, 0.6], [2.9, 0.5, 0.4], [4.4, 0.3, 0.3]],
+  string: [[1, 1, 1], [2, 0.6, 0.9], [3, 0.4, 0.8], [4, 0.28, 0.7], [5, 0.2, 0.6], [6, 0.14, 0.5], [7, 0.1, 0.45]]
+};
+function expandHits(hits, dur, seed) {
+  if (!hits) return [{ t: 0, vel: 1 }];
+  if (Array.isArray(hits)) return hits.map((h2) => typeof h2 === "number" ? { t: h2, vel: 1 } : { t: h2.t ?? h2.time ?? 0, vel: h2.vel ?? 1, freq: h2.freq });
+  const r = rng(seed + 101);
+  const { count = 8, start: start2 = 0, end = dur, distribution = "decay", vel_from = 1, vel_to = 0.3 } = hits;
+  const out = [];
+  for (let k2 = 0; k2 < count; k2++) {
+    const u = (r() + 1) / 2;
+    const pos = distribution === "uniform" ? (k2 + u * (hits.jitter ?? 0.8)) / count : distribution === "burst" ? u ** 3 : u ** 2;
+    const t = start2 + (end - start2) * Math.min(1, pos);
+    const frac = (t - start2) / Math.max(1e-6, end - start2);
+    out.push({ t, vel: (vel_from + (vel_to - vel_from) * frac) * (0.6 + 0.4 * (r() + 1) / 2) });
+  }
+  return out.sort((a, b) => a.t - b.t);
+}
+function renderModal(layer, n, sr, env, seed) {
+  const out = new Float32Array(n);
+  const dur = n / sr;
+  const partials = layer.partials || MATERIALS[layer.material || "metal"] || MATERIALS.metal;
+  const baseF = layer.freq ?? 400;
+  const decay = layer.decay ?? 1;
+  const spread = layer.freq_spread ?? 0;
+  const bright = layer.brightness ?? 0.4;
+  const damping = layer.damping ?? 0;
+  const detune = layer.detune ?? 4;
+  const r = rng(seed);
+  const hits = expandHits(layer.hits, dur, seed);
+  for (const hit of hits) {
+    const start2 = Math.round(hit.t * sr);
+    const f0 = (hit.freq ?? baseF) * (spread ? 2 ** (spread * 2 * r()) : 1);
+    const nz = noiseGen("white", seed + start2);
+    const hp = new Biquad("highpass", sr);
+    hp.set(Math.min(sr * 0.45, f0 * 2), 0.7);
+    const tn = Math.round(4e-3 * sr * (1 + bright * 3));
+    for (let i = 0; i < tn && start2 + i < n; i++) out[start2 + i] += hp.process(nz()) * bright * hit.vel * (1 - i / tn) * 1.5;
+    partials.forEach(([ratio, gain, dm], k2) => {
+      const f = f0 * ratio * 2 ** (detune * r() / 1200);
+      if (f >= sr * 0.48) return;
+      const d = decay * dm * (1 - damping * Math.min(1, k2 / partials.length));
+      const len = Math.min(n - start2, Math.round(d * 6 * sr));
+      const phase = Math.abs(r()) * Math.PI * 2;
+      const g = gain * hit.vel;
+      for (let i = 0; i < len; i++) {
+        const t = i / sr;
+        out[start2 + i] += Math.sin(2 * Math.PI * f * t + phase) * g * Math.exp(-t / d);
+      }
+    });
+  }
+  for (let i = 0; i < n; i++) out[i] *= env(i / sr);
+  return out;
+}
+function renderScrape(layer, n, sr, env, seed) {
+  const out = new Float32Array(n);
+  const dur = n / sr;
+  const partials = layer.partials || MATERIALS[layer.material || "metal"] || MATERIALS.metal;
+  const baseF = paramFn(layer.freq ?? 900, dur);
+  const speed = paramFn(layer.speed ?? 120, dur);
+  const pressure = paramFn(layer.pressure ?? 0.7, dur);
+  const grit = layer.grit ?? 0.35;
+  const squeal = layer.squeal ?? 0.3;
+  const q = layer.q ?? 30;
+  const r = rng(seed);
+  const nz = noiseGen("white", seed + 3);
+  const res = partials.slice(0, 6).map(() => new Biquad("bandpass", sr));
+  const body = new Biquad("bandpass", sr);
+  let acc = 0;
+  for (let i = 0; i < n; i++) {
+    const t = i / sr;
+    if (i % 64 === 0) {
+      const f = baseF(t) * (1 + 0.01 * r());
+      res.forEach((b, k2) => b.set(f * partials[k2][0], q * (1 + squeal * 3)));
+      body.set(f * 1.5, 0.7);
+    }
+    acc += speed(t) * (0.6 + 0.8 * Math.abs(r())) / sr;
+    let ex = 0;
+    if (acc >= 1) {
+      acc -= Math.floor(acc);
+      ex = (0.5 + Math.abs(r())) * (r() > 0 ? 1 : -1);
+    }
+    const pr = pressure(t);
+    ex = ex * pr + nz() * grit * pr * 0.25;
+    let y2 = body.process(ex) * 0.4;
+    for (let k2 = 0; k2 < res.length; k2++) y2 += res[k2].process(ex) * partials[k2][1] * (1 + squeal * (k2 > 1 ? 1.5 : 0));
+    out[i] = y2 * env(t);
+  }
+  return out;
+}
+
 // src/lib/audio/synth.js
-var LAYER_TYPES = ["osc", "noise", "fm", "click", "impact", "sample", "chirp"];
+var LAYER_TYPES = ["osc", "noise", "fm", "click", "impact", "sample", "chirp", "voice", "modal", "scrape"];
 function renderLayer(layer, sr, totalDur, index, baseDir) {
   const start2 = layer.start || 0;
   const dur = Math.max(1e-3, layer.duration ?? totalDur - start2);
@@ -636,6 +842,15 @@ function renderLayer(layer, sr, totalDur, index, baseDir) {
       }
       break;
     }
+    case "voice":
+      buf.set(renderVoice(layer, n, sr, env, seed));
+      break;
+    case "modal":
+      buf.set(renderModal(layer, n, sr, env, seed));
+      break;
+    case "scrape":
+      buf.set(renderScrape(layer, n, sr, env, seed));
+      break;
     default:
       throw new StudioError("E_SFX", `Unknown layer type ${layer.type}. Supported: ${LAYER_TYPES.join(", ")}`);
   }
@@ -644,7 +859,7 @@ function renderLayer(layer, sr, totalDur, index, baseDir) {
   if (layer.effects) applyEffects(buf, sr, layer.effects);
   let pk = 0;
   for (let i = 0; i < n; i++) pk = Math.max(pk, Math.abs(buf[i]));
-  const g = dbToGain(layer.gain ?? -6) / (pk || 1);
+  const g = (layer.normalize_layer === false ? dbToGain(layer.gain ?? -6) : dbToGain(layer.gain ?? -6) / (pk || 1)) * (layer._vel ?? 1);
   for (let i = 0; i < n; i++) buf[i] *= g;
   return { buf, offset: Math.round(start2 * sr), pan: layer.pan || 0 };
 }
@@ -659,14 +874,43 @@ function validateRecipe(recipe) {
   if (recipe.channels && ![1, 2].includes(recipe.channels)) problems.push("channels must be 1 or 2");
   return problems;
 }
+function expandRepeats(layers) {
+  const out = [];
+  layers.forEach((layer, li) => {
+    const rp = layer.repeat;
+    if (!rp) {
+      out.push(layer);
+      return;
+    }
+    const r = rng((layer.seed ?? li + 1) * 7919);
+    let times = rp.times;
+    if (!times) {
+      times = [];
+      let t = layer.start || 0, iv = rp.interval ?? 0.5;
+      for (let k2 = 0; k2 < (rp.count ?? 4); k2++) {
+        times.push(t + (rp.jitter ?? 0) * r());
+        t += iv;
+        iv *= rp.accel ?? 1;
+      }
+    }
+    times.forEach((t, k2) => {
+      const shift = 2 ** ((rp.pitch_jitter ?? 0) * r() / 12);
+      const copy = { ...layer, repeat: void 0, start: Math.max(0, t), seed: (layer.seed ?? li + 1) * 131 + k2, _vel: 10 ** (((rp.gain_jitter ?? 0) * r() - (rp.fade_db ?? 0) * (k2 / Math.max(1, times.length - 1))) / 20) };
+      for (const key of ["freq", "pitch", "carrier"]) if (typeof copy[key] === "number") copy[key] *= shift;
+      out.push(copy);
+    });
+  });
+  return out;
+}
 function renderRecipe(recipe, { baseDir = null } = {}) {
   const problems = validateRecipe(recipe);
   if (problems.length) throw new StudioError("E_SFX", `Invalid SFX recipe: ${problems.join("; ")}`);
   const sr = recipe.sample_rate || 48e3;
   const nch = recipe.channels || 1;
+  const layers = expandRepeats(recipe.layers);
   const tail = recipe.loop ? 0 : recipe.tail ?? 0;
   const out = makeAudio(sr, recipe.duration + tail + (recipe.loop ? recipe.loop_crossfade ?? 0.25 : 0), nch);
-  recipe.layers.forEach((layer, i) => {
+  layers.forEach((layer, i) => {
     const { buf, offset, pan } = renderLayer(layer, sr, recipe.duration + (recipe.loop ? recipe.loop_crossfade ?? 0.25 : 0), i, baseDir);
     for (let c = 0; c < nch; c++) {
       const g = nch === 1 ? 1 : c === 0 ? Math.cos((pan + 1) * Math.PI / 4) * Math.SQRT2 : Math.sin((pan + 1) * Math.PI / 4) * Math.SQRT2;
@@ -681,7 +925,7 @@ function renderRecipe(recipe, { baseDir = null } = {}) {
   }
   return normalizeAudio(out, recipe.normalize || { lufs: -16 });
 }
-function normalizeAudio(audio, { lufs = null, peak = null } = {}) {
+function normalizeAudio(audio, { lufs = null, peak = null, ceiling = -1 } = {}) {
   let gain = 1;
   if (lufs != null) {
     const cur = integratedLoudness(audio);
@@ -692,7 +936,7 @@ function normalizeAudio(audio, { lufs = null, peak = null } = {}) {
     if (pk > 0) gain = dbToGain(peak) / pk;
   }
   for (const c of audio.channels) for (let i = 0; i < c.length; i++) c[i] *= gain;
-  for (const c of audio.channels) limit(c, audio.sampleRate, { ceiling: -1 });
+  for (const c of audio.channels) limit(c, audio.sampleRate, { ceiling });
   return audio;
 }
 var RECIPE_PRESETS = {
@@ -3771,7 +4015,7 @@ for (let pan = MIN_PAN$1; pan <= MAX_PAN$1; pan++) {
   panTableLeft[tableIndex] = Math.cos(HALF_PI$1 * realPan);
   panTableRight[tableIndex] = Math.sin(HALF_PI$1 * realPan);
 }
-function renderVoice(voice, timeNow, outputL, outputR, startIndex, sampleCount) {
+function renderVoice2(voice, timeNow, outputL, outputR, startIndex, sampleCount) {
   if (!voice.isInRelease && timeNow >= voice.releaseStartTime) {
     voice.isInRelease = true;
     voice.volEnv.startRelease(voice);
@@ -9371,7 +9615,7 @@ var MIDIChannel = class {
   * @param sampleCount
   * @internal
   */
-  renderVoice = renderVoice.bind(this);
+  renderVoice = renderVoice2.bind(this);
   /**
   * Sets a channel MIDI parameter of the synthesizer.
   * @param parameter The type of the channel MIDI parameter to set.
@@ -18236,11 +18480,11 @@ function addPronunciation(studio, entry) {
   writeJson(pronunciationPath(studio), dict);
   return dict;
 }
-var VOWELS = "\u0430\u0435\u0451\u0438\u043E\u0443\u044B\u044D\u044E\u044Faeiouy";
+var VOWELS2 = "\u0430\u0435\u0451\u0438\u043E\u0443\u044B\u044D\u044E\u044Faeiouy";
 function stressToAcute(word) {
   let out = "";
   for (const ch of word) {
-    if (VOWELS.includes(ch.toLowerCase()) && ch !== ch.toLowerCase()) out += `${ch.toLowerCase()}\u0301`;
+    if (VOWELS2.includes(ch.toLowerCase()) && ch !== ch.toLowerCase()) out += `${ch.toLowerCase()}\u0301`;
     else out += ch;
   }
   return out;

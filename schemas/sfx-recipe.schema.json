@@ -48,7 +48,10 @@
               "chirp",
               "click",
               "impact",
-              "sample"
+              "sample",
+              "voice",
+              "modal",
+              "scrape"
             ]
           },
           "name": {
@@ -293,6 +296,155 @@
           },
           "seed": {
             "type": "integer"
+          },
+          "pitch": {
+            "description": "voice: fundamental in Hz (number, {from,to}, {center,depth,rate} or {points:[[t,v]...]})"
+          },
+          "vowel": {
+            "description": "voice: 'a','e','i','o','u','ae','uh','er','ah','oo','h' or [[time, vowel], ...] morph"
+          },
+          "size": {
+            "type": "number",
+            "description": "voice: formant scale (0.8 child, 1 adult, 1.5-2 monster)"
+          },
+          "breath": {
+            "description": "voice: breathiness 0..1 (param)"
+          },
+          "rough": {
+            "description": "voice: subharmonic growl 0..1 (param)"
+          },
+          "strain": {
+            "type": "number",
+            "description": "voice: pressed/screamed 0..1"
+          },
+          "jitter": {
+            "type": "number",
+            "description": "voice: pitch instability 0..1"
+          },
+          "vibrato": {
+            "type": "object",
+            "properties": {
+              "rate": {
+                "type": "number"
+              },
+              "depth": {
+                "type": "number",
+                "description": "semitones"
+              }
+            }
+          },
+          "pulses": {
+            "type": "object",
+            "description": "voice: syllables (laughter, sobs, panting)",
+            "properties": {
+              "rate": {},
+              "duty": {
+                "type": "number"
+              },
+              "jitter": {
+                "type": "number"
+              },
+              "pitch_jitter": {
+                "type": "number"
+              },
+              "accent": {
+                "type": "number"
+              },
+              "skip": {
+                "type": "number"
+              }
+            }
+          },
+          "material": {
+            "enum": [
+              "metal",
+              "metal_plate",
+              "pipe",
+              "glass",
+              "wood",
+              "stone",
+              "string"
+            ],
+            "description": "modal/scrape: resonance set"
+          },
+          "partials": {
+            "type": "array",
+            "description": "modal/scrape: custom [[ratio, gain, decayMul]...]"
+          },
+          "decay": {
+            "type": "number",
+            "description": "modal: decay of the fundamental (s); impact/click: decay"
+          },
+          "hits": {
+            "description": "modal: [time...] / [{t, vel, freq}...] or {count, start, end, distribution: uniform|decay|burst, vel_from, vel_to}"
+          },
+          "freq_spread": {
+            "type": "number",
+            "description": "modal: random size per hit (shards, splinters)"
+          },
+          "brightness": {
+            "type": "number",
+            "description": "modal: strike noise 0..1"
+          },
+          "damping": {
+            "type": "number"
+          },
+          "speed": {
+            "description": "scrape: slips per second (param)"
+          },
+          "pressure": {
+            "description": "scrape: 0..1 (param)"
+          },
+          "grit": {
+            "type": "number",
+            "description": "scrape: continuous noise 0..1"
+          },
+          "squeal": {
+            "type": "number",
+            "description": "scrape: resonance emphasis 0..1"
+          },
+          "q": {
+            "type": "number",
+            "description": "scrape: resonance sharpness"
+          },
+          "repeat": {
+            "type": "object",
+            "description": "Copies of this layer: {times:[...]} or {count, interval, jitter, gain_jitter (dB), pitch_jitter (semitones), accel, fade_db}",
+            "properties": {
+              "times": {
+                "type": "array"
+              },
+              "count": {
+                "type": "integer"
+              },
+              "interval": {
+                "type": "number"
+              },
+              "jitter": {
+                "type": "number"
+              },
+              "gain_jitter": {
+                "type": "number"
+              },
+              "pitch_jitter": {
+                "type": "number"
+              },
+              "accel": {
+                "type": "number"
+              },
+              "fade_db": {
+                "type": "number"
+              }
+            }
+          },
+          "drop": {
+            "type": "number"
+          },
+          "noise": {
+            "type": "number"
+          },
+          "rate": {
+            "type": "number"
           }
         }
       }
@@ -314,6 +466,10 @@
         },
         "peak": {
           "type": "number"
+        },
+        "ceiling": {
+          "type": "number",
+          "description": "Final limiter ceiling in dBFS (default -1); use -2...-4 for sharp transients that Ogg encoding overshoots"
         }
       }
     }

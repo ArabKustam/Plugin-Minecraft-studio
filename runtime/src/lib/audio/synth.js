@@ -20,8 +20,11 @@ import { paramFn, envelopeFn, oscillator, noiseGen, filterBuffer, applyEffects, 
 import { makeAudio } from './wav.js';
 import { integratedLoudness } from './analyze.js';
 import { decodeAny } from './ffmpeg.js';
+import { renderVoice, renderModal, renderScrape, MATERIALS, VOWELS } from './sfxmodels.js';
+import { rng } from './dsp.js';
 
-const LAYER_TYPES = ['osc', 'noise', 'fm', 'click', 'impact', 'sample', 'chirp'];
+const LAYER_TYPES = ['osc', 'noise', 'fm', 'click', 'impact', 'sample', 'chirp', 'voice', 'modal', 'scrape'];
+export { MATERIALS, VOWELS };
 
 function renderLayer(layer, sr, totalDur, index, baseDir) {
   const start = layer.start || 0;
@@ -104,6 +107,9 @@ function renderLayer(layer, sr, totalDur, index, baseDir) {
       for (let i = 0; i < n; i++) { const p = i * rate; const k = Math.floor(p); buf[i] = (k + 1 < src.length ? src[k] + (src[k + 1] - src[k]) * (p - k) : 0) * env(i / sr); }
       break;
     }
+    case 'voice': buf.set(renderVoice(layer, n, sr, env, seed)); break;
+    case 'modal': buf.set(renderModal(layer, n, sr, env, seed)); break;
+    case 'scrape': buf.set(renderScrape(layer, n, sr, env, seed)); break;
     default: throw new StudioError('E_SFX', `Unknown layer type ${layer.type}. Supported: ${LAYER_TYPES.join(', ')}`);
   }
   if (layer.filter) filterBuffer(buf, sr, layer.filter);
@@ -111,7 +117,7 @@ function renderLayer(layer, sr, totalDur, index, baseDir) {
   if (layer.effects) applyEffects(buf, sr, layer.effects);
   // normalise the layer to peak 1 before its gain so gains are predictable
   let pk = 0; for (let i = 0; i < n; i++) pk = Math.max(pk, Math.abs(buf[i]));
-  const g = dbToGain(layer.gain ?? -6) / (pk || 1);
+  const g = (layer.normalize_layer === false ? dbToGain(layer.gain ?? -6) : dbToGain(layer.gain ?? -6) / (pk || 1)) * (layer._vel ?? 1);
   for (let i = 0; i < n; i++) buf[i] *= g;
   return { buf, offset: Math.round(start * sr), pan: layer.pan || 0 };
 }
@@ -126,15 +132,43 @@ export function validateRecipe(recipe) {
   return problems;
 }
 
+/**
+ * Expand `repeat` on layers into copies: { times: [...] } or { count, interval, jitter (s),
+ * gain_jitter (dB), pitch_jitter (semitones), accel (interval multiplier per step) }.
+ * Each copy gets its own seed, so noise and modal hits differ (footsteps, claw taps, shards).
+ */
+export function expandRepeats(layers) {
+  const out = [];
+  layers.forEach((layer, li) => {
+    const rp = layer.repeat;
+    if (!rp) { out.push(layer); return; }
+    const r = rng((layer.seed ?? li + 1) * 7919);
+    let times = rp.times;
+    if (!times) {
+      times = [];
+      let t = layer.start || 0, iv = rp.interval ?? 0.5;
+      for (let k = 0; k < (rp.count ?? 4); k++) { times.push(t + (rp.jitter ?? 0) * r()); t += iv; iv *= rp.accel ?? 1; }
+    }
+    times.forEach((t, k) => {
+      const shift = 2 ** (((rp.pitch_jitter ?? 0) * r()) / 12);
+      const copy = { ...layer, repeat: undefined, start: Math.max(0, t), seed: (layer.seed ?? li + 1) * 131 + k, _vel: 10 ** (((rp.gain_jitter ?? 0) * r() - (rp.fade_db ?? 0) * (k / Math.max(1, times.length - 1))) / 20) };
+      for (const key of ['freq', 'pitch', 'carrier']) if (typeof copy[key] === 'number') copy[key] *= shift;
+      out.push(copy);
+    });
+  });
+  return out;
+}
+
 /** Render a recipe to an Audio object. */
 export function renderRecipe(recipe, { baseDir = null } = {}) {
   const problems = validateRecipe(recipe);
   if (problems.length) throw new StudioError('E_SFX', `Invalid SFX recipe: ${problems.join('; ')}`);
   const sr = recipe.sample_rate || 48000;
   const nch = recipe.channels || 1;
+  const layers = expandRepeats(recipe.layers);
   const tail = recipe.loop ? 0 : recipe.tail ?? 0;
   const out = makeAudio(sr, recipe.duration + tail + (recipe.loop ? (recipe.loop_crossfade ?? 0.25) : 0), nch);
-  recipe.layers.forEach((layer, i) => {
+  layers.forEach((layer, i) => {
     const { buf, offset, pan } = renderLayer(layer, sr, recipe.duration + (recipe.loop ? (recipe.loop_crossfade ?? 0.25) : 0), i, baseDir);
     for (let c = 0; c < nch; c++) {
       const g = nch === 1 ? 1 : c === 0 ? Math.cos(((pan + 1) * Math.PI) / 4) * Math.SQRT2 : Math.sin(((pan + 1) * Math.PI) / 4) * Math.SQRT2;
@@ -150,8 +184,8 @@ export function renderRecipe(recipe, { baseDir = null } = {}) {
   return normalizeAudio(out, recipe.normalize || { lufs: -16 });
 }
 
-/** Normalise to a loudness or peak target, then safety-limit at -1 dBFS. */
-export function normalizeAudio(audio, { lufs = null, peak = null } = {}) {
+/** Normalise to a loudness or peak target, then safety-limit at `ceiling` dBFS (default -1). */
+export function normalizeAudio(audio, { lufs = null, peak = null, ceiling = -1 } = {}) {
   let gain = 1;
   if (lufs != null) {
     const cur = integratedLoudness(audio);
@@ -161,7 +195,8 @@ export function normalizeAudio(audio, { lufs = null, peak = null } = {}) {
     if (pk > 0) gain = dbToGain(peak) / pk;
   }
   for (const c of audio.channels) for (let i = 0; i < c.length; i++) c[i] *= gain;
-  for (const c of audio.channels) limit(c, audio.sampleRate, { ceiling: -1 });
+  // ceiling: lower it (e.g. -3) for sharp transients that lossy Ogg encoding overshoots
+  for (const c of audio.channels) limit(c, audio.sampleRate, { ceiling });
   return audio;
 }
 

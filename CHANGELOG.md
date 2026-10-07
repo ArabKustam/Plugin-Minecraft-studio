@@ -4,6 +4,18 @@ All notable changes to Minecraft Studio are documented here. The format follows 
 
 ## [Unreleased]
 
+## [0.4.0] — 2026-10-07
+
+### Added
+- **Physical SFX models** in the recipe synthesizer:
+  - `voice`: formant voice with pitch contours, vowel morphs, size (child to monster), strain, growl, breath, jitter, vibrato and syllable pulses with per-syllable timing/pitch/accent variation (screams, roars, laughter, giggles, crying, panting);
+  - `modal`: struck resonant objects (metal, metal plate, pipe, glass, wood, stone, string) with any number of hits, shard/splinter size spread and strike brightness;
+  - `scrape`: stick-slip friction exciting a material (metal/wood/glass scrapes, creaky hinges).
+- `repeat` on any layer (times or count/interval with timing, gain and pitch jitter, acceleration, fade) for footsteps, taps, bubbles and debris.
+- Breakpoint parameters `{ points: [[t, v], ...] }` for pitch, filter and speed contours.
+- `normalize.ceiling` for headroom against Ogg overshoot on sharp transients.
+- Sound designer reference: which model to use for which sound, layering recipes, limits.
+
 ## [0.3.0] — 2026-10-07
 
 ### Added

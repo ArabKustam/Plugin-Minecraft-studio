@@ -18,6 +18,20 @@ Render: `audio_sfx_render {recipe|preset, output: "audio/sfx/x.wav", ogg_output:
 
 AI generation (`audio_sfx_generate_ai`, ElevenLabs) is for realistic foley the synth can't do (footsteps on gravel, creature breaths). Paid: ask first, `confirm_cost=true`, then process/trim locally rather than regenerating.
 
+## Physical models (use them before stacking raw oscillators)
+
+| Sound | Layer | Key fields |
+|---|---|---|
+| Creature growls, roars, screams; human screams, laughter, giggles, crying, panting | `voice` | `pitch` contour (`{points:[[t,Hz]...]}`), `vowel` morph, `size` (0.8 child ... 2 monster), `strain` (scream), `rough` (growl), `breath`, `jitter`, `vibrato`, `pulses` {rate, duty, jitter, pitch_jitter, accent} for "ha-ha", sobs, panting |
+| Doors, pipes, plates, bells, glass, wood, piano strings | `modal` | `material` (metal, metal_plate, pipe, glass, wood, stone, string), `freq`, `decay`, `hits` (times, or {count, start, end, distribution} for shatters/rattles/bounces), `freq_spread` (shards), `brightness` |
+| Scrapes (metal, wood, glass), creaky hinges, nails on glass | `scrape` | `material`, `freq`, `speed` (slips/s; low = creak, high = screech), `pressure`, `grit`, `squeal`, `q` |
+| Footsteps, claw taps, bubbles, debris, drips | any layer + `repeat` | {times} or {count, interval, jitter, gain_jitter, pitch_jitter, accel, fade_db}; every copy gets its own seed |
+
+- Combine: a monster scream = 3 `voice` layers (main, sub-octave roar, detuned upper) + breath noise + distortion; a falling piano = whoosh + impact + a real piano cluster rendered with the SoundFont sampler (`sample` layer) + `modal` wood splinters + `modal` string ring.
+- Interjections need variation: `pulses.jitter`, `pitch_jitter` and `accent` keep laughter and sobs from sounding like a metronome.
+- Sharp transients (cracks, glass, laughter attacks) overshoot after Ogg encoding: set `normalize.ceiling` to -2...-4 and re-run `audio_audit` on the .ogg.
+- Synthesis has limits: voices are formant-synthesised, not recorded. For close-up realistic human performances suggest recorded or ElevenLabs sources (`audio_sfx_generate_ai`, paid, with consent).
+
 ## Minecraft requirements
 
 - **Ogg Vorbis** only. **Mono** for positional sounds (stereo does not attenuate with distance). Music/UI may be stereo.

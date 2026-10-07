@@ -24,6 +24,22 @@ export function paramFn(p, dur) {
       return curve === 'exp' && from > 0 && to > 0 ? from * (to / from) ** u : curve === 'ease' ? from + (to - from) * (u * u * (3 - 2 * u)) : from + (to - from) * u;
     };
   }
+  if (p && typeof p === 'object' && Array.isArray(p.points) && p.points.length) {
+    // breakpoints [[time, value], ...]; holds the first/last value outside the range
+    const pts = [...p.points].sort((a, b) => a[0] - b[0]);
+    const curve = p.curve || 'linear';
+    return (t) => {
+      if (t <= pts[0][0]) return pts[0][1];
+      for (let k = 1; k < pts.length; k++) {
+        if (t <= pts[k][0]) {
+          const [t0, v0] = pts[k - 1], [t1, v1] = pts[k];
+          const u = (t - t0) / Math.max(1e-6, t1 - t0);
+          return curve === 'exp' && v0 > 0 && v1 > 0 ? v0 * (v1 / v0) ** u : curve === 'ease' ? v0 + (v1 - v0) * (u * u * (3 - 2 * u)) : v0 + (v1 - v0) * u;
+        }
+      }
+      return pts[pts.length - 1][1];
+    };
+  }
   if (p && typeof p === 'object' && 'center' in p) {
     const { center, depth = 0, rate = 1, shape = 'sine' } = p;
     return (t) => center + depth * (shape === 'triangle' ? 1 - 4 * Math.abs(((t * rate) % 1) - 0.5) : shape === 'square' ? (Math.sin(2 * Math.PI * rate * t) >= 0 ? 1 : -1) : Math.sin(2 * Math.PI * rate * t));
