@@ -15,7 +15,7 @@
 //     "head": { "material": "fur", "faces": { "north": { "x": 1, "y": 2, "palette": { "e": "#111111", "w": "#ffffff" }, "rows": ["we..ew"] } } }
 //   }
 // }
-// Ramps go dark → light (2–5 colours). Patterns: fur, shaggy, plates, feathers, stripes, scales, none.
+// Ramps go dark → light (2–5 colours). Patterns: fur, shaggy, plates, feathers, stripes, scales, spots, none.
 // Face overlays use "." / " " for "leave as is"; coordinates are face-local pixels.
 import { StudioError } from '../core/fsutil.js';
 import { createImage, setPx, hexToRgba } from './image.js';
@@ -88,6 +88,7 @@ function patternShift(p, face, fx, fy, fw, fh, r) {
     case 'plates': { const s = p.size ?? 4; return fx % s === s - 1 || fy % s === s - 1 ? -1 : fx % s === 0 && fy % s === 0 ? 1 : 0; }
     case 'feathers': { const s = p.size ?? 3; return (fy % s === s - 1) && ((fx + Math.floor(fy / s)) % 2 === 0) ? -1 : (fy % s === 0 && r() < d) ? 1 : 0; }
     case 'stripes': { const s = p.size ?? 3; const v = p.vertical ? fx : fy; return Math.floor(v / s) % 2 === 1 ? -1 : 0; }
+    case 'spots': { const s = p.size ?? 3; const hx = ((fx * 73856093) ^ (fy * 19349663) ^ ((p.seed ?? 1) * 83492791)) >>> 0; return (fx % s === 1 && fy % s === 1 && hx % 3 !== 0) ? 2 : 0; }
     case 'scales': { const s = p.size ?? 2; return ((fx + (Math.floor(fy / s) % 2) * s) % (s * 2) === 0) ? -1 : 0; }
     default: throw new StudioError('E_PAINT', `Unknown pattern ${p.type}`);
   }

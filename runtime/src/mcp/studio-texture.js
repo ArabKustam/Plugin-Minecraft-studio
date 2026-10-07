@@ -9,6 +9,7 @@ import { analyzeImage, buildStyleProfile, compareToProfile, textureCategory } fr
 import { validateTexture, checkTiling, quantizeToPalette, conceptToPixelArt, applyOps, previewSheet, variantStrip } from '../lib/texture/ops.js';
 import { readJson, writeJson, walk, StudioError, slugify, exists } from '../lib/core/fsutil.js';
 import { packBoxUv, paintAtlas, uvReport } from '../lib/texture/uvpaint.js';
+import { shadeItem, itemStats } from '../lib/texture/itempaint.js';
 import { renderTurnaround } from '../lib/model/render.js';
 import { scaleNearest } from '../lib/texture/image.js';
 
@@ -238,6 +239,30 @@ tool(server, 'texture_paint_uv', {
   writePng(turnPreview, turn.image);
   const reg = registerOutput(studio, a.asset, { type: 'texture', files, source: { provider: 'uv-painter', method: 'texture_paint_uv', source_files: [a.paint_path, modelOut].filter(Boolean), parameters: { materials: materials_used } }, preview: studio.rel(atlasPreview), metadata: { width: image.width, height: image.height, ...uvReport(model) } });
   return { output: a.output, model_output: modelOut || null, texture_size: model.texture_size, uv: uvReport(model), materials_used, previews: [studio.rel(atlasPreview), studio.rel(turnPreview)], asset: reg, _images: [atlasPreview, turnPreview] };
+});
+
+tool(server, 'texture_shade_item', {
+  title: 'Shade item from silhouette', capability: 'write',
+  description: 'Turn a part-labelled 16×16 silhouette (blade, edge, guard, grip, gem, peel…) into finished Minecraft-style item pixel art: consistent top-left lighting, rim light/shadow, specular corners, material styles (metal, wood, leather, cloth, organic, glow, gem, bone), coloured outlines, optional detail pixels and animation frames (+ .mcmeta). Saves the spec as source, returns a review sheet image.',
+  input: { spec: z.record(z.string(), z.any()).optional(), spec_path: z.string().optional(), output: z.string(), asset: assetInput },
+}, async (a, { studio }) => {
+  requireOneOf(a, ['spec', 'spec_path']);
+  const spec = a.spec || readJson(studio.abs(a.spec_path));
+  const r = shadeItem(spec);
+  writePng(studio.abs(a.output), r.image);
+  const files = [a.output];
+  if (r.mcmeta) { fs.writeFileSync(studio.abs(`${a.output}.mcmeta`), `${JSON.stringify(r.mcmeta, null, 2)}
+`); files.push(`${a.output}.mcmeta`); }
+  let src = a.spec_path || null;
+  if (a.asset && !src) { const sf = studio.p('sources', a.asset.id, 'item.json'); writeJson(sf, spec); src = studio.rel(sf); }
+  if (a.asset && src) files.push({ path: src, role: 'source' });
+  const validation = validateTexture(r.image, { mcmeta: r.mcmeta, purpose: 'item' });
+  const sheet = previewSheet(r.image, { tile: false });
+  const pp = studio.p('previews', `${slugify(a.asset?.id || a.output)}.png`);
+  writePng(pp, sheet.image);
+  const stats = itemStats(r.image);
+  const reg = registerOutput(studio, a.asset, { type: 'texture', files, source: { provider: 'item-shader', method: 'texture_shade_item', source_files: src ? [src] : [] }, preview: studio.rel(pp), metadata: { width: r.image.width, height: r.image.width, frames: r.frames.length, ...stats } });
+  return { files: files.map((f) => (typeof f === 'string' ? f : f.path)), frames: r.frames.length, stats, validation, preview: { file: studio.rel(pp), layout: sheet.layout }, asset: reg, _images: [pp] };
 });
 
 await start(server);

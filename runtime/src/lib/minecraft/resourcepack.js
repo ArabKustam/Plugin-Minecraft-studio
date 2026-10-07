@@ -86,6 +86,20 @@ export function validateResourcePack(packDir, { minecraftVersion = null } = {}) 
       if (!has(loc.ns, 'models', loc.path, '.json')) add('error', 'missing-model', f, `item definition references missing model ${ref}`);
     }
   }
+  // equipment assets (1.21.4+): layers → textures/entity/equipment/<layer>/<texture>.png
+  for (const f of files.filter((x) => /^assets\/[^/]+\/equipment\/.+\.json$/.test(x))) {
+    let eq;
+    try { eq = readJson(path.join(packDir, f)); } catch (e) { add('error', 'json', f, e.message); continue; }
+    if (!eq.layers || typeof eq.layers !== 'object') { add('error', 'equipment', f, 'missing "layers" object'); continue; }
+    for (const [layer, list] of Object.entries(eq.layers)) {
+      for (const l of [].concat(list)) {
+        const loc = parseLocation(l.texture || '', 'minecraft');
+        const tex = `assets/${loc.ns}/textures/entity/equipment/${layer}/${loc.path}.png`;
+        used.textures.add(`${loc.ns}:entity/equipment/${layer}/${loc.path}`);
+        if (loc.ns !== 'minecraft' && !fileSet.has(tex)) add('error', 'missing-equipment-texture', f, `${layer} → ${tex} not found`);
+      }
+    }
+  }
   // blockstates
   for (const f of files.filter((x) => /^assets\/[^/]+\/blockstates\/.+\.json$/.test(x))) {
     let bs;

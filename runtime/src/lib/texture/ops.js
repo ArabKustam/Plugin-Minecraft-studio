@@ -12,7 +12,8 @@ export function validateTexture(img, { expectedSize = null, animated = null, mcm
   const add = (name, status, detail) => checks.push({ name, status, detail });
   const { width: w, height: h } = img;
   add('power-of-two width', isPowerOfTwo(w) ? 'pass' : 'warn', `${w}px`);
-  const isStrip = h > w && h % w === 0;
+  // vertical strips are animations only for block/item/particle textures; entity & GUI atlases are often non-square
+  const isStrip = h > w && h % w === 0 && ['block', 'item', 'particle'].includes(purpose);
   if (isStrip) {
     add('animation strip', mcmeta ? 'pass' : 'fail', mcmeta ? `${h / w} frames with .mcmeta` : `${h / w} square frames but no .mcmeta file — Minecraft will show a squashed texture`);
   } else if (purpose === 'block' || purpose === 'item') {

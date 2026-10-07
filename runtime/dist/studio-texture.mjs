@@ -413,7 +413,7 @@ function validateTexture(img, { expectedSize = null, animated = null, mcmeta = n
   const add = (name, status, detail) => checks.push({ name, status, detail });
   const { width: w, height: h } = img;
   add("power-of-two width", isPowerOfTwo(w) ? "pass" : "warn", `${w}px`);
-  const isStrip = h > w && h % w === 0;
+  const isStrip = h > w && h % w === 0 && ["block", "item", "particle"].includes(purpose);
   if (isStrip) {
     add("animation strip", mcmeta ? "pass" : "fail", mcmeta ? `${h / w} frames with .mcmeta` : `${h / w} square frames but no .mcmeta file \u2014 Minecraft will show a squashed texture`);
   } else if (purpose === "block" || purpose === "item") {
@@ -817,6 +817,11 @@ function patternShift(p, face, fx, fy, fw, fh, r) {
       const v = p.vertical ? fx : fy;
       return Math.floor(v / s) % 2 === 1 ? -1 : 0;
     }
+    case "spots": {
+      const s = p.size ?? 3;
+      const hx = (fx * 73856093 ^ fy * 19349663 ^ (p.seed ?? 1) * 83492791) >>> 0;
+      return fx % s === 1 && fy % s === 1 && hx % 3 !== 0 ? 2 : 0;
+    }
     case "scales": {
       const s = p.size ?? 2;
       return (fx + Math.floor(fy / s) % 2 * s) % (s * 2) === 0 ? -1 : 0;
@@ -881,6 +886,115 @@ function uvReport(src) {
   let area = 0;
   for (const b of model.bones) for (const c of b.cubes) for (const r of Object.values(faceRects(c))) area += r.w * r.h;
   return { texture_size: [tw, th], cubes: model.bones.reduce((n, b) => n + b.cubes.length, 0), coverage: Number((area / (tw * th)).toFixed(3)) };
+}
+
+// src/lib/texture/itempaint.js
+var STYLES = ["metal", "wood", "cloth", "organic", "glow", "leather", "flat", "gem", "bone"];
+function shadeFrame(spec, rows, details) {
+  const [w, h] = spec.size || [16, 16];
+  if (rows.length !== h || rows.some((r) => [...r].length !== w)) throw new StudioError("E_ITEM", `rows must be ${h} strings of ${w} characters`);
+  const grid = rows.map((r) => [...r]);
+  const partAt = (x, y) => x < 0 || y < 0 || x >= w || y >= h ? "." : grid[y][x];
+  const mats = {};
+  for (const [ch, name] of Object.entries(spec.parts || {})) {
+    const m = spec.materials?.[name];
+    if (!m) throw new StudioError("E_ITEM", `part "${ch}" uses unknown material "${name}"`);
+    if (m.style && !STYLES.includes(m.style)) throw new StudioError("E_ITEM", `material ${name}: unknown style ${m.style} (${STYLES.join(", ")})`);
+    mats[ch] = { name, ramp: m.ramp.map(hexToRgba), style: m.style || "flat", outline: typeof m.outline === "string" ? hexToRgba(m.outline) : null, noOutline: m.outline === false };
+  }
+  const bbox = {};
+  grid.forEach((row, y) => row.forEach((ch, x) => {
+    if (ch === ".") return;
+    if (!mats[ch]) throw new StudioError("E_ITEM", `row ${y}: character "${ch}" has no part/material`);
+    const b = bbox[ch] || (bbox[ch] = { x0: x, y0: y, x1: x, y1: y });
+    b.x0 = Math.min(b.x0, x);
+    b.y0 = Math.min(b.y0, y);
+    b.x1 = Math.max(b.x1, x);
+    b.y1 = Math.max(b.y1, y);
+  }));
+  const img = createImage(w, h, [0, 0, 0, 0]);
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+    const ch = grid[y][x];
+    if (ch === ".") continue;
+    const m = mats[ch], n = m.ramp.length, b = bbox[ch];
+    const out = (dx, dy) => partAt(x + dx, y + dy) !== ch;
+    const U = out(0, -1), L2 = out(-1, 0), D = out(0, 1), R = out(1, 0);
+    const base = Math.floor((n - 1) / 2);
+    let idx;
+    const t = (x - b.x0 + (y - b.y0)) / Math.max(1, b.x1 - b.x0 + (b.y1 - b.y0));
+    switch (m.style) {
+      case "glow":
+      case "gem": {
+        const cx = (b.x0 + b.x1) / 2 - 0.3, cy = (b.y0 + b.y1) / 2 - 0.3;
+        const r = Math.max(1, Math.max(b.x1 - b.x0, b.y1 - b.y0) / 2 + 0.5);
+        idx = Math.round((n - 1) * (1 - Math.min(1, Math.hypot(x - cx, y - cy) / r)));
+        if (m.style === "gem" && U && L2) idx = n - 1;
+        if (m.style === "gem" && D && R) idx = Math.max(0, idx - 1);
+        break;
+      }
+      case "organic": {
+        const cx = b.x0 + (b.x1 - b.x0) * 0.32, cy = b.y0 + (b.y1 - b.y0) * 0.3;
+        const r = Math.max(1, Math.hypot(b.x1 - b.x0, b.y1 - b.y0) * 0.75);
+        idx = Math.round((n - 1) * (1 - Math.min(1, Math.hypot(x - cx, y - cy) / r)));
+        if (D || R) idx = Math.max(0, Math.min(idx, base) - (D && R ? 1 : 0));
+        break;
+      }
+      default: {
+        const light = (U ? 1 : 0) + (L2 ? 1 : 0) - (D ? 1 : 0) - (R ? 1 : 0);
+        idx = base + Math.max(-1, Math.min(1, light));
+        if (!U && !L2 && !D && !R) idx = base + (t < 0.3 ? 1 : t > 0.72 ? -1 : 0);
+        if (U && L2 && !D && !R && m.style !== "cloth") idx = n - 1;
+        if (m.style === "metal" && !U && !L2 && !D && !R && Math.abs(x - b.x0 - (y - b.y0) * ((b.x1 - b.x0) / Math.max(1, b.y1 - b.y0))) < 0.6) idx = Math.min(n - 1, idx + 1);
+        if (m.style === "wood" && !U && !D && (x * 3 + y * 5) % 7 === 0) idx = Math.max(0, idx - 1);
+        if (m.style === "leather" && (x + y * 3) % 5 === 0) idx = Math.max(0, idx - 1);
+        if (m.style === "bone" && D) idx = Math.max(0, idx - 1);
+        if (m.style === "cloth") idx = Math.max(0, Math.min(n - 2, idx));
+      }
+    }
+    setPx(img, x, y, m.ramp[Math.max(0, Math.min(n - 1, idx))]);
+  }
+  if (spec.outline !== "none") {
+    const fixed = spec.outline && spec.outline !== "auto" ? hexToRgba(spec.outline) : null;
+    const outlinePx = [];
+    for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+      if (grid[y][x] !== ".") continue;
+      const n4 = [[0, -1], [-1, 0], [1, 0], [0, 1]].map(([dx, dy]) => partAt(x + dx, y + dy)).filter((c2) => c2 !== "." && !mats[c2].noOutline);
+      if (!n4.length) continue;
+      const m = mats[n4[0]];
+      const c = fixed || m.outline || m.ramp[0].map((v, i) => i < 3 ? Math.round(v * 0.55) : 255);
+      outlinePx.push([x, y, c]);
+    }
+    for (const [x, y, c] of outlinePx) setPx(img, x, y, c);
+  }
+  if (details?.rows) {
+    const pal = Object.fromEntries(Object.entries(details.palette || {}).map(([k, v]) => [k, v === "transparent" ? [0, 0, 0, 0] : hexToRgba(v)]));
+    details.rows.forEach((row, y) => [...row].forEach((c, x) => {
+      if (c === "." || c === " ") return;
+      if (!pal[c]) throw new StudioError("E_ITEM", `details: "${c}" not in palette`);
+      setPx(img, (details.x || 0) + x, (details.y || 0) + y, pal[c]);
+    }));
+  }
+  return img;
+}
+function shadeItem(spec) {
+  const frameSpecs = spec.frames?.length ? spec.frames : [{ rows: spec.rows, details: spec.details }];
+  const frames = frameSpecs.map((f) => shadeFrame(spec, f.rows || spec.rows, f.details ?? spec.details));
+  const [w, h] = spec.size || [16, 16];
+  const strip = createImage(w, h * frames.length);
+  frames.forEach((f, i) => blit(strip, f, 0, i * h));
+  const mcmeta = frames.length > 1 ? { animation: { frametime: spec.frametime || 2, interpolate: !!spec.interpolate } } : null;
+  return { image: strip, frames, mcmeta };
+}
+function itemStats(img) {
+  let filled = 0;
+  const colors = /* @__PURE__ */ new Set();
+  for (let y = 0; y < Math.min(img.height, img.width); y++) for (let x = 0; x < img.width; x++) {
+    const c = getPx(img, x, y);
+    if (c[3] < 128) continue;
+    filled++;
+    colors.add(c.slice(0, 3).join());
+  }
+  return { filled_px: filled, coverage: Number((filled / (img.width * Math.min(img.height, img.width))).toFixed(3)), colors: colors.size };
 }
 
 // src/mcp/studio-texture.js
@@ -1127,5 +1241,36 @@ tool(server, "texture_paint_uv", {
   writePng(turnPreview, turn.image);
   const reg = registerOutput(studio, a.asset, { type: "texture", files, source: { provider: "uv-painter", method: "texture_paint_uv", source_files: [a.paint_path, modelOut].filter(Boolean), parameters: { materials: materials_used } }, preview: studio.rel(atlasPreview), metadata: { width: image.width, height: image.height, ...uvReport(model) } });
   return { output: a.output, model_output: modelOut || null, texture_size: model.texture_size, uv: uvReport(model), materials_used, previews: [studio.rel(atlasPreview), studio.rel(turnPreview)], asset: reg, _images: [atlasPreview, turnPreview] };
+});
+tool(server, "texture_shade_item", {
+  title: "Shade item from silhouette",
+  capability: "write",
+  description: "Turn a part-labelled 16\xD716 silhouette (blade, edge, guard, grip, gem, peel\u2026) into finished Minecraft-style item pixel art: consistent top-left lighting, rim light/shadow, specular corners, material styles (metal, wood, leather, cloth, organic, glow, gem, bone), coloured outlines, optional detail pixels and animation frames (+ .mcmeta). Saves the spec as source, returns a review sheet image.",
+  input: { spec: external_exports.record(external_exports.string(), external_exports.any()).optional(), spec_path: external_exports.string().optional(), output: external_exports.string(), asset: assetInput }
+}, async (a, { studio }) => {
+  requireOneOf(a, ["spec", "spec_path"]);
+  const spec = a.spec || readJson(studio.abs(a.spec_path));
+  const r = shadeItem(spec);
+  writePng(studio.abs(a.output), r.image);
+  const files = [a.output];
+  if (r.mcmeta) {
+    fs2.writeFileSync(studio.abs(`${a.output}.mcmeta`), `${JSON.stringify(r.mcmeta, null, 2)}
+`);
+    files.push(`${a.output}.mcmeta`);
+  }
+  let src = a.spec_path || null;
+  if (a.asset && !src) {
+    const sf = studio.p("sources", a.asset.id, "item.json");
+    writeJson(sf, spec);
+    src = studio.rel(sf);
+  }
+  if (a.asset && src) files.push({ path: src, role: "source" });
+  const validation = validateTexture(r.image, { mcmeta: r.mcmeta, purpose: "item" });
+  const sheet = previewSheet(r.image, { tile: false });
+  const pp = studio.p("previews", `${slugify(a.asset?.id || a.output)}.png`);
+  writePng(pp, sheet.image);
+  const stats = itemStats(r.image);
+  const reg = registerOutput(studio, a.asset, { type: "texture", files, source: { provider: "item-shader", method: "texture_shade_item", source_files: src ? [src] : [] }, preview: studio.rel(pp), metadata: { width: r.image.width, height: r.image.width, frames: r.frames.length, ...stats } });
+  return { files: files.map((f) => typeof f === "string" ? f : f.path), frames: r.frames.length, stats, validation, preview: { file: studio.rel(pp), layout: sheet.layout }, asset: reg, _images: [pp] };
 });
 await start(server);
