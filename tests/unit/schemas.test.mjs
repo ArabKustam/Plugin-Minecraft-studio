@@ -25,6 +25,14 @@ test('pixel specs, models, recipes, scores, voice profile conform', () => {
   assert.ok(n >= 25, `checked ${n} sources`);
 });
 
+test('creature sources conform (models, paint specs, recipes)', () => {
+  const art = path.join(PLUGIN_ROOT, 'examples', 'creatures', 'art');
+  const map = [['model', /\.model\.json$/], ['paint-spec', /\.paint\.json$/], ['sfx-recipe', /\.recipe\.json$/]];
+  let n = 0;
+  for (const [s, re] of map) { const v = schema(s); for (const f of files(art, re)) { check(v, f); n++; } }
+  assert.equal(n, 6 + 6 + 18);
+});
+
 test('generated registry state conforms (when the demo has been produced)', (t) => {
   const st = path.join(DEMO, '.minecraft-studio');
   if (!fs.existsSync(st)) return t.skip('run examples/industrial-reactor/studio/produce.mjs first');

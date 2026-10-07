@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ArabKustam/Plugin-Minecraft-studio/main/schemas/paint-spec.schema.json",
+  "title": "Minecraft Studio UV paint spec (texture_paint_uv)",
+  "type": "object",
+  "required": [
+    "materials"
+  ],
+  "properties": {
+    "texture_size": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "default_material": {
+      "type": "string"
+    },
+    "materials": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "ramp"
+        ],
+        "properties": {
+          "ramp": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 6,
+            "items": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$"
+            }
+          },
+          "pattern": {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "enum": [
+                  "none",
+                  "fur",
+                  "shaggy",
+                  "plates",
+                  "feathers",
+                  "stripes",
+                  "scales"
+                ]
+              },
+              "density": {
+                "type": "number"
+              },
+              "size": {
+                "type": "integer"
+              },
+              "seed": {
+                "type": "integer"
+              },
+              "vertical": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    "bones": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      }
+    },
+    "cubes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "material": {
+            "type": "string"
+          },
+          "face_materials": {
+            "type": "object"
+          },
+          "faces": {
+            "type": "object",
+            "propertyNames": {
+              "enum": [
+                "north",
+                "south",
+                "east",
+                "west",
+                "up",
+                "down"
+              ]
+            },
+            "additionalProperties": {
+              "type": "object",
+              "required": [
+                "rows"
+              ],
+              "properties": {
+                "x": {
+                  "type": "integer"
+                },
+                "y": {
+                  "type": "integer"
+                },
+                "palette": {
+                  "type": "object"
+                },
+                "rows": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
