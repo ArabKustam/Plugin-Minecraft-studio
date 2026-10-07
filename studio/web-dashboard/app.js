@@ -197,6 +197,8 @@ function startPolling() {
 function stopPolling() { clearInterval(pollTimer); pollTimer = null; }
 
 function connectEvents() {
+  // ?live=0 renders a static snapshot (screenshots, printing): no event stream, no polling
+  if (new URLSearchParams(location.search).get('live') === '0') return;
   if (!('EventSource' in window)) { startPolling(); return; }
   let errors = 0;
   const es = new EventSource('/api/events');
