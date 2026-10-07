@@ -63,6 +63,24 @@ test('the Creature Pack example add-on validates (when produced)', (t) => {
   if (!fs.existsSync(path.join(rp, 'entity'))) return t.skip('run examples/creatures/studio/produce.mjs first');
   const r = validateBedrockAddon(rp, path.join(PLUGIN_ROOT, 'examples/creatures/bedrock/BP'));
   assert.equal(r.errors, 0, JSON.stringify(r.issues.filter((i) => i.severity === 'error')));
-  assert.equal(r.counts.client_entities, 6);
-  assert.equal(r.counts.behavior_entities, 6);
+  assert.equal(r.counts.client_entities, 7);
+  assert.equal(r.counts.behavior_entities, 7);
+});
+
+test('item shader: lighting, outline, outline opt-out and animation frames', async () => {
+  const { shadeItem, itemStats } = await import('../../runtime/src/lib/texture/itempaint.js');
+  const rows = Array.from({ length: 16 }, (_, y) => (y >= 4 && y <= 11 ? '....' + 'mmmmmmmm' + '....' : '.'.repeat(16)));
+  const spec = { size: [16, 16], materials: { steel: { ramp: ['#202020', '#606060', '#a0a0a0', '#e0e0e0'], style: 'metal' } }, parts: { m: 'steel' }, rows };
+  const { image, mcmeta } = shadeItem(spec);
+  assert.equal(mcmeta, null);
+  assert.ok(getPx(image, 4, 4)[0] > getPx(image, 11, 11)[0], 'top-left corner lighter than bottom-right');
+  assert.equal(getPx(image, 3, 6)[3], 255, 'outline drawn left of the silhouette');
+  assert.ok(getPx(image, 3, 6)[0] < 0x20, 'outline darker than the darkest ramp colour');
+  const noOutline = shadeItem({ ...spec, materials: { steel: { ...spec.materials.steel, outline: false } } }).image;
+  assert.equal(getPx(noOutline, 3, 6)[3], 0, 'material outline opt-out');
+  const anim = shadeItem({ ...spec, frames: [{ rows }, { rows }], frametime: 4 });
+  assert.equal(anim.image.height, 32);
+  assert.equal(anim.mcmeta.animation.frametime, 4);
+  assert.equal(itemStats(image).filled_px, 8 * 8 + 32);
+  assert.throws(() => shadeItem({ ...spec, rows: rows.map((r) => r.replace('m', 'z')) }), /no part\/material/);
 });

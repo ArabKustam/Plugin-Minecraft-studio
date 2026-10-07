@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ArabKustam/Plugin-Minecraft-studio/main/schemas/item-spec.schema.json",
+  "title": "Minecraft Studio item spec (texture_shade_item)",
+  "type": "object",
+  "required": [
+    "materials",
+    "parts",
+    "rows"
+  ],
+  "properties": {
+    "size": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "outline": {
+      "type": "string"
+    },
+    "materials": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "ramp"
+        ],
+        "properties": {
+          "ramp": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 6,
+            "items": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$"
+            }
+          },
+          "style": {
+            "enum": [
+              "metal",
+              "wood",
+              "cloth",
+              "organic",
+              "glow",
+              "leather",
+              "flat",
+              "gem",
+              "bone"
+            ]
+          },
+          "outline": {
+            "type": [
+              "string",
+              "boolean"
+            ]
+          }
+        }
+      }
+    },
+    "parts": {
+      "type": "object",
+      "propertyNames": {
+        "minLength": 1,
+        "maxLength": 1
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "details": {
+      "type": "object",
+      "properties": {
+        "palette": {
+          "type": "object"
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "x": {
+          "type": "integer"
+        },
+        "y": {
+          "type": "integer"
+        }
+      }
+    },
+    "frames": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rows": {
+            "type": "array"
+          },
+          "details": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "frametime": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}

@@ -30,7 +30,15 @@ test('creature sources conform (models, paint specs, recipes)', () => {
   const map = [['model', /\.model\.json$/], ['paint-spec', /\.paint\.json$/], ['sfx-recipe', /\.recipe\.json$/]];
   let n = 0;
   for (const [s, re] of map) { const v = schema(s); for (const f of files(art, re)) { check(v, f); n++; } }
-  assert.equal(n, 6 + 6 + 18);
+  assert.equal(n, 7 + 7 + 21);
+});
+
+test('armory sources conform (item specs, equipment paint specs, mannequin models)', () => {
+  const art = path.join(PLUGIN_ROOT, 'examples', 'armory', 'art');
+  const map = [['item-spec', /\.item\.json$/], ['paint-spec', /\.paint\.json$/], ['model', /\.model\.json$/]];
+  let n = 0;
+  for (const [s, re] of map) { const v = schema(s); for (const f of files(art, re)) { check(v, f); n++; } }
+  assert.ok(n >= 32 + 5 + 5, `checked ${n}`);
 });
 
 test('generated registry state conforms (when the demo has been produced)', (t) => {
