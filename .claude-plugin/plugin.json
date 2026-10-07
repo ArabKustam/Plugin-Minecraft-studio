@@ -1,0 +1,22 @@
+{
+  "name": "minecraft-studio",
+  "version": "0.1.0",
+  "description": "Turns Claude into a Minecraft game-development studio: project director, specialist agents, textures, models, animation, SFX, adaptive music, voice, QA, asset registry and a local Studio Dashboard.",
+  "author": {
+    "name": "ArabKustam",
+    "url": "https://github.com/ArabKustam"
+  },
+  "homepage": "https://github.com/ArabKustam/minecraft-studio#readme",
+  "repository": "https://github.com/ArabKustam/minecraft-studio",
+  "license": "MIT",
+  "keywords": ["minecraft", "paper", "fabric", "resource-pack", "pixel-art", "blockbench", "game-audio", "adaptive-music", "elevenlabs", "game-development"],
+  "userConfig": {
+    "elevenlabs_api_key": {
+      "type": "string",
+      "title": "ElevenLabs API key (optional)",
+      "description": "Enables production voice lines, AI sound effects and music generation. Stored in secure storage; never written to your project. Leave empty to use local providers.",
+      "sensitive": true,
+      "required": false
+    }
+  }
+}

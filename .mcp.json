@@ -1,0 +1,33 @@
+{
+  "mcpServers": {
+    "studio-core": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/runtime/dist/studio-core.mjs"],
+      "env": { "MINECRAFT_STUDIO_PROJECT": "${CLAUDE_PROJECT_DIR}", "MINECRAFT_STUDIO_CAPABILITIES": "read,write,execute" }
+    },
+    "studio-texture": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/runtime/dist/studio-texture.mjs"],
+      "env": { "MINECRAFT_STUDIO_PROJECT": "${CLAUDE_PROJECT_DIR}", "MINECRAFT_STUDIO_CAPABILITIES": "read,write" }
+    },
+    "studio-model": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/runtime/dist/studio-model.mjs"],
+      "env": { "MINECRAFT_STUDIO_PROJECT": "${CLAUDE_PROJECT_DIR}", "MINECRAFT_STUDIO_CAPABILITIES": "read,write" }
+    },
+    "studio-audio": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/runtime/dist/studio-audio.mjs"],
+      "env": {
+        "MINECRAFT_STUDIO_PROJECT": "${CLAUDE_PROJECT_DIR}",
+        "MINECRAFT_STUDIO_CAPABILITIES": "read,write,publish",
+        "ELEVENLABS_API_KEY": "${user_config.elevenlabs_api_key}"
+      }
+    },
+    "studio-minecraft": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/runtime/dist/studio-minecraft.mjs"],
+      "env": { "MINECRAFT_STUDIO_PROJECT": "${CLAUDE_PROJECT_DIR}", "MINECRAFT_STUDIO_CAPABILITIES": "read,write,execute" }
+    }
+  }
+}

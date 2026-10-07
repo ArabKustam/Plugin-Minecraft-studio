@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ArabKustam/minecraft-studio/main/schemas/asset.schema.json",
+  "title": "Minecraft Studio asset record",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "status",
+    "version",
+    "files"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_.-]{0,95}$"
+    },
+    "type": {
+      "enum": [
+        "texture",
+        "model",
+        "animation",
+        "sfx",
+        "music",
+        "voice",
+        "particle",
+        "code",
+        "configuration",
+        "guide",
+        "reference",
+        "tool",
+        "timeline"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "idea",
+        "draft",
+        "review",
+        "changes-requested",
+        "approved",
+        "integrated",
+        "deprecated"
+      ]
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          },
+          "bytes": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "object"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "modified_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "created_by": {
+      "type": "string"
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "minecraft_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preview": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "qa_status": {
+      "enum": [
+        "pending",
+        "passed",
+        "failed",
+        "warnings",
+        "n/a"
+      ]
+    },
+    "qa_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "at",
+          "by",
+          "version",
+          "verdict"
+        ],
+        "properties": {
+          "verdict": {
+            "enum": [
+              "pass",
+              "fail",
+              "warn"
+            ]
+          },
+          "checks": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    "versions": {
+      "type": "array"
+    },
+    "metadata": {
+      "type": "object"
+    }
+  }
+}

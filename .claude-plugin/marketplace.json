@@ -1,0 +1,12 @@
+{
+  "name": "minecraft-studio",
+  "owner": { "name": "ArabKustam" },
+  "metadata": { "description": "Minecraft Studio — an AI production studio for Minecraft powered by Claude." },
+  "plugins": [
+    {
+      "name": "minecraft-studio",
+      "source": "./",
+      "description": "AI production studio for Minecraft: agents, textures, models, animation, audio, music, voice, QA, asset registry and dashboard."
+    }
+  ]
+}

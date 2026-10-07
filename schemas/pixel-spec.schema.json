@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ArabKustam/minecraft-studio/main/schemas/pixel-spec.schema.json",
+  "title": "Minecraft Studio pixel spec",
+  "description": "Editable source of a pixel-art texture.",
+  "type": "object",
+  "required": [
+    "palette"
+  ],
+  "properties": {
+    "size": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 512
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "palette": {
+      "type": "object",
+      "propertyNames": {
+        "minLength": 1,
+        "maxLength": 1
+      },
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^(transparent|#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8}))$"
+      }
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "frames": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rows": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "patches": {
+            "$ref": "#/$defs/patches"
+          }
+        }
+      }
+    },
+    "frametime": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "interpolate": {
+      "type": "boolean"
+    },
+    "frame_order": {
+      "type": "array"
+    },
+    "base": {
+      "type": "string",
+      "description": "Project-relative PNG to start from"
+    },
+    "patches": {
+      "$ref": "#/$defs/patches"
+    }
+  },
+  "$defs": {
+    "patches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "rows"
+        ],
+        "properties": {
+          "x": {
+            "type": "integer"
+          },
+          "y": {
+            "type": "integer"
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

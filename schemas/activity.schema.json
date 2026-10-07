@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ArabKustam/minecraft-studio/main/schemas/activity.schema.json",
+  "title": "Minecraft Studio activity log entry (one JSON object per line in logs/activity.jsonl)",
+  "type": "object",
+  "required": [
+    "ts",
+    "agent",
+    "event",
+    "severity",
+    "message"
+  ],
+  "properties": {
+    "ts": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "agent": {
+      "type": "string"
+    },
+    "task": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "event": {
+      "type": "string"
+    },
+    "asset": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "severity": {
+      "enum": [
+        "debug",
+        "info",
+        "success",
+        "warning",
+        "error"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {}
+  }
+}

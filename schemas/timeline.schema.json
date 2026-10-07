@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ArabKustam/minecraft-studio/main/schemas/timeline.schema.json",
+  "title": "Minecraft Studio timeline",
+  "type": "object",
+  "required": [
+    "id",
+    "duration",
+    "tracks"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_.-]*$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "trigger": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "tracks": {
+      "type": "object",
+      "propertyNames": {
+        "enum": [
+          "event",
+          "sfx",
+          "animation",
+          "texture",
+          "particles",
+          "music",
+          "voice",
+          "ui",
+          "lighting",
+          "state"
+        ]
+      },
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "t"
+          ],
+          "properties": {
+            "t": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    }
+  }
+}

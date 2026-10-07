@@ -1,0 +1,321 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ArabKustam/minecraft-studio/main/schemas/sfx-recipe.schema.json",
+  "title": "Minecraft Studio SFX recipe",
+  "type": "object",
+  "required": [
+    "duration",
+    "layers"
+  ],
+  "properties": {
+    "duration": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 120
+    },
+    "sample_rate": {
+      "type": "integer"
+    },
+    "channels": {
+      "enum": [
+        1,
+        2
+      ]
+    },
+    "loop": {
+      "type": "boolean"
+    },
+    "loop_crossfade": {
+      "type": "number"
+    },
+    "tail": {
+      "type": "number"
+    },
+    "layers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "osc",
+              "noise",
+              "fm",
+              "chirp",
+              "click",
+              "impact",
+              "sample"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "wave": {
+            "enum": [
+              "sine",
+              "square",
+              "saw",
+              "triangle",
+              "pulse25"
+            ]
+          },
+          "freq": {
+            "oneOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "from",
+                  "to"
+                ],
+                "properties": {
+                  "from": {
+                    "type": "number"
+                  },
+                  "to": {
+                    "type": "number"
+                  },
+                  "curve": {
+                    "enum": [
+                      "linear",
+                      "exp",
+                      "ease"
+                    ]
+                  },
+                  "start": {
+                    "type": "number"
+                  },
+                  "end": {
+                    "type": "number"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "center"
+                ],
+                "properties": {
+                  "center": {
+                    "type": "number"
+                  },
+                  "depth": {
+                    "type": "number"
+                  },
+                  "rate": {
+                    "type": "number"
+                  },
+                  "shape": {
+                    "enum": [
+                      "sine",
+                      "triangle",
+                      "square"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "carrier": {
+            "oneOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "from",
+                  "to"
+                ],
+                "properties": {
+                  "from": {
+                    "type": "number"
+                  },
+                  "to": {
+                    "type": "number"
+                  },
+                  "curve": {
+                    "enum": [
+                      "linear",
+                      "exp",
+                      "ease"
+                    ]
+                  },
+                  "start": {
+                    "type": "number"
+                  },
+                  "end": {
+                    "type": "number"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "center"
+                ],
+                "properties": {
+                  "center": {
+                    "type": "number"
+                  },
+                  "depth": {
+                    "type": "number"
+                  },
+                  "rate": {
+                    "type": "number"
+                  },
+                  "shape": {
+                    "enum": [
+                      "sine",
+                      "triangle",
+                      "square"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "index": {
+            "oneOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "from",
+                  "to"
+                ],
+                "properties": {
+                  "from": {
+                    "type": "number"
+                  },
+                  "to": {
+                    "type": "number"
+                  },
+                  "curve": {
+                    "enum": [
+                      "linear",
+                      "exp",
+                      "ease"
+                    ]
+                  },
+                  "start": {
+                    "type": "number"
+                  },
+                  "end": {
+                    "type": "number"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "required": [
+                  "center"
+                ],
+                "properties": {
+                  "center": {
+                    "type": "number"
+                  },
+                  "depth": {
+                    "type": "number"
+                  },
+                  "rate": {
+                    "type": "number"
+                  },
+                  "shape": {
+                    "enum": [
+                      "sine",
+                      "triangle",
+                      "square"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "ratio": {
+            "type": "number"
+          },
+          "harmonics": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "voices": {
+            "type": "integer"
+          },
+          "detune": {
+            "type": "number"
+          },
+          "color": {
+            "enum": [
+              "white",
+              "pink",
+              "brown"
+            ]
+          },
+          "start": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "gain": {
+            "type": "number"
+          },
+          "pan": {
+            "type": "number",
+            "minimum": -1,
+            "maximum": 1
+          },
+          "envelope": {
+            "type": "object"
+          },
+          "filter": {
+            "type": "object"
+          },
+          "filters": {
+            "type": "array"
+          },
+          "effects": {
+            "type": "array"
+          },
+          "file": {
+            "type": "string"
+          },
+          "seed": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type"
+        ]
+      }
+    },
+    "normalize": {
+      "type": "object",
+      "properties": {
+        "lufs": {
+          "type": "number"
+        },
+        "peak": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

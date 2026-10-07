@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ArabKustam/minecraft-studio/main/schemas/music-score.schema.json",
+  "title": "Minecraft Studio music score",
+  "type": "object",
+  "required": [
+    "bpm",
+    "sections",
+    "stems"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "bpm": {
+      "type": "number",
+      "minimum": 30,
+      "maximum": 300
+    },
+    "meter": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "key": {
+      "type": "string"
+    },
+    "transition_every_bars": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "bars"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "bars": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "loop": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "stems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "instrument"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "instrument": {
+            "enum": [
+              "pad",
+              "strings",
+              "bass",
+              "pluck",
+              "bell",
+              "choir",
+              "lead",
+              "drone",
+              "brass",
+              "drums",
+              "pulse",
+              "sub"
+            ]
+          },
+          "gain": {
+            "type": "number"
+          },
+          "pan": {
+            "type": "number"
+          },
+          "vowel": {
+            "enum": [
+              "a",
+              "o",
+              "u",
+              "e",
+              "i"
+            ]
+          },
+          "transpose": {
+            "type": "integer"
+          },
+          "legato": {
+            "type": "number"
+          },
+          "repeat": {
+            "type": "boolean"
+          },
+          "effects": {
+            "type": "array"
+          },
+          "parts": {
+            "type": "object",
+            "additionalProperties": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "object"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

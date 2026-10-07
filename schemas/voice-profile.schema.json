@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ArabKustam/minecraft-studio/main/schemas/voice-profile.schema.json",
+  "title": "Minecraft Studio voice profile",
+  "type": "object",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "character": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "direction": {
+      "type": "string"
+    },
+    "pace": {
+      "type": "number",
+      "minimum": 0.5,
+      "maximum": 1.5
+    },
+    "pitch_semitones": {
+      "type": "number"
+    },
+    "providers": {
+      "type": "object",
+      "properties": {
+        "elevenlabs": {
+          "type": "object",
+          "properties": {
+            "voice_id": {
+              "type": "string"
+            },
+            "model_id": {
+              "type": "string"
+            },
+            "voice_settings": {
+              "type": "object"
+            },
+            "seed": {
+              "type": "integer"
+            }
+          }
+        },
+        "system": {
+          "type": "object"
+        }
+      }
+    },
+    "processing": {
+      "type": "array"
+    },
+    "loudness_lufs": {
+      "type": "number"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

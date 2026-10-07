@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ArabKustam/minecraft-studio/main/schemas/task.schema.json",
+  "title": "Minecraft Studio production task",
+  "type": "object",
+  "required": [
+    "id",
+    "goal",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "goal": {
+      "type": "string"
+    },
+    "agent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "inputs": {
+      "type": "array"
+    },
+    "outputs": {
+      "type": "array"
+    },
+    "allowed_tools": {
+      "type": "array"
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "constraints": {
+      "type": "array"
+    },
+    "quality": {
+      "type": "array"
+    },
+    "validation": {
+      "type": "array"
+    },
+    "destination": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "ready",
+        "in-progress",
+        "blocked",
+        "review",
+        "done",
+        "failed",
+        "cancelled"
+      ]
+    }
+  }
+}

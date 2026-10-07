@@ -1,0 +1,26 @@
+{
+  "description": "Minecraft Studio: project context at session start, secret guards before writes and before publishing.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/runtime/dist/cli.mjs\" hook session-start", "timeout": 15 }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/runtime/dist/cli.mjs\" hook pre-write", "timeout": 10 }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/runtime/dist/cli.mjs\" hook pre-bash", "timeout": 30 }
+        ]
+      }
+    ]
+  }
+}

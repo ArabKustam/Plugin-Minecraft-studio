@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ArabKustam/minecraft-studio/main/schemas/model.schema.json",
+  "title": "Minecraft Studio model source",
+  "type": "object",
+  "required": [
+    "textures",
+    "bones"
+  ],
+  "properties": {
+    "format": {
+      "const": "minecraft-studio-model/1"
+    },
+    "name": {
+      "type": "string"
+    },
+    "texture_size": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "textures": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "texture_refs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+      }
+    },
+    "bones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "parent": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "pivot": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "rotation": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "cubes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "from",
+                "to"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "from": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "to": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                },
+                "inflate": {
+                  "type": "number"
+                },
+                "emissive": {
+                  "type": "boolean"
+                },
+                "box_uv": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "rotation": {
+                  "type": "object",
+                  "required": [
+                    "axis",
+                    "angle"
+                  ],
+                  "properties": {
+                    "axis": {
+                      "enum": [
+                        "x",
+                        "y",
+                        "z"
+                      ]
+                    },
+                    "angle": {
+                      "type": "number"
+                    },
+                    "origin": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "rescale": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "faces": {
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "north",
+                      "south",
+                      "east",
+                      "west",
+                      "up",
+                      "down"
+                    ]
+                  },
+                  "additionalProperties": {
+                    "type": "object",
+                    "required": [
+                      "texture",
+                      "uv"
+                    ],
+                    "properties": {
+                      "texture": {
+                        "type": "string"
+                      },
+                      "uv": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "minItems": 4,
+                        "maxItems": 4
+                      },
+                      "rotation": {
+                        "enum": [
+                          0,
+                          90,
+                          180,
+                          270
+                        ]
+                      },
+                      "cullface": {
+                        "type": "string"
+                      },
+                      "tintindex": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "display": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}
