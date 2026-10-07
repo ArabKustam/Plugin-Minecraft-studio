@@ -3,7 +3,7 @@ import {
   boxUvFaces,
   normalizeModel,
   renderTurnaround
-} from "./chunks/chunk-G3FZ7JVB.mjs";
+} from "./chunks/chunk-QGATUFJV.mjs";
 import {
   assetInput,
   createServer,
@@ -12,7 +12,7 @@ import {
   requireOneOf,
   start,
   tool
-} from "./chunks/chunk-RWJTKMSS.mjs";
+} from "./chunks/chunk-XQJ3QCTZ.mjs";
 import {
   blit,
   createImage,
@@ -31,7 +31,7 @@ import {
   scaleNearest,
   setPx,
   writePng
-} from "./chunks/chunk-3P6ZCJ33.mjs";
+} from "./chunks/chunk-X2ZWGV6D.mjs";
 import {
   StudioError,
   exists,
@@ -39,7 +39,7 @@ import {
   slugify,
   walk,
   writeJson
-} from "./chunks/chunk-5XAWRH4I.mjs";
+} from "./chunks/chunk-RRZML6EW.mjs";
 
 // src/mcp/studio-texture.js
 import fs2 from "node:fs";

@@ -4,6 +4,8 @@ All notable changes to Minecraft Studio are documented here. The format follows 
 
 ## [Unreleased]
 
+## [0.1.1] — 2026-10-07
+
 ### Added
 - **Abyssal Seer.** A non-humanoid anthropomorphic creature with:
   - digitigrade legs (thigh → shin → raised hock → toes, placed with forward kinematics)
@@ -27,6 +29,10 @@ All notable changes to Minecraft Studio are documented here. The format follows 
 - `paint-spec` JSON Schema. Creature lineup and walk-cycle artwork in both READMEs.
 
 ### Fixed
+- `studio-audio` (SFX, music, voice) no longer disappears when the optional ElevenLabs key is empty. `.mcp.json` no longer references `${user_config.*}`, because Claude Code skips a server whose optional option is unset. The key is read from `ELEVENLABS_API_KEY` (environment or project `.env`) or `CLAUDE_PLUGIN_OPTION_ELEVENLABS_API_KEY`.
+- Asset history archives use short `<n>-<file>` names (old records still revert). The longest repository path drops from 166 to 127 characters, so the marketplace clone stays under the Windows 260-character limit.
+- Delegation works on Claude Code versions where subagents cannot start subagents: the main conversation dispatches specialists, and `project-director` returns its plan instead of doing the specialists' work.
+- The main skill description now names plugins, mods, datapacks, resource packs, models and textures explicitly, including Russian phrasing.
 - Texture validation no longer treats non-square entity atlases (e.g. 64×128) as animation strips.
 
 ## [0.1.0] — 2026-10-07

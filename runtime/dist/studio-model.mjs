@@ -7,7 +7,7 @@ import {
   renderTurnaround,
   validateAnimations,
   validateModel
-} from "./chunks/chunk-G3FZ7JVB.mjs";
+} from "./chunks/chunk-QGATUFJV.mjs";
 import {
   assetInput,
   createServer,
@@ -16,16 +16,16 @@ import {
   requireOneOf,
   start,
   tool
-} from "./chunks/chunk-RWJTKMSS.mjs";
+} from "./chunks/chunk-XQJ3QCTZ.mjs";
 import {
   writePng
-} from "./chunks/chunk-3P6ZCJ33.mjs";
+} from "./chunks/chunk-X2ZWGV6D.mjs";
 import {
   StudioError,
   readJson,
   slugify,
   writeJson
-} from "./chunks/chunk-5XAWRH4I.mjs";
+} from "./chunks/chunk-RRZML6EW.mjs";
 
 // src/mcp/studio-model.js
 import path from "node:path";

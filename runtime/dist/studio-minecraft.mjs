@@ -4,7 +4,7 @@ import {
   external_exports,
   start,
   tool
-} from "./chunks/chunk-RWJTKMSS.mjs";
+} from "./chunks/chunk-XQJ3QCTZ.mjs";
 import {
   ADAPTERS,
   detectPlatforms,
@@ -14,7 +14,7 @@ import {
   requiredJava,
   runPaperTestServer,
   runProjectCommand
-} from "./chunks/chunk-J5ZW7ISX.mjs";
+} from "./chunks/chunk-P5W76KFS.mjs";
 import {
   PACK_FORMATS,
   packageResourcePack,
@@ -22,14 +22,14 @@ import {
   validateResourcePack,
   writeItemDefinition,
   writeZip
-} from "./chunks/chunk-RU4HYO7E.mjs";
-import "./chunks/chunk-3P6ZCJ33.mjs";
+} from "./chunks/chunk-EK65NMG6.mjs";
+import "./chunks/chunk-X2ZWGV6D.mjs";
 import {
   StudioError,
   exists,
   readJson,
   walk
-} from "./chunks/chunk-5XAWRH4I.mjs";
+} from "./chunks/chunk-RRZML6EW.mjs";
 
 // src/mcp/studio-minecraft.js
 import fs2 from "node:fs";

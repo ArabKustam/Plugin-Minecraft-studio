@@ -6,9 +6,9 @@ All integrations are optional. `/minecraft-studio:doctor` shows the status of ea
 
 1. Create an API key in ElevenLabs. A restricted key with *Text to Speech*, *Sound Effects*, *Music* and *User → read* is enough.
 2. Set it in one of these places:
-   - the plugin option **elevenlabs_api_key** (stored in Claude's secure storage and passed only to `studio-audio`)
-   - `ELEVENLABS_API_KEY` in your shell
+   - `ELEVENLABS_API_KEY` in your shell (set it before starting Claude Code)
    - the Minecraft project's `.env` (git-ignored by init)
+   - the plugin option **elevenlabs_api_key** (Claude's secure storage). It is read as `CLAUDE_PLUGIN_OPTION_ELEVENLABS_API_KEY`, which only Claude Code versions that pass plugin options to MCP servers provide (2.1.104 passes them to hooks only), so prefer one of the two above.
 3. Put a voice id into your voice profile (`providers.elevenlabs.voice_id`).
 
 What the studio uses:

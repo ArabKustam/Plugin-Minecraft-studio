@@ -7,7 +7,7 @@ import {
   readJson,
   scanFiles,
   writeJson
-} from "./chunk-5XAWRH4I.mjs";
+} from "./chunk-RRZML6EW.mjs";
 
 // src/lib/core/git.js
 import { spawnSync } from "node:child_process";

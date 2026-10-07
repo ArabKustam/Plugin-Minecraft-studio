@@ -25,7 +25,10 @@ export function loadDotEnv(projectRoot) {
 }
 
 export function getSecret(name) {
-  const v = process.env[name];
+  // Plugin options (userConfig) arrive as CLAUDE_PLUGIN_OPTION_<KEY> in Claude Code versions that
+  // export them to MCP servers. They are not referenced as ${user_config.*} in .mcp.json: an empty
+  // optional value there makes Claude Code skip the whole server.
+  const v = process.env[name] || process.env[`CLAUDE_PLUGIN_OPTION_${name}`];
   return v && v.trim() ? v.trim() : null;
 }
 

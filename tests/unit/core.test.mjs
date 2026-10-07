@@ -3,12 +3,14 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { Studio } from '../../runtime/src/lib/core/studio.js';
 import { safeJoin } from '../../runtime/src/lib/core/fsutil.js';
 import { scanText, redact } from '../../runtime/src/lib/core/secrets.js';
 import { validateTimeline, compileTimeline } from '../../runtime/src/lib/core/timeline.js';
 import { validateAgentSpec } from '../../runtime/src/lib/core/factory.js';
 
+const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const tmp = () => fs.mkdtempSync(path.join(os.tmpdir(), 'ms-test-'));
 
 function studioWithFile() {
@@ -107,4 +109,46 @@ test('agent factory validation enforces contracts', () => {
     name: 'particle-artist', description: 'Use this agent when particle textures and particle JSON definitions are needed for Minecraft effects.',
     specialization: 'particles', input_contract: ['effect brief'], output_contract: ['particle json'], qa_criteria: ['readable'], justification: 'recurring work', tools: ['Read'],
   }), []);
+});
+
+test('history archives use short names and revert still works', () => {
+  const { dir, s } = studioWithFile();
+  fs.mkdirSync(path.join(dir, 'deep/nested/path'), { recursive: true });
+  fs.writeFileSync(path.join(dir, 'deep/nested/path/b.png'), 'v1');
+  s.createAsset({ id: 'tex.short', type: 'texture', files: ['deep/nested/path/b.png'] });
+  fs.writeFileSync(path.join(dir, 'deep/nested/path/b.png'), 'v2');
+  const a = s.updateAsset('tex.short', { files: ['deep/nested/path/b.png'] });
+  const archived = a.versions.filter((x) => x.archived_dir);
+  assert.ok(archived.length > 0);
+  for (const v of archived) {
+    for (const f of v.files) {
+      assert.equal(f.archived, '0-b.png');
+      assert.ok(fs.existsSync(path.join(dir, v.archived_dir, f.archived)));
+    }
+  }
+  s.revertAsset('tex.short', archived[0].version);
+  assert.equal(fs.readFileSync(path.join(dir, 'deep/nested/path/b.png'), 'utf8'), archived[0].version === 1 ? 'v1' : 'v2');
+});
+
+test('plugin option env is accepted as a secret source', async () => {
+  const { getSecret } = await import('../../runtime/src/lib/core/secrets.js');
+  delete process.env.ELEVENLABS_API_KEY;
+  process.env.CLAUDE_PLUGIN_OPTION_ELEVENLABS_API_KEY = 'sk_' + 'b'.repeat(48);
+  assert.equal(getSecret('ELEVENLABS_API_KEY'), 'sk_' + 'b'.repeat(48));
+  delete process.env.CLAUDE_PLUGIN_OPTION_ELEVENLABS_API_KEY;
+  assert.equal(getSecret('ELEVENLABS_API_KEY'), null);
+});
+
+test('repository paths stay short enough for Windows plugin installs', async () => {
+  const { execFileSync } = await import('node:child_process');
+  const root = REPO_ROOT;
+  let files;
+  try { files = execFileSync('git', ['ls-files'], { cwd: root, encoding: 'utf8' }).split('\n').filter(Boolean); } catch (e) { if (e.code === 'ENOENT') return; throw e; }
+  // ~/.claude/plugins/marketplaces/minecraft-studio/ adds ~60-90 characters; Windows MAX_PATH is 260.
+  const long = files.filter((f) => f.length > 140);
+  assert.deepEqual(long, []);
+});
+
+test('.mcp.json does not reference optional user_config values (an empty one drops the server)', () => {
+  assert.doesNotMatch(fs.readFileSync(path.join(REPO_ROOT, '.mcp.json'), 'utf8'), /\$\{user_config\./);
 });

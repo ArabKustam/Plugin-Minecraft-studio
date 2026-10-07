@@ -4,16 +4,16 @@ import {
   external_exports,
   start,
   tool
-} from "./chunks/chunk-RWJTKMSS.mjs";
+} from "./chunks/chunk-XQJ3QCTZ.mjs";
 import {
   analyzeProject,
   formatDoctor,
   initProject,
   runDoctor,
   summarizeAnalysis
-} from "./chunks/chunk-YNED5BIQ.mjs";
-import "./chunks/chunk-J5ZW7ISX.mjs";
-import "./chunks/chunk-3P6ZCJ33.mjs";
+} from "./chunks/chunk-PBQNDJ76.mjs";
+import "./chunks/chunk-P5W76KFS.mjs";
+import "./chunks/chunk-X2ZWGV6D.mjs";
 import {
   checkpoint,
   compileTimeline,
@@ -27,10 +27,10 @@ import {
   scanRepository,
   testTool,
   validateTimeline
-} from "./chunks/chunk-R6KWYNWG.mjs";
+} from "./chunks/chunk-KHXEIHTL.mjs";
 import {
   listProviders
-} from "./chunks/chunk-WWXJ6DHF.mjs";
+} from "./chunks/chunk-HMLAGON2.mjs";
 import {
   ASSET_STATUSES,
   ASSET_TYPES,
@@ -43,7 +43,7 @@ import {
   readJson,
   secretStatus,
   writeJson
-} from "./chunks/chunk-5XAWRH4I.mjs";
+} from "./chunks/chunk-RRZML6EW.mjs";
 
 // src/mcp/studio-core.js
 import fs from "node:fs";

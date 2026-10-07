@@ -2,17 +2,17 @@ import { createRequire as __msCreateRequire } from 'node:module'; const require 
 import {
   detectPlatforms,
   javaVersion
-} from "./chunk-J5ZW7ISX.mjs";
+} from "./chunk-P5W76KFS.mjs";
 import {
   readPng
-} from "./chunk-3P6ZCJ33.mjs";
+} from "./chunk-X2ZWGV6D.mjs";
 import {
   gitStatus
-} from "./chunk-R6KWYNWG.mjs";
+} from "./chunk-KHXEIHTL.mjs";
 import {
   VOICE_PROVIDERS,
   findFfmpeg
-} from "./chunk-WWXJ6DHF.mjs";
+} from "./chunk-HMLAGON2.mjs";
 import {
   Studio,
   exists,
@@ -20,7 +20,7 @@ import {
   readJson,
   slugify,
   walk
-} from "./chunk-5XAWRH4I.mjs";
+} from "./chunk-RRZML6EW.mjs";
 
 // src/lib/core/project.js
 import fs from "node:fs";

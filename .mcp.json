@@ -20,8 +20,7 @@
       "args": ["${CLAUDE_PLUGIN_ROOT}/runtime/dist/studio-audio.mjs"],
       "env": {
         "MINECRAFT_STUDIO_PROJECT": "${CLAUDE_PROJECT_DIR}",
-        "MINECRAFT_STUDIO_CAPABILITIES": "read,write,publish",
-        "ELEVENLABS_API_KEY": "${user_config.elevenlabs_api_key}"
+        "MINECRAFT_STUDIO_CAPABILITIES": "read,write,publish"
       }
     },
     "studio-minecraft": {

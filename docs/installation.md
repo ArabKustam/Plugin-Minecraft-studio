@@ -22,7 +22,7 @@ From GitHub (marketplace):
 /plugin install minecraft-studio@minecraft-studio
 ```
 
-From a release file: download `minecraft-studio.plugin` from the Releases page and install it in Claude Cowork, or unzip it and point Claude Code at the folder:
+From a release file (once a version is published on the Releases page; until then build it with `node scripts/package-plugin.mjs`, which writes `dist/minecraft-studio.plugin`): download `minecraft-studio.plugin` and install it in Claude Cowork, or unzip it and point Claude Code at the folder:
 
 ```bash
 claude --plugin-dir /path/to/minecraft-studio
@@ -32,7 +32,7 @@ Restart Claude Code (or run `/reload-plugins`) after installing.
 
 ## 2. Configure optional providers
 
-- **ElevenLabs.** Fill in the plugin option *ElevenLabs API key*. It is kept in secure storage. Alternatively, put `ELEVENLABS_API_KEY=…` in your environment or in your Minecraft project's `.env`. `/minecraft-studio:init` git-ignores that file.
+- **ElevenLabs.** Put `ELEVENLABS_API_KEY=…` in your environment or in your Minecraft project's `.env`. `/minecraft-studio:init` git-ignores that file. The plugin option *ElevenLabs API key* (secure storage) is also read, but only on Claude Code versions that pass plugin options to MCP servers as `CLAUDE_PLUGIN_OPTION_ELEVENLABS_API_KEY`; run `/minecraft-studio:doctor` to check which source is active.
 - **GitHub.** Use Claude's GitHub connector, the official GitHub MCP server, or the `gh` CLI. See [integrations](integrations.md).
 - **Blockbench.** See [modeling](modeling.md#blockbench).
 

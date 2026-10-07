@@ -7,11 +7,11 @@ import {
   requireOneOf,
   start,
   tool
-} from "./chunks/chunk-RWJTKMSS.mjs";
+} from "./chunks/chunk-XQJ3QCTZ.mjs";
 import {
   upsertSoundEvent
-} from "./chunks/chunk-RU4HYO7E.mjs";
-import "./chunks/chunk-3P6ZCJ33.mjs";
+} from "./chunks/chunk-EK65NMG6.mjs";
+import "./chunks/chunk-X2ZWGV6D.mjs";
 import {
   MUSIC_PROVIDERS,
   SFX_PROVIDERS,
@@ -25,7 +25,7 @@ import {
   resolveProvider,
   toMono,
   writeWav
-} from "./chunks/chunk-WWXJ6DHF.mjs";
+} from "./chunks/chunk-HMLAGON2.mjs";
 import {
   StudioError,
   assertId,
@@ -34,7 +34,7 @@ import {
   readJson,
   slugify,
   writeJson
-} from "./chunks/chunk-5XAWRH4I.mjs";
+} from "./chunks/chunk-RRZML6EW.mjs";
 
 // src/mcp/studio-audio.js
 import fs2 from "node:fs";

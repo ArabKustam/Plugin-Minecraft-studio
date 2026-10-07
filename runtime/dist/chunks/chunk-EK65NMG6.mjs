@@ -2,7 +2,7 @@ import { createRequire as __msCreateRequire } from 'node:module'; const require 
 import {
   isPowerOfTwo,
   readPng
-} from "./chunk-3P6ZCJ33.mjs";
+} from "./chunk-X2ZWGV6D.mjs";
 import {
   StudioError,
   ensureDir,
@@ -11,7 +11,7 @@ import {
   sha1,
   walk,
   writeJson
-} from "./chunk-5XAWRH4I.mjs";
+} from "./chunk-RRZML6EW.mjs";
 
 // src/lib/minecraft/resourcepack.js
 import fs from "node:fs";

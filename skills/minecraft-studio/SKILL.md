@@ -1,6 +1,6 @@
 ---
 name: minecraft-studio
-description: "Run Minecraft content production as a small studio — plugins/mods/datapacks/resource packs with textures, 3D models, animations, sound effects, adaptive music, voice lines, game logic, QA, docs and Git. Use when the user asks to create or change Minecraft features or assets (\"make a reactor system\", \"add a block in the style of my resource pack\", \"create a mob with model and animations\", \"make an alarm siren and sync it with the alarm logic\", \"adaptive soundtrack\", \"voice announcements\", \"check the whole plugin and fix problems\"), or works inside a project that has a .minecraft-studio/ directory."
+description: "Minecraft Studio: run Minecraft content production as a small studio — Paper/Spigot/Bukkit plugins, Fabric/NeoForge/Forge mods, datapacks, Java resource packs and Bedrock add-ons, with pixel-art textures, 3D models (Blockbench), animations, sound effects, adaptive music, voice lines, game logic, QA, docs and Git. Use whenever the user wants to create, change, test or fix anything for Minecraft, in any language: \"create a Minecraft plugin\", \"make a resource pack\", \"make a Minecraft model/texture/mob/item\", \"make a Minecraft mod\", \"add a block in the style of my resource pack\", \"check the whole plugin and fix problems\"; Russian: «создай Minecraft плагин», «сделай ресурспак», «создай модель / текстуру для Майнкрафта», «сделай мод», «используй Minecraft Studio». Also use in any project that has a .minecraft-studio/ directory, plugin.yml, fabric.mod.json, mods.toml or pack.mcmeta."
 ---
 
 # Minecraft Studio
@@ -31,6 +31,8 @@ For anything bigger than a single asset, write tasks with `studio_task_plan` usi
 Typical order: research → style profile → textures → model (needs textures) → animations (needs model) ∥ SFX ∥ music ∥ voice ∥ game logic → timeline → integration → QA → guide → Git.
 
 ## 3. Delegate to specialists
+
+You — the main conversation — are the director and dispatch specialists yourself; independent tasks go out as parallel Agent calls in one message. Do not hand a whole production to the `project-director` subagent: depending on the Claude Code version, a subagent may not be able to start other subagents. Use it for planning or a resume/final report, then dispatch its plan yourself.
 
 Use the plugin agents (`minecraft-studio:<name>`): `researcher`, `style-analyst`, `texture-artist`, `modeler`, `animator`, `sfx-designer`, `composer`, `voice-director`, `minecraft-developer`, `visual-qa`, `audio-qa`, `code-reviewer`, `integration-qa`, `documentation-writer`. Send each the full task contract from the plan (`studio_task_list`) and mark tasks `in-progress`/`done` with user-facing summaries. Do small things yourself when delegation would cost more than it saves. Missing a recurring specialisation? See `references/orchestration.md#agent-factory`.
 

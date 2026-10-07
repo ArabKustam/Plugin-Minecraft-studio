@@ -5,26 +5,26 @@ import {
   initProject,
   runDoctor,
   summarizeAnalysis
-} from "./chunks/chunk-YNED5BIQ.mjs";
-import "./chunks/chunk-J5ZW7ISX.mjs";
+} from "./chunks/chunk-PBQNDJ76.mjs";
+import "./chunks/chunk-P5W76KFS.mjs";
 import {
   packageResourcePack,
   validateResourcePack
-} from "./chunks/chunk-RU4HYO7E.mjs";
-import "./chunks/chunk-3P6ZCJ33.mjs";
+} from "./chunks/chunk-EK65NMG6.mjs";
+import "./chunks/chunk-X2ZWGV6D.mjs";
 import {
   createDashboard
-} from "./chunks/chunk-Y3IDW2VB.mjs";
+} from "./chunks/chunk-JAFVAEXP.mjs";
 import {
   isRepo,
   scanRepository
-} from "./chunks/chunk-R6KWYNWG.mjs";
-import "./chunks/chunk-WWXJ6DHF.mjs";
+} from "./chunks/chunk-KHXEIHTL.mjs";
+import "./chunks/chunk-HMLAGON2.mjs";
 import {
   Studio,
   scanFiles,
   scanText
-} from "./chunks/chunk-5XAWRH4I.mjs";
+} from "./chunks/chunk-RRZML6EW.mjs";
 
 // src/cli/studio.js
 import fs from "node:fs";

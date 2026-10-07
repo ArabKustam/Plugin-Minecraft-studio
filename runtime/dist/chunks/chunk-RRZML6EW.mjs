@@ -166,7 +166,7 @@ function loadDotEnv(projectRoot) {
   }
 }
 function getSecret(name) {
-  const v = process.env[name];
+  const v = process.env[name] || process.env[`CLAUDE_PLUGIN_OPTION_${name}`];
   return v && v.trim() ? v.trim() : null;
 }
 function secretStatus() {
@@ -432,11 +432,9 @@ var Studio = class {
   archiveVersion(asset, version, by, note) {
     const vdir = this.p("history", asset.id, `v${version}`);
     ensureDir(vdir);
-    for (const f of asset.files) {
-      const target = path3.join(vdir, f.path.replace(/[\\/:]/g, "__"));
-      fs3.copyFileSync(this.abs(f.path), target);
-    }
-    return { version, at: nowIso(), by, note, files: asset.files.map((f) => ({ path: f.path, sha256: f.sha256 })), archived_dir: this.rel(vdir), source: asset.source };
+    const files = asset.files.map((f, i) => ({ path: f.path, sha256: f.sha256, archived: `${i}-${path3.basename(f.path)}` }));
+    for (const f of files) fs3.copyFileSync(this.abs(f.path), path3.join(vdir, f.archived));
+    return { version, at: nowIso(), by, note, files, archived_dir: this.rel(vdir), source: asset.source };
   }
   updateAsset(id, patch = {}, { by = "studio", note = "" } = {}) {
     const asset = this.getAsset(id);
@@ -514,7 +512,7 @@ var Studio = class {
     if (!v) throw new StudioError("E_NOT_FOUND", `Version ${version} of ${id} not found`);
     if (!v.archived_dir) throw new StudioError("E_NOT_ARCHIVED", `Version ${version} of ${id} was imported, not archived by the studio; restore it from Git history instead`);
     for (const f of v.files) {
-      const archived = path3.join(this.root, v.archived_dir, f.path.replace(/[\\/:]/g, "__"));
+      const archived = path3.join(this.root, v.archived_dir, f.archived ?? f.path.replace(/[\\/:]/g, "__"));
       ensureDir(path3.dirname(this.abs(f.path)));
       fs3.copyFileSync(archived, this.abs(f.path));
     }
