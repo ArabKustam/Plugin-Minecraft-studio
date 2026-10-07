@@ -1,0 +1,58 @@
+{
+  "size": [
+    16,
+    16
+  ],
+  "materials": {
+    "hood_shadow": {
+      "ramp": [
+        "#050a06",
+        "#0c180e",
+        "#14261a"
+      ],
+      "style": "flat"
+    },
+    "cloth_trim": {
+      "ramp": [
+        "#4a3008",
+        "#8a6420",
+        "#c49a3a",
+        "#e6c46a"
+      ],
+      "style": "cloth"
+    },
+    "cloth_green": {
+      "ramp": [
+        "#14301a",
+        "#24502c",
+        "#357040",
+        "#4a9056"
+      ],
+      "style": "cloth"
+    }
+  },
+  "parts": {
+    "m": "cloth_green",
+    "t": "cloth_trim",
+    "d": "hood_shadow"
+  },
+  "rows": [
+    "................",
+    ".......mm.......",
+    ".....mmmmmm.....",
+    "....mmmmmmmm....",
+    "...mmmmmmmmmm...",
+    "...mmmmmmmmmmm..",
+    "..mmmmddddmmmm..",
+    "..mmmddddddmmm..",
+    "..mmmddddddmmm..",
+    "..mmmddddddmmm..",
+    ".mmmmddddddmmmm.",
+    ".mmmmtddddtmmmm.",
+    "mmmmmtttttttmmmm",
+    "mmmmmmmmmmmmmmmm",
+    ".mmmmmmmmmmmmmm.",
+    "................"
+  ],
+  "outline": "auto"
+}

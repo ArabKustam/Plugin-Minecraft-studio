@@ -1,0 +1,11 @@
+{
+  "id": "run-1791352970733",
+  "at": "2026-10-07T06:02:50.733Z",
+  "suite": "resource-pack",
+  "passed": true,
+  "summary": "0 errors, 0 warnings, 98 files",
+  "details": {
+    "issues": []
+  },
+  "agent": "integration-qa"
+}

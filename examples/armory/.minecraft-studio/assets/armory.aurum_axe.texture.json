@@ -1,0 +1,107 @@
+{
+  "id": "armory.aurum_axe.texture",
+  "type": "texture",
+  "name": "Aurum Axe",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/aurum_axe.png",
+      "role": "primary",
+      "sha256": "acb8c5a2fe491f380862b1995fc0418320d75550253c690e4baee36593d1dc4d",
+      "bytes": 450
+    },
+    {
+      "path": "art/items/aurum_axe.item.json",
+      "role": "source",
+      "sha256": "f0f256f58d886e762880c5e34f6575e1efd4f70619b13758668b0b56383f55d9",
+      "bytes": 1044
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/aurum_axe.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:49.618Z",
+  "modified_at": "2026-10-07T06:02:49.625Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/aurum_axe"
+  ],
+  "preview": ".minecraft-studio/previews/armory_aurum_axe_texture.png",
+  "tags": [
+    "item",
+    "tool"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:49.623Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "11 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "11 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "34% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:49.620Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/aurum_axe.png",
+          "sha256": "acb8c5a2fe491f380862b1995fc0418320d75550253c690e4baee36593d1dc4d"
+        },
+        {
+          "path": "art/items/aurum_axe.item.json",
+          "sha256": "f0f256f58d886e762880c5e34f6575e1efd4f70619b13758668b0b56383f55d9"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.aurum_axe.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/aurum_axe.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 88,
+    "coverage": 0.344,
+    "colors": 11
+  }
+}

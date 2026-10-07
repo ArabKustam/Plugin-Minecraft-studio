@@ -1,0 +1,91 @@
+{
+  "format": "minecraft-studio-model/1",
+  "name": "mannequin_body",
+  "texture_size": [
+    64,
+    32
+  ],
+  "textures": {
+    "skin": "renders/mannequin_skin.png"
+  },
+  "bones": [
+    {
+      "name": "root",
+      "pivot": [
+        8,
+        0,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "head",
+          "from": [
+            4,
+            24,
+            4
+          ],
+          "to": [
+            12,
+            32,
+            12
+          ],
+          "box_uv": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "torso",
+          "from": [
+            4,
+            12,
+            6
+          ],
+          "to": [
+            12,
+            24,
+            10
+          ],
+          "box_uv": [
+            16,
+            16
+          ]
+        },
+        {
+          "name": "arm",
+          "from": [
+            0,
+            12,
+            6
+          ],
+          "to": [
+            4,
+            24,
+            10
+          ],
+          "box_uv": [
+            40,
+            16
+          ]
+        },
+        {
+          "name": "leg",
+          "from": [
+            4,
+            0,
+            6
+          ],
+          "to": [
+            8,
+            12,
+            10
+          ],
+          "box_uv": [
+            0,
+            16
+          ]
+        }
+      ]
+    }
+  ]
+}

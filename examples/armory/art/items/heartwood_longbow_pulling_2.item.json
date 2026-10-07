@@ -1,0 +1,89 @@
+{
+  "size": [
+    16,
+    16
+  ],
+  "materials": {
+    "birch": {
+      "ramp": [
+        "#6a5a3a",
+        "#a89064",
+        "#d6c08a",
+        "#f0e2b4"
+      ],
+      "style": "wood"
+    },
+    "leaf": {
+      "ramp": [
+        "#1c3a14",
+        "#2f6a22",
+        "#4f9a34",
+        "#7fcf52"
+      ],
+      "style": "organic"
+    },
+    "arrowhead": {
+      "ramp": [
+        "#3a3f4a",
+        "#8a94a4",
+        "#d0d8e0"
+      ],
+      "style": "metal"
+    },
+    "string": {
+      "ramp": [
+        "#b8b8ae",
+        "#e6e6dc",
+        "#ffffff"
+      ],
+      "style": "flat",
+      "outline": false
+    },
+    "wood": {
+      "ramp": [
+        "#2e1c0c",
+        "#5c3a18",
+        "#7d5224",
+        "#9c6b32",
+        "#bd8a48"
+      ],
+      "style": "wood"
+    },
+    "fletch": {
+      "ramp": [
+        "#5a0a10",
+        "#a8202a",
+        "#e04a50",
+        "#ff8a8a"
+      ],
+      "style": "flat"
+    }
+  },
+  "parts": {
+    "f": "wood",
+    "g": "leaf",
+    "s": "string",
+    "a": "birch",
+    "h": "arrowhead",
+    "q": "fletch"
+  },
+  "rows": [
+    ".fffffffff......",
+    ".fsfffffffgg....",
+    "..s.......ggg...",
+    "...s.......hhg..",
+    "...s.......hhgg.",
+    "...s......a..gg.",
+    ".........a....ff",
+    "....s...a.....ff",
+    "....s..a......ff",
+    "....s.a.......ff",
+    "....qa........ff",
+    ".....qqss.....ff",
+    ".....q...ssss.ff",
+    ".............ssf",
+    "..............ff",
+    "................"
+  ],
+  "outline": "auto"
+}

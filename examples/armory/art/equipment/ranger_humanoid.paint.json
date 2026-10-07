@@ -1,0 +1,307 @@
+{
+  "texture_size": [
+    64,
+    32
+  ],
+  "default_material": "cloth",
+  "materials": {
+    "cloth": {
+      "ramp": [
+        "#14301a",
+        "#24502c",
+        "#357040",
+        "#4a9056"
+      ],
+      "pattern": {
+        "type": "stripes",
+        "size": 3,
+        "vertical": true
+      }
+    },
+    "leather": {
+      "ramp": [
+        "#24130a",
+        "#4c2c16",
+        "#6a3f20",
+        "#8a542c"
+      ],
+      "pattern": {
+        "type": "fur",
+        "density": 0.1,
+        "seed": 5
+      }
+    },
+    "trim": {
+      "ramp": [
+        "#4a3008",
+        "#8a6420",
+        "#c49a3a",
+        "#e6c46a"
+      ]
+    }
+  },
+  "cubes": {
+    "head": {
+      "material": "cloth",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "t": "#c49a3a",
+            "x": "transparent",
+            "d": "#0c180e"
+          },
+          "rows": [
+            "tttttttt",
+            ".dddddd.",
+            "..xxxx..",
+            "..xxxx..",
+            "..xxxx..",
+            "..xxxx..",
+            "..xxxx..",
+            "..xxxx.."
+          ]
+        }
+      }
+    },
+    "body": {
+      "material": "cloth",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "t": "#c49a3a",
+            "s": "#4c2c16",
+            "S": "#6a3f20"
+          },
+          "rows": [
+            "tt....tt",
+            ".",
+            "sS......",
+            ".sS.....",
+            "..sS....",
+            "...sS...",
+            "....sS..",
+            ".....sS.",
+            "......sS",
+            ".",
+            ".",
+            "tttttttt"
+          ]
+        },
+        "south": {
+          "x": 0,
+          "y": 11,
+          "palette": {
+            "t": "#c49a3a"
+          },
+          "rows": [
+            "tttttttt"
+          ]
+        }
+      }
+    },
+    "arm": {
+      "material": "cloth",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "t": "#c49a3a"
+          },
+          "rows": [
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            "tttt....",
+            "xxxx....",
+            "xxxx...."
+          ]
+        },
+        "south": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "t": "#c49a3a"
+          },
+          "rows": [
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            "tttt....",
+            "xxxx....",
+            "xxxx...."
+          ]
+        },
+        "east": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "t": "#c49a3a"
+          },
+          "rows": [
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            "tttt....",
+            "xxxx....",
+            "xxxx...."
+          ]
+        },
+        "west": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "t": "#c49a3a"
+          },
+          "rows": [
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            "tttt....",
+            "xxxx....",
+            "xxxx...."
+          ]
+        },
+        "down": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        }
+      }
+    },
+    "leg": {
+      "material": "leather",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "t": "#c49a3a"
+          },
+          "rows": [
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "tttt...."
+          ]
+        },
+        "south": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "t": "#c49a3a"
+          },
+          "rows": [
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "tttt...."
+          ]
+        },
+        "east": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "t": "#c49a3a"
+          },
+          "rows": [
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "tttt...."
+          ]
+        },
+        "west": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "t": "#c49a3a"
+          },
+          "rows": [
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "tttt...."
+          ]
+        },
+        "up": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "ember_blade",
+    "category": "sword",
+    "name": {
+      "en": "Ember Blade",
+      "ru": "Клинок углей"
+    },
+    "base": null
+  },
+  {
+    "id": "frost_fang",
+    "category": "sword",
+    "name": {
+      "en": "Frost Fang",
+      "ru": "Ледяной клык"
+    },
+    "base": null
+  },
+  {
+    "id": "void_katana",
+    "category": "sword",
+    "name": {
+      "en": "Void Katana",
+      "ru": "Катана пустоты"
+    },
+    "base": null
+  },
+  {
+    "id": "bone_cleaver",
+    "category": "sword",
+    "name": {
+      "en": "Bone Cleaver",
+      "ru": "Костяной тесак"
+    },
+    "base": null
+  },
+  {
+    "id": "aurum_pickaxe",
+    "category": "tool",
+    "name": {
+      "en": "Aurum Pickaxe",
+      "ru": "Золотостальная кирка"
+    },
+    "base": null
+  },
+  {
+    "id": "aurum_axe",
+    "category": "tool",
+    "name": {
+      "en": "Aurum Axe",
+      "ru": "Золотостальной топор"
+    },
+    "base": null
+  },
+  {
+    "id": "aurum_shovel",
+    "category": "tool",
+    "name": {
+      "en": "Aurum Shovel",
+      "ru": "Золотостальная лопата"
+    },
+    "base": null
+  },
+  {
+    "id": "aurum_hoe",
+    "category": "tool",
+    "name": {
+      "en": "Aurum Hoe",
+      "ru": "Золотостальная мотыга"
+    },
+    "base": null
+  },
+  {
+    "id": "storm_bow",
+    "category": "bow",
+    "name": {
+      "en": "Storm Bow",
+      "ru": "Лук бури"
+    },
+    "base": "storm_bow"
+  },
+  {
+    "id": "storm_bow_pulling_0",
+    "category": "bow",
+    "name": {
+      "en": "Storm Bow (pull 1)",
+      "ru": "Лук бури (натяжение 1)"
+    },
+    "base": "storm_bow"
+  },
+  {
+    "id": "storm_bow_pulling_1",
+    "category": "bow",
+    "name": {
+      "en": "Storm Bow (pull 2)",
+      "ru": "Лук бури (натяжение 2)"
+    },
+    "base": "storm_bow"
+  },
+  {
+    "id": "storm_bow_pulling_2",
+    "category": "bow",
+    "name": {
+      "en": "Storm Bow (pull 3)",
+      "ru": "Лук бури (натяжение 3)"
+    },
+    "base": "storm_bow"
+  },
+  {
+    "id": "heartwood_longbow",
+    "category": "bow",
+    "name": {
+      "en": "Heartwood Longbow",
+      "ru": "Длинный лук из сердцевины"
+    },
+    "base": "heartwood_longbow"
+  },
+  {
+    "id": "heartwood_longbow_pulling_0",
+    "category": "bow",
+    "name": {
+      "en": "Heartwood Longbow (pull 1)",
+      "ru": "Длинный лук из сердцевины (натяжение 1)"
+    },
+    "base": "heartwood_longbow"
+  },
+  {
+    "id": "heartwood_longbow_pulling_1",
+    "category": "bow",
+    "name": {
+      "en": "Heartwood Longbow (pull 2)",
+      "ru": "Длинный лук из сердцевины (натяжение 2)"
+    },
+    "base": "heartwood_longbow"
+  },
+  {
+    "id": "heartwood_longbow_pulling_2",
+    "category": "bow",
+    "name": {
+      "en": "Heartwood Longbow (pull 3)",
+      "ru": "Длинный лук из сердцевины (натяжение 3)"
+    },
+    "base": "heartwood_longbow"
+  },
+  {
+    "id": "ember_staff",
+    "category": "staff",
+    "name": {
+      "en": "Ember Staff",
+      "ru": "Посох углей"
+    },
+    "base": null
+  },
+  {
+    "id": "tide_staff",
+    "category": "staff",
+    "name": {
+      "en": "Tide Staff",
+      "ru": "Посох прилива"
+    },
+    "base": null
+  },
+  {
+    "id": "starfruit",
+    "category": "fruit",
+    "name": {
+      "en": "Starfruit",
+      "ru": "Карамбола"
+    },
+    "base": null
+  },
+  {
+    "id": "blood_orange",
+    "category": "fruit",
+    "name": {
+      "en": "Blood Orange",
+      "ru": "Красный апельсин"
+    },
+    "base": null
+  },
+  {
+    "id": "frost_berries",
+    "category": "fruit",
+    "name": {
+      "en": "Frost Berries",
+      "ru": "Морозные ягоды"
+    },
+    "base": null
+  },
+  {
+    "id": "glowfruit",
+    "category": "fruit",
+    "name": {
+      "en": "Glowfruit",
+      "ru": "Светоплод"
+    },
+    "base": null
+  },
+  {
+    "id": "dragonfruit",
+    "category": "fruit",
+    "name": {
+      "en": "Dragonfruit",
+      "ru": "Драконий фрукт"
+    },
+    "base": null
+  },
+  {
+    "id": "golden_pear",
+    "category": "fruit",
+    "name": {
+      "en": "Golden Pear",
+      "ru": "Золотая груша"
+    },
+    "base": null
+  },
+  {
+    "id": "ranger_hood",
+    "category": "armor",
+    "name": {
+      "en": "Ranger Hood",
+      "ru": "Капюшон следопыта"
+    },
+    "base": null
+  },
+  {
+    "id": "knight_helm",
+    "category": "armor",
+    "name": {
+      "en": "Knight Helm",
+      "ru": "Рыцарский шлем"
+    },
+    "base": null
+  },
+  {
+    "id": "ranger_tunic",
+    "category": "armor",
+    "name": {
+      "en": "Ranger Tunic",
+      "ru": "Туника следопыта"
+    },
+    "base": null
+  },
+  {
+    "id": "knight_cuirass",
+    "category": "armor",
+    "name": {
+      "en": "Knight Cuirass",
+      "ru": "Рыцарская кираса"
+    },
+    "base": null
+  },
+  {
+    "id": "ranger_trousers",
+    "category": "armor",
+    "name": {
+      "en": "Ranger Trousers",
+      "ru": "Штаны следопыта"
+    },
+    "base": null
+  },
+  {
+    "id": "knight_greaves",
+    "category": "armor",
+    "name": {
+      "en": "Knight Greaves",
+      "ru": "Рыцарские поножи"
+    },
+    "base": null
+  },
+  {
+    "id": "ranger_boots",
+    "category": "armor",
+    "name": {
+      "en": "Ranger Boots",
+      "ru": "Сапоги следопыта"
+    },
+    "base": null
+  },
+  {
+    "id": "knight_sabatons",
+    "category": "armor",
+    "name": {
+      "en": "Knight Sabatons",
+      "ru": "Рыцарские сабатоны"
+    },
+    "base": null
+  }
+]

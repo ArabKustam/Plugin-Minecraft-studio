@@ -1,0 +1,60 @@
+{
+  "size": [
+    16,
+    16
+  ],
+  "materials": {
+    "aurumdark": {
+      "ramp": [
+        "#2a2016",
+        "#4a3a26",
+        "#6f5a3c",
+        "#a08458"
+      ],
+      "style": "metal"
+    },
+    "gold": {
+      "ramp": [
+        "#5a3a08",
+        "#a6720f",
+        "#e0b02a",
+        "#fff0a0"
+      ],
+      "style": "metal"
+    },
+    "plate": {
+      "ramp": [
+        "#2a2f38",
+        "#555e6c",
+        "#8a95a4",
+        "#c4cdd8",
+        "#f2f6fa"
+      ],
+      "style": "metal"
+    }
+  },
+  "parts": {
+    "m": "plate",
+    "s": "aurumdark",
+    "t": "gold"
+  },
+  "rows": [
+    "................",
+    "................",
+    "................",
+    "................",
+    "................",
+    "................",
+    "..mmmmm..mmmmm..",
+    "..mmmmm..mmmmm..",
+    "..mmmmm..mmmmm..",
+    "..ttttt..ttttt..",
+    "..mmmmm..mmmmm..",
+    ".mmmmmm..mmmmmm.",
+    ".mmmmmm..mmmmmm.",
+    ".ssssss..ssssss.",
+    "................",
+    "................"
+  ],
+  "outline": "auto"
+}

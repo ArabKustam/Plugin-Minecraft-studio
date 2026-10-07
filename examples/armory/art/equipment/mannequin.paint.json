@@ -1,0 +1,46 @@
+{
+  "texture_size": [
+    64,
+    32
+  ],
+  "default_material": "wood",
+  "materials": {
+    "wood": {
+      "ramp": [
+        "#4a3a2a",
+        "#7a6248",
+        "#a68a64",
+        "#c8ad84"
+      ],
+      "pattern": {
+        "type": "stripes",
+        "size": 2,
+        "vertical": true
+      }
+    },
+    "joint": {
+      "ramp": [
+        "#2a2016",
+        "#4a3a26",
+        "#6f5a3c",
+        "#8f7650"
+      ]
+    }
+  },
+  "cubes": {
+    "head": {
+      "faces": {
+        "north": {
+          "x": 2,
+          "y": 3,
+          "palette": {
+            "k": "#2a2016"
+          },
+          "rows": [
+            "k..k"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "id": "armory.aurum_shovel.texture",
+  "type": "texture",
+  "name": "Aurum Shovel",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/aurum_shovel.png",
+      "role": "primary",
+      "sha256": "73bab8dc27fdf5ed26ecd5c472e6a2d5f95edda09004a4329557a8ff7492980c",
+      "bytes": 383
+    },
+    {
+      "path": "art/items/aurum_shovel.item.json",
+      "role": "source",
+      "sha256": "5e72520d1e148847580ab3706b96f1674a52fdc8b7534cb748adaed2fd23c614",
+      "bytes": 1044
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/aurum_shovel.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:49.639Z",
+  "modified_at": "2026-10-07T06:02:49.646Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/aurum_shovel"
+  ],
+  "preview": ".minecraft-studio/previews/armory_aurum_shovel_texture.png",
+  "tags": [
+    "item",
+    "tool"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:49.643Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "9 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "9 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "30% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:49.641Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/aurum_shovel.png",
+          "sha256": "73bab8dc27fdf5ed26ecd5c472e6a2d5f95edda09004a4329557a8ff7492980c"
+        },
+        {
+          "path": "art/items/aurum_shovel.item.json",
+          "sha256": "5e72520d1e148847580ab3706b96f1674a52fdc8b7534cb748adaed2fd23c614"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.aurum_shovel.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/aurum_shovel.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 76,
+    "coverage": 0.297,
+    "colors": 9
+  }
+}

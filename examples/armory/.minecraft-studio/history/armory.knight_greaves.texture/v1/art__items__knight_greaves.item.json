@@ -1,0 +1,51 @@
+{
+  "size": [
+    16,
+    16
+  ],
+  "materials": {
+    "gold": {
+      "ramp": [
+        "#5a3a08",
+        "#a6720f",
+        "#e0b02a",
+        "#fff0a0"
+      ],
+      "style": "metal"
+    },
+    "plate": {
+      "ramp": [
+        "#2a2f38",
+        "#555e6c",
+        "#8a95a4",
+        "#c4cdd8",
+        "#f2f6fa"
+      ],
+      "style": "metal"
+    }
+  },
+  "parts": {
+    "m": "plate",
+    "t": "gold",
+    "k": "gold"
+  },
+  "rows": [
+    "................",
+    "...tttttttttt...",
+    "...mmmmmmmmmm...",
+    "...mmmmmmmmmm...",
+    "...mmmmmmmmmm...",
+    "...mmmmmmmmmm...",
+    "...mmmm..mmmm...",
+    "...mmmm..mmmm...",
+    "...kkkkkkkkkk...",
+    "...kkkkkkkkkk...",
+    "...mmmm..mmmm...",
+    "...mmmm..mmmm...",
+    "...mmmm..mmmm...",
+    "...mmmm..mmmm...",
+    "...mmmm..mmmm...",
+    "................"
+  ],
+  "outline": "auto"
+}

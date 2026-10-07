@@ -1,0 +1,107 @@
+{
+  "id": "armory.ranger_hood.texture",
+  "type": "texture",
+  "name": "Ranger Hood",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/ranger_hood.png",
+      "role": "primary",
+      "sha256": "a29a39d8cc2c24c52bbeb9fa8f1f4a1c513c98fcf6cee5f08d2fc719a23af42a",
+      "bytes": 433
+    },
+    {
+      "path": "art/items/ranger_hood.item.json",
+      "role": "source",
+      "sha256": "466ab7c65b10cae4f4519bab4dafb4d386e23c08749c2f0981c0475b3ba949fd",
+      "bytes": 997
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/ranger_hood.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:50.022Z",
+  "modified_at": "2026-10-07T06:02:50.028Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/ranger_hood"
+  ],
+  "preview": ".minecraft-studio/previews/armory_ranger_hood_texture.png",
+  "tags": [
+    "item",
+    "armor"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:50.026Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "10 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "10 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "79% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:50.023Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/ranger_hood.png",
+          "sha256": "a29a39d8cc2c24c52bbeb9fa8f1f4a1c513c98fcf6cee5f08d2fc719a23af42a"
+        },
+        {
+          "path": "art/items/ranger_hood.item.json",
+          "sha256": "466ab7c65b10cae4f4519bab4dafb4d386e23c08749c2f0981c0475b3ba949fd"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.ranger_hood.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/ranger_hood.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 201,
+    "coverage": 0.785,
+    "colors": 10
+  }
+}

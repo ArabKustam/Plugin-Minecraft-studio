@@ -1,0 +1,107 @@
+{
+  "id": "armory.aurum_pickaxe.texture",
+  "type": "texture",
+  "name": "Aurum Pickaxe",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/aurum_pickaxe.png",
+      "role": "primary",
+      "sha256": "30263c0f0e5af3061bdc16961cb6e4ede00adceb4511bca9f2a2e5d1b575e858",
+      "bytes": 510
+    },
+    {
+      "path": "art/items/aurum_pickaxe.item.json",
+      "role": "source",
+      "sha256": "d8d92444df2a2334818c8f3f5c6ee5a11c45e325f5938d225ec3860aeec6bfa2",
+      "bytes": 1062
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/aurum_pickaxe.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:49.597Z",
+  "modified_at": "2026-10-07T06:02:49.604Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/aurum_pickaxe"
+  ],
+  "preview": ".minecraft-studio/previews/armory_aurum_pickaxe_texture.png",
+  "tags": [
+    "item",
+    "tool"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:49.602Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "10 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "17 pixels differ from all 8 neighbours (random noise reads poorly at 16×16)"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "10 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "40% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:49.599Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/aurum_pickaxe.png",
+          "sha256": "30263c0f0e5af3061bdc16961cb6e4ede00adceb4511bca9f2a2e5d1b575e858"
+        },
+        {
+          "path": "art/items/aurum_pickaxe.item.json",
+          "sha256": "d8d92444df2a2334818c8f3f5c6ee5a11c45e325f5938d225ec3860aeec6bfa2"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.aurum_pickaxe.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/aurum_pickaxe.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 103,
+    "coverage": 0.402,
+    "colors": 10
+  }
+}

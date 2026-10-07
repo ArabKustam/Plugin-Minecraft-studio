@@ -1,0 +1,117 @@
+{
+  "id": "armory.tide_staff.texture",
+  "type": "texture",
+  "name": "Tide Staff",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/tide_staff.png",
+      "role": "primary",
+      "sha256": "4e84d61cb475c7fcaf1021a1f20ccc871be7467997eb4c88ab799a3bf2610338",
+      "bytes": 1160
+    },
+    {
+      "path": "resourcepack/assets/studio/textures/item/tide_staff.png.mcmeta",
+      "role": "primary",
+      "sha256": "e4b5cce019fc5a41d76dd2a70b5ab4ee447468b92b699c211a2dc85ab5a94bce",
+      "bytes": 70
+    },
+    {
+      "path": "art/items/tide_staff.item.json",
+      "role": "source",
+      "sha256": "3f660407e902f9e8444334161563cd25b196999d18de64b135334a9ac2714bc7",
+      "bytes": 5696
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/tide_staff.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:49.870Z",
+  "modified_at": "2026-10-07T06:02:49.878Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/tide_staff"
+  ],
+  "preview": ".minecraft-studio/previews/armory_tide_staff_texture.png",
+  "tags": [
+    "item",
+    "staff"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:49.876Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "16 colours, 4 frames",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "16 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "24% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:49.872Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/tide_staff.png",
+          "sha256": "4e84d61cb475c7fcaf1021a1f20ccc871be7467997eb4c88ab799a3bf2610338"
+        },
+        {
+          "path": "resourcepack/assets/studio/textures/item/tide_staff.png.mcmeta",
+          "sha256": "e4b5cce019fc5a41d76dd2a70b5ab4ee447468b92b699c211a2dc85ab5a94bce"
+        },
+        {
+          "path": "art/items/tide_staff.item.json",
+          "sha256": "3f660407e902f9e8444334161563cd25b196999d18de64b135334a9ac2714bc7"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.tide_staff.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/tide_staff.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 4,
+    "filled_px": 61,
+    "coverage": 0.238,
+    "colors": 16
+  }
+}

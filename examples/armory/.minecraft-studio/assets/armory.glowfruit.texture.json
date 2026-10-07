@@ -1,0 +1,107 @@
+{
+  "id": "armory.glowfruit.texture",
+  "type": "texture",
+  "name": "Glowfruit",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/glowfruit.png",
+      "role": "primary",
+      "sha256": "15ca4dbebdc247fc4e58169559f713e6b3989ca01055c0f1505d0374d87f8ce2",
+      "bytes": 435
+    },
+    {
+      "path": "art/items/glowfruit.item.json",
+      "role": "source",
+      "sha256": "d66fd08b074ab7de223b895172105fac624dddf3dcb8e0a5915e5cbbb638b9cb",
+      "bytes": 1509
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/glowfruit.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:49.959Z",
+  "modified_at": "2026-10-07T06:02:49.965Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/glowfruit"
+  ],
+  "preview": ".minecraft-studio/previews/armory_glowfruit_texture.png",
+  "tags": [
+    "item",
+    "fruit"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:49.962Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "14 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "14 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "51% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:49.960Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/glowfruit.png",
+          "sha256": "15ca4dbebdc247fc4e58169559f713e6b3989ca01055c0f1505d0374d87f8ce2"
+        },
+        {
+          "path": "art/items/glowfruit.item.json",
+          "sha256": "d66fd08b074ab7de223b895172105fac624dddf3dcb8e0a5915e5cbbb638b9cb"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.glowfruit.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/glowfruit.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 130,
+    "coverage": 0.508,
+    "colors": 14
+  }
+}

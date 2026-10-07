@@ -1,0 +1,105 @@
+{
+  "id": "armory.knight.mannequin",
+  "type": "model",
+  "name": "Mannequin — Knight plate armor",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "models/mannequin_knight.bbmodel",
+      "role": "primary",
+      "sha256": "acfd24fe0c63024ce0bacf33d3daab36e2f8a42ed45c216e2c36fe5f27bf42fe",
+      "bytes": 29917
+    },
+    {
+      "path": "art/equipment/mannequin_knight.model.json",
+      "role": "source",
+      "sha256": "2e75e8e6a4fb0a1d7ba4748afe04e48854e51765a04fb7bd7fa18108932da7b1",
+      "bytes": 6252
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "minecraft-studio-model/1",
+    "source_files": [
+      "art/equipment/mannequin_knight.model.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:50.598Z",
+  "modified_at": "2026-10-07T06:02:50.605Z",
+  "created_by": "modeler",
+  "dependencies": [
+    "armory.knight.humanoid",
+    "armory.knight.humanoid_leggings"
+  ],
+  "minecraft_ids": [],
+  "preview": ".minecraft-studio/previews/model_mannequin_knight.png",
+  "tags": [
+    "equipment",
+    "knight",
+    "preview"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:50.603Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "mannequin turnaround reviewed",
+      "checks": [
+        {
+          "name": "export",
+          "status": "pass",
+          "detail": "models/mannequin_knight.bbmodel, art/equipment/mannequin_knight.model.json"
+        },
+        {
+          "name": "fit",
+          "status": "pass",
+          "detail": "Outer layer inflated 1.0, leggings 0.5 (vanilla); no gaps between pieces."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:50.600Z",
+      "by": "modeler",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "models/mannequin_knight.bbmodel",
+          "sha256": "acfd24fe0c63024ce0bacf33d3daab36e2f8a42ed45c216e2c36fe5f27bf42fe"
+        },
+        {
+          "path": "art/equipment/mannequin_knight.model.json",
+          "sha256": "2e75e8e6a4fb0a1d7ba4748afe04e48854e51765a04fb7bd7fa18108932da7b1"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.knight.mannequin/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "minecraft-studio-model/1",
+        "source_files": [
+          "art/equipment/mannequin_knight.model.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "bones": [
+      "body",
+      "head",
+      "arm_r",
+      "arm_l",
+      "leg_r",
+      "leg_l"
+    ],
+    "texture_size": [
+      64,
+      32
+    ]
+  }
+}

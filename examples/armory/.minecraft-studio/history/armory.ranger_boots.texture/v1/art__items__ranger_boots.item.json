@@ -1,0 +1,60 @@
+{
+  "size": [
+    16,
+    16
+  ],
+  "materials": {
+    "cloth_trim": {
+      "ramp": [
+        "#4a3008",
+        "#8a6420",
+        "#c49a3a",
+        "#e6c46a"
+      ],
+      "style": "cloth"
+    },
+    "leather": {
+      "ramp": [
+        "#24130a",
+        "#4c2c16",
+        "#6a3f20",
+        "#8a542c"
+      ],
+      "style": "leather"
+    },
+    "wood": {
+      "ramp": [
+        "#2e1c0c",
+        "#5c3a18",
+        "#7d5224",
+        "#9c6b32",
+        "#bd8a48"
+      ],
+      "style": "wood"
+    }
+  },
+  "parts": {
+    "m": "leather",
+    "s": "wood",
+    "t": "cloth_trim"
+  },
+  "rows": [
+    "................",
+    "................",
+    "................",
+    "................",
+    "................",
+    "................",
+    "..ttttt..ttttt..",
+    "..mmmmm..mmmmm..",
+    "..mmmmm..mmmmm..",
+    "..mmmmm..mmmmm..",
+    "..mmmmm..mmmmm..",
+    ".mmmmmm..mmmmmm.",
+    ".mmmmmm..mmmmmm.",
+    ".ssssss..ssssss.",
+    "................",
+    "................"
+  ],
+  "outline": "auto"
+}

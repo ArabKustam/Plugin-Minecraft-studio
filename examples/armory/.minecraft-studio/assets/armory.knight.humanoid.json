@@ -1,0 +1,111 @@
+{
+  "id": "armory.knight.humanoid",
+  "type": "texture",
+  "name": "Knight plate armor (humanoid)",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/entity/equipment/humanoid/knight.png",
+      "role": "primary",
+      "sha256": "a42072b34141defee6ef01df173f471ad1b7138f080fed11ff68c882fa19c07d",
+      "bytes": 1133
+    },
+    {
+      "path": "art/equipment/knight_humanoid.paint.json",
+      "role": "source",
+      "sha256": "68988bff33bbe0d3123a3970cf849390ab89b3ad9d85342714f2a0c559bdaa8e",
+      "bytes": 5464
+    }
+  ],
+  "source": {
+    "provider": "uv-painter",
+    "method": "texture_paint_uv",
+    "source_files": [
+      "art/equipment/knight_humanoid.paint.json",
+      "renders/template_humanoid.model.json"
+    ],
+    "parameters": {
+      "materials": [
+        "plate"
+      ]
+    }
+  },
+  "created_at": "2026-10-07T06:02:50.361Z",
+  "modified_at": "2026-10-07T06:02:50.369Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:knight"
+  ],
+  "preview": ".minecraft-studio/previews/atlas_armory_knight_humanoid.png",
+  "tags": [
+    "equipment",
+    "knight"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:50.366Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "humanoid layer",
+      "checks": [
+        {
+          "name": "layout",
+          "status": "pass",
+          "detail": "64×32 vanilla humanoid layout"
+        },
+        {
+          "name": "worn review",
+          "status": "pass",
+          "detail": "Checked on the mannequin: pieces line up with head/body/arms/legs; transparent areas show the body underneath."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:50.363Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/entity/equipment/humanoid/knight.png",
+          "sha256": "a42072b34141defee6ef01df173f471ad1b7138f080fed11ff68c882fa19c07d"
+        },
+        {
+          "path": "art/equipment/knight_humanoid.paint.json",
+          "sha256": "68988bff33bbe0d3123a3970cf849390ab89b3ad9d85342714f2a0c559bdaa8e"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.knight.humanoid/v1",
+      "source": {
+        "provider": "uv-painter",
+        "method": "texture_paint_uv",
+        "source_files": [
+          "art/equipment/knight_humanoid.paint.json",
+          "renders/template_humanoid.model.json"
+        ],
+        "parameters": {
+          "materials": [
+            "plate"
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "width": 64,
+    "height": 32,
+    "texture_size": [
+      64,
+      32
+    ],
+    "cubes": 4,
+    "coverage": 0.578
+  }
+}

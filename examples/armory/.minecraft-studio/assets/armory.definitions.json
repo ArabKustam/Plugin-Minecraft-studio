@@ -1,0 +1,682 @@
+{
+  "id": "armory.definitions",
+  "type": "configuration",
+  "name": "Item models, item definitions & equipment assets",
+  "description": "Parents per category (handheld/bow/generated), bow pull states via condition + range_dispatch, equipment layers.",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/models/item/ember_blade.json",
+      "role": "primary",
+      "sha256": "374c00e8edcfd89c7ed1ac9e28b2db2816be269274a47cf497445519a54b300f",
+      "bytes": 103
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/frost_fang.json",
+      "role": "primary",
+      "sha256": "1cf9826c5ecf724e5522693dc6ea021c82974ae18f3e410886e1d66a2db719f5",
+      "bytes": 102
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/void_katana.json",
+      "role": "primary",
+      "sha256": "aa87aa137fa2a9ba1c4dd02182cc811e745a49ba2a33109e309dcaab0898d25c",
+      "bytes": 103
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/bone_cleaver.json",
+      "role": "primary",
+      "sha256": "b45a61fb473e30cb486290e8e7a9add0156bf127f092ce904b46e774af008d19",
+      "bytes": 104
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/aurum_pickaxe.json",
+      "role": "primary",
+      "sha256": "75c055983fee8f9723e36182b30b1794bc17e2530a8fa0f6f684f6b1ecfb766e",
+      "bytes": 105
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/aurum_axe.json",
+      "role": "primary",
+      "sha256": "1ba8a0c883c70ee57826d5f11dc623805db4f0251e54d462787c5d21e3eb49ab",
+      "bytes": 101
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/aurum_shovel.json",
+      "role": "primary",
+      "sha256": "847d840a8ba5318f65df7b2665c3f74cd6740ae3d232e7a0a54c7d1de1ca8777",
+      "bytes": 104
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/aurum_hoe.json",
+      "role": "primary",
+      "sha256": "b7768a2342da8803f2dd6fdc9915347c95c607e7f1cc92f99586a7ad23c3b45c",
+      "bytes": 101
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/storm_bow.json",
+      "role": "primary",
+      "sha256": "761e6519bd9a1b361f14c12358dd57fcb0f836f5d85b06b62002684637fd8269",
+      "bytes": 96
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/storm_bow_pulling_0.json",
+      "role": "primary",
+      "sha256": "61f7e80e665a781eb289f82cab0e35870f9c81008ce641555e10059be3a3b812",
+      "bytes": 106
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/storm_bow_pulling_1.json",
+      "role": "primary",
+      "sha256": "a040af3cdbdfe4a4739a5ac650f7e91a8c1d5e488bb446211209a7e7db9d7627",
+      "bytes": 106
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/storm_bow_pulling_2.json",
+      "role": "primary",
+      "sha256": "304866beefe148a7a42402321b7478d89f9a7e9d437babaab9f5e636cb500e2c",
+      "bytes": 106
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/heartwood_longbow.json",
+      "role": "primary",
+      "sha256": "4e87899da52c409e1afc09f84ee8bf7b4c186d9931d5728dcd30e6f7eb4c59a1",
+      "bytes": 104
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/heartwood_longbow_pulling_0.json",
+      "role": "primary",
+      "sha256": "5250d60f4c31b708274c9894da1f4ded048370e0a083b7a5a7695c66e95e3cdb",
+      "bytes": 114
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/heartwood_longbow_pulling_1.json",
+      "role": "primary",
+      "sha256": "e216edba4111b723a82d3633ea7117098045f7269f911ffd8f49a32a928e4427",
+      "bytes": 114
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/heartwood_longbow_pulling_2.json",
+      "role": "primary",
+      "sha256": "9118f3ed7b86ad64c20404c7a1c58841aa63028cd1777a765c9347335224213a",
+      "bytes": 114
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/ember_staff.json",
+      "role": "primary",
+      "sha256": "f69a49c453815e7a34324a752f8ea45ab1e12846a6ad046451f2f73b3e2c41d0",
+      "bytes": 103
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/tide_staff.json",
+      "role": "primary",
+      "sha256": "5fd6f605c0463f7f2111d61f97d2fbdbed31a3224c425f2e170d7275cd2592ef",
+      "bytes": 102
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/starfruit.json",
+      "role": "primary",
+      "sha256": "c404eaed2ad44545f8d9fbb53e5a04ad159c492bc9784f7aef32a1eab7a77618",
+      "bytes": 102
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/blood_orange.json",
+      "role": "primary",
+      "sha256": "d1fa166b0a9181db0c216ebd1a9aab5f2d8d58d2a0db250e2cb6e1dfc4bed0c2",
+      "bytes": 105
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/frost_berries.json",
+      "role": "primary",
+      "sha256": "f6b38fca24659df29c6c4a04ff25f8f5f471346fb574913d78f00cc9201fc432",
+      "bytes": 106
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/glowfruit.json",
+      "role": "primary",
+      "sha256": "83aedc649fc05c30376cd7e391c4d1fcb6af4f04dbc05ba851b3ff4718065125",
+      "bytes": 102
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/dragonfruit.json",
+      "role": "primary",
+      "sha256": "bd4bacf5b55c6e35666153f2d9456b41d2e3fa8e7c658d7aea68f4e3425e919d",
+      "bytes": 104
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/golden_pear.json",
+      "role": "primary",
+      "sha256": "57f1f460f9f79175f2417bf6ac1833b6640c619e459c45ada780daf66a15171c",
+      "bytes": 104
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/ranger_hood.json",
+      "role": "primary",
+      "sha256": "313af6b74ea9bcd55690d2ce860e499ff1f030166c079989bda529bf545efbd2",
+      "bytes": 104
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/knight_helm.json",
+      "role": "primary",
+      "sha256": "f0b4b49f575ab1b769012e8300cca139d37d0db35c80683b8ac54faca9048191",
+      "bytes": 104
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/ranger_tunic.json",
+      "role": "primary",
+      "sha256": "58b829181db862a8c7c415eace89b4162f94044d72c6d83838b11e247e6c52b8",
+      "bytes": 105
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/knight_cuirass.json",
+      "role": "primary",
+      "sha256": "1dc71cfc3a595561b37660d1a248d1a788a9d30ecf4700425a646d671af75434",
+      "bytes": 107
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/ranger_trousers.json",
+      "role": "primary",
+      "sha256": "d89b9b589ecc6975b8b8bab5dfca7c61219b73d8f81d6790487dfb0075593cda",
+      "bytes": 108
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/knight_greaves.json",
+      "role": "primary",
+      "sha256": "354098b97067212c9ae2bbcd54aa9e09b400cab7051463cc797568cc00092273",
+      "bytes": 107
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/ranger_boots.json",
+      "role": "primary",
+      "sha256": "3a4b831712de59912e4e67dc422773f9b7019a9b32c707ac00efb9bd0f279502",
+      "bytes": 105
+    },
+    {
+      "path": "resourcepack/assets/studio/models/item/knight_sabatons.json",
+      "role": "primary",
+      "sha256": "c3c51a9f9a524731e4db0cc867ed1a407ffb05cd52aab13e756adbda2c97cf75",
+      "bytes": 108
+    },
+    {
+      "path": "resourcepack/assets/studio/items/ember_blade.json",
+      "role": "primary",
+      "sha256": "b23ebc600456818a86a9b884e846f2eb9a7e1746a3854b7261863d614168aafb",
+      "bytes": 91
+    },
+    {
+      "path": "resourcepack/assets/studio/items/frost_fang.json",
+      "role": "primary",
+      "sha256": "be656d51b2dd55f4a0e1fe80e8e50e099489455c6260cafcebcdc1d811784466",
+      "bytes": 90
+    },
+    {
+      "path": "resourcepack/assets/studio/items/void_katana.json",
+      "role": "primary",
+      "sha256": "30aa602feb20b34fc060ab84e33eec9af184c5890755cb8fff6a5c644c02dbd5",
+      "bytes": 91
+    },
+    {
+      "path": "resourcepack/assets/studio/items/bone_cleaver.json",
+      "role": "primary",
+      "sha256": "bc53243e2f4b2597d136ee59c3f420dd45604365ebce010b5f8dd303a923ede1",
+      "bytes": 92
+    },
+    {
+      "path": "resourcepack/assets/studio/items/aurum_pickaxe.json",
+      "role": "primary",
+      "sha256": "e9d98c6fc00f26f09a7a95f162f5953c689764964efd7a85c9cc90eec833ab73",
+      "bytes": 93
+    },
+    {
+      "path": "resourcepack/assets/studio/items/aurum_axe.json",
+      "role": "primary",
+      "sha256": "7ad6b56330115859643cfcff393555a71e684ffb0df7fbd6c89bf94c115accc5",
+      "bytes": 89
+    },
+    {
+      "path": "resourcepack/assets/studio/items/aurum_shovel.json",
+      "role": "primary",
+      "sha256": "919799ee812537cf30c6f3c110bf005365c1c32df8267c4f12ee9244ece958d3",
+      "bytes": 92
+    },
+    {
+      "path": "resourcepack/assets/studio/items/aurum_hoe.json",
+      "role": "primary",
+      "sha256": "ad12f3a30ca0ed5eb04f2392bca44460989ee27e9dca9137d8c49b517ab51bf0",
+      "bytes": 89
+    },
+    {
+      "path": "resourcepack/assets/studio/items/storm_bow.json",
+      "role": "primary",
+      "sha256": "f3e98015ff8d265a66434e6caba02e505bf70779b81d83aa047e2f082c2e045f",
+      "bytes": 817
+    },
+    {
+      "path": "resourcepack/assets/studio/items/heartwood_longbow.json",
+      "role": "primary",
+      "sha256": "85ae95e619338982469235d9b926a237a13a172f74bcf5710b01f4307d800671",
+      "bytes": 849
+    },
+    {
+      "path": "resourcepack/assets/studio/items/ember_staff.json",
+      "role": "primary",
+      "sha256": "06a38bb5bac83acf331f3d9a616a207050de1335beeca52c623f3fdf601e406c",
+      "bytes": 91
+    },
+    {
+      "path": "resourcepack/assets/studio/items/tide_staff.json",
+      "role": "primary",
+      "sha256": "1678fe90da27d2241fe50a130217b0f562beaa8c8ec6927ebc2bb742c3d102cf",
+      "bytes": 90
+    },
+    {
+      "path": "resourcepack/assets/studio/items/starfruit.json",
+      "role": "primary",
+      "sha256": "245f5475b9231075d215dc2a8d9602b6ae3095c1af1183807260b17456be53b0",
+      "bytes": 89
+    },
+    {
+      "path": "resourcepack/assets/studio/items/blood_orange.json",
+      "role": "primary",
+      "sha256": "c1da444f3b0464c876ea0d36e0ef5f90b7ca349f2291646643dba9208fe2ed4d",
+      "bytes": 92
+    },
+    {
+      "path": "resourcepack/assets/studio/items/frost_berries.json",
+      "role": "primary",
+      "sha256": "877a87c58b4257d04bcfa5744796770c8c98475258089cff93e09688867f9ebb",
+      "bytes": 93
+    },
+    {
+      "path": "resourcepack/assets/studio/items/glowfruit.json",
+      "role": "primary",
+      "sha256": "0bd05e1d3f49e5c08fc02fcc9c977d397c0c6717bc177e3cd4a07a0d167aeddc",
+      "bytes": 89
+    },
+    {
+      "path": "resourcepack/assets/studio/items/dragonfruit.json",
+      "role": "primary",
+      "sha256": "fe1d7c758efdffbdb07f52fad9009921fe26dba893e228af2d6a415e67166323",
+      "bytes": 91
+    },
+    {
+      "path": "resourcepack/assets/studio/items/golden_pear.json",
+      "role": "primary",
+      "sha256": "4dee6fcb956176a137964aaaf34f20bf079b112956170e7b580f58d660526c6a",
+      "bytes": 91
+    },
+    {
+      "path": "resourcepack/assets/studio/items/ranger_hood.json",
+      "role": "primary",
+      "sha256": "9771ccdab77ad8bb91168775d47892ce8ea17fab140c597ed499b9d8b1dec52c",
+      "bytes": 91
+    },
+    {
+      "path": "resourcepack/assets/studio/items/knight_helm.json",
+      "role": "primary",
+      "sha256": "22d7a6265de02271358206120b3573820b738e6e86155e45fb9501c3cd3f488d",
+      "bytes": 91
+    },
+    {
+      "path": "resourcepack/assets/studio/items/ranger_tunic.json",
+      "role": "primary",
+      "sha256": "5dfb1e1acf47b086f17d87a587705c318d5806d8f5f6e2f32e3c456f832e6cff",
+      "bytes": 92
+    },
+    {
+      "path": "resourcepack/assets/studio/items/knight_cuirass.json",
+      "role": "primary",
+      "sha256": "7994ece11478a783a460a55cfc113eb1686e76f7c4929078714f07bcecbf00b6",
+      "bytes": 94
+    },
+    {
+      "path": "resourcepack/assets/studio/items/ranger_trousers.json",
+      "role": "primary",
+      "sha256": "a80eb7d3734570d71a1782e6769f46d4e8e5dc962e9e95f328f6bf04db0dfc0d",
+      "bytes": 95
+    },
+    {
+      "path": "resourcepack/assets/studio/items/knight_greaves.json",
+      "role": "primary",
+      "sha256": "e35434c3ddb79cf2e819811dce0c1793521a66665e30f4560dee25933149e29e",
+      "bytes": 94
+    },
+    {
+      "path": "resourcepack/assets/studio/items/ranger_boots.json",
+      "role": "primary",
+      "sha256": "6527f5ee6f1c41954ee7044ff71236ec9c000050ff8c9cce6ffb4afd49d92836",
+      "bytes": 92
+    },
+    {
+      "path": "resourcepack/assets/studio/items/knight_sabatons.json",
+      "role": "primary",
+      "sha256": "6e8c7c134fb4cfae66a2dfd9d26bc3277d8743d0d917d0763cbe4a61e3abab88",
+      "bytes": 95
+    },
+    {
+      "path": "resourcepack/assets/studio/equipment/ranger.json",
+      "role": "primary",
+      "sha256": "fd44f7e9e9fa7a82df6958410371dfd77cfe136640b21d42056831f40a63598b",
+      "bytes": 182
+    },
+    {
+      "path": "resourcepack/assets/studio/equipment/knight.json",
+      "role": "primary",
+      "sha256": "698829d5adeff19b602c01898a76962fa6e99fe0c5dd90022d197060b45af92a",
+      "bytes": 182
+    }
+  ],
+  "source": {},
+  "created_at": "2026-10-07T06:02:50.642Z",
+  "modified_at": "2026-10-07T06:02:50.782Z",
+  "created_by": "minecraft-developer",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:ember_blade",
+    "studio:frost_fang",
+    "studio:void_katana",
+    "studio:bone_cleaver",
+    "studio:aurum_pickaxe",
+    "studio:aurum_axe",
+    "studio:aurum_shovel",
+    "studio:aurum_hoe",
+    "studio:storm_bow",
+    "studio:heartwood_longbow",
+    "studio:ember_staff",
+    "studio:tide_staff",
+    "studio:starfruit",
+    "studio:blood_orange",
+    "studio:frost_berries",
+    "studio:glowfruit",
+    "studio:dragonfruit",
+    "studio:golden_pear",
+    "studio:ranger_hood",
+    "studio:knight_helm",
+    "studio:ranger_tunic",
+    "studio:knight_cuirass",
+    "studio:ranger_trousers",
+    "studio:knight_greaves",
+    "studio:ranger_boots",
+    "studio:knight_sabatons"
+  ],
+  "preview": null,
+  "tags": [
+    "integration"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:50.779Z",
+      "by": "integration-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "pack validated & packaged",
+      "checks": [
+        {
+          "name": "resource pack validation",
+          "status": "pass",
+          "detail": "0 errors, 0 warnings"
+        },
+        {
+          "name": "in-game test",
+          "status": "warn",
+          "detail": "not run: needs a Minecraft 1.21.11 client"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:50.687Z",
+      "by": "minecraft-developer",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/models/item/ember_blade.json",
+          "sha256": "374c00e8edcfd89c7ed1ac9e28b2db2816be269274a47cf497445519a54b300f"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/frost_fang.json",
+          "sha256": "1cf9826c5ecf724e5522693dc6ea021c82974ae18f3e410886e1d66a2db719f5"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/void_katana.json",
+          "sha256": "aa87aa137fa2a9ba1c4dd02182cc811e745a49ba2a33109e309dcaab0898d25c"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/bone_cleaver.json",
+          "sha256": "b45a61fb473e30cb486290e8e7a9add0156bf127f092ce904b46e774af008d19"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/aurum_pickaxe.json",
+          "sha256": "75c055983fee8f9723e36182b30b1794bc17e2530a8fa0f6f684f6b1ecfb766e"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/aurum_axe.json",
+          "sha256": "1ba8a0c883c70ee57826d5f11dc623805db4f0251e54d462787c5d21e3eb49ab"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/aurum_shovel.json",
+          "sha256": "847d840a8ba5318f65df7b2665c3f74cd6740ae3d232e7a0a54c7d1de1ca8777"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/aurum_hoe.json",
+          "sha256": "b7768a2342da8803f2dd6fdc9915347c95c607e7f1cc92f99586a7ad23c3b45c"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/storm_bow.json",
+          "sha256": "761e6519bd9a1b361f14c12358dd57fcb0f836f5d85b06b62002684637fd8269"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/storm_bow_pulling_0.json",
+          "sha256": "61f7e80e665a781eb289f82cab0e35870f9c81008ce641555e10059be3a3b812"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/storm_bow_pulling_1.json",
+          "sha256": "a040af3cdbdfe4a4739a5ac650f7e91a8c1d5e488bb446211209a7e7db9d7627"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/storm_bow_pulling_2.json",
+          "sha256": "304866beefe148a7a42402321b7478d89f9a7e9d437babaab9f5e636cb500e2c"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/heartwood_longbow.json",
+          "sha256": "4e87899da52c409e1afc09f84ee8bf7b4c186d9931d5728dcd30e6f7eb4c59a1"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/heartwood_longbow_pulling_0.json",
+          "sha256": "5250d60f4c31b708274c9894da1f4ded048370e0a083b7a5a7695c66e95e3cdb"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/heartwood_longbow_pulling_1.json",
+          "sha256": "e216edba4111b723a82d3633ea7117098045f7269f911ffd8f49a32a928e4427"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/heartwood_longbow_pulling_2.json",
+          "sha256": "9118f3ed7b86ad64c20404c7a1c58841aa63028cd1777a765c9347335224213a"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/ember_staff.json",
+          "sha256": "f69a49c453815e7a34324a752f8ea45ab1e12846a6ad046451f2f73b3e2c41d0"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/tide_staff.json",
+          "sha256": "5fd6f605c0463f7f2111d61f97d2fbdbed31a3224c425f2e170d7275cd2592ef"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/starfruit.json",
+          "sha256": "c404eaed2ad44545f8d9fbb53e5a04ad159c492bc9784f7aef32a1eab7a77618"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/blood_orange.json",
+          "sha256": "d1fa166b0a9181db0c216ebd1a9aab5f2d8d58d2a0db250e2cb6e1dfc4bed0c2"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/frost_berries.json",
+          "sha256": "f6b38fca24659df29c6c4a04ff25f8f5f471346fb574913d78f00cc9201fc432"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/glowfruit.json",
+          "sha256": "83aedc649fc05c30376cd7e391c4d1fcb6af4f04dbc05ba851b3ff4718065125"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/dragonfruit.json",
+          "sha256": "bd4bacf5b55c6e35666153f2d9456b41d2e3fa8e7c658d7aea68f4e3425e919d"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/golden_pear.json",
+          "sha256": "57f1f460f9f79175f2417bf6ac1833b6640c619e459c45ada780daf66a15171c"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/ranger_hood.json",
+          "sha256": "313af6b74ea9bcd55690d2ce860e499ff1f030166c079989bda529bf545efbd2"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/knight_helm.json",
+          "sha256": "f0b4b49f575ab1b769012e8300cca139d37d0db35c80683b8ac54faca9048191"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/ranger_tunic.json",
+          "sha256": "58b829181db862a8c7c415eace89b4162f94044d72c6d83838b11e247e6c52b8"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/knight_cuirass.json",
+          "sha256": "1dc71cfc3a595561b37660d1a248d1a788a9d30ecf4700425a646d671af75434"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/ranger_trousers.json",
+          "sha256": "d89b9b589ecc6975b8b8bab5dfca7c61219b73d8f81d6790487dfb0075593cda"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/knight_greaves.json",
+          "sha256": "354098b97067212c9ae2bbcd54aa9e09b400cab7051463cc797568cc00092273"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/ranger_boots.json",
+          "sha256": "3a4b831712de59912e4e67dc422773f9b7019a9b32c707ac00efb9bd0f279502"
+        },
+        {
+          "path": "resourcepack/assets/studio/models/item/knight_sabatons.json",
+          "sha256": "c3c51a9f9a524731e4db0cc867ed1a407ffb05cd52aab13e756adbda2c97cf75"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/ember_blade.json",
+          "sha256": "b23ebc600456818a86a9b884e846f2eb9a7e1746a3854b7261863d614168aafb"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/frost_fang.json",
+          "sha256": "be656d51b2dd55f4a0e1fe80e8e50e099489455c6260cafcebcdc1d811784466"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/void_katana.json",
+          "sha256": "30aa602feb20b34fc060ab84e33eec9af184c5890755cb8fff6a5c644c02dbd5"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/bone_cleaver.json",
+          "sha256": "bc53243e2f4b2597d136ee59c3f420dd45604365ebce010b5f8dd303a923ede1"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/aurum_pickaxe.json",
+          "sha256": "e9d98c6fc00f26f09a7a95f162f5953c689764964efd7a85c9cc90eec833ab73"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/aurum_axe.json",
+          "sha256": "7ad6b56330115859643cfcff393555a71e684ffb0df7fbd6c89bf94c115accc5"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/aurum_shovel.json",
+          "sha256": "919799ee812537cf30c6f3c110bf005365c1c32df8267c4f12ee9244ece958d3"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/aurum_hoe.json",
+          "sha256": "ad12f3a30ca0ed5eb04f2392bca44460989ee27e9dca9137d8c49b517ab51bf0"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/storm_bow.json",
+          "sha256": "f3e98015ff8d265a66434e6caba02e505bf70779b81d83aa047e2f082c2e045f"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/heartwood_longbow.json",
+          "sha256": "85ae95e619338982469235d9b926a237a13a172f74bcf5710b01f4307d800671"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/ember_staff.json",
+          "sha256": "06a38bb5bac83acf331f3d9a616a207050de1335beeca52c623f3fdf601e406c"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/tide_staff.json",
+          "sha256": "1678fe90da27d2241fe50a130217b0f562beaa8c8ec6927ebc2bb742c3d102cf"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/starfruit.json",
+          "sha256": "245f5475b9231075d215dc2a8d9602b6ae3095c1af1183807260b17456be53b0"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/blood_orange.json",
+          "sha256": "c1da444f3b0464c876ea0d36e0ef5f90b7ca349f2291646643dba9208fe2ed4d"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/frost_berries.json",
+          "sha256": "877a87c58b4257d04bcfa5744796770c8c98475258089cff93e09688867f9ebb"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/glowfruit.json",
+          "sha256": "0bd05e1d3f49e5c08fc02fcc9c977d397c0c6717bc177e3cd4a07a0d167aeddc"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/dragonfruit.json",
+          "sha256": "fe1d7c758efdffbdb07f52fad9009921fe26dba893e228af2d6a415e67166323"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/golden_pear.json",
+          "sha256": "4dee6fcb956176a137964aaaf34f20bf079b112956170e7b580f58d660526c6a"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/ranger_hood.json",
+          "sha256": "9771ccdab77ad8bb91168775d47892ce8ea17fab140c597ed499b9d8b1dec52c"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/knight_helm.json",
+          "sha256": "22d7a6265de02271358206120b3573820b738e6e86155e45fb9501c3cd3f488d"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/ranger_tunic.json",
+          "sha256": "5dfb1e1acf47b086f17d87a587705c318d5806d8f5f6e2f32e3c456f832e6cff"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/knight_cuirass.json",
+          "sha256": "7994ece11478a783a460a55cfc113eb1686e76f7c4929078714f07bcecbf00b6"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/ranger_trousers.json",
+          "sha256": "a80eb7d3734570d71a1782e6769f46d4e8e5dc962e9e95f328f6bf04db0dfc0d"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/knight_greaves.json",
+          "sha256": "e35434c3ddb79cf2e819811dce0c1793521a66665e30f4560dee25933149e29e"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/ranger_boots.json",
+          "sha256": "6527f5ee6f1c41954ee7044ff71236ec9c000050ff8c9cce6ffb4afd49d92836"
+        },
+        {
+          "path": "resourcepack/assets/studio/items/knight_sabatons.json",
+          "sha256": "6e8c7c134fb4cfae66a2dfd9d26bc3277d8743d0d917d0763cbe4a61e3abab88"
+        },
+        {
+          "path": "resourcepack/assets/studio/equipment/ranger.json",
+          "sha256": "fd44f7e9e9fa7a82df6958410371dfd77cfe136640b21d42056831f40a63598b"
+        },
+        {
+          "path": "resourcepack/assets/studio/equipment/knight.json",
+          "sha256": "698829d5adeff19b602c01898a76962fa6e99fe0c5dd90022d197060b45af92a"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.definitions/v1",
+      "source": {}
+    }
+  ],
+  "metadata": {}
+}

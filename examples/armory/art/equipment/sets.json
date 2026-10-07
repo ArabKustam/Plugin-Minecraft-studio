@@ -1,0 +1,26 @@
+{
+  "ranger": {
+    "name": {
+      "en": "Ranger outfit (clothing)",
+      "ru": "Одежда следопыта"
+    },
+    "pieces": {
+      "head": "ranger_hood",
+      "chest": "ranger_tunic",
+      "legs": "ranger_trousers",
+      "feet": "ranger_boots"
+    }
+  },
+  "knight": {
+    "name": {
+      "en": "Knight plate armor",
+      "ru": "Рыцарские латы"
+    },
+    "pieces": {
+      "head": "knight_helm",
+      "chest": "knight_cuirass",
+      "legs": "knight_greaves",
+      "feet": "knight_sabatons"
+    }
+  }
+}

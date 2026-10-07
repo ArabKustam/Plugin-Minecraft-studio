@@ -1,0 +1,61 @@
+{
+  "size": [
+    16,
+    16
+  ],
+  "materials": {
+    "gold": {
+      "ramp": [
+        "#5a3a08",
+        "#a6720f",
+        "#e0b02a",
+        "#fff0a0"
+      ],
+      "style": "metal"
+    },
+    "plate": {
+      "ramp": [
+        "#2a2f38",
+        "#555e6c",
+        "#8a95a4",
+        "#c4cdd8",
+        "#f2f6fa"
+      ],
+      "style": "metal"
+    },
+    "plume": {
+      "ramp": [
+        "#4a0a10",
+        "#8a1420",
+        "#c42a34",
+        "#e85a60"
+      ],
+      "style": "cloth"
+    }
+  },
+  "parts": {
+    "m": "plate",
+    "t": "gold",
+    "e": "gold",
+    "E": "plume"
+  },
+  "rows": [
+    "................",
+    ".mmmmm....mmmmm.",
+    ".mmmmm....mmmmm.",
+    ".mmmmmmmmmmmmmm.",
+    ".mmmmmmmmmmmmmm.",
+    ".ttmmmmeemmmmtt.",
+    ".ttmmmeeeemmmtt.",
+    "...mmmeEEemmm...",
+    "...mmmeeeemmm...",
+    "...mmmmeemmmm...",
+    "...mmmmmmmmmm...",
+    "...mmmmmmmmmm...",
+    "...mmmmmmmmmm...",
+    "...tttttttttt...",
+    "...tttttttttt...",
+    "................"
+  ],
+  "outline": "auto"
+}

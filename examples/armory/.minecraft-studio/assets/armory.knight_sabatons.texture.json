@@ -1,0 +1,107 @@
+{
+  "id": "armory.knight_sabatons.texture",
+  "type": "texture",
+  "name": "Knight Sabatons",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/knight_sabatons.png",
+      "role": "primary",
+      "sha256": "ca05435945935bd21101398c077824254584a9a3a967ec6695952bc5aebde99f",
+      "bytes": 397
+    },
+    {
+      "path": "art/items/knight_sabatons.item.json",
+      "role": "source",
+      "sha256": "152606b4042fad6ccff450a7c1a6453571f29fddd4a2e71baacb901129c42016",
+      "bytes": 1008
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/knight_sabatons.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:50.164Z",
+  "modified_at": "2026-10-07T06:02:50.170Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/knight_sabatons"
+  ],
+  "preview": ".minecraft-studio/previews/armory_knight_sabatons_texture.png",
+  "tags": [
+    "item",
+    "armor"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:50.168Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "13 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "13 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "55% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:50.165Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/knight_sabatons.png",
+          "sha256": "ca05435945935bd21101398c077824254584a9a3a967ec6695952bc5aebde99f"
+        },
+        {
+          "path": "art/items/knight_sabatons.item.json",
+          "sha256": "152606b4042fad6ccff450a7c1a6453571f29fddd4a2e71baacb901129c42016"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.knight_sabatons.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/knight_sabatons.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 140,
+    "coverage": 0.547,
+    "colors": 13
+  }
+}

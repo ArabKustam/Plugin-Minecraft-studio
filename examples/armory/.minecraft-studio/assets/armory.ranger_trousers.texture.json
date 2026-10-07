@@ -1,0 +1,107 @@
+{
+  "id": "armory.ranger_trousers.texture",
+  "type": "texture",
+  "name": "Ranger Trousers",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/ranger_trousers.png",
+      "role": "primary",
+      "sha256": "fc8e2b6c73b79083b9d6531bb41653630490a3bd31c41cea4a4d3fb4a8231f7a",
+      "bytes": 324
+    },
+    {
+      "path": "art/items/ranger_trousers.item.json",
+      "role": "source",
+      "sha256": "c2df39a5069197a126b1f918fb0911844f4256dea9635aed819607ea7278b1e0",
+      "bytes": 836
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/ranger_trousers.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:50.103Z",
+  "modified_at": "2026-10-07T06:02:50.109Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/ranger_trousers"
+  ],
+  "preview": ".minecraft-studio/previews/armory_ranger_trousers_texture.png",
+  "tags": [
+    "item",
+    "armor"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:50.107Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "9 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "9 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "73% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:50.105Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/ranger_trousers.png",
+          "sha256": "fc8e2b6c73b79083b9d6531bb41653630490a3bd31c41cea4a4d3fb4a8231f7a"
+        },
+        {
+          "path": "art/items/ranger_trousers.item.json",
+          "sha256": "c2df39a5069197a126b1f918fb0911844f4256dea9635aed819607ea7278b1e0"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.ranger_trousers.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/ranger_trousers.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 186,
+    "coverage": 0.727,
+    "colors": 9
+  }
+}

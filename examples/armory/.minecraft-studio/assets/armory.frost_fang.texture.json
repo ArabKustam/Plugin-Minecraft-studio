@@ -1,0 +1,107 @@
+{
+  "id": "armory.frost_fang.texture",
+  "type": "texture",
+  "name": "Frost Fang",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/frost_fang.png",
+      "role": "primary",
+      "sha256": "2ed32c3227d3e5e1215a600c8e22de7df510569afcf3f8c897bec0f176aec649",
+      "bytes": 533
+    },
+    {
+      "path": "art/items/frost_fang.item.json",
+      "role": "source",
+      "sha256": "99dcf8a48d7e0ae1ac96bd03d87a0c464d64dedab150b4bd0240765fd9066756",
+      "bytes": 1014
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/frost_fang.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:49.527Z",
+  "modified_at": "2026-10-07T06:02:49.535Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/frost_fang"
+  ],
+  "preview": ".minecraft-studio/previews/armory_frost_fang_texture.png",
+  "tags": [
+    "item",
+    "sword"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:49.532Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "15 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "17 pixels differ from all 8 neighbours (random noise reads poorly at 16×16)"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "15 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "36% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:49.529Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/frost_fang.png",
+          "sha256": "2ed32c3227d3e5e1215a600c8e22de7df510569afcf3f8c897bec0f176aec649"
+        },
+        {
+          "path": "art/items/frost_fang.item.json",
+          "sha256": "99dcf8a48d7e0ae1ac96bd03d87a0c464d64dedab150b4bd0240765fd9066756"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.frost_fang.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/frost_fang.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 92,
+    "coverage": 0.359,
+    "colors": 15
+  }
+}

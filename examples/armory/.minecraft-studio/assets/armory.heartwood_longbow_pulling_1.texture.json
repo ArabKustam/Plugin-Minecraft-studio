@@ -1,0 +1,107 @@
+{
+  "id": "armory.heartwood_longbow_pulling_1.texture",
+  "type": "texture",
+  "name": "Heartwood Longbow (pull 2)",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/heartwood_longbow_pulling_1.png",
+      "role": "primary",
+      "sha256": "8ae1da136f27bea22d091d260200015c6f4d9d7f9f982ae6a6321f0b8f123bcf",
+      "bytes": 565
+    },
+    {
+      "path": "art/items/heartwood_longbow_pulling_1.item.json",
+      "role": "source",
+      "sha256": "2c01d5f1e705fd4f166cb666575a64110cae7dbad5d3c744c4f1796ed95476d2",
+      "bytes": 1483
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/heartwood_longbow_pulling_1.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:49.804Z",
+  "modified_at": "2026-10-07T06:02:49.811Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/heartwood_longbow_pulling_1"
+  ],
+  "preview": ".minecraft-studio/previews/armory_heartwood_longbow_pulling_1_texture.png",
+  "tags": [
+    "item",
+    "bow"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:49.808Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "23 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "26 pixels differ from all 8 neighbours (random noise reads poorly at 16×16)"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "23 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "46% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:49.806Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/heartwood_longbow_pulling_1.png",
+          "sha256": "8ae1da136f27bea22d091d260200015c6f4d9d7f9f982ae6a6321f0b8f123bcf"
+        },
+        {
+          "path": "art/items/heartwood_longbow_pulling_1.item.json",
+          "sha256": "2c01d5f1e705fd4f166cb666575a64110cae7dbad5d3c744c4f1796ed95476d2"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.heartwood_longbow_pulling_1.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/heartwood_longbow_pulling_1.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 118,
+    "coverage": 0.461,
+    "colors": 23
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "id": "armory.ranger.mannequin",
+  "type": "model",
+  "name": "Mannequin — Ranger outfit (clothing)",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "models/mannequin_ranger.bbmodel",
+      "role": "primary",
+      "sha256": "3ac31b5308c04fd301b0981ded2ce843b534e8d68cb9a5b0eb36848b3b653163",
+      "bytes": 29069
+    },
+    {
+      "path": "art/equipment/mannequin_ranger.model.json",
+      "role": "source",
+      "sha256": "c646ee5179044ab92ac9daaaf277e7cec5a9c1f03686aabb3807298e5fc23879",
+      "bytes": 6252
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "minecraft-studio-model/1",
+    "source_files": [
+      "art/equipment/mannequin_ranger.model.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:50.519Z",
+  "modified_at": "2026-10-07T06:02:50.529Z",
+  "created_by": "modeler",
+  "dependencies": [
+    "armory.ranger.humanoid",
+    "armory.ranger.humanoid_leggings"
+  ],
+  "minecraft_ids": [],
+  "preview": ".minecraft-studio/previews/model_mannequin_ranger.png",
+  "tags": [
+    "equipment",
+    "ranger",
+    "preview"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:50.526Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "mannequin turnaround reviewed",
+      "checks": [
+        {
+          "name": "export",
+          "status": "pass",
+          "detail": "models/mannequin_ranger.bbmodel, art/equipment/mannequin_ranger.model.json"
+        },
+        {
+          "name": "fit",
+          "status": "pass",
+          "detail": "Outer layer inflated 1.0, leggings 0.5 (vanilla); no gaps between pieces."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:50.522Z",
+      "by": "modeler",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "models/mannequin_ranger.bbmodel",
+          "sha256": "3ac31b5308c04fd301b0981ded2ce843b534e8d68cb9a5b0eb36848b3b653163"
+        },
+        {
+          "path": "art/equipment/mannequin_ranger.model.json",
+          "sha256": "c646ee5179044ab92ac9daaaf277e7cec5a9c1f03686aabb3807298e5fc23879"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.ranger.mannequin/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "minecraft-studio-model/1",
+        "source_files": [
+          "art/equipment/mannequin_ranger.model.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "bones": [
+      "body",
+      "head",
+      "arm_r",
+      "arm_l",
+      "leg_r",
+      "leg_l"
+    ],
+    "texture_size": [
+      64,
+      32
+    ]
+  }
+}

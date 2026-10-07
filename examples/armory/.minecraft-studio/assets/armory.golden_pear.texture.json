@@ -1,0 +1,107 @@
+{
+  "id": "armory.golden_pear.texture",
+  "type": "texture",
+  "name": "Golden Pear",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/golden_pear.png",
+      "role": "primary",
+      "sha256": "033d527b4e67cfd7e9497332dacd33f9f2bcb481fb78de6662b558f48348d47f",
+      "bytes": 383
+    },
+    {
+      "path": "art/items/golden_pear.item.json",
+      "role": "source",
+      "sha256": "bbbbc9b8dc13154e291b5fde7b94dd927f4e401c4dee4573cada565d941a784e",
+      "bytes": 1480
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/golden_pear.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:49.998Z",
+  "modified_at": "2026-10-07T06:02:50.005Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/golden_pear"
+  ],
+  "preview": ".minecraft-studio/previews/armory_golden_pear_texture.png",
+  "tags": [
+    "item",
+    "fruit"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:50.002Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "15 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "15 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "52% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:50.000Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/golden_pear.png",
+          "sha256": "033d527b4e67cfd7e9497332dacd33f9f2bcb481fb78de6662b558f48348d47f"
+        },
+        {
+          "path": "art/items/golden_pear.item.json",
+          "sha256": "bbbbc9b8dc13154e291b5fde7b94dd927f4e401c4dee4573cada565d941a784e"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.golden_pear.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/golden_pear.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 132,
+    "coverage": 0.516,
+    "colors": 15
+  }
+}

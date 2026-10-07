@@ -1,0 +1,294 @@
+{
+  "texture_size": [
+    64,
+    32
+  ],
+  "default_material": "plate",
+  "materials": {
+    "plate": {
+      "ramp": [
+        "#2a2f38",
+        "#555e6c",
+        "#8a95a4",
+        "#c4cdd8"
+      ],
+      "pattern": {
+        "type": "plates",
+        "size": 4
+      }
+    },
+    "gold": {
+      "ramp": [
+        "#5a3a08",
+        "#a6720f",
+        "#e0b02a",
+        "#fff0a0"
+      ]
+    },
+    "plume": {
+      "ramp": [
+        "#4a0a10",
+        "#8a1420",
+        "#c42a34",
+        "#e85a60"
+      ]
+    }
+  },
+  "cubes": {
+    "head": {
+      "material": "plate",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "g": "#e0b02a",
+            "v": "#101318",
+            "V": "#101318"
+          },
+          "rows": [
+            "gggggggg",
+            ".",
+            ".",
+            ".vvvvvv.",
+            "..VVVV..",
+            "...v..v.",
+            "...v..v."
+          ]
+        },
+        "up": {
+          "x": 3,
+          "y": 0,
+          "palette": {
+            "p": "#c42a34",
+            "P": "#8a1420"
+          },
+          "rows": [
+            "pP",
+            "pP",
+            "pP",
+            "pP",
+            "pP",
+            "pP",
+            "pP",
+            "pP"
+          ]
+        },
+        "south": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "g": "#e0b02a"
+          },
+          "rows": [
+            "gggggggg"
+          ]
+        }
+      }
+    },
+    "body": {
+      "material": "plate",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "g": "#e0b02a",
+            "r": "#c42a34",
+            "G": "#a6720f"
+          },
+          "rows": [
+            "gggggggg",
+            ".",
+            ".",
+            "...gg...",
+            "..grrg..",
+            "..grrg..",
+            "...GG...",
+            ".",
+            ".",
+            ".",
+            ".",
+            "gggggggg"
+          ]
+        },
+        "south": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "g": "#e0b02a"
+          },
+          "rows": [
+            "gggggggg",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            ".",
+            "gggggggg"
+          ]
+        }
+      }
+    },
+    "arm": {
+      "material": "plate",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "g": "#e0b02a"
+          },
+          "rows": [
+            "gggg",
+            "....",
+            "....",
+            "....",
+            "gggg"
+          ]
+        },
+        "south": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "g": "#e0b02a"
+          },
+          "rows": [
+            "gggg",
+            "....",
+            "....",
+            "....",
+            "gggg"
+          ]
+        },
+        "east": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "g": "#e0b02a"
+          },
+          "rows": [
+            "gggg",
+            "....",
+            "....",
+            "....",
+            "gggg"
+          ]
+        },
+        "west": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "g": "#e0b02a"
+          },
+          "rows": [
+            "gggg",
+            "....",
+            "....",
+            "....",
+            "gggg"
+          ]
+        }
+      }
+    },
+    "leg": {
+      "material": "plate",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "g": "#e0b02a"
+          },
+          "rows": [
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "gggg...."
+          ]
+        },
+        "south": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "g": "#e0b02a"
+          },
+          "rows": [
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "gggg...."
+          ]
+        },
+        "east": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "g": "#e0b02a"
+          },
+          "rows": [
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "gggg...."
+          ]
+        },
+        "west": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "g": "#e0b02a"
+          },
+          "rows": [
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "xxxx....",
+            "gggg...."
+          ]
+        },
+        "up": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        }
+      }
+    }
+  }
+}

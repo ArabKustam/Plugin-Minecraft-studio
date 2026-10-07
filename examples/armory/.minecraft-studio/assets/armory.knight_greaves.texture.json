@@ -1,0 +1,107 @@
+{
+  "id": "armory.knight_greaves.texture",
+  "type": "texture",
+  "name": "Knight Greaves",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/knight_greaves.png",
+      "role": "primary",
+      "sha256": "f221f1bc753b9aa5884ee07d14cbd5ecf5c7837a88d178e17e05668282900e99",
+      "bytes": 397
+    },
+    {
+      "path": "art/items/knight_greaves.item.json",
+      "role": "source",
+      "sha256": "eb0e502433dc9ce3f291ada772c45db0bc7af9585a0b556973105a8c1306a179",
+      "bytes": 854
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/knight_greaves.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:50.123Z",
+  "modified_at": "2026-10-07T06:02:50.130Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/knight_greaves"
+  ],
+  "preview": ".minecraft-studio/previews/armory_knight_greaves_texture.png",
+  "tags": [
+    "item",
+    "armor"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:50.127Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "10 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "10 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "73% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:50.125Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/knight_greaves.png",
+          "sha256": "f221f1bc753b9aa5884ee07d14cbd5ecf5c7837a88d178e17e05668282900e99"
+        },
+        {
+          "path": "art/items/knight_greaves.item.json",
+          "sha256": "eb0e502433dc9ce3f291ada772c45db0bc7af9585a0b556973105a8c1306a179"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.knight_greaves.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/knight_greaves.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 186,
+    "coverage": 0.727,
+    "colors": 10
+  }
+}

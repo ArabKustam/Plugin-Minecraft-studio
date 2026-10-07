@@ -1,0 +1,70 @@
+{
+  "size": [
+    16,
+    16
+  ],
+  "materials": {
+    "cloth_trim": {
+      "ramp": [
+        "#4a3008",
+        "#8a6420",
+        "#c49a3a",
+        "#e6c46a"
+      ],
+      "style": "cloth"
+    },
+    "gold": {
+      "ramp": [
+        "#5a3a08",
+        "#a6720f",
+        "#e0b02a",
+        "#fff0a0"
+      ],
+      "style": "metal"
+    },
+    "leather": {
+      "ramp": [
+        "#24130a",
+        "#4c2c16",
+        "#6a3f20",
+        "#8a542c"
+      ],
+      "style": "leather"
+    },
+    "cloth_green": {
+      "ramp": [
+        "#14301a",
+        "#24502c",
+        "#357040",
+        "#4a9056"
+      ],
+      "style": "cloth"
+    }
+  },
+  "parts": {
+    "m": "cloth_green",
+    "t": "cloth_trim",
+    "b": "leather",
+    "k": "gold",
+    "s": "leather"
+  },
+  "rows": [
+    "................",
+    ".mmmmm....mmmmm.",
+    ".mmmsm....mmmmm.",
+    ".mmmmsmmmmmmmmm.",
+    ".mmmmmsmmmmmmmm.",
+    ".ttmmmmsmmmmmtt.",
+    ".ttmmmmmsmmmmtt.",
+    "...mmmmmmsmmm...",
+    "...mmmmmmmsmm...",
+    "...bbbbkkbbbb...",
+    "...mmmmmmmmmm...",
+    "...mmmmmmmmmm...",
+    "...mmmmmmmmmm...",
+    "...tttttttttt...",
+    "...tttttttttt...",
+    "................"
+  ],
+  "outline": "auto"
+}

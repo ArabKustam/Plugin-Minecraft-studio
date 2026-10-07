@@ -1,0 +1,107 @@
+{
+  "id": "armory.knight_cuirass.texture",
+  "type": "texture",
+  "name": "Knight Cuirass",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/knight_cuirass.png",
+      "role": "primary",
+      "sha256": "13d2c0e335b3959730fade7e311aa140b162e7fdc8155c24f4161076959c69bc",
+      "bytes": 487
+    },
+    {
+      "path": "art/items/knight_cuirass.item.json",
+      "role": "source",
+      "sha256": "479e3e6947b62aafe8f3dfc7f45454427226a712806c7addeac09b5e9f0bee2a",
+      "bytes": 1017
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/knight_cuirass.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:50.083Z",
+  "modified_at": "2026-10-07T06:02:50.089Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/knight_cuirass"
+  ],
+  "preview": ".minecraft-studio/previews/armory_knight_cuirass_texture.png",
+  "tags": [
+    "item",
+    "armor"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:50.087Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "12 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "12 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "83% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:50.084Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/knight_cuirass.png",
+          "sha256": "13d2c0e335b3959730fade7e311aa140b162e7fdc8155c24f4161076959c69bc"
+        },
+        {
+          "path": "art/items/knight_cuirass.item.json",
+          "sha256": "479e3e6947b62aafe8f3dfc7f45454427226a712806c7addeac09b5e9f0bee2a"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.knight_cuirass.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/knight_cuirass.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 212,
+    "coverage": 0.828,
+    "colors": 12
+  }
+}

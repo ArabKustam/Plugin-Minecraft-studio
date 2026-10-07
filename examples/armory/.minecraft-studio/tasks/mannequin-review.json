@@ -1,0 +1,23 @@
+{
+  "id": "mannequin-review",
+  "goal": "Mannequin wearing each set; turnarounds and Blockbench projects.",
+  "agent": "modeler",
+  "inputs": [],
+  "outputs": [],
+  "allowed_tools": [],
+  "dependencies": [
+    "equipment-textures"
+  ],
+  "constraints": [],
+  "quality": [],
+  "validation": [],
+  "destination": null,
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T06:02:49.450Z",
+  "started_at": "2026-10-07T06:02:50.424Z",
+  "finished_at": "2026-10-07T06:02:50.607Z",
+  "updated_at": "2026-10-07T06:02:50.607Z",
+  "plan": null
+}

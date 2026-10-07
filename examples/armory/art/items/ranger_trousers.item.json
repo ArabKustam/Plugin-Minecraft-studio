@@ -1,0 +1,49 @@
+{
+  "size": [
+    16,
+    16
+  ],
+  "materials": {
+    "cloth_trim": {
+      "ramp": [
+        "#4a3008",
+        "#8a6420",
+        "#c49a3a",
+        "#e6c46a"
+      ],
+      "style": "cloth"
+    },
+    "leather": {
+      "ramp": [
+        "#24130a",
+        "#4c2c16",
+        "#6a3f20",
+        "#8a542c"
+      ],
+      "style": "leather"
+    }
+  },
+  "parts": {
+    "m": "leather",
+    "t": "cloth_trim"
+  },
+  "rows": [
+    "................",
+    "...tttttttttt...",
+    "...mmmmmmmmmm...",
+    "...mmmmmmmmmm...",
+    "...mmmmmmmmmm...",
+    "...mmmmmmmmmm...",
+    "...mmmm..mmmm...",
+    "...mmmm..mmmm...",
+    "...mmmm..mmmm...",
+    "...mmmm..mmmm...",
+    "...mmmm..mmmm...",
+    "...mmmm..mmmm...",
+    "...mmmm..mmmm...",
+    "...mmmm..mmmm...",
+    "...mmmm..mmmm...",
+    "................"
+  ],
+  "outline": "auto"
+}

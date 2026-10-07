@@ -1,0 +1,107 @@
+{
+  "id": "armory.ranger_tunic.texture",
+  "type": "texture",
+  "name": "Ranger Tunic",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/ranger_tunic.png",
+      "role": "primary",
+      "sha256": "f62338ebf279f9ff58f4f6ae5ba7e6cc92b88028f2c8c788c6bda5253f926e0f",
+      "bytes": 481
+    },
+    {
+      "path": "art/items/ranger_tunic.item.json",
+      "role": "source",
+      "sha256": "da706be6daf63144c63f1c5df18f2fd95cfcab27a8173ac80e4922319179ca20",
+      "bytes": 1192
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/ranger_tunic.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:50.062Z",
+  "modified_at": "2026-10-07T06:02:50.069Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/ranger_tunic"
+  ],
+  "preview": ".minecraft-studio/previews/armory_ranger_tunic_texture.png",
+  "tags": [
+    "item",
+    "armor"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:50.066Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "14 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "22 pixels differ from all 8 neighbours (random noise reads poorly at 16×16)"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "14 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "83% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:50.064Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/ranger_tunic.png",
+          "sha256": "f62338ebf279f9ff58f4f6ae5ba7e6cc92b88028f2c8c788c6bda5253f926e0f"
+        },
+        {
+          "path": "art/items/ranger_tunic.item.json",
+          "sha256": "da706be6daf63144c63f1c5df18f2fd95cfcab27a8173ac80e4922319179ca20"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.ranger_tunic.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/ranger_tunic.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 212,
+    "coverage": 0.828,
+    "colors": 14
+  }
+}

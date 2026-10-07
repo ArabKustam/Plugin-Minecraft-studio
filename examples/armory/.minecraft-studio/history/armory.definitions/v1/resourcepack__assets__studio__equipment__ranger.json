@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "studio:ranger"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "studio:ranger"
+      }
+    ]
+  }
+}

@@ -18,3 +18,4 @@ Thumbs.db
 .vscode/
 *.log
 !examples/creatures/build-out/
+!examples/armory/build-out/

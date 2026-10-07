@@ -1,0 +1,113 @@
+{
+  "id": "armory.ranger.humanoid",
+  "type": "texture",
+  "name": "Ranger outfit (clothing) (humanoid)",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/entity/equipment/humanoid/ranger.png",
+      "role": "primary",
+      "sha256": "187f39b178f2c7ae71d9cb3cdbc511a82d83f6951e848354c35b9d8ab481db63",
+      "bytes": 690
+    },
+    {
+      "path": "art/equipment/ranger_humanoid.paint.json",
+      "role": "source",
+      "sha256": "6b5ad5b04720ddd2817177307d5f91fb74f546d21868af5eb5a9af3d91e11796",
+      "bytes": 5816
+    }
+  ],
+  "source": {
+    "provider": "uv-painter",
+    "method": "texture_paint_uv",
+    "source_files": [
+      "art/equipment/ranger_humanoid.paint.json",
+      "renders/template_humanoid.model.json"
+    ],
+    "parameters": {
+      "materials": [
+        "cloth",
+        "leather"
+      ]
+    }
+  },
+  "created_at": "2026-10-07T06:02:50.270Z",
+  "modified_at": "2026-10-07T06:02:50.277Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:ranger"
+  ],
+  "preview": ".minecraft-studio/previews/atlas_armory_ranger_humanoid.png",
+  "tags": [
+    "equipment",
+    "ranger"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:50.274Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "humanoid layer",
+      "checks": [
+        {
+          "name": "layout",
+          "status": "pass",
+          "detail": "64×32 vanilla humanoid layout"
+        },
+        {
+          "name": "worn review",
+          "status": "pass",
+          "detail": "Checked on the mannequin: pieces line up with head/body/arms/legs; transparent areas show the body underneath."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:50.271Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/entity/equipment/humanoid/ranger.png",
+          "sha256": "187f39b178f2c7ae71d9cb3cdbc511a82d83f6951e848354c35b9d8ab481db63"
+        },
+        {
+          "path": "art/equipment/ranger_humanoid.paint.json",
+          "sha256": "6b5ad5b04720ddd2817177307d5f91fb74f546d21868af5eb5a9af3d91e11796"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.ranger.humanoid/v1",
+      "source": {
+        "provider": "uv-painter",
+        "method": "texture_paint_uv",
+        "source_files": [
+          "art/equipment/ranger_humanoid.paint.json",
+          "renders/template_humanoid.model.json"
+        ],
+        "parameters": {
+          "materials": [
+            "cloth",
+            "leather"
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "width": 64,
+    "height": 32,
+    "texture_size": [
+      64,
+      32
+    ],
+    "cubes": 4,
+    "coverage": 0.578
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "armory.ranger.humanoid_leggings",
+  "type": "texture",
+  "name": "Ranger outfit (clothing) (humanoid_leggings)",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/entity/equipment/humanoid_leggings/ranger.png",
+      "role": "primary",
+      "sha256": "422dae7d18cc26cc0fdd09d176fcd1667c8d0ec9a92b33dcc74f3556ea208fe9",
+      "bytes": 258
+    },
+    {
+      "path": "art/equipment/ranger_humanoid_leggings.paint.json",
+      "role": "source",
+      "sha256": "8d14efe1157fef51fe3973c7102644d133d509f81f3675e8d45f10affd978532",
+      "bytes": 3614
+    }
+  ],
+  "source": {
+    "provider": "uv-painter",
+    "method": "texture_paint_uv",
+    "source_files": [
+      "art/equipment/ranger_humanoid_leggings.paint.json",
+      "renders/template_humanoid_leggings.model.json"
+    ],
+    "parameters": {
+      "materials": [
+        "leather"
+      ]
+    }
+  },
+  "created_at": "2026-10-07T06:02:50.314Z",
+  "modified_at": "2026-10-07T06:02:50.321Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:ranger"
+  ],
+  "preview": ".minecraft-studio/previews/atlas_armory_ranger_humanoid_leggings.png",
+  "tags": [
+    "equipment",
+    "ranger"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:50.319Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "humanoid_leggings layer",
+      "checks": [
+        {
+          "name": "layout",
+          "status": "pass",
+          "detail": "64×32 vanilla humanoid layout"
+        },
+        {
+          "name": "worn review",
+          "status": "pass",
+          "detail": "Checked on the mannequin: pieces line up with head/body/arms/legs; transparent areas show the body underneath."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:50.316Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/entity/equipment/humanoid_leggings/ranger.png",
+          "sha256": "422dae7d18cc26cc0fdd09d176fcd1667c8d0ec9a92b33dcc74f3556ea208fe9"
+        },
+        {
+          "path": "art/equipment/ranger_humanoid_leggings.paint.json",
+          "sha256": "8d14efe1157fef51fe3973c7102644d133d509f81f3675e8d45f10affd978532"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.ranger.humanoid_leggings/v1",
+      "source": {
+        "provider": "uv-painter",
+        "method": "texture_paint_uv",
+        "source_files": [
+          "art/equipment/ranger_humanoid_leggings.paint.json",
+          "renders/template_humanoid_leggings.model.json"
+        ],
+        "parameters": {
+          "materials": [
+            "leather"
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "width": 64,
+    "height": 32,
+    "texture_size": [
+      64,
+      32
+    ],
+    "cubes": 2,
+    "coverage": 0.281
+  }
+}

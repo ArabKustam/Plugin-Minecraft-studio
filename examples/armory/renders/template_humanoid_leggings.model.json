@@ -1,0 +1,60 @@
+{
+  "format": "minecraft-studio-model/1",
+  "name": "armor_template_humanoid_leggings",
+  "texture_size": [
+    64,
+    32
+  ],
+  "textures": {
+    "armor": "resourcepack/assets/studio/textures/entity/equipment/humanoid_leggings/knight.png"
+  },
+  "bones": [
+    {
+      "name": "root",
+      "pivot": [
+        8,
+        0,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "body",
+          "from": [
+            4,
+            12,
+            6
+          ],
+          "to": [
+            12,
+            24,
+            10
+          ],
+          "box_uv": [
+            16,
+            16
+          ],
+          "texture": "armor"
+        },
+        {
+          "name": "leg",
+          "from": [
+            4,
+            0,
+            6
+          ],
+          "to": [
+            8,
+            12,
+            10
+          ],
+          "box_uv": [
+            0,
+            16
+          ],
+          "texture": "armor"
+        }
+      ]
+    }
+  ],
+  "notes": "Vanilla 'humanoid_leggings' equipment layout. Used only to paint the texture (box_uv fixed)."
+}

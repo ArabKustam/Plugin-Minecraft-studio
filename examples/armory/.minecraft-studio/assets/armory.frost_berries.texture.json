@@ -1,0 +1,107 @@
+{
+  "id": "armory.frost_berries.texture",
+  "type": "texture",
+  "name": "Frost Berries",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/frost_berries.png",
+      "role": "primary",
+      "sha256": "9699cba9c02c36e6d27ca9928c983fd016cd8ca4442ef5f72b369ee2a31d0f82",
+      "bytes": 569
+    },
+    {
+      "path": "art/items/frost_berries.item.json",
+      "role": "source",
+      "sha256": "8e7adaccde608be43e1305fefe974e144916e133d47ebbe2cb25e75e3893c769",
+      "bytes": 1536
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/frost_berries.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:49.939Z",
+  "modified_at": "2026-10-07T06:02:49.945Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/frost_berries"
+  ],
+  "preview": ".minecraft-studio/previews/armory_frost_berries_texture.png",
+  "tags": [
+    "item",
+    "fruit"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:49.943Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "14 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "19 pixels differ from all 8 neighbours (random noise reads poorly at 16×16)"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "14 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "53% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:49.940Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/frost_berries.png",
+          "sha256": "9699cba9c02c36e6d27ca9928c983fd016cd8ca4442ef5f72b369ee2a31d0f82"
+        },
+        {
+          "path": "art/items/frost_berries.item.json",
+          "sha256": "8e7adaccde608be43e1305fefe974e144916e133d47ebbe2cb25e75e3893c769"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.frost_berries.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/frost_berries.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 135,
+    "coverage": 0.527,
+    "colors": 14
+  }
+}

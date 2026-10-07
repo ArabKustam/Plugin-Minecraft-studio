@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/bow",
+  "textures": {
+    "layer0": "studio:item/storm_bow_pulling_1"
+  }
+}

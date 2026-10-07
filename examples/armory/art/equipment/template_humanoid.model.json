@@ -1,0 +1,96 @@
+{
+  "format": "minecraft-studio-model/1",
+  "name": "armor_template_humanoid",
+  "texture_size": [
+    64,
+    32
+  ],
+  "textures": {
+    "armor": "TBD"
+  },
+  "bones": [
+    {
+      "name": "root",
+      "pivot": [
+        8,
+        0,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "head",
+          "from": [
+            4,
+            24,
+            4
+          ],
+          "to": [
+            12,
+            32,
+            12
+          ],
+          "box_uv": [
+            0,
+            0
+          ],
+          "texture": "armor"
+        },
+        {
+          "name": "body",
+          "from": [
+            4,
+            12,
+            6
+          ],
+          "to": [
+            12,
+            24,
+            10
+          ],
+          "box_uv": [
+            16,
+            16
+          ],
+          "texture": "armor"
+        },
+        {
+          "name": "leg",
+          "from": [
+            4,
+            0,
+            6
+          ],
+          "to": [
+            8,
+            12,
+            10
+          ],
+          "box_uv": [
+            0,
+            16
+          ],
+          "texture": "armor"
+        },
+        {
+          "name": "arm",
+          "from": [
+            0,
+            12,
+            6
+          ],
+          "to": [
+            4,
+            24,
+            10
+          ],
+          "box_uv": [
+            40,
+            16
+          ],
+          "texture": "armor"
+        }
+      ]
+    }
+  ],
+  "notes": "Vanilla 'humanoid' equipment layout. Used only to paint the texture (box_uv fixed)."
+}

@@ -1,0 +1,378 @@
+{
+  "format": "minecraft-studio-model/1",
+  "name": "mannequin_knight",
+  "texture_size": [
+    64,
+    32
+  ],
+  "textures": {
+    "skin": "renders/mannequin_skin.png",
+    "armor1": "resourcepack/assets/studio/textures/entity/equipment/humanoid/knight.png",
+    "armor2": "resourcepack/assets/studio/textures/entity/equipment/humanoid_leggings/knight.png"
+  },
+  "bones": [
+    {
+      "name": "body",
+      "pivot": [
+        8,
+        12,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "torso",
+          "from": [
+            4,
+            12,
+            6
+          ],
+          "to": [
+            12,
+            24,
+            10
+          ],
+          "box_uv": [
+            16,
+            16
+          ],
+          "texture": "skin"
+        },
+        {
+          "name": "leggings_waist",
+          "from": [
+            4,
+            12,
+            6
+          ],
+          "to": [
+            12,
+            24,
+            10
+          ],
+          "box_uv": [
+            16,
+            16
+          ],
+          "texture": "armor2",
+          "inflate": 0.5
+        },
+        {
+          "name": "chest",
+          "from": [
+            4,
+            12,
+            6
+          ],
+          "to": [
+            12,
+            24,
+            10
+          ],
+          "box_uv": [
+            16,
+            16
+          ],
+          "texture": "armor1",
+          "inflate": 1.0
+        }
+      ]
+    },
+    {
+      "name": "head",
+      "parent": "body",
+      "pivot": [
+        8,
+        24,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "head",
+          "from": [
+            4,
+            24,
+            4
+          ],
+          "to": [
+            12,
+            32,
+            12
+          ],
+          "box_uv": [
+            0,
+            0
+          ],
+          "texture": "skin"
+        },
+        {
+          "name": "helmet",
+          "from": [
+            4,
+            24,
+            4
+          ],
+          "to": [
+            12,
+            32,
+            12
+          ],
+          "box_uv": [
+            0,
+            0
+          ],
+          "texture": "armor1",
+          "inflate": 1.0
+        }
+      ]
+    },
+    {
+      "name": "arm_r",
+      "parent": "body",
+      "pivot": [
+        2,
+        22,
+        8
+      ],
+      "rotation": [
+        -10,
+        0,
+        6
+      ],
+      "cubes": [
+        {
+          "name": "arm_r",
+          "from": [
+            0,
+            12,
+            6
+          ],
+          "to": [
+            4,
+            24,
+            10
+          ],
+          "box_uv": [
+            40,
+            16
+          ],
+          "texture": "skin"
+        },
+        {
+          "name": "sleeve_r",
+          "from": [
+            0,
+            12,
+            6
+          ],
+          "to": [
+            4,
+            24,
+            10
+          ],
+          "box_uv": [
+            40,
+            16
+          ],
+          "texture": "armor1",
+          "inflate": 1.0
+        }
+      ]
+    },
+    {
+      "name": "arm_l",
+      "parent": "body",
+      "pivot": [
+        14,
+        22,
+        8
+      ],
+      "rotation": [
+        10,
+        0,
+        -6
+      ],
+      "cubes": [
+        {
+          "name": "arm_l",
+          "from": [
+            12,
+            12,
+            6
+          ],
+          "to": [
+            16,
+            24,
+            10
+          ],
+          "box_uv": [
+            40,
+            16
+          ],
+          "texture": "skin"
+        },
+        {
+          "name": "sleeve_l",
+          "from": [
+            12,
+            12,
+            6
+          ],
+          "to": [
+            16,
+            24,
+            10
+          ],
+          "box_uv": [
+            40,
+            16
+          ],
+          "texture": "armor1",
+          "inflate": 1.0
+        }
+      ]
+    },
+    {
+      "name": "leg_r",
+      "pivot": [
+        6,
+        12,
+        8
+      ],
+      "rotation": [
+        6,
+        0,
+        0
+      ],
+      "cubes": [
+        {
+          "name": "leg_r",
+          "from": [
+            4,
+            0,
+            6
+          ],
+          "to": [
+            8,
+            12,
+            10
+          ],
+          "box_uv": [
+            0,
+            16
+          ],
+          "texture": "skin"
+        },
+        {
+          "name": "legging_r",
+          "from": [
+            4,
+            0,
+            6
+          ],
+          "to": [
+            8,
+            12,
+            10
+          ],
+          "box_uv": [
+            0,
+            16
+          ],
+          "texture": "armor2",
+          "inflate": 0.5
+        },
+        {
+          "name": "boot_r",
+          "from": [
+            4,
+            0,
+            6
+          ],
+          "to": [
+            8,
+            12,
+            10
+          ],
+          "box_uv": [
+            0,
+            16
+          ],
+          "texture": "armor1",
+          "inflate": 1.0
+        }
+      ]
+    },
+    {
+      "name": "leg_l",
+      "pivot": [
+        10,
+        12,
+        8
+      ],
+      "rotation": [
+        -6,
+        0,
+        0
+      ],
+      "cubes": [
+        {
+          "name": "leg_l",
+          "from": [
+            8,
+            0,
+            6
+          ],
+          "to": [
+            12,
+            12,
+            10
+          ],
+          "box_uv": [
+            0,
+            16
+          ],
+          "texture": "skin"
+        },
+        {
+          "name": "legging_l",
+          "from": [
+            8,
+            0,
+            6
+          ],
+          "to": [
+            12,
+            12,
+            10
+          ],
+          "box_uv": [
+            0,
+            16
+          ],
+          "texture": "armor2",
+          "inflate": 0.5
+        },
+        {
+          "name": "boot_l",
+          "from": [
+            8,
+            0,
+            6
+          ],
+          "to": [
+            12,
+            12,
+            10
+          ],
+          "box_uv": [
+            0,
+            16
+          ],
+          "texture": "armor1",
+          "inflate": 1.0
+        }
+      ]
+    }
+  ],
+  "notes": "Wooden mannequin wearing the full set with vanilla inflation (outer layer 1.0, leggings 0.5)."
+}

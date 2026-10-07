@@ -1,0 +1,197 @@
+{
+  "texture_size": [
+    64,
+    32
+  ],
+  "default_material": "leather",
+  "materials": {
+    "leather": {
+      "ramp": [
+        "#2a1a0c",
+        "#4a3018",
+        "#6a4626",
+        "#8a5e36"
+      ],
+      "pattern": {
+        "type": "stripes",
+        "size": 4
+      }
+    },
+    "belt": {
+      "ramp": [
+        "#1a0e06",
+        "#2a160a",
+        "#3a200e",
+        "#4c2c16"
+      ]
+    }
+  },
+  "cubes": {
+    "body": {
+      "material": "leather",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "b": "#1a0e06",
+            "k": "#e0b02a"
+          },
+          "rows": [
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "bbbkkbbb"
+          ]
+        },
+        "south": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "b": "#1a0e06"
+          },
+          "rows": [
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "bbbbbbbb"
+          ]
+        },
+        "east": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        },
+        "west": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        },
+        "up": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx"
+          ]
+        }
+      }
+    },
+    "leg": {
+      "material": "leather",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 9,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        },
+        "south": {
+          "x": 0,
+          "y": 9,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        },
+        "east": {
+          "x": 0,
+          "y": 9,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        },
+        "west": {
+          "x": 0,
+          "y": 9,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        },
+        "up": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        },
+        "down": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "id": "armory.storm_bow_pulling_2.texture",
+  "type": "texture",
+  "name": "Storm Bow (pull 3)",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/storm_bow_pulling_2.png",
+      "role": "primary",
+      "sha256": "45de111d79cbc29fc736c3657a2ce040c7355efd6cfcb4990fd10abfb238321a",
+      "bytes": 557
+    },
+    {
+      "path": "art/items/storm_bow_pulling_2.item.json",
+      "role": "source",
+      "sha256": "7e18adf5139f75c0e695813eac98a90e5e7bcc3b42955c6a9a1000fb305c3c55",
+      "bytes": 1662
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/storm_bow_pulling_2.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:49.743Z",
+  "modified_at": "2026-10-07T06:02:49.750Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/storm_bow_pulling_2"
+  ],
+  "preview": ".minecraft-studio/previews/armory_storm_bow_pulling_2_texture.png",
+  "tags": [
+    "item",
+    "bow"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:49.748Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "21 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "27 pixels differ from all 8 neighbours (random noise reads poorly at 16×16)"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "21 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "45% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:49.745Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/storm_bow_pulling_2.png",
+          "sha256": "45de111d79cbc29fc736c3657a2ce040c7355efd6cfcb4990fd10abfb238321a"
+        },
+        {
+          "path": "art/items/storm_bow_pulling_2.item.json",
+          "sha256": "7e18adf5139f75c0e695813eac98a90e5e7bcc3b42955c6a9a1000fb305c3c55"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.storm_bow_pulling_2.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/storm_bow_pulling_2.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 114,
+    "coverage": 0.445,
+    "colors": 21
+  }
+}

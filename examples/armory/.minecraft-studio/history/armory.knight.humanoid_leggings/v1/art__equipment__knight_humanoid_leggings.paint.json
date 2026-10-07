@@ -1,0 +1,240 @@
+{
+  "texture_size": [
+    64,
+    32
+  ],
+  "default_material": "plate",
+  "materials": {
+    "plate": {
+      "ramp": [
+        "#2a2f38",
+        "#555e6c",
+        "#8a95a4",
+        "#c4cdd8"
+      ],
+      "pattern": {
+        "type": "plates",
+        "size": 4
+      }
+    },
+    "gold": {
+      "ramp": [
+        "#5a3a08",
+        "#a6720f",
+        "#e0b02a",
+        "#fff0a0"
+      ]
+    }
+  },
+  "cubes": {
+    "body": {
+      "material": "plate",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "g": "#e0b02a"
+          },
+          "rows": [
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "gggggggg"
+          ]
+        },
+        "south": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "g": "#e0b02a"
+          },
+          "rows": [
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "gggggggg"
+          ]
+        },
+        "east": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        },
+        "west": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        },
+        "up": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx"
+          ]
+        }
+      }
+    },
+    "leg": {
+      "material": "plate",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "g": "#e0b02a",
+            "G": "#a6720f"
+          },
+          "rows": [
+            ".",
+            ".",
+            ".",
+            ".",
+            "gggg....",
+            "GGGG....",
+            ".",
+            ".",
+            ".",
+            "xxxx....",
+            "xxxx....",
+            "xxxx...."
+          ]
+        },
+        "south": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "g": "#e0b02a",
+            "G": "#a6720f"
+          },
+          "rows": [
+            ".",
+            ".",
+            ".",
+            ".",
+            "gggg....",
+            "GGGG....",
+            ".",
+            ".",
+            ".",
+            "xxxx....",
+            "xxxx....",
+            "xxxx...."
+          ]
+        },
+        "east": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "g": "#e0b02a",
+            "G": "#a6720f"
+          },
+          "rows": [
+            ".",
+            ".",
+            ".",
+            ".",
+            "gggg....",
+            "GGGG....",
+            ".",
+            ".",
+            ".",
+            "xxxx....",
+            "xxxx....",
+            "xxxx...."
+          ]
+        },
+        "west": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent",
+            "g": "#e0b02a",
+            "G": "#a6720f"
+          },
+          "rows": [
+            ".",
+            ".",
+            ".",
+            ".",
+            "gggg....",
+            "GGGG....",
+            ".",
+            ".",
+            ".",
+            "xxxx....",
+            "xxxx....",
+            "xxxx...."
+          ]
+        },
+        "up": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        },
+        "down": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "x": "transparent"
+          },
+          "rows": [
+            "xxxx",
+            "xxxx",
+            "xxxx",
+            "xxxx"
+          ]
+        }
+      }
+    }
+  }
+}

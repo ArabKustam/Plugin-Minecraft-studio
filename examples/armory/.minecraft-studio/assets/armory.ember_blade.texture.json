@@ -1,0 +1,107 @@
+{
+  "id": "armory.ember_blade.texture",
+  "type": "texture",
+  "name": "Ember Blade",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "resourcepack/assets/studio/textures/item/ember_blade.png",
+      "role": "primary",
+      "sha256": "bd288b2f6ab0bf13848272315f567f7c8e4e543ee2366fc94970c5f3e881a374",
+      "bytes": 489
+    },
+    {
+      "path": "art/items/ember_blade.item.json",
+      "role": "source",
+      "sha256": "370fa8843a659b2d00432a951b55ef439f3750dbff93f48bae8cfcc8d806cecf",
+      "bytes": 1365
+    }
+  ],
+  "source": {
+    "provider": "item-shader",
+    "method": "texture_shade_item",
+    "source_files": [
+      "art/items/ember_blade.item.json"
+    ]
+  },
+  "created_at": "2026-10-07T06:02:49.501Z",
+  "modified_at": "2026-10-07T06:02:49.512Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:item/ember_blade"
+  ],
+  "preview": ".minecraft-studio/previews/armory_ember_blade_texture.png",
+  "tags": [
+    "item",
+    "sword"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T06:02:49.509Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "16 colours",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "palette size",
+          "status": "pass",
+          "detail": "16 colours"
+        },
+        {
+          "name": "silhouette coverage",
+          "status": "pass",
+          "detail": "32% of the canvas"
+        },
+        {
+          "name": "visual review",
+          "status": "pass",
+          "detail": "Review sheet checked at 1600%/800%/100%: readable shape, consistent lighting and outline."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T06:02:49.505Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "resourcepack/assets/studio/textures/item/ember_blade.png",
+          "sha256": "bd288b2f6ab0bf13848272315f567f7c8e4e543ee2366fc94970c5f3e881a374"
+        },
+        {
+          "path": "art/items/ember_blade.item.json",
+          "sha256": "370fa8843a659b2d00432a951b55ef439f3750dbff93f48bae8cfcc8d806cecf"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/armory.ember_blade.texture/v1",
+      "source": {
+        "provider": "item-shader",
+        "method": "texture_shade_item",
+        "source_files": [
+          "art/items/ember_blade.item.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "width": 16,
+    "height": 16,
+    "frames": 1,
+    "filled_px": 82,
+    "coverage": 0.32,
+    "colors": 16
+  }
+}

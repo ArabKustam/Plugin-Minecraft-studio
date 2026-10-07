@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "studio:knight"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "studio:knight"
+      }
+    ]
+  }
+}

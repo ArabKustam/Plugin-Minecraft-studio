@@ -1,0 +1,99 @@
+{
+  "size": [
+    16,
+    16
+  ],
+  "materials": {
+    "storm": {
+      "ramp": [
+        "#141c2e",
+        "#2a3a5c",
+        "#46628f",
+        "#7aa0d8",
+        "#bcd6ff"
+      ],
+      "style": "metal"
+    },
+    "lightning": {
+      "ramp": [
+        "#3a3a10",
+        "#c4c41c",
+        "#fff35a",
+        "#ffffd0"
+      ],
+      "style": "glow"
+    },
+    "birch": {
+      "ramp": [
+        "#6a5a3a",
+        "#a89064",
+        "#d6c08a",
+        "#f0e2b4"
+      ],
+      "style": "wood"
+    },
+    "arrowhead": {
+      "ramp": [
+        "#3a3f4a",
+        "#8a94a4",
+        "#d0d8e0"
+      ],
+      "style": "metal"
+    },
+    "string": {
+      "ramp": [
+        "#b8b8ae",
+        "#e6e6dc",
+        "#ffffff"
+      ],
+      "style": "flat",
+      "outline": false
+    },
+    "leather": {
+      "ramp": [
+        "#24130a",
+        "#4c2c16",
+        "#6a3f20",
+        "#8a542c"
+      ],
+      "style": "leather"
+    },
+    "fletch": {
+      "ramp": [
+        "#5a0a10",
+        "#a8202a",
+        "#e04a50",
+        "#ff8a8a"
+      ],
+      "style": "flat"
+    }
+  },
+  "parts": {
+    "f": "storm",
+    "g": "leather",
+    "s": "string",
+    "a": "birch",
+    "h": "arrowhead",
+    "q": "fletch",
+    "z": "lightning"
+  },
+  "rows": [
+    ".....f..........",
+    "..ffffffffg.....",
+    "...ss....fggg...",
+    "....ss.....gzg..",
+    ".....ss.....gg..",
+    "......ss.....gg.",
+    ".......ss....ff.",
+    "........ss....f.",
+    ".........ss...f.",
+    "..........ss..f.",
+    "...........ss.ff",
+    "............ssf.",
+    ".............sf.",
+    "..............f.",
+    "................",
+    "................"
+  ],
+  "outline": "auto"
+}

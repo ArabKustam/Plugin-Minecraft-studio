@@ -1,0 +1,34 @@
+{
+  "entries": [
+    {
+      "id": "platform-0001",
+      "category": "platform",
+      "title": "Primary platform: resourcepack",
+      "content": "Detected nothing. Minecraft version: 1.21.11.",
+      "tags": [],
+      "by": "project-director",
+      "at": "2026-10-07T06:02:49.416Z",
+      "superseded_by": null
+    },
+    {
+      "id": "naming-0002",
+      "category": "naming",
+      "title": "Default namespace \"armoryorchard\"",
+      "content": "New resource locations, sound events and item models use this namespace unless the user says otherwise.",
+      "tags": [],
+      "by": "project-director",
+      "at": "2026-10-07T06:02:49.417Z",
+      "superseded_by": null
+    },
+    {
+      "id": "decision-0003",
+      "category": "decision",
+      "title": "Custom items without mods",
+      "content": "Items use the 1.21.4+ item_model component and assets/<ns>/items definitions; wearables use the equippable component with equipment assets (assets/<ns>/equipment + textures/entity/equipment/<layer>). Vanilla base items are reskinned with /give components.",
+      "tags": [],
+      "by": "project-director",
+      "at": "2026-10-07T06:02:49.423Z",
+      "superseded_by": null
+    }
+  ]
+}
