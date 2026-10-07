@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /runtime
+    schedule: { interval: weekly }
+    groups:
+      mcp: { patterns: ["@modelcontextprotocol/*", "zod"] }
+  - package-ecosystem: maven
+    directory: /examples/industrial-reactor
+    schedule: { interval: monthly }
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: monthly }

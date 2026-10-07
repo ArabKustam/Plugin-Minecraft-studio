@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*.*.*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci && npm run build
+        working-directory: runtime
+      - name: Verify tag matches plugin version
+        run: |
+          V=$(node -p "require('./.claude-plugin/plugin.json').version")
+          test "v$V" = "${GITHUB_REF_NAME}" || (echo "tag ${GITHUB_REF_NAME} != v$V" && exit 1)
+      - run: node scripts/validate-plugin.mjs
+      - run: node --test "tests/unit/**/*.test.mjs"
+      - run: node scripts/package-plugin.mjs
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - name: Demo artifacts
+        run: |
+          (cd examples/industrial-reactor && mvn -B -q package)
+          node runtime/dist/cli.mjs package-pack examples/industrial-reactor/resourcepack dist/industrial-reactor-resourcepack.zip
+          cp examples/industrial-reactor/target/industrial-reactor-*.jar dist/
+          (cd dist && sha256sum *.plugin *.zip *.jar > SHA256SUMS.txt)
+      - name: Release notes from CHANGELOG
+        run: node -e "const c=require('fs').readFileSync('CHANGELOG.md','utf8');const v=process.env.GITHUB_REF_NAME.slice(1);const m=c.split(/^## /m).find(s=>s.startsWith('['+v+']'));require('fs').writeFileSync('notes.md',m?'## '+m:'See CHANGELOG.md')"
+      - uses: softprops/action-gh-release@v2
+        with:
+          body_path: notes.md
+          files: |
+            dist/minecraft-studio.plugin
+            dist/minecraft-studio-*.plugin
+            dist/industrial-reactor-resourcepack.zip
+            dist/industrial-reactor-*.jar
+            dist/SHA256SUMS.txt

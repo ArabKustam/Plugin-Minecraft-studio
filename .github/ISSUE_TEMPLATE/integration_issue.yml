@@ -1,0 +1,16 @@
+name: Integration issue
+description: Problem with ElevenLabs, Blockbench MCP, GitHub, FFmpeg, TTS or the dashboard
+labels: [integration]
+body:
+  - type: dropdown
+    id: integration
+    attributes: { label: Integration, options: [ElevenLabs, Blockbench MCP, GitHub, FFmpeg, System TTS, Studio Dashboard, Paper test server, other] }
+    validations: { required: true }
+  - type: textarea
+    id: doctor
+    attributes: { label: "/minecraft-studio:doctor output", render: text }
+    validations: { required: true }
+  - type: textarea
+    id: issue
+    attributes: { label: What happened? }
+    validations: { required: true }

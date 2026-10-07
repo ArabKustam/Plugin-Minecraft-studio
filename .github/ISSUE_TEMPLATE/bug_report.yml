@@ -1,0 +1,25 @@
+name: Bug report
+description: Something in Minecraft Studio doesn't work as documented
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes: { label: What happened?, description: Include the request you gave Claude and what it did. }
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes: { label: What did you expect? }
+    validations: { required: true }
+  - type: textarea
+    id: doctor
+    attributes: { label: "/minecraft-studio:doctor output", render: text }
+  - type: input
+    id: version
+    attributes: { label: Minecraft Studio version, placeholder: "0.1.0" }
+    validations: { required: true }
+  - type: dropdown
+    id: host
+    attributes: { label: Host, options: [Claude Code CLI, Claude Code desktop, Claude Cowork, other] }
+  - type: textarea
+    id: logs
+    attributes: { label: Relevant logs (.minecraft-studio/logs/activity.jsonl excerpt), render: text, description: Never paste API keys. }

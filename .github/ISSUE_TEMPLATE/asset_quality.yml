@@ -1,0 +1,19 @@
+name: Asset quality issue
+description: A generated texture, model, animation, sound, music or voice line is wrong or low quality
+labels: [asset-quality]
+body:
+  - type: dropdown
+    id: type
+    attributes: { label: Asset type, options: [texture, model, animation, sfx, music, voice, particle, timeline] }
+    validations: { required: true }
+  - type: textarea
+    id: request
+    attributes: { label: What was requested? }
+    validations: { required: true }
+  - type: textarea
+    id: problem
+    attributes: { label: What's wrong with the result?, description: Attach previews from .minecraft-studio/previews or dashboard screenshots. }
+    validations: { required: true }
+  - type: textarea
+    id: qa
+    attributes: { label: QA record (studio_asset_get → qa_history) if available, render: json }

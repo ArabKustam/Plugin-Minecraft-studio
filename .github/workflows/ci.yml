@@ -1,0 +1,100 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  plugin:
+    name: Plugin, runtime & tests
+    runs-on: ${{ matrix.os }}
+    env:
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: runtime/package-lock.json
+      - name: Install runtime dev dependencies
+        run: npm ci
+        working-directory: runtime
+      - name: Build MCP servers
+        run: npm run build
+        working-directory: runtime
+      - name: Bundled dist is up to date
+        if: runner.os == 'Linux'
+        run: git diff --exit-code -- runtime/dist || (echo "runtime/dist is stale — run npm run build and commit" && exit 1)
+      - name: Install FFmpeg (Ogg Vorbis export)
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg espeak-ng
+      - name: Lint
+        run: node scripts/lint.mjs
+      - name: Broken links
+        run: node scripts/check-links.mjs
+      - name: Third-party licenses
+        run: node scripts/third-party.mjs --check
+      - name: Claude plugin validation (structure, agents, skills, MCP tool references)
+        run: node scripts/validate-plugin.mjs
+      - name: Official Claude plugin validator
+        shell: bash
+        run: |
+          npm install -g @anthropic-ai/claude-code >/dev/null 2>&1 || true
+          if command -v claude >/dev/null; then claude plugin validate .claude-plugin/plugin.json; else echo "claude CLI unavailable — skipped"; fi
+      - name: Unit & integration tests
+        run: node --test "tests/**/*.test.mjs"
+      - name: ElevenLabs live check (only with secret)
+        if: ${{ env.ELEVENLABS_API_KEY != '' }}
+        run: node runtime/dist/cli.mjs doctor --json | node -e "const r=JSON.parse(require('fs').readFileSync(0));const e=r.checks.find(c=>c.component==='ElevenLabs');console.log(e);process.exit(e.status==='error'?1:0)"
+      - name: Package .plugin
+        run: node scripts/package-plugin.mjs
+      - uses: actions/upload-artifact@v4
+        if: runner.os == 'Linux'
+        with:
+          name: minecraft-studio-plugin
+          path: dist/
+
+  demo:
+    name: Minecraft example build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+      - name: Build & unit-test the Industrial Reactor plugin
+        run: mvn -B package
+        working-directory: examples/industrial-reactor
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate the demo resource pack
+        run: node runtime/dist/cli.mjs validate-pack examples/industrial-reactor/resourcepack --mc 1.21.11
+
+  secrets:
+    name: Secret scanning
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Minecraft Studio secret scan
+        run: node runtime/dist/cli.mjs scan-secrets
+      - name: Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

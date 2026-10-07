@@ -1,0 +1,14 @@
+name: Feature request
+description: Suggest a capability for the studio
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes: { label: Production problem, description: What are you trying to make in Minecraft and what's missing? }
+    validations: { required: true }
+  - type: textarea
+    id: proposal
+    attributes: { label: Proposed solution (tool, agent, provider, dashboard view…) }
+  - type: textarea
+    id: alternatives
+    attributes: { label: Alternatives / existing tools you evaluated (license, maintenance) }

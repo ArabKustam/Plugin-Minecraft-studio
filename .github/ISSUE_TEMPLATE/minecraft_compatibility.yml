@@ -1,0 +1,19 @@
+name: Minecraft compatibility issue
+description: A platform, version or API that is detected, built or generated incorrectly
+labels: [compatibility]
+body:
+  - type: dropdown
+    id: platform
+    attributes: { label: Platform, options: [Paper/Spigot/Bukkit, Folia, Velocity/BungeeCord, Fabric, NeoForge/Forge, Datapack, Resource pack, Bedrock add-on, other] }
+    validations: { required: true }
+  - type: input
+    id: mcversion
+    attributes: { label: Minecraft version, placeholder: "1.21.11 / 26.2" }
+    validations: { required: true }
+  - type: textarea
+    id: issue
+    attributes: { label: What is wrong?, description: e.g. pack_format, API version string, Java version, model format }
+    validations: { required: true }
+  - type: textarea
+    id: source
+    attributes: { label: Official source showing the correct behaviour (link) }
