@@ -1,0 +1,112 @@
+{
+  "texture_size": [
+    64,
+    64
+  ],
+  "default_material": "feathers",
+  "materials": {
+    "feathers": {
+      "ramp": [
+        "#3c4654",
+        "#5b6878",
+        "#7f8c9c",
+        "#a7b2bf"
+      ],
+      "pattern": {
+        "type": "feathers",
+        "size": 3,
+        "density": 0.2,
+        "seed": 31
+      }
+    },
+    "white": {
+      "ramp": [
+        "#9aa3ad",
+        "#c9d0d6",
+        "#e6eaee",
+        "#ffffff"
+      ]
+    },
+    "black": {
+      "ramp": [
+        "#0d0f12",
+        "#1b1f25",
+        "#2a3038",
+        "#3a414b"
+      ]
+    },
+    "yellow": {
+      "ramp": [
+        "#8a6a10",
+        "#c49416",
+        "#e8b92a",
+        "#ffd95a"
+      ]
+    }
+  },
+  "cubes": {
+    "neck": {
+      "material": "white"
+    },
+    "head": {
+      "material": "white",
+      "faces": {
+        "west": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "k": "#111317",
+            "y": "#ffd95a"
+          },
+          "rows": [
+            "kkkkkk",
+            ".yk..."
+          ]
+        },
+        "east": {
+          "x": 0,
+          "y": 0,
+          "palette": {
+            "k": "#111317",
+            "y": "#ffd95a"
+          },
+          "rows": [
+            "kkkkkk",
+            "...ky."
+          ]
+        },
+        "up": {
+          "palette": {
+            "k": "#111317"
+          },
+          "rows": [
+            "kkkk",
+            "kkkk"
+          ]
+        }
+      }
+    },
+    "beak": {
+      "material": "yellow"
+    },
+    "crest": {
+      "material": "black"
+    },
+    "wing_r": {},
+    "leg_r": {
+      "material": "yellow"
+    },
+    "leg_l": {
+      "material": "yellow"
+    },
+    "foot_r": {
+      "material": "yellow"
+    },
+    "foot_l": {
+      "material": "yellow"
+    },
+    "tail_feathers": {
+      "material": "black"
+    }
+  }
+}

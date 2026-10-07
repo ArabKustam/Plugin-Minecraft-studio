@@ -1,0 +1,23 @@
+{
+  "id": "rust_crawler-sfx",
+  "goal": "Rust Crawler: ambient, hurt, attack sounds",
+  "agent": "sfx-designer",
+  "inputs": [],
+  "outputs": [],
+  "allowed_tools": [],
+  "dependencies": [
+    "creature-design"
+  ],
+  "constraints": [],
+  "quality": [],
+  "validation": [],
+  "destination": null,
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T05:37:26.846Z",
+  "started_at": "2026-10-07T05:37:30.661Z",
+  "finished_at": "2026-10-07T05:37:31.316Z",
+  "updated_at": "2026-10-07T05:37:31.316Z",
+  "plan": null
+}

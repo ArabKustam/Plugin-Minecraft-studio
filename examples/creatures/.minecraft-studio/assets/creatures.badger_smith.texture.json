@@ -1,0 +1,128 @@
+{
+  "id": "creatures.badger_smith.texture",
+  "type": "texture",
+  "name": "Badger Smith skin",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/textures/entity/badger_smith.png",
+      "role": "primary",
+      "sha256": "fc0ff5aa789b7ee4b894b9d40b235a6a6ccb09bcd182003440dff964c08f6c2d",
+      "bytes": 1285
+    },
+    {
+      "path": "art/paint/badger_smith.paint.json",
+      "role": "source",
+      "sha256": "a6140270fecb8e454789dde6fdcee5f35a4719eeebbba4873c0ff8e841d9d048",
+      "bytes": 4442
+    }
+  ],
+  "source": {
+    "provider": "uv-painter",
+    "method": "texture_paint_uv",
+    "source_files": [
+      "art/paint/badger_smith.paint.json",
+      "art/models/badger_smith.model.json"
+    ],
+    "parameters": {
+      "materials": [
+        "trousers",
+        "linen",
+        "leather",
+        "fur",
+        "black",
+        "wood",
+        "iron"
+      ]
+    }
+  },
+  "created_at": "2026-10-07T05:37:32.493Z",
+  "modified_at": "2026-10-07T05:37:32.509Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:badger_smith"
+  ],
+  "preview": ".minecraft-studio/previews/atlas_creatures_badger_smith_texture.png",
+  "tags": [
+    "creature",
+    "anthropomorphic"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:32.506Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "64×64 atlas",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "uv coverage",
+          "status": "pass",
+          "detail": "51% of 64×64"
+        },
+        {
+          "name": "turnaround review",
+          "status": "pass",
+          "detail": "Face details (eyes, markings) land on the right faces; materials read at game scale."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:32.495Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/textures/entity/badger_smith.png",
+          "sha256": "fc0ff5aa789b7ee4b894b9d40b235a6a6ccb09bcd182003440dff964c08f6c2d"
+        },
+        {
+          "path": "art/paint/badger_smith.paint.json",
+          "sha256": "a6140270fecb8e454789dde6fdcee5f35a4719eeebbba4873c0ff8e841d9d048"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.badger_smith.texture/v1",
+      "source": {
+        "provider": "uv-painter",
+        "method": "texture_paint_uv",
+        "source_files": [
+          "art/paint/badger_smith.paint.json",
+          "art/models/badger_smith.model.json"
+        ],
+        "parameters": {
+          "materials": [
+            "trousers",
+            "linen",
+            "leather",
+            "fur",
+            "black",
+            "wood",
+            "iron"
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "width": 64,
+    "height": 64,
+    "texture_size": [
+      64,
+      64
+    ],
+    "cubes": 12,
+    "coverage": 0.511
+  }
+}

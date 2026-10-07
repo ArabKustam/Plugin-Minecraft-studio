@@ -1,0 +1,127 @@
+{
+  "id": "creatures.badger_smith.animations",
+  "type": "animation",
+  "name": "Badger Smith animations",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/animations/badger_smith.animation.json",
+      "role": "primary",
+      "sha256": "6765b796d51de73f80dddff17f1f00b075c024e20e856e74be2fd87f64958d51",
+      "bytes": 7145
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "bedrock-animation/1.8.0"
+  },
+  "created_at": "2026-10-07T05:37:32.591Z",
+  "modified_at": "2026-10-07T05:37:32.826Z",
+  "created_by": "animator",
+  "dependencies": [
+    "creatures.badger_smith.model"
+  ],
+  "minecraft_ids": [],
+  "preview": null,
+  "tags": [
+    "creature",
+    "anthropomorphic"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:32.822Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "contact sheets reviewed",
+      "checks": [
+        {
+          "name": "animation.badger_smith.idle",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.badger_smith.walk",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.badger_smith.attack",
+          "status": "pass",
+          "detail": "max 725°/s at arm_l 0.4s→0.6s"
+        },
+        {
+          "name": "animation.badger_smith.forge",
+          "status": "pass",
+          "detail": "eased, seamless"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:32.592Z",
+      "by": "animator",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/animations/badger_smith.animation.json",
+          "sha256": "6765b796d51de73f80dddff17f1f00b075c024e20e856e74be2fd87f64958d51"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.badger_smith.animations/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "bedrock-animation/1.8.0"
+      }
+    }
+  ],
+  "metadata": {
+    "animations": [
+      {
+        "name": "animation.badger_smith.idle",
+        "length": 2.5,
+        "loop": true,
+        "bones": [
+          "body",
+          "head",
+          "arm_r"
+        ]
+      },
+      {
+        "name": "animation.badger_smith.walk",
+        "length": 1,
+        "loop": true,
+        "bones": [
+          "leg_r",
+          "leg_l",
+          "arm_r",
+          "arm_l",
+          "body"
+        ]
+      },
+      {
+        "name": "animation.badger_smith.attack",
+        "length": 1,
+        "loop": false,
+        "bones": [
+          "arm_l",
+          "body"
+        ]
+      },
+      {
+        "name": "animation.badger_smith.forge",
+        "length": 1.2,
+        "loop": true,
+        "bones": [
+          "arm_l",
+          "head"
+        ]
+      }
+    ]
+  }
+}

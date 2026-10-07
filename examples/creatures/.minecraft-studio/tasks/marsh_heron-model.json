@@ -1,0 +1,23 @@
+{
+  "id": "marsh_heron-model",
+  "goal": "Marsh Heron: rigged model, Bedrock geometry and .bbmodel",
+  "agent": "modeler",
+  "inputs": [],
+  "outputs": [],
+  "allowed_tools": [],
+  "dependencies": [
+    "marsh_heron-texture"
+  ],
+  "constraints": [],
+  "quality": [],
+  "validation": [],
+  "destination": null,
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T05:37:26.817Z",
+  "started_at": "2026-10-07T05:37:29.388Z",
+  "finished_at": "2026-10-07T05:37:29.451Z",
+  "updated_at": "2026-10-07T05:37:29.451Z",
+  "plan": null
+}

@@ -1,0 +1,167 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "mob.ember_fox.ambient": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/creatures/ember_fox/ambient",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.ember_fox.hurt": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/creatures/ember_fox/hurt",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.ember_fox.attack": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/creatures/ember_fox/attack",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.highland_ox.ambient": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/creatures/highland_ox/ambient",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.highland_ox.hurt": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/creatures/highland_ox/hurt",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.highland_ox.attack": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/creatures/highland_ox/attack",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.marsh_heron.ambient": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/creatures/marsh_heron/ambient",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.marsh_heron.hurt": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/creatures/marsh_heron/hurt",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.marsh_heron.attack": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/creatures/marsh_heron/attack",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.rust_crawler.ambient": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/creatures/rust_crawler/ambient",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.rust_crawler.hurt": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/creatures/rust_crawler/hurt",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.rust_crawler.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/creatures/rust_crawler/attack",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.hollow_wraith.ambient": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/creatures/hollow_wraith/ambient",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.hollow_wraith.hurt": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/creatures/hollow_wraith/hurt",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.hollow_wraith.attack": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/creatures/hollow_wraith/attack",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.badger_smith.ambient": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/creatures/badger_smith/ambient",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.badger_smith.hurt": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/creatures/badger_smith/hurt",
+          "volume": 1
+        }
+      ]
+    },
+    "mob.badger_smith.attack": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/creatures/badger_smith/attack",
+          "volume": 1
+        }
+      ]
+    }
+  }
+}

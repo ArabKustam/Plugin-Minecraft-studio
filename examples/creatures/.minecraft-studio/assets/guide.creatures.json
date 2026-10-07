@@ -1,0 +1,65 @@
+{
+  "id": "guide.creatures",
+  "type": "guide",
+  "name": "Studio Creatures — field guide",
+  "description": "Spawning, behaviour, animations and sounds of the six creatures.",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "docs/creatures.md",
+      "role": "primary",
+      "sha256": "f8d0513f2525439b732c7a72d392cbee2567bad15a344179c824e598d1af2579",
+      "bytes": 3599
+    }
+  ],
+  "source": {},
+  "created_at": "2026-10-07T05:37:33.672Z",
+  "modified_at": "2026-10-07T05:37:33.678Z",
+  "created_by": "documentation-writer",
+  "dependencies": [
+    "creatures.bedrock"
+  ],
+  "minecraft_ids": [],
+  "preview": null,
+  "tags": [],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:33.675Z",
+      "by": "code-reviewer",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "guide verified against the add-on",
+      "checks": [
+        {
+          "name": "every creature documented",
+          "status": "pass",
+          "detail": "6 entities"
+        },
+        {
+          "name": "stats match behavior pack",
+          "status": "pass",
+          "detail": "health values cross-checked"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:33.673Z",
+      "by": "documentation-writer",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "docs/creatures.md",
+          "sha256": "f8d0513f2525439b732c7a72d392cbee2567bad15a344179c824e598d1af2579"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/guide.creatures/v1",
+      "source": {}
+    }
+  ],
+  "metadata": {}
+}

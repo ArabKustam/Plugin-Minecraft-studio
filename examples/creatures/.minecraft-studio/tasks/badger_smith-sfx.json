@@ -1,0 +1,23 @@
+{
+  "id": "badger_smith-sfx",
+  "goal": "Badger Smith: ambient, hurt, attack sounds",
+  "agent": "sfx-designer",
+  "inputs": [],
+  "outputs": [],
+  "allowed_tools": [],
+  "dependencies": [
+    "creature-design"
+  ],
+  "constraints": [],
+  "quality": [],
+  "validation": [],
+  "destination": null,
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T05:37:26.901Z",
+  "started_at": "2026-10-07T05:37:32.829Z",
+  "finished_at": "2026-10-07T05:37:33.499Z",
+  "updated_at": "2026-10-07T05:37:33.499Z",
+  "plan": null
+}

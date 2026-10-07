@@ -1,0 +1,120 @@
+{
+  "id": "creatures.hollow_wraith.texture",
+  "type": "texture",
+  "name": "Hollow Wraith skin",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/textures/entity/hollow_wraith.png",
+      "role": "primary",
+      "sha256": "c83f13ff61fc27ff37ef47742a6b1210ca40f1734628470dbfead05ecb6d5392",
+      "bytes": 828
+    },
+    {
+      "path": "art/paint/hollow_wraith.paint.json",
+      "role": "source",
+      "sha256": "30654e822a71c68da116685ba87e154bf6c116a01c9ca7b1d2546ce970e97134",
+      "bytes": 1199
+    }
+  ],
+  "source": {
+    "provider": "uv-painter",
+    "method": "texture_paint_uv",
+    "source_files": [
+      "art/paint/hollow_wraith.paint.json",
+      "art/models/hollow_wraith.model.json"
+    ],
+    "parameters": {
+      "materials": [
+        "cloth",
+        "wisp",
+        "bone"
+      ]
+    }
+  },
+  "created_at": "2026-10-07T05:37:31.399Z",
+  "modified_at": "2026-10-07T05:37:31.414Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:hollow_wraith"
+  ],
+  "preview": ".minecraft-studio/previews/atlas_creatures_hollow_wraith_texture.png",
+  "tags": [
+    "creature",
+    "monster"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:31.411Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "64×64 atlas",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "uv coverage",
+          "status": "pass",
+          "detail": "34% of 64×64"
+        },
+        {
+          "name": "turnaround review",
+          "status": "pass",
+          "detail": "Face details (eyes, markings) land on the right faces; materials read at game scale."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:31.401Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/textures/entity/hollow_wraith.png",
+          "sha256": "c83f13ff61fc27ff37ef47742a6b1210ca40f1734628470dbfead05ecb6d5392"
+        },
+        {
+          "path": "art/paint/hollow_wraith.paint.json",
+          "sha256": "30654e822a71c68da116685ba87e154bf6c116a01c9ca7b1d2546ce970e97134"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.hollow_wraith.texture/v1",
+      "source": {
+        "provider": "uv-painter",
+        "method": "texture_paint_uv",
+        "source_files": [
+          "art/paint/hollow_wraith.paint.json",
+          "art/models/hollow_wraith.model.json"
+        ],
+        "parameters": {
+          "materials": [
+            "cloth",
+            "wisp",
+            "bone"
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "width": 64,
+    "height": 64,
+    "texture_size": [
+      64,
+      64
+    ],
+    "cubes": 6,
+    "coverage": 0.341
+  }
+}

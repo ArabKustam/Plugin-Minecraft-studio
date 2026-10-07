@@ -1,0 +1,51 @@
+{
+  "duration": 0.9,
+  "layers": [
+    {
+      "type": "osc",
+      "wave": "triangle",
+      "freq": {
+        "from": 520,
+        "to": 832,
+        "curve": "ease"
+      },
+      "harmonics": [
+        1,
+        0.3,
+        0.15
+      ],
+      "voices": 3,
+      "detune": 18,
+      "gain": -6,
+      "envelope": {
+        "attack": 0.2,
+        "release": 0.45
+      }
+    },
+    {
+      "type": "noise",
+      "color": "pink",
+      "gain": -20,
+      "filter": {
+        "type": "bandpass",
+        "freq": 1040,
+        "q": 2
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.35,
+      "mix": 0.12
+    },
+    {
+      "type": "reverb",
+      "room": 0.8,
+      "mix": 0.3
+    }
+  ],
+  "normalize": {
+    "lufs": -17
+  }
+}

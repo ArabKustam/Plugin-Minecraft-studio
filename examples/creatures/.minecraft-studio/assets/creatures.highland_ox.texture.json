@@ -1,0 +1,122 @@
+{
+  "id": "creatures.highland_ox.texture",
+  "type": "texture",
+  "name": "Highland Ox skin",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/textures/entity/highland_ox.png",
+      "role": "primary",
+      "sha256": "daa0665cd072b57f4c351159dc25d261937eb7d2ee85541e05fb13e5d2d9149e",
+      "bytes": 2932
+    },
+    {
+      "path": "art/paint/highland_ox.paint.json",
+      "role": "source",
+      "sha256": "a41efd1a92ae6a81d41a197c28fa9aed2bc2c018b741cd6fd1411b4a1b7c1443",
+      "bytes": 4946
+    }
+  ],
+  "source": {
+    "provider": "uv-painter",
+    "method": "texture_paint_uv",
+    "source_files": [
+      "art/paint/highland_ox.paint.json",
+      "art/models/highland_ox.model.json"
+    ],
+    "parameters": {
+      "materials": [
+        "shag",
+        "nose",
+        "fringe",
+        "horn"
+      ]
+    }
+  },
+  "created_at": "2026-10-07T05:37:28.211Z",
+  "modified_at": "2026-10-07T05:37:28.233Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:highland_ox"
+  ],
+  "preview": ".minecraft-studio/previews/atlas_creatures_highland_ox_texture.png",
+  "tags": [
+    "creature",
+    "animal"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:28.230Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "128×64 atlas",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "uv coverage",
+          "status": "pass",
+          "detail": "47% of 128×64"
+        },
+        {
+          "name": "turnaround review",
+          "status": "pass",
+          "detail": "Face details (eyes, markings) land on the right faces; materials read at game scale."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:28.213Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/textures/entity/highland_ox.png",
+          "sha256": "daa0665cd072b57f4c351159dc25d261937eb7d2ee85541e05fb13e5d2d9149e"
+        },
+        {
+          "path": "art/paint/highland_ox.paint.json",
+          "sha256": "a41efd1a92ae6a81d41a197c28fa9aed2bc2c018b741cd6fd1411b4a1b7c1443"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.highland_ox.texture/v1",
+      "source": {
+        "provider": "uv-painter",
+        "method": "texture_paint_uv",
+        "source_files": [
+          "art/paint/highland_ox.paint.json",
+          "art/models/highland_ox.model.json"
+        ],
+        "parameters": {
+          "materials": [
+            "shag",
+            "nose",
+            "fringe",
+            "horn"
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "width": 128,
+    "height": 64,
+    "texture_size": [
+      128,
+      64
+    ],
+    "cubes": 15,
+    "coverage": 0.471
+  }
+}

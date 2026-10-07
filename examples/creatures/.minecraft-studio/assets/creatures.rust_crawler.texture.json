@@ -1,0 +1,120 @@
+{
+  "id": "creatures.rust_crawler.texture",
+  "type": "texture",
+  "name": "Rust Crawler skin",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/textures/entity/rust_crawler.png",
+      "role": "primary",
+      "sha256": "d66ffe01647cd5e27bb73336bf8e7d26fe50f5808d4628417a1c12ac61a81298",
+      "bytes": 1270
+    },
+    {
+      "path": "art/paint/rust_crawler.paint.json",
+      "role": "source",
+      "sha256": "29301586375384bdfe9033ab3c72c0f23ff205115cb5d2a0a47f14884e00b09a",
+      "bytes": 1345
+    }
+  ],
+  "source": {
+    "provider": "uv-painter",
+    "method": "texture_paint_uv",
+    "source_files": [
+      "art/paint/rust_crawler.paint.json",
+      "art/models/rust_crawler.model.json"
+    ],
+    "parameters": {
+      "materials": [
+        "rust",
+        "iron",
+        "toxic"
+      ]
+    }
+  },
+  "created_at": "2026-10-07T05:37:30.415Z",
+  "modified_at": "2026-10-07T05:37:30.427Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:rust_crawler"
+  ],
+  "preview": ".minecraft-studio/previews/atlas_creatures_rust_crawler_texture.png",
+  "tags": [
+    "creature",
+    "monster"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:30.424Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "64×64 atlas",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "uv coverage",
+          "status": "pass",
+          "detail": "24% of 64×64"
+        },
+        {
+          "name": "turnaround review",
+          "status": "pass",
+          "detail": "Face details (eyes, markings) land on the right faces; materials read at game scale."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:30.417Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/textures/entity/rust_crawler.png",
+          "sha256": "d66ffe01647cd5e27bb73336bf8e7d26fe50f5808d4628417a1c12ac61a81298"
+        },
+        {
+          "path": "art/paint/rust_crawler.paint.json",
+          "sha256": "29301586375384bdfe9033ab3c72c0f23ff205115cb5d2a0a47f14884e00b09a"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.rust_crawler.texture/v1",
+      "source": {
+        "provider": "uv-painter",
+        "method": "texture_paint_uv",
+        "source_files": [
+          "art/paint/rust_crawler.paint.json",
+          "art/models/rust_crawler.model.json"
+        ],
+        "parameters": {
+          "materials": [
+            "rust",
+            "iron",
+            "toxic"
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "width": 64,
+    "height": 64,
+    "texture_size": [
+      64,
+      64
+    ],
+    "cubes": 13,
+    "coverage": 0.244
+  }
+}

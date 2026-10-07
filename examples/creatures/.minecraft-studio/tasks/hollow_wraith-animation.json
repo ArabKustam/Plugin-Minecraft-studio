@@ -1,0 +1,23 @@
+{
+  "id": "hollow_wraith-animation",
+  "goal": "Hollow Wraith: idle, walk, attack animations",
+  "agent": "animator",
+  "inputs": [],
+  "outputs": [],
+  "allowed_tools": [],
+  "dependencies": [
+    "hollow_wraith-model"
+  ],
+  "constraints": [],
+  "quality": [],
+  "validation": [],
+  "destination": null,
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T05:37:26.865Z",
+  "started_at": "2026-10-07T05:37:31.485Z",
+  "finished_at": "2026-10-07T05:37:31.645Z",
+  "updated_at": "2026-10-07T05:37:31.645Z",
+  "plan": null
+}

@@ -1,0 +1,23 @@
+{
+  "id": "hollow_wraith-model",
+  "goal": "Hollow Wraith: rigged model, Bedrock geometry and .bbmodel",
+  "agent": "modeler",
+  "inputs": [],
+  "outputs": [],
+  "allowed_tools": [],
+  "dependencies": [
+    "hollow_wraith-texture"
+  ],
+  "constraints": [],
+  "quality": [],
+  "validation": [],
+  "destination": null,
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T05:37:26.858Z",
+  "started_at": "2026-10-07T05:37:31.417Z",
+  "finished_at": "2026-10-07T05:37:31.483Z",
+  "updated_at": "2026-10-07T05:37:31.483Z",
+  "plan": null
+}

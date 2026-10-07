@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "name": "Studio Creatures",
+  "minecraft_version": "1.21",
+  "platform": "bedrock",
+  "platforms": [
+    {
+      "adapter": "bedrock",
+      "name": "Bedrock add-on",
+      "kind": "bedrock-addon",
+      "confidence": 0.9,
+      "evidence": [
+        "bedrock/BP/manifest.json",
+        "bedrock/RP/manifest.json"
+      ]
+    }
+  ],
+  "build_system": null,
+  "languages": {},
+  "namespaces": [],
+  "default_namespace": "studio",
+  "packs": [],
+  "plugin_descriptor": null,
+  "conventions": {
+    "entity_ids": "studio:<snake_case>",
+    "textures": "64×64 box-UV atlases painted with texture_paint_uv; ramps dark→light, top-left light"
+  },
+  "created_at": "2026-10-07T05:37:26.774Z",
+  "updated_at": "2026-10-07T05:37:26.781Z",
+  "plugin_version": "0.1.0",
+  "resource_pack_version": "0.1.0"
+}

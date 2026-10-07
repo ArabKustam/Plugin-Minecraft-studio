@@ -1,0 +1,160 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.hollow_wraith",
+        "texture_width": 64,
+        "texture_height": 64,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 3,
+        "visible_bounds_offset": [
+          0,
+          1,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            12,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                8,
+                -3
+              ],
+              "size": [
+                8,
+                14,
+                6
+              ],
+              "uv": [
+                0,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -3,
+                3,
+                -2
+              ],
+              "size": [
+                6,
+                5,
+                4
+              ],
+              "uv": [
+                16,
+                20
+              ]
+            },
+            {
+              "origin": [
+                -2,
+                0,
+                -1
+              ],
+              "size": [
+                4,
+                3,
+                2
+              ],
+              "uv": [
+                36,
+                20
+              ]
+            }
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "root",
+          "pivot": [
+            0,
+            22,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5,
+                22,
+                -4
+              ],
+              "size": [
+                10,
+                9,
+                8
+              ],
+              "uv": [
+                28,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "name": "arm_r",
+          "parent": "root",
+          "pivot": [
+            4,
+            21,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                5,
+                8,
+                -1
+              ],
+              "size": [
+                2,
+                13,
+                2
+              ],
+              "uv": [
+                0,
+                20
+              ]
+            }
+          ]
+        },
+        {
+          "name": "arm_l",
+          "parent": "root",
+          "pivot": [
+            -4,
+            21,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -7,
+                8,
+                -1
+              ],
+              "size": [
+                2,
+                13,
+                2
+              ],
+              "uv": [
+                8,
+                20
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

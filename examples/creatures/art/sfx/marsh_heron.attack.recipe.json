@@ -1,0 +1,71 @@
+{
+  "duration": 0.12,
+  "layers": [
+    {
+      "type": "click",
+      "start": 0.0,
+      "freq": 2400.0,
+      "decay": 0.004,
+      "gain": -6,
+      "seed": 1
+    },
+    {
+      "type": "click",
+      "start": 0.017142857142857144,
+      "freq": 3120.0,
+      "decay": 0.004,
+      "gain": -10,
+      "seed": 2
+    },
+    {
+      "type": "click",
+      "start": 0.03428571428571429,
+      "freq": 3840.0,
+      "decay": 0.004,
+      "gain": -6,
+      "seed": 3
+    },
+    {
+      "type": "click",
+      "start": 0.05142857142857143,
+      "freq": 2400.0,
+      "decay": 0.004,
+      "gain": -10,
+      "seed": 4
+    },
+    {
+      "type": "click",
+      "start": 0.06857142857142857,
+      "freq": 3120.0,
+      "decay": 0.004,
+      "gain": -6,
+      "seed": 5
+    },
+    {
+      "type": "click",
+      "start": 0.08571428571428572,
+      "freq": 3840.0,
+      "decay": 0.004,
+      "gain": -10,
+      "seed": 6
+    },
+    {
+      "type": "click",
+      "start": 0.10285714285714286,
+      "freq": 2400.0,
+      "decay": 0.004,
+      "gain": -6,
+      "seed": 7
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.35,
+      "mix": 0.12
+    }
+  ],
+  "normalize": {
+    "lufs": -17
+  }
+}

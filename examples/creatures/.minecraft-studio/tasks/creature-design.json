@@ -1,0 +1,21 @@
+{
+  "id": "creature-design",
+  "goal": "Design 3 animals, 2 monsters and 1 anthropomorphic NPC: silhouettes, rigs, behaviour, sounds.",
+  "agent": "project-director",
+  "inputs": [],
+  "outputs": [],
+  "allowed_tools": [],
+  "dependencies": [],
+  "constraints": [],
+  "quality": [],
+  "validation": [],
+  "destination": null,
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T05:37:26.785Z",
+  "started_at": "2026-10-07T05:37:26.937Z",
+  "finished_at": "2026-10-07T05:37:26.939Z",
+  "updated_at": "2026-10-07T05:37:26.939Z",
+  "plan": null
+}

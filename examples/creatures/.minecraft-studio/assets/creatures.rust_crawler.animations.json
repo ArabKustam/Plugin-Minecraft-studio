@@ -1,0 +1,116 @@
+{
+  "id": "creatures.rust_crawler.animations",
+  "type": "animation",
+  "name": "Rust Crawler animations",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/animations/rust_crawler.animation.json",
+      "role": "primary",
+      "sha256": "1bc1c7a8c0f494bbb76cbb607323c760b8f83e898adee45a51165238e1016e48",
+      "bytes": 9016
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "bedrock-animation/1.8.0"
+  },
+  "created_at": "2026-10-07T05:37:30.501Z",
+  "modified_at": "2026-10-07T05:37:30.658Z",
+  "created_by": "animator",
+  "dependencies": [
+    "creatures.rust_crawler.model"
+  ],
+  "minecraft_ids": [],
+  "preview": null,
+  "tags": [
+    "creature",
+    "monster"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:30.654Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "contact sheets reviewed",
+      "checks": [
+        {
+          "name": "animation.rust_crawler.idle",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.rust_crawler.walk",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.rust_crawler.attack",
+          "status": "pass",
+          "detail": "eased, seamless"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:30.502Z",
+      "by": "animator",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/animations/rust_crawler.animation.json",
+          "sha256": "1bc1c7a8c0f494bbb76cbb607323c760b8f83e898adee45a51165238e1016e48"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.rust_crawler.animations/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "bedrock-animation/1.8.0"
+      }
+    }
+  ],
+  "metadata": {
+    "animations": [
+      {
+        "name": "animation.rust_crawler.idle",
+        "length": 2,
+        "loop": true,
+        "bones": [
+          "tail1",
+          "body",
+          "head"
+        ]
+      },
+      {
+        "name": "animation.rust_crawler.walk",
+        "length": 0.6,
+        "loop": true,
+        "bones": [
+          "leg_r0",
+          "leg_r1",
+          "leg_r2",
+          "leg_l0",
+          "leg_l1",
+          "leg_l2",
+          "body"
+        ]
+      },
+      {
+        "name": "animation.rust_crawler.attack",
+        "length": 1,
+        "loop": false,
+        "bones": [
+          "tail1",
+          "tail2",
+          "body"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "studio:badger_smith",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/badger_smith"
+      },
+      "geometry": {
+        "default": "geometry.badger_smith"
+      },
+      "animations": {
+        "idle": "animation.badger_smith.idle",
+        "walk": "animation.badger_smith.walk",
+        "attack": "animation.badger_smith.attack",
+        "forge": "animation.badger_smith.forge"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "idle": "query.modified_move_speed < 0.05"
+          },
+          {
+            "walk": "query.modified_move_speed >= 0.05"
+          },
+          {
+            "attack": "variable.attack_time > 0.0"
+          },
+          {
+            "forge": "query.modified_move_speed < 0.05 && query.is_on_ground && math.mod(query.life_time, 20.0) > 10.0"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "spawn_egg": {
+        "base_color": "#4a4a4e",
+        "overlay_color": "#e8e6e0"
+      }
+    }
+  }
+}

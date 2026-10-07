@@ -1,0 +1,112 @@
+[
+  {
+    "id": "ember_fox",
+    "category": "animal",
+    "name": {
+      "en": "Ember Fox",
+      "ru": "Огненный лис"
+    },
+    "animations": [
+      "idle",
+      "walk",
+      "attack"
+    ],
+    "sounds": [
+      "ambient",
+      "hurt",
+      "attack"
+    ]
+  },
+  {
+    "id": "highland_ox",
+    "category": "animal",
+    "name": {
+      "en": "Highland Ox",
+      "ru": "Горный бык"
+    },
+    "animations": [
+      "idle",
+      "walk",
+      "attack"
+    ],
+    "sounds": [
+      "ambient",
+      "hurt",
+      "attack"
+    ]
+  },
+  {
+    "id": "marsh_heron",
+    "category": "animal",
+    "name": {
+      "en": "Marsh Heron",
+      "ru": "Болотная цапля"
+    },
+    "animations": [
+      "idle",
+      "walk",
+      "attack",
+      "flap"
+    ],
+    "sounds": [
+      "ambient",
+      "hurt",
+      "attack"
+    ]
+  },
+  {
+    "id": "rust_crawler",
+    "category": "monster",
+    "name": {
+      "en": "Rust Crawler",
+      "ru": "Ржавый ползун"
+    },
+    "animations": [
+      "idle",
+      "walk",
+      "attack"
+    ],
+    "sounds": [
+      "ambient",
+      "hurt",
+      "attack"
+    ]
+  },
+  {
+    "id": "hollow_wraith",
+    "category": "monster",
+    "name": {
+      "en": "Hollow Wraith",
+      "ru": "Полый призрак"
+    },
+    "animations": [
+      "idle",
+      "walk",
+      "attack"
+    ],
+    "sounds": [
+      "ambient",
+      "hurt",
+      "attack"
+    ]
+  },
+  {
+    "id": "badger_smith",
+    "category": "anthropomorphic",
+    "name": {
+      "en": "Badger Smith",
+      "ru": "Барсук-кузнец"
+    },
+    "animations": [
+      "idle",
+      "walk",
+      "attack",
+      "forge"
+    ],
+    "sounds": [
+      "ambient",
+      "hurt",
+      "attack"
+    ]
+  }
+]

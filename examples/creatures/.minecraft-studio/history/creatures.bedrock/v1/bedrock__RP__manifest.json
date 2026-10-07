@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Studio Creatures (resources)",
+    "description": "Made with Minecraft Studio — 3 animals, 2 monsters, 1 anthropomorphic NPC",
+    "uuid": "41a48e59-4965-45ff-91ca-6f71856278ba",
+    "version": [
+      0,
+      1,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "5e5bc4fa-5964-49fe-bdd4-783c53e907f7",
+      "version": [
+        0,
+        1,
+        0
+      ]
+    }
+  ]
+}

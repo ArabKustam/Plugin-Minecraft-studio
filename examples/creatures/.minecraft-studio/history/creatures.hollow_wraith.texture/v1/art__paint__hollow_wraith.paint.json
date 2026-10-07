@@ -1,0 +1,70 @@
+{
+  "texture_size": [
+    64,
+    64
+  ],
+  "default_material": "cloth",
+  "materials": {
+    "cloth": {
+      "ramp": [
+        "#0f0d14",
+        "#1d1a26",
+        "#2c2838",
+        "#3d3850"
+      ],
+      "pattern": {
+        "type": "stripes",
+        "size": 2,
+        "vertical": true
+      }
+    },
+    "bone": {
+      "ramp": [
+        "#5c5a52",
+        "#85827a",
+        "#aeaaa0",
+        "#d6d2c6"
+      ]
+    },
+    "wisp": {
+      "ramp": [
+        "#14303a",
+        "#1f5664",
+        "#3a8fa0",
+        "#7ff5ff"
+      ]
+    }
+  },
+  "cubes": {
+    "hood": {
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 1,
+          "palette": {
+            "k": "#040306",
+            "G": "#7ff5ff",
+            "g": "#2a8fa0"
+          },
+          "rows": [
+            "..kkkkkk..",
+            ".kkkkkkkk.",
+            ".kGgkkgGk.",
+            ".kkkkkkkk.",
+            ".kkkkkkkk.",
+            "..kkkkkk.."
+          ]
+        }
+      }
+    },
+    "arm_r": {
+      "material": "bone"
+    },
+    "arm_l": {
+      "material": "bone"
+    },
+    "wisp": {
+      "material": "wisp"
+    }
+  }
+}

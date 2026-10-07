@@ -1,0 +1,276 @@
+{
+  "texture_size": [
+    128,
+    64
+  ],
+  "default_material": "shag",
+  "materials": {
+    "shag": {
+      "ramp": [
+        "#4a2410",
+        "#7a3a17",
+        "#a8562a",
+        "#c97a44"
+      ],
+      "pattern": {
+        "type": "shaggy",
+        "density": 0.2,
+        "seed": 21
+      }
+    },
+    "fringe": {
+      "ramp": [
+        "#7a3a17",
+        "#a8562a",
+        "#c97a44",
+        "#e09a5c"
+      ],
+      "pattern": {
+        "type": "shaggy",
+        "seed": 22
+      }
+    },
+    "horn": {
+      "ramp": [
+        "#8c7a5a",
+        "#b8a47c",
+        "#dccba0",
+        "#f2e6c4"
+      ]
+    },
+    "nose": {
+      "ramp": [
+        "#3a2a26",
+        "#5a423a",
+        "#755a50",
+        "#8d7064"
+      ]
+    }
+  },
+  "cubes": {
+    "head": {
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 5,
+          "palette": {
+            "k": "#0e0a08",
+            "w": "#d8c8b0"
+          },
+          "rows": [
+            ".kw....wk."
+          ]
+        }
+      }
+    },
+    "muzzle": {
+      "material": "nose",
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 2,
+          "palette": {
+            "k": "#120c0a"
+          },
+          "rows": [
+            "..k..k.."
+          ]
+        }
+      }
+    },
+    "fringe": {
+      "material": "fringe"
+    },
+    "horn_r": {
+      "material": "horn"
+    },
+    "horn_l": {
+      "material": "horn"
+    },
+    "horn_tip_r": {
+      "material": "horn"
+    },
+    "horn_tip_l": {
+      "material": "horn"
+    },
+    "leg_fl": {
+      "faces": {
+        "north": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        },
+        "south": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        },
+        "east": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        },
+        "west": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        }
+      }
+    },
+    "leg_fr": {
+      "faces": {
+        "north": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        },
+        "south": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        },
+        "east": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        },
+        "west": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        }
+      }
+    },
+    "leg_bl": {
+      "faces": {
+        "north": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        },
+        "south": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        },
+        "east": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        },
+        "west": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        }
+      }
+    },
+    "leg_br": {
+      "faces": {
+        "north": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        },
+        "south": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        },
+        "east": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        },
+        "west": {
+          "y": 8,
+          "palette": {
+            "h": "#2b211c"
+          },
+          "rows": [
+            "hhhh",
+            "hhhh"
+          ]
+        }
+      }
+    },
+    "tuft": {
+      "material": "fringe"
+    }
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "format": "minecraft-studio-model/1",
+  "name": "badger_smith",
+  "texture_size": [
+    64,
+    64
+  ],
+  "textures": {
+    "skin": "bedrock/RP/textures/entity/badger_smith.png"
+  },
+  "texture_refs": {
+    "skin": "studio:entity/badger_smith"
+  },
+  "bones": [
+    {
+      "name": "leg_r",
+      "pivot": [
+        6,
+        12,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "leg_r",
+          "from": [
+            4,
+            0,
+            6
+          ],
+          "to": [
+            8,
+            12,
+            10
+          ],
+          "box_uv": [
+            0,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "name": "leg_l",
+      "pivot": [
+        10,
+        12,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "leg_l",
+          "from": [
+            8,
+            0,
+            6
+          ],
+          "to": [
+            12,
+            12,
+            10
+          ],
+          "box_uv": [
+            16,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "name": "body",
+      "pivot": [
+        8,
+        12,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "torso",
+          "from": [
+            4,
+            12,
+            6
+          ],
+          "to": [
+            12,
+            24,
+            10
+          ],
+          "box_uv": [
+            32,
+            0
+          ]
+        },
+        {
+          "name": "apron",
+          "from": [
+            4,
+            12,
+            5
+          ],
+          "to": [
+            12,
+            22,
+            6
+          ],
+          "box_uv": [
+            0,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "name": "head",
+      "pivot": [
+        8,
+        24,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "head",
+          "from": [
+            4,
+            24,
+            4
+          ],
+          "to": [
+            12,
+            32,
+            12
+          ],
+          "box_uv": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "snout",
+          "from": [
+            6,
+            24,
+            1
+          ],
+          "to": [
+            10,
+            27,
+            4
+          ],
+          "box_uv": [
+            0,
+            43
+          ]
+        },
+        {
+          "name": "ear_r",
+          "from": [
+            3,
+            31,
+            7
+          ],
+          "to": [
+            5,
+            33,
+            9
+          ],
+          "box_uv": [
+            14,
+            43
+          ]
+        },
+        {
+          "name": "ear_l",
+          "from": [
+            11,
+            31,
+            7
+          ],
+          "to": [
+            13,
+            33,
+            9
+          ],
+          "box_uv": [
+            22,
+            43
+          ]
+        }
+      ],
+      "parent": "body"
+    },
+    {
+      "name": "arm_r",
+      "pivot": [
+        2,
+        22,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "arm_r",
+          "from": [
+            0,
+            12,
+            6
+          ],
+          "to": [
+            4,
+            24,
+            10
+          ],
+          "box_uv": [
+            32,
+            16
+          ]
+        }
+      ],
+      "parent": "body"
+    },
+    {
+      "name": "arm_l",
+      "pivot": [
+        14,
+        22,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "arm_l",
+          "from": [
+            12,
+            12,
+            6
+          ],
+          "to": [
+            16,
+            24,
+            10
+          ],
+          "box_uv": [
+            48,
+            16
+          ]
+        }
+      ],
+      "parent": "body"
+    },
+    {
+      "name": "hammer",
+      "pivot": [
+        14,
+        13,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "handle",
+          "from": [
+            13,
+            13,
+            -1
+          ],
+          "to": [
+            15,
+            14,
+            8
+          ],
+          "box_uv": [
+            18,
+            32
+          ]
+        },
+        {
+          "name": "hammer_head",
+          "from": [
+            12,
+            11,
+            -4
+          ],
+          "to": [
+            16,
+            16,
+            -1
+          ],
+          "box_uv": [
+            40,
+            32
+          ]
+        }
+      ],
+      "parent": "arm_l"
+    }
+  ],
+  "notes": "Badger Smith — anthropomorphic blacksmith. Biped with player-like proportions (2 blocks tall); hammer is parented to the left arm (screen-right)."
+}

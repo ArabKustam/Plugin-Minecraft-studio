@@ -1,0 +1,39 @@
+{
+  "duration": 1.2,
+  "layers": [
+    {
+      "type": "fm",
+      "carrier": 620,
+      "ratio": 3.7,
+      "index": {
+        "from": 8,
+        "to": 0.5,
+        "curve": "exp"
+      },
+      "gain": -6,
+      "envelope": {
+        "attack": 0.001,
+        "decay": 0.6,
+        "sustain": 0,
+        "release": 0.6
+      }
+    },
+    {
+      "type": "impact",
+      "freq": 155.0,
+      "decay": 0.08,
+      "noise": 0.9,
+      "gain": -10
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.35,
+      "mix": 0.12
+    }
+  ],
+  "normalize": {
+    "lufs": -17
+  }
+}

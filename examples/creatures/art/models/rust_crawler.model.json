@@ -1,0 +1,403 @@
+{
+  "format": "minecraft-studio-model/1",
+  "name": "rust_crawler",
+  "texture_size": [
+    64,
+    64
+  ],
+  "textures": {
+    "skin": "bedrock/RP/textures/entity/rust_crawler.png"
+  },
+  "texture_refs": {
+    "skin": "studio:entity/rust_crawler"
+  },
+  "bones": [
+    {
+      "name": "body",
+      "pivot": [
+        8,
+        5,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "thorax",
+          "from": [
+            3,
+            3,
+            2
+          ],
+          "to": [
+            13,
+            8,
+            14
+          ],
+          "box_uv": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "head",
+      "pivot": [
+        8,
+        5,
+        2
+      ],
+      "cubes": [
+        {
+          "name": "head",
+          "from": [
+            5,
+            3,
+            -2
+          ],
+          "to": [
+            11,
+            7,
+            2
+          ],
+          "box_uv": [
+            44,
+            0
+          ]
+        },
+        {
+          "name": "mandible_r",
+          "from": [
+            4,
+            3,
+            -4
+          ],
+          "to": [
+            6,
+            4,
+            -2
+          ],
+          "box_uv": [
+            40,
+            17
+          ]
+        },
+        {
+          "name": "mandible_l",
+          "from": [
+            10,
+            3,
+            -4
+          ],
+          "to": [
+            12,
+            4,
+            -2
+          ],
+          "box_uv": [
+            48,
+            17
+          ]
+        }
+      ],
+      "parent": "body"
+    },
+    {
+      "name": "leg_r0",
+      "pivot": [
+        3,
+        5,
+        3.5
+      ],
+      "cubes": [
+        {
+          "name": "leg_r0",
+          "from": [
+            -5,
+            4,
+            3
+          ],
+          "to": [
+            3,
+            5,
+            4
+          ],
+          "box_uv": [
+            0,
+            25
+          ]
+        }
+      ],
+      "parent": "body",
+      "rotation": [
+        0,
+        -18,
+        32
+      ]
+    },
+    {
+      "name": "leg_l0",
+      "pivot": [
+        13,
+        5,
+        3.5
+      ],
+      "cubes": [
+        {
+          "name": "leg_l0",
+          "from": [
+            13,
+            4,
+            3
+          ],
+          "to": [
+            21,
+            5,
+            4
+          ],
+          "box_uv": [
+            18,
+            25
+          ]
+        }
+      ],
+      "parent": "body",
+      "rotation": [
+        0,
+        18,
+        -32
+      ]
+    },
+    {
+      "name": "leg_r1",
+      "pivot": [
+        3,
+        5,
+        7.5
+      ],
+      "cubes": [
+        {
+          "name": "leg_r1",
+          "from": [
+            -5,
+            4,
+            7
+          ],
+          "to": [
+            3,
+            5,
+            8
+          ],
+          "box_uv": [
+            36,
+            25
+          ]
+        }
+      ],
+      "parent": "body",
+      "rotation": [
+        0,
+        0,
+        32
+      ]
+    },
+    {
+      "name": "leg_l1",
+      "pivot": [
+        13,
+        5,
+        7.5
+      ],
+      "cubes": [
+        {
+          "name": "leg_l1",
+          "from": [
+            13,
+            4,
+            7
+          ],
+          "to": [
+            21,
+            5,
+            8
+          ],
+          "box_uv": [
+            0,
+            27
+          ]
+        }
+      ],
+      "parent": "body",
+      "rotation": [
+        0,
+        0,
+        -32
+      ]
+    },
+    {
+      "name": "leg_r2",
+      "pivot": [
+        3,
+        5,
+        11.5
+      ],
+      "cubes": [
+        {
+          "name": "leg_r2",
+          "from": [
+            -5,
+            4,
+            11
+          ],
+          "to": [
+            3,
+            5,
+            12
+          ],
+          "box_uv": [
+            18,
+            27
+          ]
+        }
+      ],
+      "parent": "body",
+      "rotation": [
+        0,
+        18,
+        32
+      ]
+    },
+    {
+      "name": "leg_l2",
+      "pivot": [
+        13,
+        5,
+        11.5
+      ],
+      "cubes": [
+        {
+          "name": "leg_l2",
+          "from": [
+            13,
+            4,
+            11
+          ],
+          "to": [
+            21,
+            5,
+            12
+          ],
+          "box_uv": [
+            36,
+            27
+          ]
+        }
+      ],
+      "parent": "body",
+      "rotation": [
+        0,
+        -18,
+        -32
+      ]
+    },
+    {
+      "name": "tail1",
+      "pivot": [
+        8,
+        6,
+        14
+      ],
+      "cubes": [
+        {
+          "name": "tail1",
+          "from": [
+            6,
+            5,
+            14
+          ],
+          "to": [
+            10,
+            8,
+            19
+          ],
+          "box_uv": [
+            0,
+            17
+          ]
+        }
+      ],
+      "parent": "body",
+      "rotation": [
+        -35,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "tail2",
+      "pivot": [
+        8,
+        7,
+        19
+      ],
+      "cubes": [
+        {
+          "name": "tail2",
+          "from": [
+            7,
+            6,
+            19
+          ],
+          "to": [
+            9,
+            8,
+            23
+          ],
+          "box_uv": [
+            18,
+            17
+          ]
+        }
+      ],
+      "parent": "tail1",
+      "rotation": [
+        -45,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "stinger",
+      "pivot": [
+        8,
+        7,
+        23
+      ],
+      "cubes": [
+        {
+          "name": "stinger",
+          "from": [
+            7,
+            6,
+            23
+          ],
+          "to": [
+            9,
+            9,
+            26
+          ],
+          "box_uv": [
+            30,
+            17
+          ]
+        }
+      ],
+      "parent": "tail2",
+      "rotation": [
+        -40,
+        0,
+        0
+      ]
+    }
+  ],
+  "notes": "Rust Crawler — six-legged scrap scorpion. Low hexapod monster with a three-segment tail."
+}

@@ -1,0 +1,38 @@
+{
+  "duration": 0.4,
+  "layers": [
+    {
+      "type": "osc",
+      "wave": "saw",
+      "freq": {
+        "from": 168,
+        "to": 140
+      },
+      "harmonics": [
+        1,
+        0.5,
+        0.3
+      ],
+      "gain": -6,
+      "envelope": {
+        "attack": 0.02,
+        "release": 0.24
+      },
+      "filter": {
+        "type": "bandpass",
+        "freq": 700,
+        "q": 1.3
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.35,
+      "mix": 0.12
+    }
+  ],
+  "normalize": {
+    "lufs": -17
+  }
+}

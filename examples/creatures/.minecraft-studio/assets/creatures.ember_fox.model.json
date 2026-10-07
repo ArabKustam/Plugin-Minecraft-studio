@@ -1,0 +1,116 @@
+{
+  "id": "creatures.ember_fox.model",
+  "type": "model",
+  "name": "Ember Fox model",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/models/entity/ember_fox.geo.json",
+      "role": "primary",
+      "sha256": "af06b836459b4e8afb9205079023f19b19f81fced7bded19a8b24d139b155795",
+      "bytes": 4979
+    },
+    {
+      "path": "models/ember_fox.bbmodel",
+      "role": "primary",
+      "sha256": "d8c612066f69dfdb39e98612aaaa0951a5960d74e570cd445d86091f76f26932",
+      "bytes": 48296
+    },
+    {
+      "path": "art/models/ember_fox.model.json",
+      "role": "source",
+      "sha256": "6f556d7b4ccc88adbd32e636f229323843ed4670f98b31383d244d35198c6288",
+      "bytes": 4251
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "minecraft-studio-model/1",
+    "source_files": [
+      "art/models/ember_fox.model.json"
+    ]
+  },
+  "created_at": "2026-10-07T05:37:27.136Z",
+  "modified_at": "2026-10-07T05:37:27.147Z",
+  "created_by": "modeler",
+  "dependencies": [
+    "creatures.ember_fox.texture"
+  ],
+  "minecraft_ids": [
+    "geometry.ember_fox"
+  ],
+  "preview": ".minecraft-studio/previews/model_ember_fox.png",
+  "tags": [
+    "creature",
+    "animal"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:27.144Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "11 cubes",
+      "checks": [
+        {
+          "name": "rig validation",
+          "status": "pass",
+          "detail": "11 cubes, bones body/head/leg_fl/leg_fr/leg_bl/leg_br/tail"
+        },
+        {
+          "name": "size",
+          "status": "pass",
+          "detail": "0.5 × 1.13 × 2 blocks"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:27.141Z",
+      "by": "modeler",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/models/entity/ember_fox.geo.json",
+          "sha256": "af06b836459b4e8afb9205079023f19b19f81fced7bded19a8b24d139b155795"
+        },
+        {
+          "path": "models/ember_fox.bbmodel",
+          "sha256": "d8c612066f69dfdb39e98612aaaa0951a5960d74e570cd445d86091f76f26932"
+        },
+        {
+          "path": "art/models/ember_fox.model.json",
+          "sha256": "6f556d7b4ccc88adbd32e636f229323843ed4670f98b31383d244d35198c6288"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.ember_fox.model/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "minecraft-studio-model/1",
+        "source_files": [
+          "art/models/ember_fox.model.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "bones": [
+      "body",
+      "head",
+      "leg_fl",
+      "leg_fr",
+      "leg_bl",
+      "leg_br",
+      "tail"
+    ],
+    "texture_size": [
+      64,
+      64
+    ]
+  }
+}

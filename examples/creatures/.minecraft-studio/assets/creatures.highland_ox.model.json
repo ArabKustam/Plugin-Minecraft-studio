@@ -1,0 +1,116 @@
+{
+  "id": "creatures.highland_ox.model",
+  "type": "model",
+  "name": "Highland Ox model",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/models/entity/highland_ox.geo.json",
+      "role": "primary",
+      "sha256": "74a331703634baff89994963914d426249b45108697880782fc4bd8ea308c1b5",
+      "bytes": 6153
+    },
+    {
+      "path": "models/highland_ox.bbmodel",
+      "role": "primary",
+      "sha256": "fe571126af7bfc17ac89af5e591932ac7919befaf8a1db569238445d52257385",
+      "bytes": 52925
+    },
+    {
+      "path": "art/models/highland_ox.model.json",
+      "role": "source",
+      "sha256": "946fe8d7cbe7f03d2a17428305e1ef1c03e4784609ca9bcff4b1391388cfe469",
+      "bytes": 5292
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "minecraft-studio-model/1",
+    "source_files": [
+      "art/models/highland_ox.model.json"
+    ]
+  },
+  "created_at": "2026-10-07T05:37:28.313Z",
+  "modified_at": "2026-10-07T05:37:28.322Z",
+  "created_by": "modeler",
+  "dependencies": [
+    "creatures.highland_ox.texture"
+  ],
+  "minecraft_ids": [
+    "geometry.highland_ox"
+  ],
+  "preview": ".minecraft-studio/previews/model_highland_ox.png",
+  "tags": [
+    "creature",
+    "animal"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:28.319Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "15 cubes",
+      "checks": [
+        {
+          "name": "rig validation",
+          "status": "pass",
+          "detail": "15 cubes, bones body/head/leg_fl/leg_fr/leg_bl/leg_br/tail"
+        },
+        {
+          "name": "size",
+          "status": "pass",
+          "detail": "1.38 × 1.69 × 2.31 blocks"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:28.317Z",
+      "by": "modeler",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/models/entity/highland_ox.geo.json",
+          "sha256": "74a331703634baff89994963914d426249b45108697880782fc4bd8ea308c1b5"
+        },
+        {
+          "path": "models/highland_ox.bbmodel",
+          "sha256": "fe571126af7bfc17ac89af5e591932ac7919befaf8a1db569238445d52257385"
+        },
+        {
+          "path": "art/models/highland_ox.model.json",
+          "sha256": "946fe8d7cbe7f03d2a17428305e1ef1c03e4784609ca9bcff4b1391388cfe469"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.highland_ox.model/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "minecraft-studio-model/1",
+        "source_files": [
+          "art/models/highland_ox.model.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "bones": [
+      "body",
+      "head",
+      "leg_fl",
+      "leg_fr",
+      "leg_bl",
+      "leg_br",
+      "tail"
+    ],
+    "texture_size": [
+      128,
+      64
+    ]
+  }
+}

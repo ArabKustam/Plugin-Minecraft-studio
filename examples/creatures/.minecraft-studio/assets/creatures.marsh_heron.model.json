@@ -1,0 +1,116 @@
+{
+  "id": "creatures.marsh_heron.model",
+  "type": "model",
+  "name": "Marsh Heron model",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/models/entity/marsh_heron.geo.json",
+      "role": "primary",
+      "sha256": "fe584260d108605e7cbb5737d602123fe2a673784854c59d47d2b2303c7e33a1",
+      "bytes": 5269
+    },
+    {
+      "path": "models/marsh_heron.bbmodel",
+      "role": "primary",
+      "sha256": "2eb5b8c4966dc2c39bfb1dccb2b751a2350294a0bb8ce5dc1aeb7d0db2c05334",
+      "bytes": 40838
+    },
+    {
+      "path": "art/models/marsh_heron.model.json",
+      "role": "source",
+      "sha256": "74c11bf9597cf13490cd51fb1e9d430594fb8a7273f96a7b6ba655b0f048105c",
+      "bytes": 4487
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "minecraft-studio-model/1",
+    "source_files": [
+      "art/models/marsh_heron.model.json"
+    ]
+  },
+  "created_at": "2026-10-07T05:37:29.442Z",
+  "modified_at": "2026-10-07T05:37:29.449Z",
+  "created_by": "modeler",
+  "dependencies": [
+    "creatures.marsh_heron.texture"
+  ],
+  "minecraft_ids": [
+    "geometry.marsh_heron"
+  ],
+  "preview": ".minecraft-studio/previews/model_marsh_heron.png",
+  "tags": [
+    "creature",
+    "animal"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:29.447Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "12 cubes",
+      "checks": [
+        {
+          "name": "rig validation",
+          "status": "pass",
+          "detail": "12 cubes, bones body/neck/head/wing_r/wing_l/leg_r/leg_l"
+        },
+        {
+          "name": "size",
+          "status": "pass",
+          "detail": "0.5 × 1.88 × 1.44 blocks"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:29.445Z",
+      "by": "modeler",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/models/entity/marsh_heron.geo.json",
+          "sha256": "fe584260d108605e7cbb5737d602123fe2a673784854c59d47d2b2303c7e33a1"
+        },
+        {
+          "path": "models/marsh_heron.bbmodel",
+          "sha256": "2eb5b8c4966dc2c39bfb1dccb2b751a2350294a0bb8ce5dc1aeb7d0db2c05334"
+        },
+        {
+          "path": "art/models/marsh_heron.model.json",
+          "sha256": "74c11bf9597cf13490cd51fb1e9d430594fb8a7273f96a7b6ba655b0f048105c"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.marsh_heron.model/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "minecraft-studio-model/1",
+        "source_files": [
+          "art/models/marsh_heron.model.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "bones": [
+      "body",
+      "neck",
+      "head",
+      "wing_r",
+      "wing_l",
+      "leg_r",
+      "leg_l"
+    ],
+    "texture_size": [
+      64,
+      64
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "duration": 0.8,
+  "layers": [
+    {
+      "type": "impact",
+      "freq": 70,
+      "drop": 0.5,
+      "decay": 0.32000000000000006,
+      "noise": 0.8,
+      "gain": -4
+    },
+    {
+      "type": "click",
+      "freq": 2200,
+      "decay": 0.006,
+      "gain": -12
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.35,
+      "mix": 0.12
+    }
+  ],
+  "normalize": {
+    "lufs": -17
+  }
+}

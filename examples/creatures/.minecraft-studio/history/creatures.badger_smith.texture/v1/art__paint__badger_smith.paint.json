@@ -1,0 +1,246 @@
+{
+  "texture_size": [
+    64,
+    64
+  ],
+  "default_material": "linen",
+  "materials": {
+    "fur": {
+      "ramp": [
+        "#2a2a2c",
+        "#4a4a4e",
+        "#6a6a70",
+        "#8c8c92"
+      ],
+      "pattern": {
+        "type": "fur",
+        "density": 0.15,
+        "seed": 61
+      }
+    },
+    "linen": {
+      "ramp": [
+        "#6b5a40",
+        "#8e7a56",
+        "#b39c72",
+        "#d2bd92"
+      ]
+    },
+    "leather": {
+      "ramp": [
+        "#2e1a0e",
+        "#4c2c16",
+        "#6a3f20",
+        "#8a542c"
+      ],
+      "pattern": {
+        "type": "stripes",
+        "size": 3
+      }
+    },
+    "trousers": {
+      "ramp": [
+        "#1f2a36",
+        "#2e3e50",
+        "#40556b",
+        "#566f88"
+      ]
+    },
+    "iron": {
+      "ramp": [
+        "#2b2e33",
+        "#4a5058",
+        "#6f7781",
+        "#9aa3ad"
+      ],
+      "pattern": {
+        "type": "plates",
+        "size": 3
+      }
+    },
+    "wood": {
+      "ramp": [
+        "#3a240f",
+        "#5c3a18",
+        "#7d5224",
+        "#9c6b32"
+      ]
+    },
+    "black": {
+      "ramp": [
+        "#0c0c0d",
+        "#18181a",
+        "#242427",
+        "#323236"
+      ]
+    }
+  },
+  "cubes": {
+    "leg_r": {
+      "material": "trousers"
+    },
+    "leg_l": {
+      "material": "trousers"
+    },
+    "apron": {
+      "material": "leather"
+    },
+    "head": {
+      "material": "fur",
+      "faces": {
+        "north": {
+          "palette": {
+            "w": "#e8e6e0",
+            "k": "#141416",
+            "e": "#c9e3ff"
+          },
+          "rows": [
+            "wkkwwkkw",
+            "wkkwwkkw",
+            "wkkwwkkw",
+            "wkewwekw",
+            "wkkwwkkw",
+            "wwkwwkww",
+            "wwwwwwww",
+            "wwwwwwww"
+          ]
+        }
+      }
+    },
+    "snout": {
+      "material": "fur",
+      "face_materials": {
+        "north": "fur"
+      },
+      "faces": {
+        "north": {
+          "palette": {
+            "k": "#0c0c0d",
+            "w": "#e8e6e0"
+          },
+          "rows": [
+            ".kk.",
+            "wwww",
+            "wwww"
+          ]
+        }
+      }
+    },
+    "ear_r": {
+      "material": "black"
+    },
+    "ear_l": {
+      "material": "black"
+    },
+    "arm_r": {
+      "faces": {
+        "north": {
+          "y": 8,
+          "palette": {
+            "f": "#4a4a4e"
+          },
+          "rows": [
+            "ffff",
+            "ffff",
+            "ffff",
+            "ffff"
+          ]
+        },
+        "south": {
+          "y": 8,
+          "palette": {
+            "f": "#4a4a4e"
+          },
+          "rows": [
+            "ffff",
+            "ffff",
+            "ffff",
+            "ffff"
+          ]
+        },
+        "east": {
+          "y": 8,
+          "palette": {
+            "f": "#4a4a4e"
+          },
+          "rows": [
+            "ffff",
+            "ffff",
+            "ffff",
+            "ffff"
+          ]
+        },
+        "west": {
+          "y": 8,
+          "palette": {
+            "f": "#4a4a4e"
+          },
+          "rows": [
+            "ffff",
+            "ffff",
+            "ffff",
+            "ffff"
+          ]
+        }
+      }
+    },
+    "arm_l": {
+      "faces": {
+        "north": {
+          "y": 8,
+          "palette": {
+            "f": "#4a4a4e"
+          },
+          "rows": [
+            "ffff",
+            "ffff",
+            "ffff",
+            "ffff"
+          ]
+        },
+        "south": {
+          "y": 8,
+          "palette": {
+            "f": "#4a4a4e"
+          },
+          "rows": [
+            "ffff",
+            "ffff",
+            "ffff",
+            "ffff"
+          ]
+        },
+        "east": {
+          "y": 8,
+          "palette": {
+            "f": "#4a4a4e"
+          },
+          "rows": [
+            "ffff",
+            "ffff",
+            "ffff",
+            "ffff"
+          ]
+        },
+        "west": {
+          "y": 8,
+          "palette": {
+            "f": "#4a4a4e"
+          },
+          "rows": [
+            "ffff",
+            "ffff",
+            "ffff",
+            "ffff"
+          ]
+        }
+      }
+    },
+    "handle": {
+      "material": "wood"
+    },
+    "hammer_head": {
+      "material": "iron"
+    }
+  }
+}

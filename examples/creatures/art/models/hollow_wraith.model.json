@@ -1,0 +1,162 @@
+{
+  "format": "minecraft-studio-model/1",
+  "name": "hollow_wraith",
+  "texture_size": [
+    64,
+    64
+  ],
+  "textures": {
+    "skin": "bedrock/RP/textures/entity/hollow_wraith.png"
+  },
+  "texture_refs": {
+    "skin": "studio:entity/hollow_wraith"
+  },
+  "bones": [
+    {
+      "name": "root",
+      "pivot": [
+        8,
+        12,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "robe",
+          "from": [
+            4,
+            8,
+            5
+          ],
+          "to": [
+            12,
+            22,
+            11
+          ],
+          "box_uv": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "hem",
+          "from": [
+            5,
+            3,
+            6
+          ],
+          "to": [
+            11,
+            8,
+            10
+          ],
+          "box_uv": [
+            16,
+            20
+          ]
+        },
+        {
+          "name": "wisp",
+          "from": [
+            6,
+            0,
+            7
+          ],
+          "to": [
+            10,
+            3,
+            9
+          ],
+          "box_uv": [
+            36,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "name": "head",
+      "pivot": [
+        8,
+        22,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "hood",
+          "from": [
+            3,
+            22,
+            4
+          ],
+          "to": [
+            13,
+            31,
+            12
+          ],
+          "box_uv": [
+            28,
+            0
+          ]
+        }
+      ],
+      "parent": "root"
+    },
+    {
+      "name": "arm_r",
+      "pivot": [
+        4,
+        21,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "arm_r",
+          "from": [
+            1,
+            8,
+            7
+          ],
+          "to": [
+            3,
+            21,
+            9
+          ],
+          "box_uv": [
+            0,
+            20
+          ]
+        }
+      ],
+      "parent": "root"
+    },
+    {
+      "name": "arm_l",
+      "pivot": [
+        12,
+        21,
+        8
+      ],
+      "cubes": [
+        {
+          "name": "arm_l",
+          "from": [
+            13,
+            8,
+            7
+          ],
+          "to": [
+            15,
+            21,
+            9
+          ],
+          "box_uv": [
+            8,
+            20
+          ]
+        }
+      ],
+      "parent": "root"
+    }
+  ],
+  "notes": "Hollow Wraith — floating hooded spirit. Hovering humanoid silhouette without legs."
+}

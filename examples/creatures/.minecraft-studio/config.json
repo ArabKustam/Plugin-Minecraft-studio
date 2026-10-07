@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "providers": {
+    "image": "none",
+    "sfx": "local-synth",
+    "music": "local-composer",
+    "voice": "auto",
+    "modeling": "studio-model"
+  },
+  "audio": {
+    "master_format": "flac",
+    "sample_rate": 48000,
+    "target_lufs_sfx": -16,
+    "target_lufs_music": -20,
+    "target_lufs_voice": -18
+  },
+  "costs": {
+    "confirm_above_usd": 1,
+    "max_generations_per_asset": 6
+  },
+  "dashboard": {
+    "port": 4777
+  },
+  "minecraft": {
+    "accept_eula": false,
+    "test_server_dir": ".minecraft-studio/test-server",
+    "startup_timeout_s": 180
+  },
+  "git": {
+    "auto_checkpoint": true,
+    "scan_secrets_before_commit": true
+  },
+  "telemetry": false
+}

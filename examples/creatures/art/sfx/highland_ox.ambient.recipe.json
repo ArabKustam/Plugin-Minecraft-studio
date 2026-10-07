@@ -1,0 +1,59 @@
+{
+  "duration": 1.6,
+  "layers": [
+    {
+      "type": "osc",
+      "wave": "saw",
+      "freq": {
+        "from": 95,
+        "to": 71.25,
+        "curve": "exp"
+      },
+      "harmonics": [
+        1,
+        0.7,
+        0.5,
+        0.35,
+        0.2
+      ],
+      "gain": -6,
+      "envelope": {
+        "attack": 0.15,
+        "decay": 0.3,
+        "sustain": 0.8,
+        "release": 0.5599999999999999
+      },
+      "filter": {
+        "type": "bandpass",
+        "freq": {
+          "from": 500,
+          "to": 380
+        },
+        "q": 1.6
+      }
+    },
+    {
+      "type": "noise",
+      "color": "brown",
+      "gain": -22,
+      "envelope": {
+        "attack": 0.2,
+        "release": 0.4
+      },
+      "filter": {
+        "type": "lowpass",
+        "freq": 400
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.35,
+      "mix": 0.12
+    }
+  ],
+  "normalize": {
+    "lufs": -17
+  }
+}

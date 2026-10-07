@@ -1,0 +1,82 @@
+{
+  "texture_size": [
+    64,
+    64
+  ],
+  "default_material": "rust",
+  "materials": {
+    "rust": {
+      "ramp": [
+        "#2a1a14",
+        "#5a2f1c",
+        "#8a4a26",
+        "#b8703a"
+      ],
+      "pattern": {
+        "type": "plates",
+        "size": 4
+      }
+    },
+    "iron": {
+      "ramp": [
+        "#141210",
+        "#2a2420",
+        "#3e3530",
+        "#544840"
+      ]
+    },
+    "toxic": {
+      "ramp": [
+        "#1f3a10",
+        "#3f7a1c",
+        "#6fbf2c",
+        "#b6ff5a"
+      ]
+    }
+  },
+  "cubes": {
+    "head": {
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 1,
+          "palette": {
+            "o": "#ff8a1f",
+            "O": "#fff1b0"
+          },
+          "rows": [
+            ".O..O.",
+            ".o..o."
+          ]
+        }
+      }
+    },
+    "mandible_r": {
+      "material": "iron"
+    },
+    "mandible_l": {
+      "material": "iron"
+    },
+    "leg_r0": {
+      "material": "iron"
+    },
+    "leg_r1": {
+      "material": "iron"
+    },
+    "leg_r2": {
+      "material": "iron"
+    },
+    "leg_l0": {
+      "material": "iron"
+    },
+    "leg_l1": {
+      "material": "iron"
+    },
+    "leg_l2": {
+      "material": "iron"
+    },
+    "stinger": {
+      "material": "toxic"
+    }
+  }
+}

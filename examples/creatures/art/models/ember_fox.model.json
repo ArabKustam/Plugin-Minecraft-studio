@@ -1,0 +1,281 @@
+{
+  "format": "minecraft-studio-model/1",
+  "name": "ember_fox",
+  "texture_size": [
+    64,
+    64
+  ],
+  "textures": {
+    "skin": "bedrock/RP/textures/entity/ember_fox.png"
+  },
+  "texture_refs": {
+    "skin": "studio:entity/ember_fox"
+  },
+  "bones": [
+    {
+      "name": "body",
+      "pivot": [
+        8,
+        9,
+        10
+      ],
+      "cubes": [
+        {
+          "name": "torso",
+          "from": [
+            5,
+            6,
+            4
+          ],
+          "to": [
+            11,
+            12,
+            16
+          ],
+          "box_uv": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "head",
+      "pivot": [
+        8,
+        10,
+        4
+      ],
+      "cubes": [
+        {
+          "name": "head",
+          "from": [
+            4,
+            8,
+            -2
+          ],
+          "to": [
+            12,
+            15,
+            4
+          ],
+          "box_uv": [
+            36,
+            0
+          ]
+        },
+        {
+          "name": "snout",
+          "from": [
+            6,
+            8,
+            -5
+          ],
+          "to": [
+            10,
+            11,
+            -2
+          ],
+          "box_uv": [
+            14,
+            30
+          ]
+        },
+        {
+          "name": "ear_r",
+          "from": [
+            4,
+            15,
+            1
+          ],
+          "to": [
+            6,
+            18,
+            2
+          ],
+          "box_uv": [
+            28,
+            30
+          ]
+        },
+        {
+          "name": "ear_l",
+          "from": [
+            10,
+            15,
+            1
+          ],
+          "to": [
+            12,
+            18,
+            2
+          ],
+          "box_uv": [
+            34,
+            30
+          ]
+        }
+      ],
+      "parent": "body"
+    },
+    {
+      "name": "leg_fl",
+      "pivot": [
+        6,
+        6,
+        6
+      ],
+      "cubes": [
+        {
+          "name": "leg_fl",
+          "from": [
+            5,
+            0,
+            5
+          ],
+          "to": [
+            7,
+            6,
+            7
+          ],
+          "box_uv": [
+            24,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "name": "leg_fr",
+      "pivot": [
+        10,
+        6,
+        6
+      ],
+      "cubes": [
+        {
+          "name": "leg_fr",
+          "from": [
+            9,
+            0,
+            5
+          ],
+          "to": [
+            11,
+            6,
+            7
+          ],
+          "box_uv": [
+            32,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "name": "leg_bl",
+      "pivot": [
+        6,
+        6,
+        14
+      ],
+      "cubes": [
+        {
+          "name": "leg_bl",
+          "from": [
+            5,
+            0,
+            13
+          ],
+          "to": [
+            7,
+            6,
+            15
+          ],
+          "box_uv": [
+            40,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "name": "leg_br",
+      "pivot": [
+        10,
+        6,
+        14
+      ],
+      "cubes": [
+        {
+          "name": "leg_br",
+          "from": [
+            9,
+            0,
+            13
+          ],
+          "to": [
+            11,
+            6,
+            15
+          ],
+          "box_uv": [
+            48,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tail",
+      "pivot": [
+        8,
+        11,
+        16
+      ],
+      "cubes": [
+        {
+          "name": "tail",
+          "from": [
+            6,
+            8,
+            16
+          ],
+          "to": [
+            10,
+            12,
+            24
+          ],
+          "box_uv": [
+            0,
+            18
+          ]
+        },
+        {
+          "name": "tail_tip",
+          "from": [
+            6,
+            8,
+            24
+          ],
+          "to": [
+            10,
+            12,
+            27
+          ],
+          "box_uv": [
+            0,
+            30
+          ]
+        }
+      ],
+      "parent": "body",
+      "rotation": [
+        -20,
+        0,
+        0
+      ]
+    }
+  ],
+  "notes": "Ember Fox — small agile animal. Quadruped, 1 block long. Head faces north (−Z)."
+}

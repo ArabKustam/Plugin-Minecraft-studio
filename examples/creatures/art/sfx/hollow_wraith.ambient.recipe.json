@@ -1,0 +1,52 @@
+{
+  "duration": 2.0,
+  "layers": [
+    {
+      "type": "noise",
+      "color": "pink",
+      "gain": -6,
+      "envelope": {
+        "attack": 0.6,
+        "release": 0.8
+      },
+      "filter": {
+        "type": "bandpass",
+        "freq": {
+          "center": 1400,
+          "depth": 560.0,
+          "rate": 0.8
+        },
+        "q": 3
+      }
+    },
+    {
+      "type": "osc",
+      "wave": "sine",
+      "freq": {
+        "center": 233.33333333333334,
+        "depth": 8,
+        "rate": 0.3
+      },
+      "gain": -22,
+      "envelope": {
+        "attack": 0.8,
+        "release": 0.8
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.35,
+      "mix": 0.12
+    },
+    {
+      "type": "reverb",
+      "room": 0.9,
+      "mix": 0.35
+    }
+  ],
+  "normalize": {
+    "lufs": -17
+  }
+}

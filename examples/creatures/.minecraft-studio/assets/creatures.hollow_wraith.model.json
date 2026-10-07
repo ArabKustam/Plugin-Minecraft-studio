@@ -1,0 +1,113 @@
+{
+  "id": "creatures.hollow_wraith.model",
+  "type": "model",
+  "name": "Hollow Wraith model",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/models/entity/hollow_wraith.geo.json",
+      "role": "primary",
+      "sha256": "48de13a962d25d7d9dd3b277b16689d3438b3987cfc7e3b387f8953431b8057c",
+      "bytes": 2935
+    },
+    {
+      "path": "models/hollow_wraith.bbmodel",
+      "role": "primary",
+      "sha256": "2819d99515722d47ba49b69a93777532182774a166ffe625e0278a28c0ba2277",
+      "bytes": 28824
+    },
+    {
+      "path": "art/models/hollow_wraith.model.json",
+      "role": "source",
+      "sha256": "33847dd3185054ad57a697504ad3b30d5ae84a9e86d99b277953ed033bd9b28c",
+      "bytes": 2514
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "minecraft-studio-model/1",
+    "source_files": [
+      "art/models/hollow_wraith.model.json"
+    ]
+  },
+  "created_at": "2026-10-07T05:37:31.474Z",
+  "modified_at": "2026-10-07T05:37:31.482Z",
+  "created_by": "modeler",
+  "dependencies": [
+    "creatures.hollow_wraith.texture"
+  ],
+  "minecraft_ids": [
+    "geometry.hollow_wraith"
+  ],
+  "preview": ".minecraft-studio/previews/model_hollow_wraith.png",
+  "tags": [
+    "creature",
+    "monster"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:31.479Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "6 cubes",
+      "checks": [
+        {
+          "name": "rig validation",
+          "status": "pass",
+          "detail": "6 cubes, bones root/head/arm_r/arm_l"
+        },
+        {
+          "name": "size",
+          "status": "pass",
+          "detail": "0.88 × 1.94 × 0.5 blocks"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:31.477Z",
+      "by": "modeler",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/models/entity/hollow_wraith.geo.json",
+          "sha256": "48de13a962d25d7d9dd3b277b16689d3438b3987cfc7e3b387f8953431b8057c"
+        },
+        {
+          "path": "models/hollow_wraith.bbmodel",
+          "sha256": "2819d99515722d47ba49b69a93777532182774a166ffe625e0278a28c0ba2277"
+        },
+        {
+          "path": "art/models/hollow_wraith.model.json",
+          "sha256": "33847dd3185054ad57a697504ad3b30d5ae84a9e86d99b277953ed033bd9b28c"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.hollow_wraith.model/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "minecraft-studio-model/1",
+        "source_files": [
+          "art/models/hollow_wraith.model.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "bones": [
+      "root",
+      "head",
+      "arm_r",
+      "arm_l"
+    ],
+    "texture_size": [
+      64,
+      64
+    ]
+  }
+}

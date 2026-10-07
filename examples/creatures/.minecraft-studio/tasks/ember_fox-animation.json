@@ -1,0 +1,23 @@
+{
+  "id": "ember_fox-animation",
+  "goal": "Ember Fox: idle, walk, attack animations",
+  "agent": "animator",
+  "inputs": [],
+  "outputs": [],
+  "allowed_tools": [],
+  "dependencies": [
+    "ember_fox-model"
+  ],
+  "constraints": [],
+  "quality": [],
+  "validation": [],
+  "destination": null,
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T05:37:26.796Z",
+  "started_at": "2026-10-07T05:37:27.151Z",
+  "finished_at": "2026-10-07T05:37:27.350Z",
+  "updated_at": "2026-10-07T05:37:27.350Z",
+  "plan": null
+}

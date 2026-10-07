@@ -1,0 +1,78 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "studio:ember_fox": {
+        "volume": 1,
+        "pitch": [
+          0.9,
+          1.1
+        ],
+        "events": {
+          "ambient": "mob.ember_fox.ambient",
+          "hurt": "mob.ember_fox.hurt",
+          "death": "mob.ember_fox.hurt"
+        }
+      },
+      "studio:highland_ox": {
+        "volume": 1,
+        "pitch": [
+          0.9,
+          1.1
+        ],
+        "events": {
+          "ambient": "mob.highland_ox.ambient",
+          "hurt": "mob.highland_ox.hurt",
+          "death": "mob.highland_ox.hurt"
+        }
+      },
+      "studio:marsh_heron": {
+        "volume": 1,
+        "pitch": [
+          0.9,
+          1.1
+        ],
+        "events": {
+          "ambient": "mob.marsh_heron.ambient",
+          "hurt": "mob.marsh_heron.hurt",
+          "death": "mob.marsh_heron.hurt"
+        }
+      },
+      "studio:rust_crawler": {
+        "volume": 1,
+        "pitch": [
+          0.9,
+          1.1
+        ],
+        "events": {
+          "ambient": "mob.rust_crawler.ambient",
+          "hurt": "mob.rust_crawler.hurt",
+          "death": "mob.rust_crawler.hurt"
+        }
+      },
+      "studio:hollow_wraith": {
+        "volume": 1,
+        "pitch": [
+          0.9,
+          1.1
+        ],
+        "events": {
+          "ambient": "mob.hollow_wraith.ambient",
+          "hurt": "mob.hollow_wraith.hurt",
+          "death": "mob.hollow_wraith.hurt"
+        }
+      },
+      "studio:badger_smith": {
+        "volume": 1,
+        "pitch": [
+          0.9,
+          1.1
+        ],
+        "events": {
+          "ambient": "mob.badger_smith.ambient",
+          "hurt": "mob.badger_smith.hurt",
+          "death": "mob.badger_smith.hurt"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "ember_fox-sfx",
+  "goal": "Ember Fox: ambient, hurt, attack sounds",
+  "agent": "sfx-designer",
+  "inputs": [],
+  "outputs": [],
+  "allowed_tools": [],
+  "dependencies": [
+    "creature-design"
+  ],
+  "constraints": [],
+  "quality": [],
+  "validation": [],
+  "destination": null,
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T05:37:26.798Z",
+  "started_at": "2026-10-07T05:37:27.351Z",
+  "finished_at": "2026-10-07T05:37:28.132Z",
+  "updated_at": "2026-10-07T05:37:28.132Z",
+  "plan": null
+}

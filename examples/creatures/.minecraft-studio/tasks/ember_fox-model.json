@@ -1,0 +1,23 @@
+{
+  "id": "ember_fox-model",
+  "goal": "Ember Fox: rigged model, Bedrock geometry and .bbmodel",
+  "agent": "modeler",
+  "inputs": [],
+  "outputs": [],
+  "allowed_tools": [],
+  "dependencies": [
+    "ember_fox-texture"
+  ],
+  "constraints": [],
+  "quality": [],
+  "validation": [],
+  "destination": null,
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T05:37:26.794Z",
+  "started_at": "2026-10-07T05:37:27.056Z",
+  "finished_at": "2026-10-07T05:37:27.149Z",
+  "updated_at": "2026-10-07T05:37:27.149Z",
+  "plan": null
+}

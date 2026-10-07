@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "studio:marsh_heron",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/marsh_heron"
+      },
+      "geometry": {
+        "default": "geometry.marsh_heron"
+      },
+      "animations": {
+        "idle": "animation.marsh_heron.idle",
+        "walk": "animation.marsh_heron.walk",
+        "attack": "animation.marsh_heron.attack",
+        "flap": "animation.marsh_heron.flap"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "idle": "query.modified_move_speed < 0.05"
+          },
+          {
+            "walk": "query.modified_move_speed >= 0.05"
+          },
+          {
+            "attack": "variable.attack_time > 0.0"
+          },
+          {
+            "flap": "!query.is_on_ground"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "spawn_egg": {
+        "base_color": "#7f8c9c",
+        "overlay_color": "#ffd95a"
+      }
+    }
+  }
+}

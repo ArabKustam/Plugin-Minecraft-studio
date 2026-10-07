@@ -1,0 +1,344 @@
+{
+  "format": "minecraft-studio-model/1",
+  "name": "highland_ox",
+  "texture_size": [
+    128,
+    64
+  ],
+  "textures": {
+    "skin": "bedrock/RP/textures/entity/highland_ox.png"
+  },
+  "texture_refs": {
+    "skin": "studio:entity/highland_ox"
+  },
+  "bones": [
+    {
+      "name": "body",
+      "pivot": [
+        8,
+        14,
+        12
+      ],
+      "cubes": [
+        {
+          "name": "body",
+          "from": [
+            1,
+            10,
+            0
+          ],
+          "to": [
+            15,
+            24,
+            24
+          ],
+          "box_uv": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "hump",
+          "from": [
+            3,
+            24,
+            2
+          ],
+          "to": [
+            13,
+            27,
+            10
+          ],
+          "box_uv": [
+            48,
+            38
+          ]
+        }
+      ]
+    },
+    {
+      "name": "head",
+      "pivot": [
+        8,
+        19,
+        1
+      ],
+      "cubes": [
+        {
+          "name": "head",
+          "from": [
+            3,
+            13,
+            -8
+          ],
+          "to": [
+            13,
+            23,
+            0
+          ],
+          "box_uv": [
+            76,
+            0
+          ]
+        },
+        {
+          "name": "muzzle",
+          "from": [
+            4,
+            13,
+            -11
+          ],
+          "to": [
+            12,
+            18,
+            -8
+          ],
+          "box_uv": [
+            90,
+            38
+          ]
+        },
+        {
+          "name": "fringe",
+          "from": [
+            3,
+            19,
+            -9
+          ],
+          "to": [
+            13,
+            23,
+            -8
+          ],
+          "box_uv": [
+            0,
+            52
+          ]
+        },
+        {
+          "name": "horn_r",
+          "from": [
+            -3,
+            20,
+            -6
+          ],
+          "to": [
+            3,
+            22,
+            -4
+          ],
+          "box_uv": [
+            38,
+            52
+          ]
+        },
+        {
+          "name": "horn_l",
+          "from": [
+            13,
+            20,
+            -6
+          ],
+          "to": [
+            19,
+            22,
+            -4
+          ],
+          "box_uv": [
+            54,
+            52
+          ]
+        },
+        {
+          "name": "horn_tip_r",
+          "from": [
+            -3,
+            22,
+            -6
+          ],
+          "to": [
+            -1,
+            25,
+            -4
+          ],
+          "box_uv": [
+            22,
+            52
+          ]
+        },
+        {
+          "name": "horn_tip_l",
+          "from": [
+            17,
+            22,
+            -6
+          ],
+          "to": [
+            19,
+            25,
+            -4
+          ],
+          "box_uv": [
+            30,
+            52
+          ]
+        }
+      ],
+      "parent": "body"
+    },
+    {
+      "name": "leg_fl",
+      "pivot": [
+        4,
+        10,
+        4
+      ],
+      "cubes": [
+        {
+          "name": "leg_fl",
+          "from": [
+            2,
+            0,
+            2
+          ],
+          "to": [
+            6,
+            10,
+            6
+          ],
+          "box_uv": [
+            112,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "leg_fr",
+      "pivot": [
+        12,
+        10,
+        4
+      ],
+      "cubes": [
+        {
+          "name": "leg_fr",
+          "from": [
+            10,
+            0,
+            2
+          ],
+          "to": [
+            14,
+            10,
+            6
+          ],
+          "box_uv": [
+            0,
+            38
+          ]
+        }
+      ]
+    },
+    {
+      "name": "leg_bl",
+      "pivot": [
+        4,
+        10,
+        20
+      ],
+      "cubes": [
+        {
+          "name": "leg_bl",
+          "from": [
+            2,
+            0,
+            18
+          ],
+          "to": [
+            6,
+            10,
+            22
+          ],
+          "box_uv": [
+            16,
+            38
+          ]
+        }
+      ]
+    },
+    {
+      "name": "leg_br",
+      "pivot": [
+        12,
+        10,
+        20
+      ],
+      "cubes": [
+        {
+          "name": "leg_br",
+          "from": [
+            10,
+            0,
+            18
+          ],
+          "to": [
+            14,
+            10,
+            22
+          ],
+          "box_uv": [
+            32,
+            38
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tail",
+      "pivot": [
+        8,
+        22,
+        24
+      ],
+      "cubes": [
+        {
+          "name": "tail",
+          "from": [
+            7,
+            12,
+            24
+          ],
+          "to": [
+            9,
+            22,
+            25
+          ],
+          "box_uv": [
+            84,
+            38
+          ]
+        },
+        {
+          "name": "tuft",
+          "from": [
+            6,
+            9,
+            24
+          ],
+          "to": [
+            10,
+            13,
+            26
+          ],
+          "box_uv": [
+            112,
+            38
+          ]
+        }
+      ],
+      "parent": "body"
+    }
+  ],
+  "notes": "Highland Ox — big shaggy grazer. Large quadruped (~1.6 blocks tall)."
+}

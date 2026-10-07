@@ -1,0 +1,42 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "studio:ember_fox",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/ember_fox"
+      },
+      "geometry": {
+        "default": "geometry.ember_fox"
+      },
+      "animations": {
+        "idle": "animation.ember_fox.idle",
+        "walk": "animation.ember_fox.walk",
+        "attack": "animation.ember_fox.attack"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "idle": "query.modified_move_speed < 0.05"
+          },
+          {
+            "walk": "query.modified_move_speed >= 0.05"
+          },
+          {
+            "attack": "variable.attack_time > 0.0"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "spawn_egg": {
+        "base_color": "#d0611f",
+        "overlay_color": "#fbf6ee"
+      }
+    }
+  }
+}

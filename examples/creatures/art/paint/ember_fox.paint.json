@@ -1,0 +1,115 @@
+{
+  "texture_size": [
+    64,
+    64
+  ],
+  "default_material": "fur",
+  "materials": {
+    "fur": {
+      "ramp": [
+        "#5a2410",
+        "#9a3c14",
+        "#d0611f",
+        "#f08a3c"
+      ],
+      "pattern": {
+        "type": "fur",
+        "density": 0.14,
+        "seed": 11
+      }
+    },
+    "cream": {
+      "ramp": [
+        "#a99a8a",
+        "#cfc2b2",
+        "#ebe1d3",
+        "#fbf6ee"
+      ],
+      "pattern": {
+        "type": "fur",
+        "density": 0.08,
+        "seed": 12
+      }
+    },
+    "sock": {
+      "ramp": [
+        "#120d0b",
+        "#241a15",
+        "#3a2a21",
+        "#4d3a2e"
+      ]
+    },
+    "ear": {
+      "ramp": [
+        "#2a120a",
+        "#5a2410",
+        "#7a3214",
+        "#9a3c14"
+      ]
+    }
+  },
+  "cubes": {
+    "torso": {
+      "face_materials": {
+        "down": "cream"
+      }
+    },
+    "head": {
+      "faces": {
+        "north": {
+          "x": 0,
+          "y": 1,
+          "palette": {
+            "e": "#f6e7c1",
+            "k": "#151010",
+            "c": "#efe6d8"
+          },
+          "rows": [
+            ".e....e.",
+            ".k....k.",
+            "........",
+            "cc....cc",
+            "cc....cc",
+            "c......c"
+          ]
+        }
+      }
+    },
+    "snout": {
+      "material": "cream",
+      "faces": {
+        "north": {
+          "x": 1,
+          "y": 0,
+          "palette": {
+            "k": "#151010"
+          },
+          "rows": [
+            "kk"
+          ]
+        }
+      }
+    },
+    "ear_r": {
+      "material": "ear"
+    },
+    "ear_l": {
+      "material": "ear"
+    },
+    "leg_fl": {
+      "material": "sock"
+    },
+    "leg_fr": {
+      "material": "sock"
+    },
+    "leg_bl": {
+      "material": "sock"
+    },
+    "leg_br": {
+      "material": "sock"
+    },
+    "tail_tip": {
+      "material": "cream"
+    }
+  }
+}

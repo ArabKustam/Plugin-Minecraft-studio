@@ -1,0 +1,124 @@
+{
+  "id": "creatures.marsh_heron.animations",
+  "type": "animation",
+  "name": "Marsh Heron animations",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/animations/marsh_heron.animation.json",
+      "role": "primary",
+      "sha256": "3fca6171a3d7cb4ca8511b9683bdf28e6872d99cd79b5875a1fff2923143367b",
+      "bytes": 5713
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "bedrock-animation/1.8.0"
+  },
+  "created_at": "2026-10-07T05:37:29.456Z",
+  "modified_at": "2026-10-07T05:37:29.681Z",
+  "created_by": "animator",
+  "dependencies": [
+    "creatures.marsh_heron.model"
+  ],
+  "minecraft_ids": [],
+  "preview": null,
+  "tags": [
+    "creature",
+    "animal"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:29.677Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "contact sheets reviewed",
+      "checks": [
+        {
+          "name": "animation.marsh_heron.idle",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.marsh_heron.walk",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.marsh_heron.attack",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.marsh_heron.flap",
+          "status": "pass",
+          "detail": "eased, seamless"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:29.457Z",
+      "by": "animator",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/animations/marsh_heron.animation.json",
+          "sha256": "3fca6171a3d7cb4ca8511b9683bdf28e6872d99cd79b5875a1fff2923143367b"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.marsh_heron.animations/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "bedrock-animation/1.8.0"
+      }
+    }
+  ],
+  "metadata": {
+    "animations": [
+      {
+        "name": "animation.marsh_heron.idle",
+        "length": 3,
+        "loop": true,
+        "bones": [
+          "neck",
+          "head"
+        ]
+      },
+      {
+        "name": "animation.marsh_heron.walk",
+        "length": 1,
+        "loop": true,
+        "bones": [
+          "leg_r",
+          "leg_l",
+          "neck"
+        ]
+      },
+      {
+        "name": "animation.marsh_heron.attack",
+        "length": 0.9,
+        "loop": false,
+        "bones": [
+          "neck",
+          "head"
+        ]
+      },
+      {
+        "name": "animation.marsh_heron.flap",
+        "length": 1,
+        "loop": true,
+        "bones": [
+          "wing_r",
+          "wing_l"
+        ]
+      }
+    ]
+  }
+}

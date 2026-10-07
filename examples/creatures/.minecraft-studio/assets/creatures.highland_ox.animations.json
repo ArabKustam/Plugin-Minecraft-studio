@@ -1,0 +1,114 @@
+{
+  "id": "creatures.highland_ox.animations",
+  "type": "animation",
+  "name": "Highland Ox animations",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/animations/highland_ox.animation.json",
+      "role": "primary",
+      "sha256": "aabaf990adc645d17a06844b775e2df4eeffc61316a1fbe9849b4ad52f4f31f2",
+      "bytes": 7981
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "bedrock-animation/1.8.0"
+  },
+  "created_at": "2026-10-07T05:37:28.329Z",
+  "modified_at": "2026-10-07T05:37:28.528Z",
+  "created_by": "animator",
+  "dependencies": [
+    "creatures.highland_ox.model"
+  ],
+  "minecraft_ids": [],
+  "preview": null,
+  "tags": [
+    "creature",
+    "animal"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:28.525Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "contact sheets reviewed",
+      "checks": [
+        {
+          "name": "animation.highland_ox.idle",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.highland_ox.walk",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.highland_ox.attack",
+          "status": "pass",
+          "detail": "eased, seamless"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:28.330Z",
+      "by": "animator",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/animations/highland_ox.animation.json",
+          "sha256": "aabaf990adc645d17a06844b775e2df4eeffc61316a1fbe9849b4ad52f4f31f2"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.highland_ox.animations/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "bedrock-animation/1.8.0"
+      }
+    }
+  ],
+  "metadata": {
+    "animations": [
+      {
+        "name": "animation.highland_ox.idle",
+        "length": 3,
+        "loop": true,
+        "bones": [
+          "head",
+          "tail",
+          "body"
+        ]
+      },
+      {
+        "name": "animation.highland_ox.walk",
+        "length": 1.2,
+        "loop": true,
+        "bones": [
+          "leg_fl",
+          "leg_br",
+          "leg_fr",
+          "leg_bl",
+          "head",
+          "body"
+        ]
+      },
+      {
+        "name": "animation.highland_ox.attack",
+        "length": 1,
+        "loop": false,
+        "bones": [
+          "head",
+          "body"
+        ]
+      }
+    ]
+  }
+}

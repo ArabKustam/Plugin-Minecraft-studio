@@ -1,0 +1,34 @@
+{
+  "duration": 0.5,
+  "layers": [
+    {
+      "type": "noise",
+      "color": "white",
+      "gain": -6,
+      "envelope": {
+        "attack": 0.03,
+        "decay": 0.2,
+        "sustain": 0.6,
+        "release": 0.25
+      },
+      "filter": {
+        "type": "bandpass",
+        "freq": {
+          "from": 4200,
+          "to": 2520
+        },
+        "q": 1.5
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.35,
+      "mix": 0.12
+    }
+  ],
+  "normalize": {
+    "lufs": -17
+  }
+}

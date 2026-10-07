@@ -1,0 +1,122 @@
+{
+  "id": "creatures.ember_fox.texture",
+  "type": "texture",
+  "name": "Ember Fox skin",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/textures/entity/ember_fox.png",
+      "role": "primary",
+      "sha256": "4a1260823b5266323bdcadaca6d140703fa6424558341b8b2743fcbd23be8cc0",
+      "bytes": 1374
+    },
+    {
+      "path": "art/paint/ember_fox.paint.json",
+      "role": "source",
+      "sha256": "6044aaa53e89535fa8dea91c7397107043b153dd0f02b5d80060ed11937a70cc",
+      "bytes": 1965
+    }
+  ],
+  "source": {
+    "provider": "uv-painter",
+    "method": "texture_paint_uv",
+    "source_files": [
+      "art/paint/ember_fox.paint.json",
+      "art/models/ember_fox.model.json"
+    ],
+    "parameters": {
+      "materials": [
+        "fur",
+        "cream",
+        "ear",
+        "sock"
+      ]
+    }
+  },
+  "created_at": "2026-10-07T05:37:27.030Z",
+  "modified_at": "2026-10-07T05:37:27.052Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:ember_fox"
+  ],
+  "preview": ".minecraft-studio/previews/atlas_creatures_ember_fox_texture.png",
+  "tags": [
+    "creature",
+    "animal"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:27.049Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "64×64 atlas",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "uv coverage",
+          "status": "pass",
+          "detail": "30% of 64×64"
+        },
+        {
+          "name": "turnaround review",
+          "status": "pass",
+          "detail": "Face details (eyes, markings) land on the right faces; materials read at game scale."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:27.034Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/textures/entity/ember_fox.png",
+          "sha256": "4a1260823b5266323bdcadaca6d140703fa6424558341b8b2743fcbd23be8cc0"
+        },
+        {
+          "path": "art/paint/ember_fox.paint.json",
+          "sha256": "6044aaa53e89535fa8dea91c7397107043b153dd0f02b5d80060ed11937a70cc"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.ember_fox.texture/v1",
+      "source": {
+        "provider": "uv-painter",
+        "method": "texture_paint_uv",
+        "source_files": [
+          "art/paint/ember_fox.paint.json",
+          "art/models/ember_fox.model.json"
+        ],
+        "parameters": {
+          "materials": [
+            "fur",
+            "cream",
+            "ear",
+            "sock"
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "width": 64,
+    "height": 64,
+    "texture_size": [
+      64,
+      64
+    ],
+    "cubes": 11,
+    "coverage": 0.299
+  }
+}

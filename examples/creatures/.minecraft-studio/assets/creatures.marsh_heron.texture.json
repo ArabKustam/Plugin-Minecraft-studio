@@ -1,0 +1,122 @@
+{
+  "id": "creatures.marsh_heron.texture",
+  "type": "texture",
+  "name": "Marsh Heron skin",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/textures/entity/marsh_heron.png",
+      "role": "primary",
+      "sha256": "7476019d518605cbd38772644e6737288cd3e2732e3bca21914fb87a17b177c0",
+      "bytes": 1402
+    },
+    {
+      "path": "art/paint/marsh_heron.paint.json",
+      "role": "source",
+      "sha256": "796705f3951c3c8712c8d8db164a35b87c3e2df7712b959e0a9f4570a249ef3d",
+      "bytes": 1943
+    }
+  ],
+  "source": {
+    "provider": "uv-painter",
+    "method": "texture_paint_uv",
+    "source_files": [
+      "art/paint/marsh_heron.paint.json",
+      "art/models/marsh_heron.model.json"
+    ],
+    "parameters": {
+      "materials": [
+        "feathers",
+        "black",
+        "white",
+        "yellow"
+      ]
+    }
+  },
+  "created_at": "2026-10-07T05:37:29.370Z",
+  "modified_at": "2026-10-07T05:37:29.384Z",
+  "created_by": "texture-artist",
+  "dependencies": [],
+  "minecraft_ids": [
+    "studio:marsh_heron"
+  ],
+  "preview": ".minecraft-studio/previews/atlas_creatures_marsh_heron_texture.png",
+  "tags": [
+    "creature",
+    "animal"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:29.381Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "64×64 atlas",
+      "checks": [
+        {
+          "name": "technical validation",
+          "status": "pass",
+          "detail": "pass"
+        },
+        {
+          "name": "uv coverage",
+          "status": "pass",
+          "detail": "26% of 64×64"
+        },
+        {
+          "name": "turnaround review",
+          "status": "pass",
+          "detail": "Face details (eyes, markings) land on the right faces; materials read at game scale."
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:29.373Z",
+      "by": "texture-artist",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/textures/entity/marsh_heron.png",
+          "sha256": "7476019d518605cbd38772644e6737288cd3e2732e3bca21914fb87a17b177c0"
+        },
+        {
+          "path": "art/paint/marsh_heron.paint.json",
+          "sha256": "796705f3951c3c8712c8d8db164a35b87c3e2df7712b959e0a9f4570a249ef3d"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.marsh_heron.texture/v1",
+      "source": {
+        "provider": "uv-painter",
+        "method": "texture_paint_uv",
+        "source_files": [
+          "art/paint/marsh_heron.paint.json",
+          "art/models/marsh_heron.model.json"
+        ],
+        "parameters": {
+          "materials": [
+            "feathers",
+            "black",
+            "white",
+            "yellow"
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "width": 64,
+    "height": 64,
+    "texture_size": [
+      64,
+      64
+    ],
+    "cubes": 12,
+    "coverage": 0.263
+  }
+}

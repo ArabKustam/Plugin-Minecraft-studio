@@ -1,0 +1,117 @@
+{
+  "id": "creatures.ember_fox.animations",
+  "type": "animation",
+  "name": "Ember Fox animations",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/animations/ember_fox.animation.json",
+      "role": "primary",
+      "sha256": "2da9e072e936352511ca5a9e70df3abd2bba08577cc69fb2995a556823e13839",
+      "bytes": 9083
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "bedrock-animation/1.8.0"
+  },
+  "created_at": "2026-10-07T05:37:27.156Z",
+  "modified_at": "2026-10-07T05:37:27.348Z",
+  "created_by": "animator",
+  "dependencies": [
+    "creatures.ember_fox.model"
+  ],
+  "minecraft_ids": [],
+  "preview": null,
+  "tags": [
+    "creature",
+    "animal"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:27.345Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "contact sheets reviewed",
+      "checks": [
+        {
+          "name": "animation.ember_fox.idle",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.ember_fox.walk",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.ember_fox.attack",
+          "status": "pass",
+          "detail": "eased, seamless"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:27.157Z",
+      "by": "animator",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/animations/ember_fox.animation.json",
+          "sha256": "2da9e072e936352511ca5a9e70df3abd2bba08577cc69fb2995a556823e13839"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.ember_fox.animations/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "bedrock-animation/1.8.0"
+      }
+    }
+  ],
+  "metadata": {
+    "animations": [
+      {
+        "name": "animation.ember_fox.idle",
+        "length": 2,
+        "loop": true,
+        "bones": [
+          "body",
+          "head",
+          "tail"
+        ]
+      },
+      {
+        "name": "animation.ember_fox.walk",
+        "length": 0.8,
+        "loop": true,
+        "bones": [
+          "leg_fl",
+          "leg_br",
+          "leg_fr",
+          "leg_bl",
+          "body",
+          "tail"
+        ]
+      },
+      {
+        "name": "animation.ember_fox.attack",
+        "length": 1.2,
+        "loop": false,
+        "bones": [
+          "body",
+          "leg_fl",
+          "leg_fr",
+          "leg_bl",
+          "leg_br"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Studio Creatures (behavior)",
+    "description": "Made with Minecraft Studio",
+    "uuid": "162ca563-bd10-40b9-b009-58c7e439c6ef",
+    "version": [
+      0,
+      1,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "0caa83da-4c0b-4d5a-836b-353f2dee9a57",
+      "version": [
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "41a48e59-4965-45ff-91ca-6f71856278ba",
+      "version": [
+        0,
+        1,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "duration": 0.3,
+  "layers": [
+    {
+      "type": "fm",
+      "carrier": {
+        "from": 1819.9999999999998,
+        "to": 1300,
+        "curve": "exp"
+      },
+      "ratio": 2,
+      "index": 1.5,
+      "gain": -6,
+      "envelope": {
+        "attack": 0.005,
+        "release": 0.08
+      },
+      "filter": {
+        "type": "bandpass",
+        "freq": 2600,
+        "q": 1.2
+      }
+    },
+    {
+      "type": "noise",
+      "color": "pink",
+      "gain": -24,
+      "envelope": {
+        "attack": 0.002,
+        "release": 0.05
+      },
+      "filter": {
+        "type": "highpass",
+        "freq": 3000
+      }
+    }
+  ],
+  "effects": [
+    {
+      "type": "reverb",
+      "room": 0.35,
+      "mix": 0.12
+    }
+  ],
+  "normalize": {
+    "lufs": -17
+  }
+}

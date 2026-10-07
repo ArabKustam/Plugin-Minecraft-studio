@@ -1,0 +1,295 @@
+{
+  "format": "minecraft-studio-model/1",
+  "name": "marsh_heron",
+  "texture_size": [
+    64,
+    64
+  ],
+  "textures": {
+    "skin": "bedrock/RP/textures/entity/marsh_heron.png"
+  },
+  "texture_refs": {
+    "skin": "studio:entity/marsh_heron"
+  },
+  "bones": [
+    {
+      "name": "body",
+      "pivot": [
+        8,
+        14,
+        9
+      ],
+      "cubes": [
+        {
+          "name": "body",
+          "from": [
+            5,
+            12,
+            4
+          ],
+          "to": [
+            11,
+            19,
+            14
+          ],
+          "box_uv": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "tail_feathers",
+          "from": [
+            6,
+            13,
+            14
+          ],
+          "to": [
+            10,
+            15,
+            18
+          ],
+          "box_uv": [
+            0,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "name": "neck",
+      "pivot": [
+        8,
+        18,
+        4
+      ],
+      "cubes": [
+        {
+          "name": "neck",
+          "from": [
+            7,
+            18,
+            3
+          ],
+          "to": [
+            9,
+            27,
+            5
+          ],
+          "box_uv": [
+            26,
+            17
+          ]
+        }
+      ],
+      "parent": "body"
+    },
+    {
+      "name": "head",
+      "pivot": [
+        8,
+        27,
+        4
+      ],
+      "cubes": [
+        {
+          "name": "head",
+          "from": [
+            6,
+            26,
+            0
+          ],
+          "to": [
+            10,
+            30,
+            6
+          ],
+          "box_uv": [
+            34,
+            17
+          ]
+        },
+        {
+          "name": "beak",
+          "from": [
+            7,
+            27,
+            -5
+          ],
+          "to": [
+            9,
+            28,
+            0
+          ],
+          "box_uv": [
+            16,
+            31
+          ]
+        },
+        {
+          "name": "crest",
+          "from": [
+            7,
+            29,
+            5
+          ],
+          "to": [
+            9,
+            30,
+            9
+          ],
+          "box_uv": [
+            30,
+            31
+          ]
+        }
+      ],
+      "parent": "neck"
+    },
+    {
+      "name": "wing_r",
+      "pivot": [
+        5,
+        18,
+        6
+      ],
+      "cubes": [
+        {
+          "name": "wing_r",
+          "from": [
+            4,
+            12,
+            5
+          ],
+          "to": [
+            5,
+            18,
+            13
+          ],
+          "box_uv": [
+            32,
+            0
+          ]
+        }
+      ],
+      "parent": "body"
+    },
+    {
+      "name": "wing_l",
+      "pivot": [
+        11,
+        18,
+        6
+      ],
+      "cubes": [
+        {
+          "name": "wing_l",
+          "from": [
+            11,
+            12,
+            5
+          ],
+          "to": [
+            12,
+            18,
+            13
+          ],
+          "box_uv": [
+            0,
+            17
+          ]
+        }
+      ],
+      "parent": "body"
+    },
+    {
+      "name": "leg_r",
+      "pivot": [
+        7,
+        12,
+        9
+      ],
+      "cubes": [
+        {
+          "name": "leg_r",
+          "from": [
+            6,
+            1,
+            8
+          ],
+          "to": [
+            7,
+            12,
+            9
+          ],
+          "box_uv": [
+            18,
+            17
+          ]
+        },
+        {
+          "name": "foot_r",
+          "from": [
+            5,
+            0,
+            6
+          ],
+          "to": [
+            8,
+            1,
+            9
+          ],
+          "box_uv": [
+            42,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "name": "leg_l",
+      "pivot": [
+        9,
+        12,
+        9
+      ],
+      "cubes": [
+        {
+          "name": "leg_l",
+          "from": [
+            9,
+            1,
+            8
+          ],
+          "to": [
+            10,
+            12,
+            9
+          ],
+          "box_uv": [
+            22,
+            17
+          ]
+        },
+        {
+          "name": "foot_l",
+          "from": [
+            8,
+            0,
+            6
+          ],
+          "to": [
+            11,
+            1,
+            9
+          ],
+          "box_uv": [
+            0,
+            37
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Marsh Heron — tall wading bird. Biped bird (~2 blocks tall)."
+}

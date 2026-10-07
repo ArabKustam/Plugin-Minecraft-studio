@@ -1,0 +1,23 @@
+{
+  "id": "ember_fox-texture",
+  "goal": "Ember Fox: paint the UV atlas",
+  "agent": "texture-artist",
+  "inputs": [],
+  "outputs": [],
+  "allowed_tools": [],
+  "dependencies": [
+    "creature-design"
+  ],
+  "constraints": [],
+  "quality": [],
+  "validation": [],
+  "destination": null,
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T05:37:26.786Z",
+  "started_at": "2026-10-07T05:37:26.941Z",
+  "finished_at": "2026-10-07T05:37:27.054Z",
+  "updated_at": "2026-10-07T05:37:27.054Z",
+  "plan": null
+}

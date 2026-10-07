@@ -1,0 +1,120 @@
+{
+  "id": "creatures.rust_crawler.model",
+  "type": "model",
+  "name": "Rust Crawler model",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/models/entity/rust_crawler.geo.json",
+      "role": "primary",
+      "sha256": "fdeab1b64322209144339058655f469c7063de45ce4cdbd97347db3e0e63c1c7",
+      "bytes": 7134
+    },
+    {
+      "path": "models/rust_crawler.bbmodel",
+      "role": "primary",
+      "sha256": "519005b39c90ff629734dd188a177d74bace25b63d04ec1889df35032e74d432",
+      "bytes": 52793
+    },
+    {
+      "path": "art/models/rust_crawler.model.json",
+      "role": "source",
+      "sha256": "90787526a077dda6a5a0430aff2447eea41fbbceb464e40f75944465ef681a79",
+      "bytes": 5999
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "minecraft-studio-model/1",
+    "source_files": [
+      "art/models/rust_crawler.model.json"
+    ]
+  },
+  "created_at": "2026-10-07T05:37:30.487Z",
+  "modified_at": "2026-10-07T05:37:30.494Z",
+  "created_by": "modeler",
+  "dependencies": [
+    "creatures.rust_crawler.texture"
+  ],
+  "minecraft_ids": [
+    "geometry.rust_crawler"
+  ],
+  "preview": ".minecraft-studio/previews/model_rust_crawler.png",
+  "tags": [
+    "creature",
+    "monster"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:30.491Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "13 cubes",
+      "checks": [
+        {
+          "name": "rig validation",
+          "status": "pass",
+          "detail": "13 cubes, bones body/head/leg_r0/leg_l0/leg_r1/leg_l1/leg_r2/leg_l2/tail1/tail2/stinger"
+        },
+        {
+          "name": "size",
+          "status": "pass",
+          "detail": "1.63 × 0.38 × 1.88 blocks"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:30.490Z",
+      "by": "modeler",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/models/entity/rust_crawler.geo.json",
+          "sha256": "fdeab1b64322209144339058655f469c7063de45ce4cdbd97347db3e0e63c1c7"
+        },
+        {
+          "path": "models/rust_crawler.bbmodel",
+          "sha256": "519005b39c90ff629734dd188a177d74bace25b63d04ec1889df35032e74d432"
+        },
+        {
+          "path": "art/models/rust_crawler.model.json",
+          "sha256": "90787526a077dda6a5a0430aff2447eea41fbbceb464e40f75944465ef681a79"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.rust_crawler.model/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "minecraft-studio-model/1",
+        "source_files": [
+          "art/models/rust_crawler.model.json"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "bones": [
+      "body",
+      "head",
+      "leg_r0",
+      "leg_l0",
+      "leg_r1",
+      "leg_l1",
+      "leg_r2",
+      "leg_l2",
+      "tail1",
+      "tail2",
+      "stinger"
+    ],
+    "texture_size": [
+      64,
+      64
+    ]
+  }
+}

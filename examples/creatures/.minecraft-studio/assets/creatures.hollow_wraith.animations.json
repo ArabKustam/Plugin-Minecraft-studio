@@ -1,0 +1,113 @@
+{
+  "id": "creatures.hollow_wraith.animations",
+  "type": "animation",
+  "name": "Hollow Wraith animations",
+  "description": "",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/animations/hollow_wraith.animation.json",
+      "role": "primary",
+      "sha256": "fe9becd97377ee0d036a6d35b70b5ac327b063a489a723d83f97e61668b35dc2",
+      "bytes": 5276
+    }
+  ],
+  "source": {
+    "provider": "studio-model",
+    "format": "bedrock-animation/1.8.0"
+  },
+  "created_at": "2026-10-07T05:37:31.488Z",
+  "modified_at": "2026-10-07T05:37:31.644Z",
+  "created_by": "animator",
+  "dependencies": [
+    "creatures.hollow_wraith.model"
+  ],
+  "minecraft_ids": [],
+  "preview": null,
+  "tags": [
+    "creature",
+    "monster"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:31.640Z",
+      "by": "visual-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "contact sheets reviewed",
+      "checks": [
+        {
+          "name": "animation.hollow_wraith.idle",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.hollow_wraith.walk",
+          "status": "pass",
+          "detail": "eased, seamless"
+        },
+        {
+          "name": "animation.hollow_wraith.attack",
+          "status": "pass",
+          "detail": "eased, seamless"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:31.490Z",
+      "by": "animator",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/animations/hollow_wraith.animation.json",
+          "sha256": "fe9becd97377ee0d036a6d35b70b5ac327b063a489a723d83f97e61668b35dc2"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.hollow_wraith.animations/v1",
+      "source": {
+        "provider": "studio-model",
+        "format": "bedrock-animation/1.8.0"
+      }
+    }
+  ],
+  "metadata": {
+    "animations": [
+      {
+        "name": "animation.hollow_wraith.idle",
+        "length": 3,
+        "loop": true,
+        "bones": [
+          "root",
+          "arm_r",
+          "arm_l"
+        ]
+      },
+      {
+        "name": "animation.hollow_wraith.walk",
+        "length": 2,
+        "loop": true,
+        "bones": [
+          "root",
+          "arm_r",
+          "arm_l"
+        ]
+      },
+      {
+        "name": "animation.hollow_wraith.attack",
+        "length": 1.2,
+        "loop": false,
+        "bones": [
+          "arm_r",
+          "arm_l",
+          "head",
+          "root"
+        ]
+      }
+    ]
+  }
+}

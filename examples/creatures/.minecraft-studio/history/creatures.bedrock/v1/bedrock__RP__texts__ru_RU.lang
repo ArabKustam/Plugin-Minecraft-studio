@@ -1,0 +1,12 @@
+entity.studio:ember_fox.name=Огненный лис
+item.spawn_egg.entity.studio:ember_fox.name=Призвать: Огненный лис
+entity.studio:highland_ox.name=Горный бык
+item.spawn_egg.entity.studio:highland_ox.name=Призвать: Горный бык
+entity.studio:marsh_heron.name=Болотная цапля
+item.spawn_egg.entity.studio:marsh_heron.name=Призвать: Болотная цапля
+entity.studio:rust_crawler.name=Ржавый ползун
+item.spawn_egg.entity.studio:rust_crawler.name=Призвать: Ржавый ползун
+entity.studio:hollow_wraith.name=Полый призрак
+item.spawn_egg.entity.studio:hollow_wraith.name=Призвать: Полый призрак
+entity.studio:badger_smith.name=Барсук-кузнец
+item.spawn_egg.entity.studio:badger_smith.name=Призвать: Барсук-кузнец

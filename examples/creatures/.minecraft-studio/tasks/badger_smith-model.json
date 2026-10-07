@@ -1,0 +1,23 @@
+{
+  "id": "badger_smith-model",
+  "goal": "Badger Smith: rigged model, Bedrock geometry and .bbmodel",
+  "agent": "modeler",
+  "inputs": [],
+  "outputs": [],
+  "allowed_tools": [],
+  "dependencies": [
+    "badger_smith-texture"
+  ],
+  "constraints": [],
+  "quality": [],
+  "validation": [],
+  "destination": null,
+  "assets": [],
+  "status": "done",
+  "result": null,
+  "created_at": "2026-10-07T05:37:26.886Z",
+  "started_at": "2026-10-07T05:37:32.513Z",
+  "finished_at": "2026-10-07T05:37:32.586Z",
+  "updated_at": "2026-10-07T05:37:32.586Z",
+  "plan": null
+}

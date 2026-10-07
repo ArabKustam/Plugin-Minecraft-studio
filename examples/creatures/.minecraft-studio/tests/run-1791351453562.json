@@ -1,0 +1,19 @@
+{
+  "id": "run-1791351453562",
+  "at": "2026-10-07T05:37:33.562Z",
+  "suite": "bedrock-addon",
+  "passed": true,
+  "summary": "0 errors, 0 warnings; 6 entities, 6 geometries, 20 animations",
+  "details": {
+    "issues": [],
+    "counts": {
+      "geometries": 6,
+      "animations": 20,
+      "client_entities": 6,
+      "behavior_entities": 6,
+      "sound_definitions": 18,
+      "files": 48
+    }
+  },
+  "agent": "integration-qa"
+}

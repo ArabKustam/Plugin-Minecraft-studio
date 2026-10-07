@@ -1,0 +1,271 @@
+{
+  "id": "creatures.bedrock",
+  "type": "configuration",
+  "name": "Bedrock add-on definitions",
+  "description": "Client entities, behavior entities, sound definitions, language files and manifests for the 6 creatures.",
+  "status": "approved",
+  "version": 1,
+  "files": [
+    {
+      "path": "bedrock/RP/entity/ember_fox.entity.json",
+      "role": "primary",
+      "sha256": "5697dd14c741ec8bba426a23946be81b98ba4722ce30c809d760c0b361d2372f",
+      "bytes": 982
+    },
+    {
+      "path": "bedrock/BP/entities/ember_fox.json",
+      "role": "primary",
+      "sha256": "9be3d7a6653112b7e4926b35373597fa781345d2503c2278b856aac64e1f78a8",
+      "bytes": 1574
+    },
+    {
+      "path": "bedrock/RP/entity/highland_ox.entity.json",
+      "role": "primary",
+      "sha256": "eda8aafdea8cf41726d20019ac7f6158ebd2cc64d5dae9c2a7e6ddb33e13ac35",
+      "bytes": 994
+    },
+    {
+      "path": "bedrock/BP/entities/highland_ox.json",
+      "role": "primary",
+      "sha256": "6fbaecabef74d251364d36a9d0d3a252b34876a8901a1efcca7bee96d307cf71",
+      "bytes": 1577
+    },
+    {
+      "path": "bedrock/RP/entity/marsh_heron.entity.json",
+      "role": "primary",
+      "sha256": "75a1c2b820cdb481e4fcd70df4bbf83b2a8f856bf6caec4c74fd6b61ef43691e",
+      "bytes": 1107
+    },
+    {
+      "path": "bedrock/BP/entities/marsh_heron.json",
+      "role": "primary",
+      "sha256": "4ca59face535f79f145c0b60c049b6f5ac012b20510ae1aa178c3981c0cb80ad",
+      "bytes": 1406
+    },
+    {
+      "path": "bedrock/RP/entity/rust_crawler.entity.json",
+      "role": "primary",
+      "sha256": "d4da993bb7c7922de6018f978bd6b5b09dc655199943c6259912ec135ce1e6fe",
+      "bytes": 1000
+    },
+    {
+      "path": "bedrock/BP/entities/rust_crawler.json",
+      "role": "primary",
+      "sha256": "5d7902448f24beef7fd4e9345267aa3882386252c61ee6258856c6417cecc6f2",
+      "bytes": 1956
+    },
+    {
+      "path": "bedrock/RP/entity/hollow_wraith.entity.json",
+      "role": "primary",
+      "sha256": "df224f3f0248a0d09f5e95ccc9a0da6d77aa5fdba9eb5d4a3d7cdb5dbff09da2",
+      "bytes": 1006
+    },
+    {
+      "path": "bedrock/BP/entities/hollow_wraith.json",
+      "role": "primary",
+      "sha256": "bc51e8630292e2f6ba6be13ba2fed08b51c1472439976e14803adfd3c96c087b",
+      "bytes": 1957
+    },
+    {
+      "path": "bedrock/RP/entity/badger_smith.entity.json",
+      "role": "primary",
+      "sha256": "f72a04aee767d3bba648bb0a7f8688f3af37c9186ac35b1863d954f97856cacf",
+      "bytes": 1194
+    },
+    {
+      "path": "bedrock/BP/entities/badger_smith.json",
+      "role": "primary",
+      "sha256": "c47796fba9a328298a093d63339f356ae3be133318114b348514827d6cb95ab4",
+      "bytes": 1575
+    },
+    {
+      "path": "bedrock/RP/sounds/sound_definitions.json",
+      "role": "primary",
+      "sha256": "3b73cbf48ac14f005056f2ed6698b6d0e94b99facc6cacf9b76d78487384b27c",
+      "bytes": 3536
+    },
+    {
+      "path": "bedrock/RP/sounds.json",
+      "role": "primary",
+      "sha256": "02277f21a23b7aa53539d8d3e6db9bd88b8a09e70323f0af416285dcdce28c57",
+      "bytes": 1746
+    },
+    {
+      "path": "bedrock/RP/texts/languages.json",
+      "role": "primary",
+      "sha256": "08da6da98589855f355bd1cd31f1250999e8b9b2aa2c68ea1b93b84ebc627489",
+      "bytes": 25
+    },
+    {
+      "path": "bedrock/RP/texts/en_US.lang",
+      "role": "primary",
+      "sha256": "fa72dcc2823366bb830ff279b929cf899876dfda035a82c0b104ee32d0c77468",
+      "bytes": 650
+    },
+    {
+      "path": "bedrock/RP/texts/ru_RU.lang",
+      "role": "primary",
+      "sha256": "9f2d13fb292ffb2a4ef0fdb2eaf1718de816b197fa7c69399e733918cee253b3",
+      "bytes": 874
+    },
+    {
+      "path": "bedrock/RP/manifest.json",
+      "role": "primary",
+      "sha256": "939cae2c30ebc4555f2c2af9d68f2b6f147feb096e3f37c19e66792f3bb69520",
+      "bytes": 522
+    },
+    {
+      "path": "bedrock/BP/manifest.json",
+      "role": "primary",
+      "sha256": "fa7348f736e2e6a9d7a93d8026658c31ff3f5d9d9f10029c99a3b014d091f72a",
+      "bytes": 617
+    }
+  ],
+  "source": {},
+  "created_at": "2026-10-07T05:37:33.526Z",
+  "modified_at": "2026-10-07T05:37:33.620Z",
+  "created_by": "minecraft-developer",
+  "dependencies": [
+    "creatures.ember_fox.model",
+    "creatures.ember_fox.animations",
+    "creatures.highland_ox.model",
+    "creatures.highland_ox.animations",
+    "creatures.marsh_heron.model",
+    "creatures.marsh_heron.animations",
+    "creatures.rust_crawler.model",
+    "creatures.rust_crawler.animations",
+    "creatures.hollow_wraith.model",
+    "creatures.hollow_wraith.animations",
+    "creatures.badger_smith.model",
+    "creatures.badger_smith.animations"
+  ],
+  "minecraft_ids": [
+    "studio:ember_fox",
+    "studio:highland_ox",
+    "studio:marsh_heron",
+    "studio:rust_crawler",
+    "studio:hollow_wraith",
+    "studio:badger_smith"
+  ],
+  "preview": null,
+  "tags": [
+    "creature",
+    "bedrock"
+  ],
+  "qa_status": "passed",
+  "qa_history": [
+    {
+      "at": "2026-10-07T05:37:33.617Z",
+      "by": "integration-qa",
+      "version": 1,
+      "verdict": "pass",
+      "summary": "add-on validated & packaged",
+      "checks": [
+        {
+          "name": "bedrock add-on validation",
+          "status": "pass",
+          "detail": "0 errors, 0 warnings"
+        },
+        {
+          "name": "entities",
+          "status": "pass",
+          "detail": "6 client / 6 behavior"
+        },
+        {
+          "name": "in-game test",
+          "status": "warn",
+          "detail": "not run: no Bedrock client in the build environment"
+        }
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "version": 1,
+      "at": "2026-10-07T05:37:33.542Z",
+      "by": "minecraft-developer",
+      "note": "initial version",
+      "files": [
+        {
+          "path": "bedrock/RP/entity/ember_fox.entity.json",
+          "sha256": "5697dd14c741ec8bba426a23946be81b98ba4722ce30c809d760c0b361d2372f"
+        },
+        {
+          "path": "bedrock/BP/entities/ember_fox.json",
+          "sha256": "9be3d7a6653112b7e4926b35373597fa781345d2503c2278b856aac64e1f78a8"
+        },
+        {
+          "path": "bedrock/RP/entity/highland_ox.entity.json",
+          "sha256": "eda8aafdea8cf41726d20019ac7f6158ebd2cc64d5dae9c2a7e6ddb33e13ac35"
+        },
+        {
+          "path": "bedrock/BP/entities/highland_ox.json",
+          "sha256": "6fbaecabef74d251364d36a9d0d3a252b34876a8901a1efcca7bee96d307cf71"
+        },
+        {
+          "path": "bedrock/RP/entity/marsh_heron.entity.json",
+          "sha256": "75a1c2b820cdb481e4fcd70df4bbf83b2a8f856bf6caec4c74fd6b61ef43691e"
+        },
+        {
+          "path": "bedrock/BP/entities/marsh_heron.json",
+          "sha256": "4ca59face535f79f145c0b60c049b6f5ac012b20510ae1aa178c3981c0cb80ad"
+        },
+        {
+          "path": "bedrock/RP/entity/rust_crawler.entity.json",
+          "sha256": "d4da993bb7c7922de6018f978bd6b5b09dc655199943c6259912ec135ce1e6fe"
+        },
+        {
+          "path": "bedrock/BP/entities/rust_crawler.json",
+          "sha256": "5d7902448f24beef7fd4e9345267aa3882386252c61ee6258856c6417cecc6f2"
+        },
+        {
+          "path": "bedrock/RP/entity/hollow_wraith.entity.json",
+          "sha256": "df224f3f0248a0d09f5e95ccc9a0da6d77aa5fdba9eb5d4a3d7cdb5dbff09da2"
+        },
+        {
+          "path": "bedrock/BP/entities/hollow_wraith.json",
+          "sha256": "bc51e8630292e2f6ba6be13ba2fed08b51c1472439976e14803adfd3c96c087b"
+        },
+        {
+          "path": "bedrock/RP/entity/badger_smith.entity.json",
+          "sha256": "f72a04aee767d3bba648bb0a7f8688f3af37c9186ac35b1863d954f97856cacf"
+        },
+        {
+          "path": "bedrock/BP/entities/badger_smith.json",
+          "sha256": "c47796fba9a328298a093d63339f356ae3be133318114b348514827d6cb95ab4"
+        },
+        {
+          "path": "bedrock/RP/sounds/sound_definitions.json",
+          "sha256": "3b73cbf48ac14f005056f2ed6698b6d0e94b99facc6cacf9b76d78487384b27c"
+        },
+        {
+          "path": "bedrock/RP/sounds.json",
+          "sha256": "02277f21a23b7aa53539d8d3e6db9bd88b8a09e70323f0af416285dcdce28c57"
+        },
+        {
+          "path": "bedrock/RP/texts/languages.json",
+          "sha256": "08da6da98589855f355bd1cd31f1250999e8b9b2aa2c68ea1b93b84ebc627489"
+        },
+        {
+          "path": "bedrock/RP/texts/en_US.lang",
+          "sha256": "fa72dcc2823366bb830ff279b929cf899876dfda035a82c0b104ee32d0c77468"
+        },
+        {
+          "path": "bedrock/RP/texts/ru_RU.lang",
+          "sha256": "9f2d13fb292ffb2a4ef0fdb2eaf1718de816b197fa7c69399e733918cee253b3"
+        },
+        {
+          "path": "bedrock/RP/manifest.json",
+          "sha256": "939cae2c30ebc4555f2c2af9d68f2b6f147feb096e3f37c19e66792f3bb69520"
+        },
+        {
+          "path": "bedrock/BP/manifest.json",
+          "sha256": "fa7348f736e2e6a9d7a93d8026658c31ff3f5d9d9f10029c99a3b014d091f72a"
+        }
+      ],
+      "archived_dir": ".minecraft-studio/history/creatures.bedrock/v1",
+      "source": {}
+    }
+  ],
+  "metadata": {}
+}
