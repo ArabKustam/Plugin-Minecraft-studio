@@ -36,7 +36,7 @@ jobs:
           (cd dist && sha256sum *.plugin *.zip *.jar > SHA256SUMS.txt)
       - name: Release notes from CHANGELOG
         run: node -e "const c=require('fs').readFileSync('CHANGELOG.md','utf8');const v=process.env.GITHUB_REF_NAME.slice(1);const m=c.split(/^## /m).find(s=>s.startsWith('['+v+']'));require('fs').writeFileSync('notes.md',m?'## '+m:'See CHANGELOG.md')"
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           body_path: notes.md
           files: |
