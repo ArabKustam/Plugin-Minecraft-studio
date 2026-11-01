@@ -95,6 +95,6 @@ jobs:
       - name: Minecraft Studio secret scan
         run: node runtime/dist/cli.mjs scan-secrets
       - name: Gitleaks
-        uses: gitleaks/gitleaks-action@v2
+        uses: gitleaks/gitleaks-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
