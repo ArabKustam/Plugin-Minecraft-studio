@@ -16,7 +16,7 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.32.1",
     "pngjs": "7.0.0",
-    "spessasynth_core": "4.3.22",
+    "spessasynth_core": "4.4.4",
     "zod": "4.6.5"
   },
   "devDependencies": {
